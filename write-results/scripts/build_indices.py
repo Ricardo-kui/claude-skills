@@ -306,8 +306,11 @@ def parse_file(family: dict[str, str]) -> tuple[list[Entry], list[Unparsed], int
                 i += 1
                 continue
             # blockquote form: **原文锚定**:\n> "..."  (one entry per > line)
-            if i + 1 < len(lines) and lines[i + 1].strip().startswith(">"):
-                j = i + 1
+            first = i + 1
+            while first < len(lines) and not lines[first].strip():
+                first += 1
+            if first < len(lines) and lines[first].strip().startswith(">"):
+                j = first
                 while j < len(lines) and lines[j].strip().startswith(">"):
                     body = lines[j].strip()[1:].strip()
                     if body:
@@ -334,9 +337,12 @@ def parse_file(family: dict[str, str]) -> tuple[list[Entry], list[Unparsed], int
                 i += 1
                 continue
             # blockquote form: **骨架**:\n> ...
-            if i + 1 < len(lines) and lines[i + 1].strip().startswith(">"):
+            first = i + 1
+            while first < len(lines) and not lines[first].strip():
+                first += 1
+            if first < len(lines) and lines[first].strip().startswith(">"):
                 chunks: list[str] = []
-                j = i + 1
+                j = first
                 while j < len(lines) and lines[j].strip().startswith(">"):
                     body = lines[j].strip()[1:].strip()
                     body = eng.strip_outer_quotes(body)
@@ -348,8 +354,8 @@ def parse_file(family: dict[str, str]) -> tuple[list[Entry], list[Unparsed], int
                 i = j
                 continue
             # code-fence form: **骨架**:\n``` ... ```
-            if i + 1 < len(lines) and lines[i + 1].strip().startswith("```"):
-                fence = eng.collect_fence(lines, i + 1)
+            if first < len(lines) and lines[first].strip().startswith("```"):
+                fence = eng.collect_fence(lines, first)
                 if fence["text"]:
                     cur.templates.append(eng.normalize(fence["text"]))
                 i = fence["end"] + 1

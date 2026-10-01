@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """fitness_report — 策展指标聚合报告（fitness 台账之上的派生视图，按需再生）。
 
-五节（对应架构批评第 4 项的五个空白）：
+六节（A–E 延续原报告，F 记录句段使用观察）：
   A 接受率    gate① 存活率：run×section 漏斗 + 按节汇总 + 月度趋势。
               acceptance_rate = confirmed / (confirmed+edited+dropped+
               skip_endorsed+skip_flipped)；preauthorized_auto 单列不入分母。
@@ -15,6 +15,8 @@
               不自动裁定——band-vocab「提升路由权重」仍是人裁的事。
   E 剪裁候选  从未被消耗的 wb 变体（排除 30 天内新建）+ 低接受率 run。
               全部是候选清单；剪与不剪走 Decision Protocol，本脚本不删任何东西。
+  F 句段观察  returned/opened/adopted/author_accepted/rejected 分开计数；
+              没有作者反馈就不推算作者接受率。无可靠条目日期不按文件年龄列剪裁候选。
 
 v1 诚实边界：历史 gate① 裁决无快照不可回补，一切比率自台账首事件起算；
 band 历史判定（_skill_design_feedback.yaml 散文后缀）不回填进矩阵——
@@ -54,6 +56,9 @@ except ImportError:  # pragma: no cover
     WB_RE = re.compile(r"<!--\s*wb:([^:>]+):([^>]+?)\s*-->")
 
 SKILLS_ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(SKILLS_ROOT / '_shared' / 'indexing'))
+from consumption_join import resolve_event
+from retrieve import load_catalog as load_excerpt_catalog
 CATALOG = SKILLS_ROOT / "story-blueprints" / "v4" / "catalog.json"
 DENOM_VERDICTS = ("confirmed", "edited", "dropped", "skip_endorsed",
                   "skip_flipped")
@@ -248,22 +253,30 @@ def sec_consumption(cons: list, out: list):
     variant_counts: Counter = Counter()
     card_counts: Counter = Counter()
     skills: Counter = Counter()
+    source_uids: Counter = Counter()
+    catalog = load_excerpt_catalog()
+    unresolved = []
+    migrated = 0
     for e in cons:
         skills[str(e.get("skill") or "?")] += 1
         for f in e.get("corpus_files") or []:
             file_counts[str(f)] += 1
-        for v in e.get("variants") or []:
-            ms = list(WB_RE.finditer(str(v)))
-            if not ms:
-                variant_counts[f"::??（非 wb 标记）{str(v)[:40]}"] += 1
-            for m in ms:
-                consumed.add((norm_key(m.group(1)), m.group(2)))
-                variant_counts[f"{norm_key(m.group(1))}::{m.group(2)}"] += 1
+        joined = resolve_event(e, catalog)
+        source_uids.update(d['input'] for d in joined['details'] if d['resolution'] == 'uid')
+        unresolved.extend(joined['unresolved'])
+        migrated += sum(d['resolution'].startswith('legacy') for d in joined['details'])
+        for paper, item in joined['resolved']:
+            consumed.add((paper, item))
+            variant_counts[f'{paper}::{item}'] += 1
         for c in e.get("blueprint_cards") or []:
             card_counts[str(c)] += 1
     out.append("")
     out.append(f"事件 {len(cons)} 次（按 skill："
                + "，".join(f"{k}×{v}" for k, v in skills.most_common()) + "）")
+    out.append(f"历史别名回连 {migrated} 项；未解析 {len(unresolved)} 项（不计入未使用判断）。")
+    if source_uids:
+        out.append(f'已解析采用 UID {len(source_uids)} 个（可包含没有 wb 标记的原生条目，不等于 wb 变体数）。')
+    out.extend(f'- 未解析：{v}' for v in unresolved[:10])
     if file_counts:
         out.append("")
         out.append(f"corpus 文件（{len(file_counts)} 个被登记，"
@@ -348,14 +361,9 @@ def scan_corpus_markers() -> dict:
             ms = list(WB_RE.finditer(text))
             if not ms:
                 continue
+            # File creation/mtime does not date a variant added later.
+            # No per-item timestamp is available in the legacy marker contract.
             created = None
-            m = re.search(r"^created:\s*['\"]?(\d{4}-\d{2}-\d{2})",
-                          "\n".join(text.splitlines()[:24]), re.MULTILINE)
-            if m:
-                created = m.group(1)
-            else:
-                created = time.strftime("%Y-%m-%d",
-                                        time.localtime(f.stat().st_mtime))
             try:
                 rel = str(f.relative_to(SKILLS_ROOT))
             except ValueError:
@@ -371,12 +379,14 @@ def sec_prune(cons: list, out: list, lows):
     consumed, _ = sec_consumption(cons, [])  # 复用解析，不重复出 C 节文字
     markers = scan_corpus_markers()
     cutoff = (datetime.now() - timedelta(days=RECENT_DAYS)).strftime("%Y-%m-%d")
-    never = {k: v for k, v in markers.items()
-             if k not in consumed and (v["created"] or "9999") < cutoff}
+    unused = {k: v for k, v in markers.items() if k not in consumed}
+    never = {k: v for k, v in unused.items()
+             if v['created'] and v['created'] < cutoff}
     out.append("")
     out.append(f"语料 wb 变体全集 {len(markers)}；台账窗口内被消耗 "
                f"{len([k for k in markers if k in consumed])}；"
-               f"从未被消耗（排除 {RECENT_DAYS} 天内新建）{len(never)}。")
+               f"窗口内未记录使用 {len(unused)}；有可靠条目日期的旧条目 {len(never)}。")
+    out.append('未记录使用与无价值不是同一指标；条目创建日期未知时，不以文件 created/mtime 推断年龄，不列剪裁候选。')
     if never and not cons:
         # 冷启动保护：消耗台账为空时 never-consumed = 全部旧变体，零判别力，
         # 只报计数不出明细——防止 441 这类数字被误读成剪裁信号。
@@ -404,6 +414,57 @@ def sec_prune(cons: list, out: list, lows):
 
 # ------------------------------------------------------------------ main --
 
+def sec_exemplar_use(uses, out):
+    out.extend(['', '## F. 句段范本观察（按检索编号关联使用与反馈）', ''])
+    states = Counter(e.get('state') for e in uses)
+    out.append('事件次数：' + '；'.join(f'{state}：{states[state]}' for state in
+               ('returned', 'opened', 'adopted', 'author_accepted', 'rejected')))
+    linked = [e for e in uses if e.get('query_id')]
+    legacy = len(uses) - len(linked)
+    returned = {e['query_id'] for e in linked if e.get('state') == 'returned'}
+    observed = {e['query_id'] for e in linked}
+    out.append(f'窗口内有编号的检索：{len(observed)}；有返回记录：{len(returned)}；'
+               f'历史无编号事件：{legacy}（保留，但不补造关联）。')
+    unique = {(e['query_id'], u, e.get('state')) for e in linked
+              for u in e.get('source_uids', [])}
+    counts = Counter(s for _, _, s in unique)
+    out.append('按检索×UID×状态去重：' + '；'.join(f'{s}：{counts[s]}' for s in
+               ('returned', 'opened', 'adopted', 'author_accepted', 'rejected')))
+    from log_exemplar import is_author_evaluation, source_history
+    authors = {e['query_id'] for e in linked if is_author_evaluation(e)}
+    out.append(f'有明确作者评价的检索：{len(authors)}；'
+               f'窗口内有返回、尚无作者评价记录：{len(returned - authors)}。')
+    adopted = {(e['query_id'], u) for e in linked if e.get('state') == 'adopted'
+               for u in e.get('source_uids', [])}
+    opened = {(e['query_id'], u) for e in linked if e.get('state') == 'opened'
+              for u in e.get('source_uids', [])}
+    by_query = {}
+    for event in linked:
+        by_query.setdefault(event['query_id'], []).append(event)
+    histories = {key: source_history(key[1], by_query[key[0]]) for key in adopted}
+    rated = {key for key, history in histories.items() if history['author_status'] != 'unknown'}
+    saved = {(e['query_id'], u) for e in linked if e.get('state') == 'adopted'
+             and e.get('draft', {}).get('sha256') for u in e.get('source_uids', [])}
+    out.append(f'已采用的检索×UID：{len(adopted)}；关联已保存草稿：{len(saved)}；'
+               f'窗口内缺查看记录：{len(adopted - opened)}；作者评价未知：{len(adopted - rated)}。'
+               '窗口外记录与历史漏登不补造。')
+    versions = [version for history in histories.values() for version in history['adoptions']]
+    out.append(f'按采用记录分开的检索×UID×版本：{len(versions)}；'
+               f'作者评价未知版本：{sum(v["author_status"] == "unknown" for v in versions)}。'
+               '旧版评价不延用到新稿；候选评价与草稿评价分别呈现。')
+    reasons = Counter(code for _, _, code in {
+        (e['query_id'], tuple(sorted(e.get('source_uids', []))), e.get('reason_code'))
+        for e in linked if e.get('state') == 'rejected' and e.get('reason_code')})
+    if reasons:
+        from log_exemplar import REASONS
+        out.extend(['', '| 拒绝原因 | 去重记录 | 修正位置 |', '|---|---|---|'])
+        for code, n in sorted(reasons.items()):
+            out.append(f'| {code} | {n} | {REASONS.get(code, "待复核")} |')
+    out.append('采用与作者接受分开记录；未回复保持未知。以上是观察及去重计数，不直接相除为转化率。')
+    out.append('按编号查看完整链：use_exemplar.py show --query-id <编号>；'
+               '低频或未登记使用本身不构成删除语料的依据。')
+
+
 def build_report(days: int, home=None) -> str:
     since = (datetime.now().astimezone()
              - timedelta(days=days)) if days else None
@@ -411,9 +472,10 @@ def build_report(days: int, home=None) -> str:
     ret, b2 = load_events("retrieval", since, home)
     cq, b3 = load_events("corpus_query", since, home)
     cons, b4 = load_events("consumption", since, home)
+    uses, b5 = load_events('exemplar_use', since, home)
     bads = [f"{k}×{n}" for k, n in (("acceptance", b1), ("retrieval", b2),
                                     ("corpus_query", b3),
-                                    ("consumption", b4)) if n]
+                                    ("consumption", b4), ('exemplar_use', b5)) if n]
     out = ["# fitness 策展报告",
            f"生成：{datetime.now():%Y-%m-%d %H:%M} · "
            + ("窗口：全部历史" if not days else f"窗口：近 {days} 天")
@@ -430,6 +492,7 @@ def build_report(days: int, home=None) -> str:
     sec_band(acc, ret, out)
     out.append("")
     sec_prune(cons, out, lows)
+    sec_exemplar_use(uses, out)
     if cq:
         out.append("")
         out.append(f"附：选材 Gate 查询 {len(cq)} 次"

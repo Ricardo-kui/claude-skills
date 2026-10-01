@@ -6,7 +6,7 @@
 > **锚点** = `corpus/<文件名>#变体-<变体号>`（脚本自定义片段，指向 `### 变体 <N>` 标题；`--verify` 断言该标题存在）。
 > 状态列：`verbatim` = 逐字底本（与源卡片逐字一致，不得改写/拼接/补全）；`模板` = 填槽骨架（不可当逐字底本引用）。
 
-条目：verbatim 5 条 / 模板 7 条。
+条目：verbatim 7 条 / 模板 7 条。
 
 ## Verbatim 底本
 
@@ -17,6 +17,8 @@
 | `experiments#3` | R3 | li_chiu_kong_cropanzano_ho_2026_jom | Supporting Hypothesis 1, the interactive effect of CEO achievement expression and mortality salience on agentic leader stereotypes was positive (B = .28, SE = .12, p = .024; see Figure 2). Simple slope analysis indicated that the effect of CEO achievement expression on agentic leader stereotypes was positive when mortality salience was higher (B = .248, SE = .088, p = .005), but nonsignificant when mortality salience was lower (B = −.034, SE = .088, p = .696). | `corpus/实验.md#变体-3` | verbatim |
 | `experiments#4` | R3/R4 | Ilicic_Brennan_2026_JM | As predicted, a significant interaction between political ideology and threat appeal was found (F(2, 433) = 11.89, p < .001, η² = .052). Post hoc comparisons revealed that conservatives (compared with liberals) reported a more favorable attitude toward smoking/vaping when the threat appeal was absent (F(1, 137) = 30.11, p < .001, η² = .180) and when a nonpersonally directed threat appeal was present (F(1, 142) = 17.46, p < .001, η² = .109). | `corpus/实验.md#变体-4` | verbatim |
 | `experiments#5` | R8 | Ilicic_Brennan_2026_JM | To verify the causal ordering of variables, we conducted a second serial mediation analysis reversing the order of the mediators (Fairchild and McDaniel 2017), testing whether political ideology was associated with perceived product danger (M1), which in turn was associated with sense of agency (M2), and subsequently with gambling severity. The results showed that the 95% bootstrapped CI for the indirect effect of political ideology on gambling severity included zero (effect = −.01, SE = .001, 95% CI = [−.01,.01]), indicating no significant serial mediation effect. | `corpus/实验.md#变体-5` | verbatim |
+| `experiments#6.a` | 通用 | raithel_2024_product_recall_effectiveness_and_consumers_part | Most importantly, the index of moderated mediation was only significant for perceived benefits (95% CI: 0.011, 0.330) and self-efficacy (95% CI: 0.032, 0.266), indicating that the effect of remedy on participation likelihood is not only mediated by perceived benefits and self-efficacy but also moderated by reputation, supporting H7a and H7b. | `corpus/实验.md#变体-6` | verbatim（原文锚定节） |
+| `experiments#7.a` | 通用 | raithel_2024_product_recall_effectiveness_and_consumers_part | Recalls with high incident likelihood directionally achieved higher recall effectiveness (M_high=5.05, SD=1.84 vs. M_low=4.74, SD=1.88; F(1,369)=2.97, p=0.101, d=0.17). In line with the secondary data (Study 1), H2 is not supported. | `corpus/实验.md#变体-7` | verbatim（原文锚定节） |
 
 ## 填槽模板
 

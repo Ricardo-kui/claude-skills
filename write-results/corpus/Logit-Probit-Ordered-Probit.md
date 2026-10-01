@@ -452,6 +452,71 @@ updated: 2026-08-13
 <!-- wb:hoffmann_cheong_phan_zurbruegg2024_jm:legacy_Logit-Probit-Ordered-Probit_15 -->
 
 ### 变体 16: R7 替代解释 — CONTROL + INTERACT 两步 + need/willingness 收束（2026-08-05）
+<!-- retrieval-move:
+{
+  "functions": [
+    "results.robustness_alternative_explanation"
+  ],
+  "definitions": [
+    {
+      "id": "results.robustness_alternative_explanation",
+      "label": "用检验回应特定替代解释",
+      "section": "results",
+      "refines": "results.robustness",
+      "definition": "命名一个也可能生成观察结果的实质解释，说明针对它的检验及结果如何改变该解释的可信度。",
+      "use_when": [
+        "替代解释有清楚的生成路径与可诊断含义，检验实际针对该路径。",
+        "解释结论强度与测量和设计一致；仅相关控制或非显著交互不足以彻底排除机制。"
+      ],
+      "neighbors": [
+        {
+          "id": "results.robustness_identification_threat",
+          "distinction": "识别威胁直接挑战估计关系的可信度；替代解释强调同一结果的不同实质生成过程，两者可相交但须说明路径。"
+        },
+        {
+          "id": "results.robustness_measurement_sensitivity",
+          "distinction": "更换测量检验口径敏感性，本身未必裁决实质机制。"
+        }
+      ],
+      "positive_example": {
+        "kind": "verbatim",
+        "cue": "a lower need for recalls instead of reflecting a lower willingness",
+        "why": "Hoffmann 的收束句明确区分产品问题减少与管理者召回意愿降低；移植时须重定证据强度。"
+      },
+      "mismatch_example": {
+        "kind": "illustrative",
+        "text": "把金额指标换成占比指标后，系数方向相同。",
+        "why": "这是测量口径敏感性检查，没有提出另一条实质解释。",
+        "actual_function": "results.robustness_measurement_sensitivity"
+      },
+      "aliases": [
+        "排除某项替代解释",
+        "回应特定替代解释",
+        "rival explanation test"
+      ],
+      "review_cases": [
+        "R08",
+        "R09"
+      ]
+    }
+  ],
+  "position": "基线结果之后，补充分析回应替代过程的位置",
+  "prerequisite": "按本块 definitions 的 use_when 核对当前需求与研究事实。",
+  "next": "按检验实际信息限定替代解释的可信度。",
+  "applicability": {
+    "evidence": [
+      "observational",
+      "alternative_explanation_test"
+    ],
+    "claim_scope": [
+      "limited_conclusion"
+    ],
+    "required_facts": {
+      "targeted_alternative": true
+    }
+  }
+}
+-->
 **来源论文**: Hoffmann, Cheong, Phan & Zurbruegg 2024 (Journal of Marketing)
 **原始句锚点**: That is, it is unlikely that the documented effect of the reduced threat of managers being sued by shareholders on firms' likelihood to recall is an artefact of a lower need for recalls instead of reflecting a lower willingness of managers to recall.
 **验证状态**: EMERGING（单篇）
@@ -543,6 +608,37 @@ updated: 2026-08-13
 
 <!-- wb:mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate:r7_alternative_choice_swap_inferences_hold -->
 <!-- wb-meta: gap=Incompleteness status=EMERGING -->
+<!-- retrieval-move:
+{
+  "functions": [
+    "results.robustness_identification_threat"
+  ],
+  "function_evidence": {
+    "results.robustness_identification_threat": {
+      "kind": "verbatim",
+      "cue": "regardless of the method used to mitigate endogeneity in strategic emphasis",
+      "why": "替换针对内生性的修正方法并报告结论一致，未把方法一致等同识别充分。"
+    }
+  },
+  "function_support": {
+    "results.robustness_identification_threat": "complete"
+  },
+  "position": "主修正法之后的替代修正检验",
+  "prerequisite": "替代方法针对同一内生性路径，且相应假设与推断适用于当前分析。",
+  "next": "报告替代估计结果及两种方法共同依赖的前提。",
+  "advances": "检验结论是否依赖一项修正选择。",
+  "next_evidence": [
+    "偏误路径与方法对应关系",
+    "实际替代结果与假设"
+  ],
+  "applicability": {
+    "required_facts": {
+      "endogeneity_mitigation_compared": true
+    }
+  }
+}
+-->
+
 
 ### 变体 23: R8 post-hoc 机制代理另 DV（限 aligns with） (2026-08-13)
 **来源论文**: Lun, Zurbruegg, Mount & Cheong 2026 (Entrepreneurship Theory and Practice)
@@ -627,6 +723,71 @@ updated: 2026-08-13
 
 <!-- wb:liu_liu_luo_2016_jm:legacy_Logit-Probit-Ordered-Probit_28 -->
 ### 变体 29: R7 水平 vs 比例测量 (2026-08-13)
+<!-- retrieval-move:
+{
+  "functions": [
+    "results.robustness_measurement_sensitivity"
+  ],
+  "definitions": [
+    {
+      "id": "results.robustness_measurement_sensitivity",
+      "label": "说明结论对测量口径的敏感性",
+      "section": "results",
+      "refines": "results.robustness",
+      "definition": "在构念含义可比较的前提下报告替代测量后的结果，说明焦点结论是否依赖某一操作化。",
+      "use_when": [
+        "替代口径与原口径的共同构念及差别明确，报告真实的一致或分歧。",
+        "比较相应方向、幅度和不确定性；若口径改变了构念子域或估计对象，先限明可比范围。"
+      ],
+      "neighbors": [
+        {
+          "id": "results.robustness_alternative_explanation",
+          "distinction": "测量替换本身不提供新实质机制的裁决，除非有独立的诊断理由。"
+        },
+        {
+          "id": "results.mixed_synthesis",
+          "distinction": "替代口径间结果分裂时转入混合发现，不能继续写不敏感。"
+        }
+      ],
+      "positive_example": {
+        "kind": "verbatim",
+        "cue": "when they are measured as proportions",
+        "why": "Liu 的原句明确把水平与比例测量的对比接到 separate analysis 和 fairly consistent results。"
+      },
+      "mismatch_example": {
+        "kind": "illustrative",
+        "text": "核心操作化显著，但同构念的另外三项测量不显著，证据呈混合状态。",
+        "why": "这是需要披露的分歧，不能作为测量不敏感的正例。",
+        "actual_function": "results.mixed_synthesis"
+      },
+      "aliases": [
+        "说明结论对测量口径不敏感",
+        "测量口径敏感性",
+        "measurement sensitivity"
+      ],
+      "review_cases": [
+        "R07",
+        "R08"
+      ]
+    }
+  ],
+  "position": "焦点结果之后，替代口径结果的比较位置",
+  "prerequisite": "按本块 definitions 的 use_when 核对当前需求与研究事实。",
+  "next": "结论相似则限明一致范围，分歧则进入混合发现。",
+  "applicability": {
+    "evidence": [
+      "measurement_sensitivity",
+      "observational"
+    ],
+    "claim_scope": [
+      "measurement_robustness"
+    ],
+    "required_facts": {
+      "comparable_operationalizations": true
+    }
+  }
+}
+-->
 **来源论文**: Liu, Liu & Luo 2016 (*Journal of Marketing*)
 **原始句锚点**: "Nevertheless, to check the potential impact of cash versus equity incentives when they are measured as proportions, we conducted a separate analysis and found fairly consistent results."
 **验证状态**: EMERGING
@@ -771,6 +932,72 @@ updated: 2026-08-13
 
 
 ### 变体 Z: R6 构念家族混合证据 — mixed 标题拍+核心显著+辅助 null 全披露 (gulati1999 型)
+<!-- retrieval-move:
+{
+  "functions": [
+    "results.mixed_synthesis"
+  ],
+  "definitions": [
+    {
+      "id": "results.mixed_synthesis",
+      "label": "整合不同检验的混合发现",
+      "section": "results",
+      "refines": "results.mixed",
+      "definition": "将同一理论承诺下的各项检验逐一对应到支持与未支持部分，给出一次范围明确的总体证据判断。",
+      "use_when": [
+        "多个检验确实服务同一构念或理论承诺，且各自对象和差异可说明。",
+        "先兑现主规格的报告责任，再集中交代例外；解释分歧须有理论或设计依据，不补造事后机制。"
+      ],
+      "neighbors": [
+        {
+          "id": "results.hypothesis_not_supported",
+          "distinction": "单一检验未支持不自动构成混合发现；混合判断要交代各项结果的对应关系。"
+        },
+        {
+          "id": "results.robustness_measurement_sensitivity",
+          "distinction": "若替代测量均相似，可报告不敏感；存在分裂时保留混合判断。"
+        }
+      ],
+      "positive_example": {
+        "kind": "verbatim",
+        "cue": "show mixed results",
+        "why": "Gulati 的摘录把核心经验测量与另外三项测量的 null 同时披露；这是跨段拼接，省略号保留。"
+      },
+      "mismatch_example": {
+        "kind": "illustrative",
+        "text": "H1不显著，所以本研究全部假设只得到部分支持。",
+        "why": "从单项结果跳到全研究裁决，没有逐项说明支持与未支持的关系。",
+        "actual_function": "results.hypothesis_not_supported"
+      },
+      "aliases": [
+        "解释不同检验之间的混合发现",
+        "整合混合发现",
+        "mixed evidence synthesis"
+      ],
+      "review_cases": [
+        "R07",
+        "R10"
+      ]
+    }
+  ],
+  "position": "各项相关检验报告之后或构念子节开场定调位置",
+  "prerequisite": "按本块 definitions 的 use_when 核对当前需求与研究事实。",
+  "next": "将支持与未支持的范围合并为一次总体判断。",
+  "applicability": {
+    "evidence": [
+      "mixed_findings",
+      "observational"
+    ],
+    "claim_scope": [
+      "hypothesis_support",
+      "limited_conclusion"
+    ],
+    "required_facts": {
+      "same_construct_family_tests": true
+    }
+  }
+}
+-->
 **来源论文**: Gulati 1999 (Strategic Management Journal, 20(5), 397-420)
 **原始句锚点**: "The results for the influence of alliance formation capabilities on subsequent alliances show mixed results. ... While past experience with alliances was significant, no significant results were obtained from three additional measures of alliance capabilities that assessed the diversity of alliances each firm had previously entered and the time duration since it last entered an alliance (results not reported here)."（跨段拼接，省略号标注）
 **验证状态**: VERIFIED — expert_audit_override (user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED; paper_count=1)
@@ -799,6 +1026,37 @@ updated: 2026-08-13
 **区别于**: 变体 X（R2 相关替代测量分模型括弧——事先声明的各进独立模型架构）；变体 Z 的估计器可信度强化拍（估计质量自证）——本变体是判决后的测量构念效度外部同调证词+替代测量一行复证 coda。
 
 <!-- wb:gulati_1999_where_do_interorganizational_networks:r3_construct_validity_congruence_coda -->
+<!-- retrieval-move:
+{
+  "functions": [
+    "results.robustness_measurement_sensitivity"
+  ],
+  "function_evidence": {
+    "results.robustness_measurement_sensitivity": {
+      "kind": "verbatim",
+      "cue": "Our alternative measure for interdependence, using membership in the clusters corroborated by industry experts, yielded similar results",
+      "why": "同一构念的专家确认替代测量与原指标对照并明确报告相似结果。"
+    }
+  },
+  "function_support": {
+    "results.robustness_measurement_sensitivity": "complete"
+  },
+  "position": "主结果判决之后或测量敏感性段",
+  "prerequisite": "两种口径衡量同一可比较构念；相似程度按实际方向、幅度和不确定性判断。",
+  "next": "列出替代口径结果，并限定可比较范围。",
+  "advances": "说明焦点结论是否依赖单一操作化。",
+  "next_evidence": [
+    "两种测量的共同构念与差别",
+    "替代估计的实际结果"
+  ],
+  "applicability": {
+    "required_facts": {
+      "comparable_measurement_tested": true
+    }
+  }
+}
+-->
+
 
 
 ### 变体 AS: R3 构念子节系数→假设映射判决 — likelihood 方向拍+判决措辞轮换+构念级理论收尾（probit 无幅度版） (2026-09-23)
@@ -896,6 +1154,37 @@ updated: 2026-08-13
 **区别于**: 变体 Y（控制变量衰减的理论重读——跨嵌套模型解释消去）；变体 Z（构念家族 mixed 证据——mixed 标题拍）；变体 P（四格设计 null 格确认——组间比较）；本变体是主假设 null 的序列位置学（首位 pivot）+ 权变化收束。
 
 <!-- wb:gulati_westphal_1999_cooperative_or_controlling:r6_null_main_effect_contingency_synthesis -->
+<!-- retrieval-move:
+{
+  "functions": [
+    "results.null_caution"
+  ],
+  "function_evidence": {
+    "results.null_caution": {
+      "kind": "verbatim",
+      "cue": "such ties may either increase or decrease the likelihood of alliance formation, depending on the nature of the CEO-director relationship",
+      "why": "未支持无条件关系后，用实际条件关系限制结论，避免由聚合非显著推断关系不存在。"
+    }
+  },
+  "function_support": {
+    "results.null_caution": "complete"
+  },
+  "position": "非显著基线与条件结果均报告之后的收束",
+  "prerequisite": "条件关系已实际检验；原句跨段拼接已标省略号，需读其上下文。",
+  "next": "将结论限制在所检验的关系内容和条件。",
+  "advances": "说明无条件非显著不能概括已有条件发现。",
+  "next_evidence": [
+    "无条件与条件检验的对应结果",
+    "原文跨段上下文"
+  ],
+  "applicability": {
+    "required_facts": {
+      "conditional_effects_tested": true
+    }
+  }
+}
+-->
+
 
 
 ### 变体 AE: R4 对称放大调节镜像判决句 — 单 moderator 同向放大异号双主效应 (gulati_westphal_1999 型)
@@ -1003,6 +1292,31 @@ updated: 2026-08-13
 **区别于**: 变体 AD（null 主假设是答案一半的首位 pivot——权变即核心结论）；变体 AB（虚拟变量显著≠斜率异质性的概念区分拍）；本变体处理已获支持的调节假设内部的 null 分量，功能是坦白+边界标注而非翻案或概念澄清。
 
 <!-- wb:gulati_1999_where_do_interorganizational_networks:r6_null_component_significant_interaction_candor -->
+
+<!-- retrieval-move:
+{
+  "functions": ["results.null_caution"],
+  "function_evidence": {
+    "results.null_caution": {
+      "kind": "verbatim",
+      "cue": "although this tendency is not strong enough to make the difference in centrality statistically significant during the period of observation",
+      "why": "原句承认主效应非显著，指出交互显著，并把主效应证据强度限定到观察期；未把非显著翻成存在无条件效应，也未虚构低功效解释。"
+    }
+  },
+  "function_support": {"results.null_caution": "complete"},
+  "position": "已报告交互检验之后，坦白非显著分量并限定该观察期的解释范围。",
+  "prerequisite": "主效应非显著且相关交互确实获支持；观察期限定来自当前证据。原句是同段省略拼接，改编前须查看完整上下文并保留主效应与交互的区分。",
+  "advances": "同时保留主效应未获支持与条件性发现，避免把观察期内非显著推广成机制在全部条件下不存在。",
+  "next": "仅在已检验条件范围内解释交互；可选机制推测保留 may 等措辞并与实测结果分开。",
+  "next_evidence": ["主效应与交互的实际估计和支持判断", "当前观察期及条件范围"],
+  "applicability": {
+    "required_facts": {
+      "supported_interaction": true,
+      "observation_scope_limited": true
+    }
+  }
+}
+-->
 
 
 ### 变体 AL: R7 曲线形式脚注稳健性 — 差异化发现+线性不受影响+简约保留裁决 (gulati_ajs1999 型)

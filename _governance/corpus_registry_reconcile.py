@@ -4,14 +4,14 @@
 定位
 ----
 维护期对账门（与 ``_shared/indexing/check_all.py`` 同类：运行期写作路径不引用）。
-check_all.py 覆盖的是「骨架索引 ↔ corpus」，且 SKILLS 列表只有 write-results /
-write-methods / write-theory；本脚本补的是它没有的那个面：
-**「注册表/治理台账 ↔ corpus」**，并把 write-introduction 纳入。
+check_all.py 覆盖四节的骨架索引与 corpus；本脚本检查
+**「注册表/治理台账 ↔ corpus」**。
 
 对账口径
 --------
-以 corpus/ 目录的实际文件为唯一事实源（`discover_assets` 直接 rglob 扫盘），
-反向检查登记侧的三类偏差：
+Introduction 的资产对账以 corpus/ 文件为事实源（`discover_assets` rglob 扫盘），
+反向检查登记侧的三类偏差。另对四节执行 wb 标记派生注册表的 dry-run，
+存在派生差异即失败；这不等于四节所有自由文本来源都已校验。
 
 - MISSING_IN_REGISTRY  corpus 有、注册表无  → 新蒸馏漏登记
 - GHOST_IN_REGISTRY   注册表有、corpus 无  → 重命名收尾未清旧键
@@ -38,6 +38,8 @@ pyyaml。若当前解释器缺 pyyaml，请用受管 venv 解释器运行。
 from __future__ import annotations
 
 import argparse
+import contextlib
+import io
 import json
 import sys
 from pathlib import Path
@@ -157,13 +159,25 @@ def reconcile_intro(res: Result) -> None:
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--skill", action="append", help="限定技能名（可重复）；缺省跑已接入的全部")
+    ap.add_argument("--skill", action="append", choices=['write-introduction','write-theory','write-methods','write-results'], help="限定技能名（可重复）；缺省跑已接入的全部")
     ap.add_argument("--json", action="store_true", help="以 JSON 输出")
     args = ap.parse_args(argv)
 
     res = Result("write-introduction")
     if not args.skill or "write-introduction" in args.skill:
         reconcile_intro(res)
+    sys.path.insert(0, str(REPO / 'distill-paper-exemplar' / 'scripts'))
+    from rebuild_apply import apply_corpus
+    for section in ('introduction', 'theory', 'methods', 'results'):
+        skill = f'write-{section}'
+        if args.skill and skill not in args.skill:
+            continue
+        result = Result(skill)
+        with contextlib.redirect_stdout(io.StringIO()):
+            notes = apply_corpus(section, dry_run=True)
+        result.add('REGISTRY_DRIFT' if notes else 'INFO',
+                   f'{skill}: wb 标记与注册表派生字段对账，{len(notes)} 项漂移', notes or None)
+        res.rows.extend(result.rows)
 
     if args.json:
         print(json.dumps({"rows": res.rows}, ensure_ascii=False, indent=2))

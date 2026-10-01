@@ -484,6 +484,21 @@ verification_status: VERIFIED — expert_audit_override (Gulati 系单源裁定 
 story_fidelity: section_variant
 sentence_position: hypothesis
 -->
+<!-- retrieval-move:
+{
+  "functions": [],
+  "position": "配对事件概率主效应的假设收敛句",
+  "prerequisite": "分析单元是配对，结果为离散事件概率，自变量在配对层面定义。",
+  "next": "数据与模型保持同一配对单元和事件概率口径。",
+  "applicability": {
+    "required_facts": {
+      "dyadic_unit": true,
+      "event_probability_outcome": true,
+      "dyadic_predictor": true
+    }
+  }
+}
+-->
 
 **句位**: 假设句位——DV 是两个行动者之间的离散事件（tie formation、交易缔结、并购发生）时的主效应假设。
 
@@ -858,6 +873,38 @@ how [X] may influence [Y]:"
 
 **原文锚点** (Wowak et al. 2025, Management Science "The Politics of Product Safety: Top Management Team Political Ideology and Serious Medical Product Recalls"):
 > "Hypothesis 1(a). There is a negative relationship between top management team liberalism and the count of recalls." ... "Hypothesis 1(b). There is a positive relationship between top management team liberalism and the count of recalls."
+<!-- retrieval-move:
+{
+  "functions": [
+    "theory.competing_predictions"
+  ],
+  "function_evidence": {
+    "theory.competing_predictions": {
+      "kind": "verbatim",
+      "cue": "Hypothesis 1(b). There is a positive relationship between top management team liberalism and the count of recalls",
+      "why": "同一解释变量与结果的正负假设形成明确竞争对；两方机制须由前文承担。"
+    }
+  },
+  "function_support": {
+    "theory.competing_predictions": "complete"
+  },
+  "position": "两套机制推导之后的竞争假设收敛处",
+  "prerequisite": "前文已充分推导两套可信机制，预测对象与尺度一致。",
+  "next": "保持竞争对编号，并移交能够区分两方的检验。",
+  "advances": "把两套解释明确落实为相反预测。",
+  "next_evidence": [
+    "两方机制推导",
+    "同一结果与作用域的检验"
+  ],
+  "applicability": {
+    "required_facts": {
+      "competing_mechanisms_developed": true,
+      "prediction_scope_aligned": true
+    }
+  }
+}
+-->
+
 
 ### 单一非定向调节（Nondirectional Competing Moderator）
 <!-- wb:kalaignanametal2013 -->

@@ -12,6 +12,8 @@ Diagnose the theory-building problem, choose the correct architecture, and produ
 
 ## Intake
 
+**句段范本检索**：逐句/逐段选范本前读取 `../_shared/exemplar-retrieval.md`，用 `../_shared/indexing/use_exemplar.py query` 同时查询研究内容、当前句子功能与已知设计条件，自动保留本次检索编号。比较 top 3 的六栏改编卡，核对句段的承接、推进、后续证据以及分别呈现的适用性和来源状态后再改编；无可用候选时说明缺口并回查原生索引。改编前用共享协议的 `open` 实际读源卡与原文上下文；保存改编稿用 `write/adopt` 统一登记采用和消耗，关联编号、真实 UID 与草稿指纹。已登记的版本不另记一次；收到对范本匹配或本次改编的明确评价时，按共享协议的 `feedback` 关联实际采用与草稿版本，未评价的版本保持未知。
+
 Collect the core constructs, theoretical lens, intended contribution, level of analysis, empirical setting, and any Introduction contribution contract. If `paper-state.yaml` exists, validate its canonical `story` first; use legacy Introduction story fields only through the migration map in the sibling `paper-story-contract` skill.
 
 ## Story gate

@@ -47,9 +47,11 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import json
 import re
 import sys
 from dataclasses import dataclass, field
+from collections import Counter
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -387,7 +389,17 @@ class Block:
     src_field: str | None = None
     func: str = ""
     verbatim: list[str] = field(default_factory=list)
+    verbatim_citekeys: dict[str, str] = field(default_factory=dict)
     templates: list[str] = field(default_factory=list)
+
+
+def add_verbatim(block: Block, quotes: list[str], field_line: str = "") -> None:
+    """An explicit field-level citekey binds only the excerpts in that field."""
+    match = re.search(r"citekey\s*=\s*([A-Za-z0-9_\-]+)", field_line)
+    block.verbatim.extend(quotes)
+    if match:
+        for quote in quotes:
+            block.verbatim_citekeys[normalize(quote)] = match.group(1)
 
 
 def finalize_block(b: Block, branch: str, relpath: str,
@@ -415,7 +427,8 @@ def finalize_block(b: Block, branch: str, relpath: str,
     for k, seg in enumerate(b.verbatim):
         suffix = chr(ord("a") + k)
         entries.append(Entry(
-            id=f"{base}.{suffix}", func=func, citekey=citekey, status=status,
+            id=f"{base}.{suffix}", func=func,
+            citekey=b.verbatim_citekeys.get(normalize(seg), citekey), status=status,
             kind="verbatim", text=normalize(seg),
             anchor=f"{relpath}#{_anchor_for(b, branch)}",
             heading=b.heading, file=relpath))
@@ -544,7 +557,15 @@ def _bind_variant_ids(lines: list[str], block_starts: list[int],
     bound: dict[int, dict] = {}
     for pc in pcomments:
         idx = pc["idx"]
+        prev_hdr = next((h for h in reversed(all_headers) if h < idx), None)
         next_hdr = next((h for h in all_headers if h > idx), len(lines))
+        # Metadata immediately inside a heading belongs to that block. The
+        # historical tail-wb heuristic skipped these blocks and stole the next
+        # framework's identity/source.
+        if prev_hdr in block_starts and not any(
+                s.strip() for s in lines[prev_hdr + 1:idx]):
+            bound[prev_hdr] = pc
+            continue
         post = None
         for w in wb_lines:
             if idx < w["idx"] < next_hdr and _same_token(w["pattern"], pc["pid"]):
@@ -643,11 +664,10 @@ def parse_variants(relpath: str, registry: dict[str, str],
                 inline = fm.group(1).strip()
                 if inline:
                     qs, j = _extract_verbatim_inline(lines, j, inline, end)
-                    cur.verbatim += qs
+                    add_verbatim(cur, qs, s)
                 elif j + 1 < end and lines[j + 1].strip().startswith(">"):
                     bq = _read_blockquote(lines, j + 1)
-                    for q in extract_quotes(bq["text"]):
-                        cur.verbatim.append(q)
+                    add_verbatim(cur, extract_quotes(bq["text"]), s)
                     j = bq["end"] + 1
                     continue
                 j += 1
@@ -770,10 +790,10 @@ def parse_variants_branch4(relpath: str, registry: dict[str, str],
             inline = fm.group(1).strip()
             if inline:
                 qs, i = _extract_verbatim_inline(lines, i, inline, len(lines))
-                cur.verbatim += qs
+                add_verbatim(cur, qs, s)
             elif i + 1 < len(lines) and lines[i + 1].strip().startswith(">"):
                 bq = _read_blockquote(lines, i + 1)
-                cur.verbatim += extract_quotes(bq["text"])
+                add_verbatim(cur, extract_quotes(bq["text"]), s)
                 i = bq["end"] + 1
                 continue
             i += 1
@@ -851,45 +871,10 @@ def parse_subprotocols(relpath: str, registry: dict[str, str],
         if m:
             block_starts.append((j, m.group(1).strip(), "###"))
 
-    def block_content_has_gap(start: int, end: int) -> bool:
-        for j in range(start, end):
-            s = lines[j]
-            if "wb-meta:" in s or s.strip().startswith("**band**"):
-                return True
-        return False
-
     # --- 阶段二：pattern_id 注释绑定到块 ---
-    # 规则：
-    #   1) 若注释后（到下一块边界/文末）出现同 token 的 wb 注释 → 后置约定，绑到
-    #      最近的前一个块（注释所在块）。
-    #   2) 否则为前置约定，绑到最近的下一个非 gap 块。
-    bound: dict[int, dict] = {}   # block_start_line -> pcomment
+    # 与变体轴共用标题内/前置/后置元数据绑定纪律。
     starts = [s[0] for s in block_starts]
-    for pc in pcomments:
-        idx = pc["idx"]
-        # 找注释后的下一个 wb（同 token 判定）是否在下一块边界之前
-        next_block = next((s for s in starts if s > idx), len(lines))
-        post_anchor = None
-        for w in wb_lines:
-            if idx < w["idx"] < next_block and _same_token(w["pattern"], pc["pid"]):
-                post_anchor = w
-                break
-        if post_anchor is not None:
-            # 绑到最近前一个块
-            prev = [s for s in starts if s < idx]
-            if prev:
-                target = prev[-1]
-                bound[target] = pc
-        else:
-            # 绑到最近下一个非 gap 块
-            for k, s0 in enumerate(starts):
-                if s0 <= idx:
-                    continue
-                end = next((h for h in all_headers if h > s0), len(lines))
-                if block_content_has_gap(s0, end):
-                    continue
-                bound[s0] = pc
-                break
+    bound = _bind_variant_ids(lines, starts, all_headers, pcomments, wb_lines)
 
     # --- 阶段三：逐块解析 ---
     for bi, (start, title, level) in enumerate(block_starts):
@@ -931,10 +916,10 @@ def parse_subprotocols(relpath: str, registry: dict[str, str],
                 inline = fm.group(1).strip()
                 if inline:
                     qs, j = _extract_verbatim_inline(lines, j, inline, end)
-                    cur.verbatim += qs
+                    add_verbatim(cur, qs, s)
                 elif j + 1 < end and lines[j + 1].strip().startswith(">"):
                     bq = _read_blockquote(lines, j + 1)
-                    cur.verbatim += extract_quotes(bq["text"])
+                    add_verbatim(cur, extract_quotes(bq["text"]), s)
                     j = bq["end"] + 1
                     continue
                 j += 1
@@ -1055,10 +1040,10 @@ def parse_sentences(relpath: str, registry: dict[str, str],
             inline = fm.group(1).strip()
             if inline:
                 qs, i = _extract_verbatim_inline(lines, i, inline, len(lines))
-                cur.verbatim += qs
+                add_verbatim(cur, qs, s)
             elif i + 1 < len(lines) and lines[i + 1].strip().startswith(">"):
                 bq = _read_blockquote(lines, i + 1)
-                cur.verbatim += extract_quotes(bq["text"])
+                add_verbatim(cur, extract_quotes(bq["text"]), s)
                 i = bq["end"] + 1
                 continue
             i += 1
@@ -1253,6 +1238,30 @@ def _target_name(relpath: str, branch: str) -> str:
     return f"{prefix}-{stem}.md"
 
 
+def assign_unique_ids(entries: list[Entry]) -> list[dict]:
+    """Keep unambiguous IDs; disambiguate collisions with source/block/content.
+
+    A legacy alias can have several targets. The caller must supply its source
+    file and excerpt fingerprint, rather than silently choose the first one.
+    """
+    counts = Counter(e.id for e in entries)
+    aliases, used = [], set()
+    for e in entries:
+        old = e.id
+        if counts[old] > 1:
+            fingerprint = hashlib.sha256(
+                "\0".join((e.file, e.heading, e.kind, normalize(e.text))).encode("utf-8")
+            ).hexdigest()[:12]
+            e.id = f"{old}~{fingerprint}"
+            aliases.append({"legacy_id": old, "id": e.id, "source_file": e.file,
+                            "anchor": e.anchor, "text_sha256": hashlib.sha256(
+                                normalize(e.text).encode("utf-8")).hexdigest()})
+        if e.id in used:
+            raise ValueError(f"duplicate excerpt identity: {e.file} {e.id}")
+        used.add(e.id)
+    return aliases
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--check", action="store_true")
@@ -1271,6 +1280,7 @@ def main(argv: list[str] | None = None) -> int:
     all_unparsed: list[Unparsed] = []
     routes: list[dict] = []
     rendered: dict[str, str] = {}
+    pending: list[tuple] = []
 
     # ---- variants ----
     for fam, (rel, branch) in VARIANT_FILES.items():
@@ -1283,8 +1293,8 @@ def main(argv: list[str] | None = None) -> int:
         all_entries += entries
         all_unparsed += unparsed
         target = _target_name(rel, "variants4" if branch == "branch4" else "variants")
-        _emit(rendered, routes, target, entries, unparsed, rpath,
-              f"{fam}（{VARIANT_NAMES.get(fam, '')}）", "variants")
+        pending.append((target, entries, unparsed, rpath,
+                        f"{fam}（{VARIANT_NAMES.get(fam, '')}）", "variants"))
 
     # ---- subprotocols ----
     for rel in SUBPROTOCOL_FILES:
@@ -1294,8 +1304,7 @@ def main(argv: list[str] | None = None) -> int:
         all_entries += entries
         all_unparsed += unparsed
         target = _target_name(rel, "subprotocols")
-        _emit(rendered, routes, target, entries, unparsed, rpath,
-              Path(rel).stem, "subprotocols")
+        pending.append((target, entries, unparsed, rpath, Path(rel).stem, "subprotocols"))
 
     # ---- sentences ----
     for rel in SENTENCE_FILES:
@@ -1305,8 +1314,11 @@ def main(argv: list[str] | None = None) -> int:
         all_entries += entries
         all_unparsed += unparsed
         target = _target_name(rel, "sentences")
-        _emit(rendered, routes, target, entries, unparsed, rpath,
-              Path(rel).stem, "sentences")
+        pending.append((target, entries, unparsed, rpath, Path(rel).stem, "sentences"))
+
+    aliases = assign_unique_ids(all_entries)
+    for item in pending:
+        _emit(rendered, routes, *item)
 
     nv_total = sum(1 for e in all_entries if e.kind == "verbatim")
     nt_total = sum(1 for e in all_entries if e.kind == "模板")
@@ -1391,6 +1403,9 @@ def main(argv: list[str] | None = None) -> int:
     eng.write_skeleton(SKELETON, rendered,
                        render_index(routes, len(all_unparsed)),
                        render_unparsed(all_unparsed))
+    (SKELETON / "_id_aliases.json").write_text(
+        json.dumps({"schema_version": 1, "aliases": aliases}, ensure_ascii=False, indent=2)
+        + "\n", encoding="utf-8", newline="\n")
     return counts
 
 

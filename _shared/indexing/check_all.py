@@ -1,17 +1,22 @@
 #!/usr/bin/env python3
-"""维护期漂移门：三个 write-* 骨架索引的「重生成 == 已提交内容」回归检查。
+"""维护期漂移门：四节原生索引、检索视图与来源绑定回归。
+
+默认重生成后比对 Git 暂存区；--worktree 比对运行前的当前文件内容
+（忽略 CRLF/LF 差异），无需把授权修改暂存。两种模式都会重写派生索引。
+function-map 仅验证可达与非空；检索质量另见 _governance/exemplar-retrieval。
+引用完整性门只覆盖归档来源特征行及 .sentences.md 引用，不覆盖全部内链。
 
 门语义（先读再用）
 ------------------
-对 write-results / write-methods / write-theory 依序执行：
+对 write-results / write-methods / write-theory / write-introduction 依序执行：
 
 1. 运行 ``python scripts/build_indices.py --verify``（会重写 ``corpus/_skeleton/``，
    与手工重建同一效果），断言 exit 0 且 SUMMARY 行 ``mismatch=0 anchor_miss=0``；
 2. **blob 哈希门**：``git hash-object``（工作树）逐文件比对 ``git rev-parse :path``
-   （已提交索引）——全部相等即「生成物与提交内容逐字节一致」。不用
+   （Git暂存区）——全部相等即「生成物与暂存内容逐字节一致」。不用
    ``git status``：autocrlf 下 LF 工作树文件会出现内容相同却报 M 的幻影；
 3. 串联 ``validate_write_methods.py`` / ``validate_write_results.py``（exit 0）。
-4. **覆盖对账**（theory/results）：(a) 登记检查——corpus 内容文件必须登记在适配器
+4. **覆盖对账**（methods 登记；theory/results 登记与内容覆盖）：(a) 登记检查——corpus 内容文件必须登记在适配器
    解析清单（FAMILIES/VARIANT_FILES 等），新蒸馏文件漏登记即 FAIL；(b) 变体覆盖——
    每个变体标题必须有索引条目或 _unparsed 记录；(c) 围栏覆盖——含 [槽位] 的围栏块数
    ≤ 该文件模板条目数（E_moderation 型 H2 模板静默漏抽的自动拦截）。
@@ -28,7 +33,8 @@
    含 1 处**跨技能**引用）。本项检出 MISSING / PLACEHOLDER / LINE_OOB。
 
 判定纪律：corpus 未变时，本门 FAIL = 引擎/适配器漂移（查 git diff 即见）；
-corpus 变更后 FAIL = 重建产物尚未随 corpus 一起提交，是纪律提示而非误报。
+corpus 变更后默认模式 FAIL = 重建产物尚未与暂存区一致；用 --worktree
+检查未暂存修改。默认门不检查是否已经 commit。
 
 用法
 ----
@@ -42,6 +48,7 @@ corpus 变更后 FAIL = 重建产物尚未随 corpus 一起提交，是纪律提
 from __future__ import annotations
 
 import argparse
+import hashlib
 import os
 import re
 import subprocess
@@ -49,7 +56,7 @@ import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent.parent
-SKILLS = ["write-results", "write-methods", "write-theory"]
+SKILLS = ["write-results", "write-methods", "write-theory", "write-introduction"]
 
 failures: list[str] = []
 
@@ -61,7 +68,7 @@ def check(cond: bool, message: str) -> None:
 
 
 def run(cmd: list[str], cwd: Path) -> subprocess.CompletedProcess:
-    env = dict(os.environ, PYTHONIOENCODING="utf-8")
+    env = dict(os.environ, PYTHONIOENCODING="utf-8", PYTHONDONTWRITEBYTECODE="1")
     return subprocess.run(cmd, cwd=str(cwd), capture_output=True, text=True,
                           encoding="utf-8", errors="replace", env=env)
 
@@ -79,7 +86,7 @@ def parse_summary(stdout: str) -> dict[str, str]:
 
 
 def blob_gate(skill: str) -> None:
-    """工作树 vs 已提交索引的逐文件 blob 哈希比对（免疫行尾幻影）。"""
+    """工作树 vs Git暂存区的逐文件 blob 哈希比对（免疫行尾幻影）。"""
     skel = REPO / skill / "corpus" / "_skeleton"
     drift: list[str] = []
     n = 0
@@ -99,7 +106,7 @@ def blob_gate(skill: str) -> None:
         if not (REPO / rel).exists():
             drift.append(f"MISSING {rel}")
     detail = "" if not drift else f"；漂移 {len(drift)} 处: {drift[:5]}"
-    check(not drift, f"{skill}: {n} 个生成物与提交内容逐字节一致{detail}")
+    check(not drift, f"{skill}: {n} 个生成物与暂存内容逐字节一致{detail}")
 
 
 # ------------------------------------------------------- 覆盖对账门 ----
@@ -171,8 +178,54 @@ def function_map_gate(fail) -> None:
                 fail(f"function-map 索引目标无表格数据行: {t}")
 
 
+def methods_registration_gate(fail) -> None:
+    """Methods 设计类型文件须进入 FAMILIES，包括新建的子目录文件。
+
+    _* 目录是派生/治理资产；micro-templates 是由其 INDEX 直接路由的
+    微模板库，不属于 FAMILIES 设计类型轴；目录索引自身也不作为类型文件。
+    """
+    mod = _load_adapter('write-methods')
+    corpus = REPO / 'write-methods' / 'corpus'
+    registered = {Path(f['file']).as_posix() for f in mod.FAMILIES}
+    for p in sorted(corpus.rglob('*.md')):
+        rel = p.relative_to(corpus)
+        if (any(part.startswith('_') for part in rel.parts)
+                or rel.parts[0] == 'micro-templates' or p.name == 'INDEX.md'):
+            continue
+        if rel.as_posix() not in registered:
+            fail(f'write-methods: corpus/{rel.as_posix()} 未登记进 FAMILIES（新文件漏登记）')
+    for rel in sorted(registered):
+        if not (corpus / rel).is_file():
+            fail(f'write-methods: FAMILIES 登记的 corpus/{rel} 不存在（删除或改名后未同步）')
+
+
+def artifact_hygiene_gate(fail) -> None:
+    """四个 write skill 内只拦截明确的缓存、临时输出及备份。
+
+    _skeleton 是运行索引；feedback/registry 是持久治理状态。
+    draft/preview 等词也属于正式协议与功能名称，不据名称片段判定污染。
+    """
+    cache_dirs = {'__pycache__', '.pytest_cache', '.mypy_cache', '.ruff_cache'}
+    transient_names = {'catalog.json', 'candidates.yaml', 'writeback_plan.yaml',
+                       'writeback_residuals.yaml', 'benchmark-results.json',
+                       'batch-cli.json', 'retrieval-preview.json', '.DS_Store', 'Thumbs.db'}
+    for skill in SKILLS:
+        root = REPO / skill
+        for p in sorted(root.rglob('*')):
+            rel = p.relative_to(root)
+            if any(part in cache_dirs for part in rel.parts[:-1]):
+                continue  # 同一缓存目录只报一次。
+            is_cache = p.is_dir() and p.name in cache_dirs
+            is_temp = p.is_file() and (
+                p.name in transient_names or p.suffix.lower() in {'.pyc', '.pyo', '.tmp', '.temp', '.bak', '.log'}
+                or '.backup-' in p.name or '.backup_' in p.name or '.bak-' in p.name)
+            if is_cache or is_temp:
+                fail(f'{skill}: {rel.as_posix()} 是缓存/中间产物；移至仓库外工作目录或清理')
+
+
 def coverage_gate(fail) -> None:
-    """theory/results 的登记/变体/围栏三重覆盖对账。"""
+    """Methods 登记对账；theory/results 登记/变体/围栏覆盖对账。"""
+    methods_registration_gate(fail)
     # 覆盖豁免清单：未登记但有意的文件（协议/骨架文档，非模式库语料）。
     # 是否应升级入索引属语料扩展决策——改动此处须附理由与日期。
     coverage_allowlist = {
@@ -261,12 +314,6 @@ def coverage_gate(fail) -> None:
     unbound_allowlist = {
         ("SEM-moderated-mediation.md", "变体-7"): "变体 7 仅登记来源/槽位，无骨架与原文锚定（蒸馏欠账，2026-09-15）",
         ("定性过程研究.md", "变体-6"): "Power/Proof Quotes 引语选择决策表节——无句级底本，results 索引不含决策表内容（是否入索引属语料扩展决策，2026-09-15）",
-        # mukherjee2022 跑（2026-09-29）：四变体已在 _unparsed.md 记录为待人工补录（骨架字段在，
-        # 多行 **模板**: 引块未被句级抽取器识别——抽取器对多行 > 引块的 [槽位] 识别待工具化）。
-        ("事件研究法.md", "变体-18"): "已在 _unparsed.md 待人工补录：多行 **模板**: 引块未被句级抽取器识别（2026-09-29）",
-        ("事件研究法.md", "变体-19"): "已在 _unparsed.md 待人工补录：多行 **模板**: 引块未被句级抽取器识别（2026-09-29）",
-        ("事件研究法.md", "变体-20"): "已在 _unparsed.md 待人工补录：多行 **模板**: 引块未被句级抽取器识别（2026-09-29）",
-        ("Hawkes过程.md", "变体-A"): "已在 _unparsed.md 待人工补录：多行 **模板**: 引块未被句级抽取器识别（2026-09-29）",
     }
     unparsed = (skel / "_unparsed.md").read_text(encoding="utf-8")
     for rel in sorted(reg):
@@ -294,16 +341,24 @@ def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--skip-validators", action="store_true",
                     help="跳过 validate_write_methods / validate_write_results 串联")
+    ap.add_argument('--worktree', action='store_true',
+                    help='校验重生成与当前工作树一致；不要求修改已暂存到 Git')
     args = ap.parse_args(argv)
 
     print(f"repo = {REPO}")
     for skill in SKILLS:
         print(f"\n== {skill} ==")
+        skel = REPO / skill / 'corpus/_skeleton'
+        before = {p.relative_to(skel).as_posix(): hashlib.sha256(p.read_text(encoding='utf-8').encode()).hexdigest()
+                  for p in skel.rglob('*') if p.is_file()}
         r = run([sys.executable, "scripts/build_indices.py", "--verify"],
                 REPO / skill)
         check(r.returncode == 0,
               f"{skill}: build_indices --verify exit 0 (got {r.returncode})")
         kv = parse_summary(r.stdout or "")
+        if skill == 'write-introduction':
+            kv['mismatch'] = '0' if 'verbatim 回源校验:' in r.stdout and 'MISMATCH ' not in r.stdout else 'failed'
+            kv['anchor_miss'] = '0' if '锚点局部性校验' in r.stdout and 'ANCHOR-MISS ' not in r.stdout else 'failed'
         check(kv.get("mismatch") == "0",
               f"{skill}: verbatim 回源 mismatch=0 (got {kv.get('mismatch', '无 SUMMARY 行')})")
         check(kv.get("anchor_miss") == "0",
@@ -316,7 +371,20 @@ def main(argv: list[str] | None = None) -> int:
             err = (r.stderr or "")[-800:]
             if err.strip():
                 print(f"  stderr: {err}")
-        blob_gate(skill)
+        if args.worktree:
+            after = {p.relative_to(skel).as_posix(): hashlib.sha256(p.read_text(encoding='utf-8').encode()).hexdigest()
+                     for p in skel.rglob('*') if p.is_file()}
+            check(before == after, f'{skill}: 重生成与当前工作树一致（{len(after)} files）')
+        else:
+            blob_gate(skill)
+
+    print('\n== 检索视图与来源绑定 ==')
+    r = run([sys.executable, '-B', '_shared/indexing/build_catalog.py', '--check'], REPO)
+    check(r.returncode == 0, 'catalog 与四节原生解析器一致')
+    r = run([sys.executable, '-B', '-m', 'unittest', 'discover', '-s', '_shared/indexing/tests'], REPO)
+    check(r.returncode == 0, 'ID、来源绑定与检索回归检查通过')
+    if r.returncode:
+        print(r.stderr[-3000:])
 
     print("\n== 覆盖对账 ==")
 
@@ -325,6 +393,9 @@ def main(argv: list[str] | None = None) -> int:
         print(f"  [FAIL] {msg}")
 
     coverage_gate(_cov_fail)
+
+    print('\n== 内部文件清洁 ==')
+    artifact_hygiene_gate(_cov_fail)
 
     print("\n== function-map ==")
 

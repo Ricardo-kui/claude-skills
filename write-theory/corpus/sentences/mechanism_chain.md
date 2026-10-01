@@ -90,6 +90,44 @@ Consequently, [DV outcome] emerges through [final link]. Thus:"
 **语料锚定**：
 - Darby et al. 2025 (JSCM) — activist investor ownership → faster recalls 单步链（2026-08-08 审计校正：原标 2024 MSOM，锚点逐字核验出自 2025 JSCM）
 
+<!-- retrieval-move:
+{
+  "functions": [
+    "theory.mechanism_link",
+    "theory.actor_motivation"
+  ],
+  "function_evidence": {
+    "theory.mechanism_link": {
+      "kind": "verbatim",
+      "cue": "recall more quickly to favorably manage the perceptions of activist investors",
+      "why": "威胁通过管理外部评价的行动目标接到更快行动；来源键保持未标注。"
+    },
+    "theory.actor_motivation": {
+      "kind": "verbatim",
+      "cue": "the potential threat of becoming the next target increases",
+      "why": "点名行动者试图避免的威胁，再解释其加快行动以管理评价的动机。"
+    }
+  },
+  "function_support": {
+    "theory.mechanism_link": "complete",
+    "theory.actor_motivation": "complete"
+  },
+  "position": "前一机制状态之后、行为预测之前",
+  "prerequisite": "威胁与评价目标有依据；本卡来源尚未确认，使用前须核验。",
+  "next": "将局部连接接回完整机制与预测。",
+  "advances": "用明确目标补齐威胁到行动的传递过程。",
+  "next_evidence": [
+    "威胁与动机的依据",
+    "原文来源核验"
+  ],
+  "applicability": {
+    "required_facts": {
+      "actor_motivation_supported": true
+    }
+  }
+}
+-->
+
 ---
 
 ## 两步机制链（标准）
@@ -396,6 +434,38 @@ who tend to focus on [价值] may be more motivated to [行为3] ([文献])."
 **语料锚定**：
 - Wowak 2025 (MS) — liberal vs conservative CEO recall behavior
 
+<!-- retrieval-move:
+{
+  "functions": [
+    "theory.competing_predictions"
+  ],
+  "function_evidence": {
+    "theory.competing_predictions": {
+      "kind": "verbatim",
+      "cue": "Given these competing arguments, we put forth the following hypotheses",
+      "why": "原句提供双机制与竞争假设移交；该源块未包含正式假设，且 serious recalls 与 recall counts 的范围须核对。"
+    }
+  },
+  "function_support": {
+    "theory.competing_predictions": "partial"
+  },
+  "position": "两套机制并置处、正式竞争假设之前",
+  "prerequisite": "两方结果范围须一致；本块与假设形式卡来自同一论文，不算新增独立来源。",
+  "next": "写出与两方机制对应的正式竞争假设。",
+  "advances": "提供从可信分歧到竞争预测的移交形式。",
+  "next_evidence": [
+    "两方结果范围的可比性",
+    "正式竞争假设"
+  ],
+  "applicability": {
+    "required_facts": {
+      "competing_mechanisms_developed": true,
+      "prediction_scope_aligned": true
+    }
+  }
+}
+-->
+
 ---
 
 ## 辩证对立型机制推演（Dialectical Contrast Mechanism，kalaignanam2017 型）
@@ -582,6 +652,37 @@ Third, the [theory] proposes that [IV] enlarges individuals' [temporal mechanism
 - NA 路径被写成 PA 的"反面"而非独立过程 → 必须用 "Conversely" 而非 "Similarly" 开头
 - 三步之间缺少连接词 → 每步之间用 "First... Second... Third..." 明确标记节奏
 
+<!-- retrieval-move:
+{
+  "functions": [
+    "theory.mechanism_explanation"
+  ],
+  "function_evidence": {
+    "theory.mechanism_explanation": {
+      "kind": "verbatim",
+      "cue": "PA broadens a CEO's scope of attention and action, which expands CEOs' awareness of their surroundings",
+      "why": "摘录给出预测开场与注意力、群体边界、时间视野环节，但未完整交代每个环节如何通向 CSR；保留为部分机制表达。"
+    }
+  },
+  "function_support": {
+    "theory.mechanism_explanation": "partial"
+  },
+  "position": "主效应预测展开处",
+  "prerequisite": "当前研究有对应的行动者及传递过程，平行通道可区分且指向同一结果。",
+  "next": "补足每个过程到当前行动的连接并收敛预测。",
+  "advances": "提供三类传递过程的开场与局部句。",
+  "next_evidence": [
+    "各过程的理论依据",
+    "过程到实际战略行动的连接"
+  ],
+  "applicability": {
+    "required_facts": {
+      "mechanism_steps_supported": true
+    }
+  }
+}
+-->
+
 ---
 
 ## 用文献支撑机制（非罗列）
@@ -661,6 +762,85 @@ The second relevant stream of research for understanding [outcome domain] is [Th
 ---
 
 ## Ability-Motivation 双路径机制框架（Eilert 2017 型）
+<!-- retrieval-move:
+{
+  "functions": [
+    "theory.actor_motivation",
+    "theory.mechanism_explanation"
+  ],
+  "definitions": [
+    {
+      "id": "theory.actor_motivation",
+      "label": "说明行为动机",
+      "section": "theory",
+      "refines": "theory.mechanism",
+      "definition": "从行动者的目标、利益、价值或面临的损失解释其为什么愿意采取某项行为，把条件变化接到行动倾向。",
+      "use_when": [
+        "明确谁在行动、试图得到或避免什么，以及焦点条件如何改变该目标的权重。",
+        "动机由理论或已有材料支持；能够区分愿意做与有能力做。"
+      ],
+      "neighbors": [
+        {
+          "id": "theory.mechanism_link",
+          "distinction": "局部链条可连接资源或认知环节，无须涉及行动者的目标；本动作须解释意愿。"
+        },
+        {
+          "id": "theory.cost_benefit_balance",
+          "distinction": "完整权衡同时解释同一行动的收益与成本；单侧风险回避已可构成动机。"
+        }
+      ],
+      "positive_example": {
+        "kind": "verbatim",
+        "cue": "firms will also be motivated to avoid external accountability and delay the recall",
+        "why": "Eilert 的同块摘录先交代惩罚、诉讼和更高 stakes，再推出避免问责的动机。"
+      },
+      "mismatch_example": {
+        "kind": "illustrative",
+        "text": "更高权力使管理者能够贯彻自己的偏好。",
+        "why": "说明的是实施能力；尚未解释为何形成该偏好或意愿。",
+        "actual_function": "theory.condition_amplification"
+      },
+      "aliases": [
+        "说明行为动机",
+        "解释行动意愿",
+        "actor motivation"
+      ],
+      "review_cases": [
+        "T02"
+      ]
+    }
+  ],
+  "position": "焦点因素与结果预测之前的能力—动机推导",
+  "prerequisite": "行动能力与目标动机分别有依据；借完整双通道形式时，两条过程须实际指向同一预测，单借动机句仍按动机定义核对。",
+  "next": "使用完整形式时收敛两通道预测；单借动机句时接回当前过程；实际中介检验另行报告。",
+  "applicability": {
+    "required_facts": {
+      "actor_goal_supported": true
+    }
+  },
+  "function_evidence": {
+    "theory.mechanism_explanation": {
+      "kind": "verbatim",
+      "cue": "the investigation will rely on traditional routines and, thus, may not quickly arrive at a solution",
+      "why": "能力通道说明问题导向搜寻的近视限制，动机通道说明责任威胁引出避责延迟；两条有内容的过程共同解释较慢行动。"
+    },
+    "theory.actor_motivation": {
+      "kind": "verbatim",
+      "cue": "firms will also be motivated to avoid external accountability and delay the recall",
+      "why": "更高处罚与诉讼风险抬升行动代价，原句明确点名企业想避免的责任及相应延迟行为。"
+    }
+  },
+  "function_support": {
+    "theory.actor_motivation": "complete",
+    "theory.mechanism_explanation": "complete"
+  },
+  "advances": "以搜寻约束与避责意愿解释行动延迟。",
+  "next_evidence": [
+    "能力路径的搜寻与解决条件",
+    "动机路径的责任及激励依据"
+  ]
+}
+-->
 <!-- wb:eilert_2017_jm -->
 
 **适用**：组织决策、企业行为、战略响应类主题中，将机制论证系统性地组织为能力维度和动机维度
@@ -2186,6 +2366,25 @@ mechanism 3]... Taken together, [converging main-effect prediction].
 **禁忌**: "same decision rule" 必须与前句陈述的规则逐字对应，否则跳层无据；该句式只用于真正的同质决策规则情境，异质成员间不成立
 
 ## 成本-收益计算机制链（Cost-Benefit Calculus Mechanism，Chung/Low/Rust 2022 型）
+<!-- retrieval-move:
+{
+  "functions": [
+    "theory.cost_benefit_balance"
+  ],
+  "position": "成本收益机制的综合收敛；原句承接此前高收益与低成本论证",
+  "prerequisite": "先解释同一行动的收益与成本；原句不是完整的前置推导段落",
+  "next": "收敛到行动预测；两侧机制须用当前研究的论据补齐",
+  "applicability": {
+    "required_facts": {
+      "both_cost_and_benefit": true,
+      "preceding_cost_benefit_explanation": true
+    }
+  },
+  "function_support": {
+    "theory.cost_benefit_balance": "partial"
+  }
+}
+-->
 <!-- wb:chung_low_rust_2022_jams -->
 
 **功能**: 当研究的理论机制可以归结为"行为者面对 [short-term benefit] 与 [long-term cost] 的权衡，而 [IV] 通过改变对收益/成本的感知来影响行动概率"时使用。提供完整的 why chain：建立权衡 → 论证感知高收益 → 论证感知低成本 → 收敛到主效应。
@@ -2305,6 +2504,38 @@ H1: There is a curvilinear relationship (taking an inverted U-shape) between [IV
 - `corpus/subprotocols/bilateral_argumentation_templates.md` — 倒U型调节 high/low 双侧论证
 - `corpus/sentences/moderation.md` — flatten/steepen 图形化描述
 - `corpus/sentences/closure.md` — 倒U型调节局部收束
+
+<!-- retrieval-move:
+{
+  "functions": [
+    "theory.cost_benefit_balance"
+  ],
+  "function_evidence": {
+    "theory.cost_benefit_balance": {
+      "kind": "verbatim",
+      "cue": "expected costs exceed the benefits of launching a competitive action",
+      "why": "先给竞争机会与能力收益，再给相互依赖和报复成本，比较同一竞争行动的两侧。"
+    }
+  },
+  "function_support": {
+    "theory.cost_benefit_balance": "complete"
+  },
+  "position": "收益机制之后、成本主导与曲线收敛之前",
+  "prerequisite": "两侧针对同一行动；借完整倒 U 形式须另有曲率依据；本卡来源仍未标注。",
+  "next": "结合当前作用域作权衡判断，曲线预测另按实际理论推导。",
+  "advances": "说明何时行动成本超过已建立的收益。",
+  "next_evidence": [
+    "收益和成本来源",
+    "需要时的曲率依据",
+    "原文来源核验"
+  ],
+  "applicability": {
+    "required_facts": {
+      "cost_and_benefit_supported": true
+    }
+  }
+}
+-->
 
 ---
 

@@ -124,6 +124,63 @@ source: Distilled by distill-introduction-exemplar from Hoffmann et al. 2024 JM;
 <!-- wb:gulati2005-adaptation-vertical:theory_lens_adjacent_tradition_level_extension_gulati2005 -->
 
 ### 变体 C：注意力重定向型（moon2026 型）
+<!-- retrieval-move:
+{
+  "functions": [
+    "intro.attention_lens"
+  ],
+  "position": "引言的解释透镜引入；资源配置机制的起点",
+  "prerequisite": "制度冲击释放旧注意力需求，并存在明确的外部期望施予者",
+  "next": "展开注意力重新配置如何影响焦点行动",
+  "definitions": [
+    {
+      "id": "intro.attention_lens",
+      "label": "引入注意力配置的解释透镜",
+      "section": "introduction",
+      "refines": "intro.lens",
+      "definition": "以管理者注意力稀缺及其配置影响资源分配的命题引入解释透镜，再指出焦点条件如何改变注意力指向。",
+      "use_when": [
+        "当前机制涉及有限注意力的配置；使用本卡重定向形式时，能说明旧需求释放或新要求抬升。",
+        "外部期望的施予者和焦点行动明确，且由当前研究材料支持。"
+      ],
+      "neighbors": [
+        {
+          "id": "intro.lens",
+          "distinction": "社会认知或评价框架也能涉及 attention，但未必包含稀缺注意力的资源配置逻辑。"
+        },
+        {
+          "id": "theory.mechanism_link",
+          "distinction": "透镜引入先建立解释起点；局部链条连接承担后续因果环节的推演。"
+        }
+      ],
+      "positive_example": {
+        "kind": "verbatim",
+        "cue": "attention is scarce, and managerial attention can determine resource allocation decisions",
+        "why": "Moon 的原句同时给出稀缺与资源分配命题，而不是仅含 attention 一词。"
+      },
+      "mismatch_example": {
+        "kind": "illustrative",
+        "text": "我们使用社会认知视角，说明评价者如何借框架理解信息。",
+        "why": "框架解码与有限注意力配置的动作不同，不能直接换成 ABV。",
+        "actual_function": "intro.lens"
+      },
+      "aliases": [
+        "注意力理论",
+        "注意力基础观",
+        "attention-based view"
+      ],
+      "review_cases": [
+        "I05"
+      ]
+    }
+  ],
+  "applicability": {
+    "required_facts": {
+      "attention_reallocation": true
+    }
+  }
+}
+-->
 
 **模板**:
 > "We draw on the attention-based view of the firm ([citations]), which posits that managerial decisions are shaped by what captures managers' scarce attention ([citation]). Because [institutional change] reduces the attention demanded by [prior protective concern] while raising [external stakeholder] expectations for [performance dimension], it redirects top management attention toward [focal leveraging action]."
@@ -182,6 +239,37 @@ source: Distilled by distill-introduction-exemplar from Hoffmann et al. 2024 JM;
 **禁忌**: "两类错误"必须互斥且覆盖评估者的真实决策空间，否则是假二分；透镜服务调节假设时必须显式说明注意力→信号加权的传导，不能只贴 ABV 标签
 
 <!-- wb:gulati_higgins_2003_which_ties_matter:theory_lens_abv_audience_error_switching -->
+<!-- retrieval-move:
+{
+  "functions": [
+    "intro.attention_lens"
+  ],
+  "function_evidence": {
+    "intro.attention_lens": {
+      "kind": "verbatim",
+      "cue": "different types of market uncertainty focus investor attention on different sets of factors",
+      "why": "支持外部条件改变注意力指向；原句讨论投资者，未建立管理者注意力稀缺及资源配置命题。"
+    }
+  },
+  "function_support": {
+    "intro.attention_lens": "partial"
+  },
+  "position": "理论透镜开场、错误关注机制之前",
+  "prerequisite": "借用注意力选择形式时，明确实际受众与关注任务；不可据此补造稀缺性命题。",
+  "next": "解释不同条件下受众更重视哪种错误和信号。",
+  "advances": "提供注意力重定向的相邻表达形式。",
+  "next_evidence": [
+    "受众与关注任务",
+    "条件改变信号权重的理论依据"
+  ],
+  "applicability": {
+    "required_facts": {
+      "attention_selection_changes": true
+    }
+  }
+}
+-->
+
 
 
 ### 变体 G：静默引镜型（mallapragada2025型）

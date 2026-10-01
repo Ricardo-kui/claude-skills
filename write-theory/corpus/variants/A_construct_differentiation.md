@@ -141,6 +141,37 @@ of [Type-A].
 > "We unpack the benefits of partnering experience by distinguishing between general partnering experience (GPE) and partner-specific experience (PSE)." ... "Whereas GPE serves as the foundation for a firm's relational capability, PSE assists in building trust and facilitating coordination with certain partners." ... "We next propose that while all these benefits accrue for both PSE and GPE, the benefits of PSE are greater because: (a) the process of learning from PSE is more efficient than the learning from GPE ... and (b) PSE offers richer benefits than those available through GPE."
 
 <!-- wb:gulati_lavie_singh_2009_partnering_experience:construct_decomposition_dual_reason_differential -->
+<!-- retrieval-move:
+{
+  "functions": [
+    "theory.construct_contrast"
+  ],
+  "function_evidence": {
+    "theory.construct_contrast": {
+      "kind": "verbatim",
+      "cue": "Whereas GPE serves as the foundation for a firm's relational capability, PSE assists in building trust",
+      "why": "先区分经验类型，再沿特定性、功能及收益宽度比较其理论作用。"
+    }
+  },
+  "function_support": {
+    "theory.construct_contrast": "complete"
+  },
+  "position": "两构念定义之后、差异预测之前",
+  "prerequisite": "两构念可沿共同维度比较，各项差异有理论依据。",
+  "next": "从差异维度推出不同关系或相对强度预测。",
+  "advances": "使构念差异承担后续预测的论证任务。",
+  "next_evidence": [
+    "两构念定义",
+    "共同比较维度及差异依据"
+  ],
+  "applicability": {
+    "required_facts": {
+      "comparable_construct_dimensions": true
+    }
+  }
+}
+-->
+
 
 ## 假设陈述格式
 <!-- wb:pollock_2015_asq -->
@@ -173,6 +204,65 @@ of [Type-A].
 ---
 
 ## Pollock 2015 型：两构念四维系统区分
+<!-- retrieval-move:
+{
+  "functions": [
+    "theory.construct_contrast"
+  ],
+  "position": "理论起点：两构念定义后，沿共同维度比较",
+  "prerequisite": "两个相关构念可在同一组维度上比较",
+  "next": "用这些差异建立共演或比较机制；区别于上位类收编",
+  "definitions": [
+    {
+      "id": "theory.construct_contrast",
+      "label": "沿共同维度区分相邻构念",
+      "section": "theory",
+      "refines": "theory.definition",
+      "definition": "在分别定义相邻构念后，沿同一组可比较维度说明它们怎样不同，并指出差异的理论用途。",
+      "use_when": [
+        "构念容易被混用，且存在共同维度可作逐项比较。",
+        "每项差异有文献或材料依据，并服务后续关系、比较或共演机制。"
+      ],
+      "neighbors": [
+        {
+          "id": "theory.definition",
+          "distinction": "定义可说明谱系或上位类归属；共同维度比较还须分别展示差异。"
+        },
+        {
+          "id": "theory.hypothesis",
+          "distinction": "对两个构念提出不同预测不等于已经完成构念辨析。"
+        }
+      ],
+      "positive_example": {
+        "kind": "verbatim",
+        "cue": "they differ in four fundamental ways",
+        "why": "Pollock 的同块摘录先给两定义再转入四维比较，卡片模板展示逐维结构。"
+      },
+      "mismatch_example": {
+        "kind": "illustrative",
+        "text": "声誉、地位和名望都是社会评价资产。",
+        "why": "把多个构念纳入上位类，尚未在共同维度上区分它们。",
+        "actual_function": "theory.definition"
+      },
+      "aliases": [
+        "同维度区分",
+        "区分声誉",
+        "相邻构念辨析",
+        "系统区分",
+        "构念区分"
+      ],
+      "review_cases": [
+        "T01"
+      ]
+    }
+  ],
+  "applicability": {
+    "required_facts": {
+      "shared_comparison_dimensions": true
+    }
+  }
+}
+-->
 <!-- wb:pollock_2015_asq -->
 
 **新增于**: write-theory 3.2.0 (Pollock et al. 2015 ASQ 蒸馏)

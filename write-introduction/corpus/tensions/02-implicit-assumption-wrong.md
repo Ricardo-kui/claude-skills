@@ -48,6 +48,61 @@ Inadequacy 问题化的核心 Tension：不是"文献遗漏了东西"，而是"�
 ## 句法模板
 
 ### 变体 A：双重解构型（paruchuri2020 型）
+<!-- retrieval-move:
+{
+  "functions": [
+    "intro.gap_shared_assumption"
+  ],
+  "definitions": [
+    {
+      "id": "intro.gap_shared_assumption",
+      "label": "质疑既有研究的共同假设",
+      "section": "introduction",
+      "refines": "intro.literature_to_gap",
+      "definition": "明示一条被既有研究共同依赖的前提，解释该前提为何需要重新检视，以及这会改变哪项理论理解。",
+      "use_when": [
+        "能够指认真实研究中的共同前提，而非把自己的猜测归给整个领域。",
+        "有理由说明前提在哪些条件下不成立或尚未经检验，并交代其理论后果。"
+      ],
+      "neighbors": [
+        {
+          "id": "intro.gap_unexplained",
+          "distinction": "指出未解释的对象无须否定既有前提；本动作必须命名前提。"
+        },
+        {
+          "id": "intro.gap_conflicting_accounts",
+          "distinction": "两套解释分歧不自动意味着它们共享错误前提。"
+        }
+      ],
+      "positive_example": {
+        "kind": "verbatim",
+        "cue": "A major, but generally untested assumption",
+        "why": "Paruchuri 的摘录指认同类企业相似性及波及持续性的前提；省略号仍按卡片保留。"
+      },
+      "mismatch_example": {
+        "kind": "illustrative",
+        "text": "现有研究主要讨论召回后果，很少解释企业实际召回行为。",
+        "why": "这里只指出解释对象遗漏，没有指认共同前提。",
+        "actual_function": "intro.gap_unexplained"
+      },
+      "aliases": [
+        "质疑既有研究的共同假设",
+        "质疑共同假设",
+        "shared assumption challenge"
+      ],
+      "review_cases": []
+    }
+  ],
+  "position": "已有文献前提说明之后，问题化与新视角之前",
+  "prerequisite": "按本块 definitions 的 use_when 核对当前需求与研究事实。",
+  "next": "交代重新检视前提对理论理解的后果。",
+  "applicability": {
+    "required_facts": {
+      "shared_assumption_identified": true
+    }
+  }
+}
+-->
 
 **模板**:
 > "A major, but generally untested assumption underlying [research stream] is that [assumption 1]. However, [complexity that undermines assumption]. [Elaboration]. A second frequent, but generally untested assumption... is that [assumption 2]. This assumption is important because [significance]. However, [limitation of current research]."
@@ -79,6 +134,37 @@ Inadequacy 问题化的核心 Tension：不是"文献遗漏了东西"，而是"�
 - "considers... broadly" → 指出笼统对待的问题
 - "This distinction is theoretically meaningful because" → 解释为什么细分重要
 
+<!-- retrieval-move:
+{
+  "functions": [
+    "intro.gap_unexplained"
+  ],
+  "function_evidence": {
+    "intro.gap_unexplained": {
+      "kind": "verbatim",
+      "cue": "Research has yet to seriously consider how and why CEOs might pursue more specific stakeholder strategies",
+      "why": "承认宽泛研究后，把未解释对象收窄为不同具体策略的动因。"
+    }
+  },
+  "function_support": {
+    "intro.gap_unexplained": "complete"
+  },
+  "position": "概括既有知识之后、具体研究问题之前",
+  "prerequisite": "具体策略的区分有理论意义，文献确未解释相应动因。",
+  "next": "界定策略类型并说明需要解释的关系。",
+  "advances": "从笼统参与问题推进到具体行为的解释缺口。",
+  "next_evidence": [
+    "已有知识的范围",
+    "细分策略及其理论必要性"
+  ],
+  "applicability": {
+    "required_facts": {
+      "unexplained_process_documented": true
+    }
+  }
+}
+-->
+
 ---
 
 ### 变体 C：去情境化批判型（han2020 型）
@@ -95,6 +181,38 @@ Inadequacy 问题化的核心 Tension：不是"文献遗漏了东西"，而是"�
 - "treated [construct] as decontextualized" → 识别出一个理论假设：情境不重要
 - "sometimes even inverting the relationships" → 暗示忽略情境会导致方向性误判
 - 直接挑战一个方法论层面的隐性假设
+
+<!-- retrieval-move:
+{
+  "functions": [
+    "intro.gap_shared_assumption"
+  ],
+  "function_evidence": {
+    "intro.gap_shared_assumption": {
+      "kind": "verbatim",
+      "cue": "has treated the misbehaving actor's status as decontextualized",
+      "why": "原句点名去情境化的共同前提，并说明情境可能改变甚至反转关系。"
+    }
+  },
+  "function_support": {
+    "intro.gap_shared_assumption": "complete"
+  },
+  "position": "文献综述之后、焦点缺口之前",
+  "prerequisite": "既有研究确有去情境化前提，当前情境差异有理论依据。",
+  "next": "说明哪类情境改变评价及其理论后果。",
+  "advances": "将共同前提转成可检视的问题。",
+  "next_evidence": [
+    "依赖该前提的文献",
+    "情境改变关系的理论或观察依据"
+  ],
+  "applicability": {
+    "required_facts": {
+      "common_assumption_documented": true,
+      "contextual_variation_supported": true
+    }
+  }
+}
+-->
 
 ---
 
@@ -129,6 +247,38 @@ Inadequacy 问题化的核心 Tension：不是"文献遗漏了东西"，而是"�
 - 若 Gap 是构念混淆（A 和 B 被混为一谈），改用变体 B（gamache 型）
 - 若 Gap 是理论不平衡或两个理论推出矛盾预测，改用 `06-theoretical-imbalance` 或 `04-reality-contradicts-consensus`
 - 不能只喊"challenges an implicit premise"而不给替代机制——必须紧跟"varies systematically with [变量]"或对比发现，否则沦为空泛声明
+
+<!-- retrieval-move:
+{
+  "functions": [
+    "intro.gap_shared_assumption"
+  ],
+  "function_evidence": {
+    "intro.gap_shared_assumption": {
+      "kind": "verbatim",
+      "cue": "our study challenges an implicit premise that lower entry barriers mechanically translate into greater product variety",
+      "why": "贡献段回指一条机械因果链前提，再用系统性差异说明其不足。"
+    }
+  },
+  "function_support": {
+    "intro.gap_shared_assumption": "complete"
+  },
+  "position": "贡献预告中的前提挑战句",
+  "prerequisite": "前文已建立研究问题；当前理论与结果支持所述系统性差异。",
+  "next": "报告实际贡献及对既有理解的修正。",
+  "advances": "把研究贡献绑定到被挑战的前提。",
+  "next_evidence": [
+    "共同前提的文献依据",
+    "当前研究支持的差异发现"
+  ],
+  "applicability": {
+    "required_facts": {
+      "common_assumption_documented": true,
+      "contribution_findings_supported": true
+    }
+  }
+}
+-->
 
 ---
 
@@ -309,6 +459,39 @@ Inadequacy 问题化的核心 Tension：不是"文献遗漏了东西"，而是"�
 
 <!-- wb:mukherjee_2022_hiding_in_the_herd_the_product_recall_cluster:tension_02_anecdotal_deviation_crossfield_naming -->
 <!-- wb-meta: gap=Inadequacy status=EMERGING -->
+<!-- retrieval-move:
+{
+  "functions": [
+    "intro.gap_shared_assumption"
+  ],
+  "function_evidence": {
+    "intro.gap_shared_assumption": {
+      "kind": "verbatim",
+      "cue": "presumes product recalls to be independent across firms",
+      "why": "先指出跨企业独立前提，再以已标省略号的轶事反证开启理论重检。"
+    }
+  },
+  "function_support": {
+    "intro.gap_shared_assumption": "complete"
+  },
+  "position": "文献前提说明之后、跨域理论引入之前",
+  "prerequisite": "共同前提和偏离该前提的轶事均有真实来源。",
+  "next": "用理论说明轶事为何值得检验，再提出问题。",
+  "advances": "使现象偏离成为前提重检的入口。",
+  "next_evidence": [
+    "前提依据",
+    "可追溯的反常实例",
+    "后续系统检验"
+  ],
+  "applicability": {
+    "required_facts": {
+      "common_assumption_documented": true,
+      "field_anomaly_documented": true
+    }
+  }
+}
+-->
+
 
 ## 组装规则
 

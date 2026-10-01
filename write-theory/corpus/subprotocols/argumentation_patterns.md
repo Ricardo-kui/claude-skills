@@ -1091,6 +1091,37 @@ confidence: medium（单篇，EMERGING）
 **适用**: 引入的构念与某个更知名构念共享结果变量（决策失败、绩效下滑）时的辨析段；调节变量在两个构念中方向相反的对照性研究
 
 **禁忌**: 反号主张必须与前文对 W 的论证一致（本篇前文确实论证了凝聚力降低 PI），临时反转会自相矛盾；对手机制必须以其最强形式陈述，不得偷换成稻草人
+<!-- retrieval-move:
+{
+  "functions": [
+    "theory.construct_contrast"
+  ],
+  "function_evidence": {
+    "theory.construct_contrast": {
+      "kind": "verbatim",
+      "cue": "social cohesion from friendship ties and demographic homogeneity actually attenuates pluralistic ignorance",
+      "why": "同一失败结果下比较两种不同过程，并指出共同因素对二者的相反作用。"
+    }
+  },
+  "function_support": {
+    "theory.construct_contrast": "complete"
+  },
+  "position": "相邻构念介绍之后、焦点机制推导之前",
+  "prerequisite": "同果构念的过程差别及共同因素作用有文献或理论依据。",
+  "next": "解释不同过程如何生成同一表面结果。",
+  "advances": "防止用表面相同结果混同不同构念。",
+  "next_evidence": [
+    "过程差别",
+    "共同因素作用差别的依据"
+  ],
+  "applicability": {
+    "required_facts": {
+      "comparable_construct_dimensions": true
+    }
+  }
+}
+-->
+
 
 ### 模式 F：机制前提→情境放大映射型（westphal_bednar2005 型）
 

@@ -113,6 +113,65 @@ a [actor] and a [moderator] can operate to compromise the [pole-A actor]'s
 ---
 
 ## 能力放大+双边约束型（weng_yang2024 型）
+<!-- retrieval-move:
+{
+  "functions": [
+    "theory.condition_amplification"
+  ],
+  "definitions": [
+    {
+      "id": "theory.condition_amplification",
+      "label": "解释特定条件如何增强机制",
+      "section": "theory",
+      "refines": "theory.moderation",
+      "definition": "指出边界条件改变哪一项机制能力、暴露或响应，使焦点关系在该条件下更强，并说明低条件下的相应约束。",
+      "use_when": [
+        "焦点机制已建立，边界条件与其作用环节有理论联系。",
+        "强化指作用强度变化；若方向反转、曲率或位置变化，应另按实际交互形式论证。"
+      ],
+      "neighbors": [
+        {
+          "id": "theory.actor_motivation",
+          "distinction": "行动意愿的形成与实现该意愿的条件不同；不能用能力放大替代动机解释。"
+        },
+        {
+          "id": "theory.moderator_selection",
+          "distinction": "选择调节变量先回答为什么检验这个条件；本动作展开它如何改变机制。"
+        }
+      ],
+      "positive_example": {
+        "kind": "verbatim",
+        "cue": "greater power increases a CEO's capacity to address the issue",
+        "why": "Weng 的高权力能力放大与低权力约束同块呈现；不能仅凭相关性选择 moderator。"
+      },
+      "mismatch_example": {
+        "kind": "illustrative",
+        "text": "既有文献经常使用董事会规模，所以本文将它设为调节变量。",
+        "why": "仅提供选择惯例，没有解释边界条件作用于哪个环节。",
+        "actual_function": "theory.moderator_selection"
+      },
+      "aliases": [
+        "解释机制为什么在特定条件下增强",
+        "条件增强机制",
+        "mechanism amplification"
+      ],
+      "review_cases": [
+        "T04",
+        "T05"
+      ]
+    }
+  ],
+  "position": "焦点机制之后，调节预测之前",
+  "prerequisite": "按本块 definitions 的 use_when 核对当前需求与研究事实。",
+  "next": "按实际交互形式收敛到条件预测。",
+  "applicability": {
+    "required_facts": {
+      "mechanism_established": true,
+      "condition_amplifies": true
+    }
+  }
+}
+-->
 <!-- wb:weng_yang2024 -->
 
 **功能**: 当 moderator 是个体/组织的 "capacity/power" 时，论证 moderator 如何放大 IV 两端（pole-A AND pole-B）的效应，同时展示低 moderator 如何约束两端。
@@ -552,6 +611,37 @@ relationship between [X2] and [Y].
 
 
 <!-- wb:gulati_westphal_1999_cooperative_or_controlling:sentence_symmetric_amplifier_moderation -->
+<!-- retrieval-move:
+{
+  "functions": [
+    "theory.condition_amplification"
+  ],
+  "function_evidence": {
+    "theory.condition_amplification": {
+      "kind": "verbatim",
+      "cue": "indirect ties make managers more certain of their trust (or distrust) in another",
+      "why": "边界条件通过提高已有状态的确信程度改变作用强度，明确不改变方向。"
+    }
+  },
+  "function_support": {
+    "theory.condition_amplification": "complete"
+  },
+  "position": "基线关系建立之后、调节假设之前",
+  "prerequisite": "基线正负关系已分别建立；当前条件确改变强度而非方向或曲率。",
+  "next": "分别推出有内容的强度调节预测。",
+  "advances": "把条件变化绑定到机制确信程度。",
+  "next_evidence": [
+    "已有关系方向",
+    "条件改变作用强度的理论理由"
+  ],
+  "applicability": {
+    "required_facts": {
+      "amplification_mechanism_supported": true
+    }
+  }
+}
+-->
+
 
 
 

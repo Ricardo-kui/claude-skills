@@ -172,6 +172,45 @@ updated: 2026-08-05
 <!-- wb:wowak_2025_ms:legacy_IV-2SLS_8 -->
 ### 变体 9: M8 simultaneity 先证伪后 IV 的 "abundance of caution" 叙事
 **来源论文**: Wowak2025 MS
+<!-- retrieval-move:
+{
+  "functions": [
+    "methods.endogeneity_risk",
+    "methods.design_mitigation"
+  ],
+  "position": "M8；setting 特有反向因果回应之后，以谨慎措辞引入 IV",
+  "prerequisite": "已有 setting 特有理由与行为证据；工具变量前提和诊断有依据。",
+  "next": "补充工具的相关性、排除限制和诊断；abundance of caution 不代替技术论证。",
+  "applicability": {
+    "design": [
+      "iv_2sls"
+    ],
+    "evidence": [
+      "observational"
+    ],
+    "claim_scope": [
+      "association",
+      "causal_with_assumptions"
+    ],
+    "required_facts": {
+      "instrument_diagnostics_supported": true,
+      "setting_specific_simultaneity_rebuttal": true
+    }
+  },
+  "sequence": [
+    {
+      "function": "methods.endogeneity_risk",
+      "kind": "verbatim",
+      "cue": "concerns related to endogeneity bias"
+    },
+    {
+      "function": "methods.design_mitigation",
+      "kind": "verbatim",
+      "cue": "we use IV estimation"
+    }
+  ]
+}
+-->
 **原始句锚点**: "However, out of an abundance of caution, and to further ameliorate concerns related to endogeneity bias that may be caused by this type of simultaneity, or other sources of endogeneity, we use IV estimation."
 **验证状态**: VERIFIED（单篇高价值；corpus 此前无"先证伪最可能威胁再以防御性 IV 收尾"的 M8 修辞变体）
 **写入日期**: 2026-07-25

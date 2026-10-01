@@ -17,6 +17,64 @@ status: EMERGING
 ---
 
 ## 基础权衡框架
+<!-- retrieval-move:
+{
+  "functions": [
+    "theory.cost_benefit_balance"
+  ],
+  "position": "先建立同一行动的收益与成本权衡框架",
+  "prerequisite": "短期收益与长期成本均有理论依据；此块仅含表达模板",
+  "next": "分别展开感知收益、感知成本与综合收敛；不把模板称为原文",
+  "definitions": [
+    {
+      "id": "theory.cost_benefit_balance",
+      "label": "建立同一行动的收益成本权衡",
+      "section": "theory",
+      "refines": "theory.cost_benefit",
+      "definition": "把同一行动的预期收益与成本同时纳入选择逻辑，说明行动吸引力如何取决于两侧比较。",
+      "use_when": [
+        "能说明谁权衡、针对哪一行动，以及两侧收益和成本来自何处。",
+        "完整推导须分别展开两侧；综合收敛句只有在前文已建立两侧时才可使用。"
+      ],
+      "neighbors": [
+        {
+          "id": "theory.actor_motivation",
+          "distinction": "单侧收益追求或损失回避可解释意愿，但还未形成两侧权衡。"
+        },
+        {
+          "id": "theory.competing_predictions",
+          "distinction": "收益与成本共同进入一个选择模型，不必形成两项正式竞争假设。"
+        }
+      ],
+      "positive_example": {
+        "kind": "template",
+        "cue": "weigh the benefits of [action]",
+        "why": "本卡基础模板把同一 action 的短期收益与长期成本放在同一个比较关系里；此块未抽取文章原文。"
+      },
+      "mismatch_example": {
+        "kind": "illustrative",
+        "text": "我们考察召回的补救成本与消费者伤害两个属性。",
+        "why": "命名两个属性不等于说明行动收益、成本和两侧权衡。",
+        "actual_function": "theory.mechanism"
+      },
+      "aliases": [
+        "同时解释行动的收益与成本",
+        "完整成本收益权衡",
+        "收益成本权衡",
+        "成本收益权衡"
+      ],
+      "review_cases": [
+        "T09"
+      ]
+    }
+  ],
+  "applicability": {
+    "required_facts": {
+      "both_cost_and_benefit": true
+    }
+  }
+}
+-->
 <!-- wb:chung_low_rust_2022_jams:cost_benefit_calculus_mechanism -->
 
 ```
@@ -108,6 +166,16 @@ are less deterred by the prospective costs of [action].
 
 ## 综合收敛句
 <!-- wb:chung_low_rust_2022_jams -->
+<!-- retrieval-move:
+{
+  "functions": ["theory.cost_benefit_balance"],
+  "function_support": {"theory.cost_benefit_balance": "partial"},
+  "position": "收益与成本两侧机制已建立后的总结句",
+  "prerequisite": "当前文章的前文已分别解释两侧；本句本身没有完成完整推导。",
+  "next": "收敛到当前行动预测，不补造两侧机制。",
+  "applicability": {"required_facts": {"both_cost_and_benefit": true, "preceding_cost_benefit_explanation": true}}
+}
+-->
 
 ```
 Overall, we expect the perceived higher benefits and lower long-term costs from [action] 

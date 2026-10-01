@@ -3,8 +3,8 @@
 """
 Corpus Health Check — 语料库体检：变体数 vs 批评数聚合。
 
-聚合两侧语料库的度量（测量学第一原则：没有聚合的测量无法指导分配）：
-  - 变体数：从各设计/结果类型文件实际计数（`### 变体 N:`，全角/半角冒号兼容），不信任 INDEX 计数表
+聚合四节语料库的度量（测量学第一原则：没有聚合的测量无法指导分配）：
+  - 库存数：四节原生适配器解析出的源块数；零值表示未进入句级索引，不等于空库
   - 批评数：methods 读 `evidence.by_design_type.<类型>.validation_history`；
             results 读 `estimators.<键>.usage_stats`
   - 输出每类型一行：变体数 | revise | reject | 批评合计 | last_critique | critique_heavy | 趋同批评要点
@@ -26,8 +26,11 @@ import json
 import re
 import sys
 from pathlib import Path
+from functools import lru_cache
 
 SKILLS = Path(__file__).resolve().parent
+sys.path.insert(0, str(SKILLS / '_shared/indexing'))
+from retrieve import load_catalog
 # 数字（methods/results）与字母（intro/theory 的 变体 A/B/C）均计数
 VAR_RE = re.compile(r"^### 变体 ([A-Za-z0-9]+)[:：]", re.M)
 
@@ -39,8 +42,18 @@ def norm_key(s: str) -> str:
     return re.sub(r"[-_]", "", s.lower())
 
 
+@lru_cache(maxsize=1)
+def indexed_assets():
+    groups = {}
+    for row in load_catalog()['entries']:
+        groups.setdefault(row['source_file'], []).append(row)
+    return groups
+
+
 def count_variants(path: Path) -> int:
-    return len(VAR_RE.findall(path.read_text(encoding="utf-8")))
+    """Native parsed source blocks; zero means unindexed, not missing prose."""
+    rows = indexed_assets().get(path.relative_to(SKILLS).as_posix(), [])
+    return len({r['parent_paragraph'] for r in rows})
 
 
 def load_usage(registry_path: Path) -> dict:
@@ -116,6 +129,8 @@ def collect(side: str) -> list:
     usage = load_critique_usage(registry)
     rows = []
     for d in sorted(p for p in corpus.iterdir() if p.is_dir()):
+        if d.name.startswith('_'):
+            continue
         for f in sorted(d.glob("*.md")):
             if f.name == "_index.md":
                 continue
@@ -137,6 +152,8 @@ def collect(side: str) -> list:
 def fmt_rows(rows: list) -> list:
     """排序 + 标记。critique_heavy: revise+reject>=2。"""
     for r in rows:
+        r['inventory_unit'] = 'native_source_block'
+        r['inventory_note'] = '未进入原生句级索引；不据此判断空库' if r['variants'] == 0 else ''
         r["critiques"] = r["revise"] + r["reject"]
         r["heavy"] = r["critiques"] >= 2
     rows.sort(key=lambda r: (not r["heavy"], -r["critiques"], -r["variants"]))
@@ -148,7 +165,7 @@ def print_report(rows: list) -> None:
     print("=" * 78)
     print("Corpus Health Check — 语料库体检（变体数 vs 批评数聚合）")
     print("=" * 78)
-    print(f"{'侧':>2}{'类型':<20}{'变体':>5}{'revise':>7}{'reject':>7}{'批评合计':>8}{'最近批评':>12}  标记 / 趋同批评要点")
+    print(f"{'侧':>2}{'类型':<20}{'源块':>5}{'revise':>7}{'reject':>7}{'批评合计':>8}{'最近批评':>12}  标记 / 趋同批评要点")
     print("-" * 80)
     for r in rows:
         last = r["last_critique"] or "—"
@@ -157,6 +174,7 @@ def print_report(rows: list) -> None:
         if reasons:
             mark = (mark + " " + reasons).strip()
         print(f"{r['side']:>2} {r['type']:<20}{r['variants']:>5}{r['revise']:>7}{r['reject']:>7}{r['critiques']:>8}{last:>12}  {mark}")
+    print('库存单位：原生解析源块（兼容字段 variants）；0 表示未进入句级索引，不判断为空库。')
     print("-" * 78)
     if heavy:
         print(f"薄弱类型 {len(heavy)} 个（revise+reject ≥ 2 → 下一轮蒸馏优先 REPLACE/EXTEND）:")
@@ -191,7 +209,7 @@ def main() -> int:
 
     if args.json:
         print(json.dumps([{k: r[k] for k in ("side", "type", "variants", "revise", "reject",
-                                             "critiques", "heavy", "last_critique", "reasons")}
+                                             "critiques", "heavy", "last_critique", "reasons", "inventory_unit", "inventory_note")}
                           for r in rows], ensure_ascii=False, indent=2))
     else:
         print_report(rows)

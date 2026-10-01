@@ -103,6 +103,8 @@ Distill how a published Methods section argues—not what it says—into reusabl
 - **`write-methods`** — Phase 4 writeback plan（执行器 v2）指定锚点文件与插入位置
 - **`methods-review`** — Phase 1.5 槽位覆盖检查可复用
 
+实际写回后的完成判据见 [四节共用收尾协议](../_shared/distillation-writeback-finalization.md)；单节独立模式同样执行登记、检索刷新与工作树终验。
+
 ## Context discipline
 
 按需加载单个 phase reference，不预读全部；先经 `py ../distill-paper-exemplar/scripts/corpus_query.py index --section methods --query "<槽位/设计类型关键词>"` 与 `... registry --section methods --query "<关键词>"` 查命中行（确定性，默认 ≤50 行），再打开具体语料文件对比或写回——先查后开、命中即开，索引正文不进上下文。

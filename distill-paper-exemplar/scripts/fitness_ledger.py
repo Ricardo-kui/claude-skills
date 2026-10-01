@@ -6,6 +6,7 @@ fitness 信号分四类事件，全部追加进 <台账家>/events/：
   retrieval     蓝图卡检索命中（retrieve_exemplars.py 发射）
   corpus_query  选材 Gate 语料查询（corpus_query.py 发射）
   consumption   写作期语料消耗（write-* 成文登记，best-effort）
+  exemplar_use  句段范本返回／查看／采用／真实作者评价（query_id 关联）
 
 设计不变量（方案裁定 2026-09-14）：
   - 台账家默认 ~/.claude/fitness/，FITNESS_HOME env 可覆盖；ledger_home()
@@ -42,7 +43,7 @@ if sys.stdout.encoding and sys.stdout.encoding.lower() not in ("utf-8", "utf8"):
     sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
 SCHEMA_V = 1
-EVENT_KINDS = ("acceptance", "retrieval", "corpus_query", "consumption")
+EVENT_KINDS = ("acceptance", "retrieval", "corpus_query", "consumption", "exemplar_use")
 VERDICTS = ("confirmed", "edited", "dropped", "skip_endorsed", "skip_flipped",
             "added_at_gate", "preauthorized_auto")
 
@@ -50,11 +51,20 @@ VERDICTS = ("confirmed", "edited", "dropped", "skip_endorsed", "skip_flipped",
 def ledger_home(explicit: str | Path | None = None) -> Path:
     """台账家目录：显式参数 > FITNESS_HOME env > ~/.claude/fitness。"""
     if explicit is not None:
-        return Path(explicit)
+        return Path(explicit).expanduser()
     env = os.environ.get("FITNESS_HOME")
     if env:
         return Path(env).expanduser()
     return Path.home() / ".claude" / "fitness"
+
+
+def read_json_input(path=None):
+    """Read the UTF-8 JSON transport, including Chinese Windows pipe input."""
+    if path not in (None, '-'):
+        return json.loads(Path(path).read_text(encoding='utf-8-sig'))
+    if hasattr(sys.stdin, 'reconfigure'):
+        sys.stdin.reconfigure(encoding='utf-8-sig', errors='strict')
+    return json.load(sys.stdin)
 
 
 def _events_path(kind: str, home=None) -> Path:
@@ -254,19 +264,39 @@ def emit_written(pdm_path: Path, root: dict, section: str, plan: dict | None,
 # ------------------------------------------------------------ consumption --
 
 def cmd_log_consumption(args) -> int:
-    """write-* 成文登记（best-effort）：stdin 或 --file 的 JSON 透传入账。"""
+    """成文登记；新 UID 采用关联检索与草稿，历史原生登记单列。"""
     try:
-        raw = sys.stdin.read() if args.file in (None, "-") \
-            else Path(args.file).read_text(encoding="utf-8")
-        data = json.loads(raw)
-    except (OSError, json.JSONDecodeError) as e:
+        data = read_json_input(args.file)
+    except (OSError, ValueError) as e:
         print(f"ERROR: consumption JSON 不可读：{e}", file=sys.stderr)
         return 2
     if not isinstance(data, dict) or not str(data.get("skill") or "").strip() \
             or not str(data.get("section") or "").strip():
         print("ERROR: consumption 事件至少需要 skill 与 section 字段", file=sys.stderr)
         return 2
-    ok = append_event("consumption", data)
+    # A new UID adoption has one writer for adopted + consumption. Historical
+    # unlinked lines remain untouched; no query ID is invented for native use.
+    sys.path.insert(0, str(Path(__file__).resolve().parents[2] / '_shared/indexing'))
+    from use_exemplar import external_path, record_adoption
+    try:
+        external_path(ledger_home(args.home), name='ledger')
+        if not isinstance(data.get('source_uids', []), list):
+            raise ValueError('source_uids must be a list')
+        if data.get('source_uids') or 'uses' in data or 'query_id' in data:
+            from retrieve import load_catalog
+            result = record_adoption(data, load_catalog(), args.home)
+            print(json.dumps(result, ensure_ascii=False))
+            return 0
+        allowed = {'skill', 'section', 'project', 'corpus_files', 'source_uids',
+                   'variants', 'blueprint_cards', 'note'}
+        if set(data) - allowed:
+            raise ValueError('consumption accepts metadata only, not prose snapshots')
+        if data['section'] not in ('introduction', 'theory', 'methods', 'results') or data['skill'] != f"write-{data['section']}":
+            raise ValueError('skill and section must name the same active write-* section')
+    except (ValueError, TypeError, OSError) as exc:
+        print(f'ERROR: 消耗登记未执行：{exc}', file=sys.stderr)
+        return 2
+    ok = append_event("consumption", {**data, 'linkage': 'legacy_native'}, home=args.home)
     print("consumption 已落账" if ok else "consumption 写入失败（见 WARN）")
     return 0
 
@@ -279,6 +309,7 @@ def main() -> int:
                        help="登记一次写作的语料消耗（JSON：stdin 或 --file）")
     p.add_argument("--file", default=None,
                    help="JSON 文件路径；缺省读 stdin，'-' 显式 stdin")
+    p.add_argument('--home', type=Path, help='隔离台账目录；默认 FITNESS_HOME 或 ~/.claude/fitness')
     args = ap.parse_args()
     if args.cmd == "log-consumption":
         return cmd_log_consumption(args)

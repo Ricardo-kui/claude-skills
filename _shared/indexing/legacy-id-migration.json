@@ -1,0 +1,4149 @@
+{
+  "schema_version": 1,
+  "baseline_sha256": "23e107d1f59d1af794c1529965493c7ca433e8f974403b6573a2f271148dadc3",
+  "policy": "旧 ID 需结合源文件与摘录内容；多目标显式保留，不取第一项。",
+  "migrations": [
+    {
+      "section": "theory",
+      "legacy_id": "5-rogerian-g-l-2017-ch04-feb285.t1",
+      "legacy_anchor": "corpus/sentences/acknowledgment_response.md#5-rogerian-g-l-2017-ch04-feb285",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/acknowledgment_response.md",
+      "text_sha256": "285f1755bb5c46c0c034019182c4cc59e2edd583dd3d16d5f0b8892bf6e56236",
+      "targets": [
+        {
+          "id": "5-rogerian-g-l-2017-ch04-feb285.t1",
+          "uid": "theory:5a6f435cc479871551be083b",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-1~44bc8b8122e0",
+          "uid": "theory:57819829acec98f7c96023e0",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "5-rogerian-g-l-2017-ch04-feb285.t2",
+      "legacy_anchor": "corpus/sentences/acknowledgment_response.md#5-rogerian-g-l-2017-ch04-feb285",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/acknowledgment_response.md",
+      "text_sha256": "4906eb90b11f7b370fc5f9a6fefb6df593046944ad8ee62e2405fe96392b7914",
+      "targets": [
+        {
+          "id": "5-rogerian-g-l-2017-ch04-feb285.t2",
+          "uid": "theory:205196d9c79e01918045991d",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-2~4e2fab3625cf",
+          "uid": "theory:aa6389b7bf4365b16bbc5d0f",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "5-rogerian-g-l-2017-ch04-feb285.t3",
+      "legacy_anchor": "corpus/sentences/acknowledgment_response.md#5-rogerian-g-l-2017-ch04-feb285",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/acknowledgment_response.md",
+      "text_sha256": "ac886bcdb651a0ad4c44c1487fbb8262e315522f5b8c1a35d257a9f317e75cd4",
+      "targets": [
+        {
+          "id": "5-rogerian-g-l-2017-ch04-feb285.t3",
+          "uid": "theory:251952af1b78377a80c4affb",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-3~2add6a53fd53",
+          "uid": "theory:44aa0fa1878308c81acd3be0",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "5-rogerian-g-l-2017-ch04-feb285.t4",
+      "legacy_anchor": "corpus/sentences/acknowledgment_response.md#5-rogerian-g-l-2017-ch04-feb285",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/acknowledgment_response.md",
+      "text_sha256": "27eb23ff403e8594bbb9dc5b3e38f603d5ae09d3800c47be54d3b1f4dcd01074",
+      "targets": [
+        {
+          "id": "5-rogerian-g-l-2017-ch04-feb285.t4",
+          "uid": "theory:9c0913c0b36a4da1ad742dbc",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-4~4e8d8408c21d",
+          "uid": "theory:018f36d1b52672a6022e1029",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-1",
+      "legacy_anchor": "corpus/sentences/acknowledgment_response.md#5. Rogerian 四步对话结构（高威胁异议的降防御序列，G&L 2017 Ch04）",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/acknowledgment_response.md",
+      "text_sha256": "285f1755bb5c46c0c034019182c4cc59e2edd583dd3d16d5f0b8892bf6e56236",
+      "targets": [
+        {
+          "id": "5-rogerian-g-l-2017-ch04-feb285.t1",
+          "uid": "theory:5a6f435cc479871551be083b",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-1~44bc8b8122e0",
+          "uid": "theory:57819829acec98f7c96023e0",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-2",
+      "legacy_anchor": "corpus/sentences/acknowledgment_response.md#5. Rogerian 四步对话结构（高威胁异议的降防御序列，G&L 2017 Ch04）",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/acknowledgment_response.md",
+      "text_sha256": "4906eb90b11f7b370fc5f9a6fefb6df593046944ad8ee62e2405fe96392b7914",
+      "targets": [
+        {
+          "id": "5-rogerian-g-l-2017-ch04-feb285.t2",
+          "uid": "theory:205196d9c79e01918045991d",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-2~4e2fab3625cf",
+          "uid": "theory:aa6389b7bf4365b16bbc5d0f",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-3",
+      "legacy_anchor": "corpus/sentences/acknowledgment_response.md#5. Rogerian 四步对话结构（高威胁异议的降防御序列，G&L 2017 Ch04）",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/acknowledgment_response.md",
+      "text_sha256": "ac886bcdb651a0ad4c44c1487fbb8262e315522f5b8c1a35d257a9f317e75cd4",
+      "targets": [
+        {
+          "id": "5-rogerian-g-l-2017-ch04-feb285.t3",
+          "uid": "theory:251952af1b78377a80c4affb",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-3~2add6a53fd53",
+          "uid": "theory:44aa0fa1878308c81acd3be0",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-4",
+      "legacy_anchor": "corpus/sentences/acknowledgment_response.md#5. Rogerian 四步对话结构（高威胁异议的降防御序列，G&L 2017 Ch04）",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/acknowledgment_response.md",
+      "text_sha256": "27eb23ff403e8594bbb9dc5b3e38f603d5ae09d3800c47be54d3b1f4dcd01074",
+      "targets": [
+        {
+          "id": "5-rogerian-g-l-2017-ch04-feb285.t4",
+          "uid": "theory:9c0913c0b36a4da1ad742dbc",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-4~4e8d8408c21d",
+          "uid": "theory:018f36d1b52672a6022e1029",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-2a032c5a.t1",
+      "legacy_anchor": "corpus/sentences/closure.md#cjk-2a032c5a",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/closure.md",
+      "text_sha256": "6f32abcbf899ea0a75385edb2aaaa54aca9882390e47a4bd18a861026cfb822b",
+      "targets": [
+        {
+          "id": "cjk-2a032c5a.t1",
+          "uid": "theory:6b6446832eee8241876f4d0b",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-1~78263e3b6b0f",
+          "uid": "theory:a7cf4813133e985f10c6d4f9",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-2a032c5a.t2",
+      "legacy_anchor": "corpus/sentences/closure.md#cjk-2a032c5a",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/closure.md",
+      "text_sha256": "9f6f942565c1ba4b866ebb61820aef0efd6a08601f6126b62a2fb5ac9cd14a4e",
+      "targets": [
+        {
+          "id": "cjk-2a032c5a.t2",
+          "uid": "theory:c5979d36c71aaa0c805a9133",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-2~d737617b121b",
+          "uid": "theory:110020e93ea08a63a5aafe8e",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-2a032c5a.t3",
+      "legacy_anchor": "corpus/sentences/closure.md#cjk-2a032c5a",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/closure.md",
+      "text_sha256": "39cfd1ce24296178abe23a490950ef1a9f3c1ebd51ad67b7b1bb7bccf2fc722c",
+      "targets": [
+        {
+          "id": "cjk-2a032c5a.t3",
+          "uid": "theory:550ca6aa0be68c727071fdcc",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-3~7bc8f697f62c",
+          "uid": "theory:3a4a0b3f6ad491802ad8b505",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-2a032c5a.t4",
+      "legacy_anchor": "corpus/sentences/closure.md#cjk-2a032c5a",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/closure.md",
+      "text_sha256": "abeec715536f6ab211a481f4d429c564fb6a1ec59a4b2250de26c49c892b5983",
+      "targets": [
+        {
+          "id": "cjk-2a032c5a.t4",
+          "uid": "theory:6260d14d04da3252a6815464",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-4~e71155edd607",
+          "uid": "theory:fe2cd4ead6e8da555ab3f42a",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-2a032c5a.t5",
+      "legacy_anchor": "corpus/sentences/closure.md#cjk-2a032c5a",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/closure.md",
+      "text_sha256": "5893914e5d573e2569e1482f3c36cc9aa219c56672e3d77733c13f46ac2913c6",
+      "targets": [
+        {
+          "id": "cjk-2a032c5a.t5",
+          "uid": "theory:b705c6d57803ae5cb0f603b5",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-5~3a3fe7664c43",
+          "uid": "theory:7d0d8d3f1eb66641adafbae0",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-1",
+      "legacy_anchor": "corpus/sentences/closure.md#段落收束→假设过渡（按论证类型）",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/closure.md",
+      "text_sha256": "6f32abcbf899ea0a75385edb2aaaa54aca9882390e47a4bd18a861026cfb822b",
+      "targets": [
+        {
+          "id": "cjk-2a032c5a.t1",
+          "uid": "theory:6b6446832eee8241876f4d0b",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-1~78263e3b6b0f",
+          "uid": "theory:a7cf4813133e985f10c6d4f9",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-2",
+      "legacy_anchor": "corpus/sentences/closure.md#段落收束→假设过渡（按论证类型）",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/closure.md",
+      "text_sha256": "9f6f942565c1ba4b866ebb61820aef0efd6a08601f6126b62a2fb5ac9cd14a4e",
+      "targets": [
+        {
+          "id": "cjk-2a032c5a.t2",
+          "uid": "theory:c5979d36c71aaa0c805a9133",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-2~d737617b121b",
+          "uid": "theory:110020e93ea08a63a5aafe8e",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-3",
+      "legacy_anchor": "corpus/sentences/closure.md#段落收束→假设过渡（按论证类型）",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/closure.md",
+      "text_sha256": "39cfd1ce24296178abe23a490950ef1a9f3c1ebd51ad67b7b1bb7bccf2fc722c",
+      "targets": [
+        {
+          "id": "cjk-2a032c5a.t3",
+          "uid": "theory:550ca6aa0be68c727071fdcc",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-3~7bc8f697f62c",
+          "uid": "theory:3a4a0b3f6ad491802ad8b505",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-4",
+      "legacy_anchor": "corpus/sentences/closure.md#段落收束→假设过渡（按论证类型）",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/closure.md",
+      "text_sha256": "abeec715536f6ab211a481f4d429c564fb6a1ec59a4b2250de26c49c892b5983",
+      "targets": [
+        {
+          "id": "cjk-2a032c5a.t4",
+          "uid": "theory:6260d14d04da3252a6815464",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-4~e71155edd607",
+          "uid": "theory:fe2cd4ead6e8da555ab3f42a",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-5",
+      "legacy_anchor": "corpus/sentences/closure.md#段落收束→假设过渡（按论证类型）",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/closure.md",
+      "text_sha256": "5893914e5d573e2569e1482f3c36cc9aa219c56672e3d77733c13f46ac2913c6",
+      "targets": [
+        {
+          "id": "cjk-2a032c5a.t5",
+          "uid": "theory:b705c6d57803ae5cb0f603b5",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-5~3a3fe7664c43",
+          "uid": "theory:7d0d8d3f1eb66641adafbae0",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "变体-B.a",
+      "legacy_anchor": "corpus/sentences/construct_definition.md#变体-B",
+      "legacy_citekey": "malik_wang_martin_gomez_mejia_2025_jm",
+      "source_file": "write-theory/corpus/sentences/construct_definition.md",
+      "text_sha256": "8d5efad4fe18bc5195ac4c90dc64b8eb25c85df9936dc4e84283cda5742e56bb",
+      "targets": [
+        {
+          "id": "变体-B.a~bbdf9f8b2f20",
+          "uid": "theory:c056b138c5c00bb5d4095ed4",
+          "citekey": "malik_wang_martin_gomez_mejia_2025_jm"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "变体-B.t1",
+      "legacy_anchor": "corpus/sentences/construct_definition.md#变体-B",
+      "legacy_citekey": "malik_wang_martin_gomez_mejia_2025_jm",
+      "source_file": "write-theory/corpus/sentences/construct_definition.md",
+      "text_sha256": "1ada3d76693fee50b372c547adfac7beb4591ff1b9ff99483c1900ba094429dd",
+      "targets": [
+        {
+          "id": "变体-B.t1~856cf8a0019e",
+          "uid": "theory:b367b8ed747e0c9aa297df68",
+          "citekey": "malik_wang_martin_gomez_mejia_2025_jm"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "变体-C.a",
+      "legacy_anchor": "corpus/sentences/construct_definition.md#变体-C",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/construct_definition.md",
+      "text_sha256": "1e10055b007f5c2e85dec066565ae343d29ee5e165be7a74e3c16bf8965720c4",
+      "targets": [
+        {
+          "id": "变体-C.a~25e1edd05d4d",
+          "uid": "theory:ee2c2787e1c633b9463258b2",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "变体-C.t1",
+      "legacy_anchor": "corpus/sentences/construct_definition.md#变体-C",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/construct_definition.md",
+      "text_sha256": "5599e99e058df24322ba120148a2eea207d7dc788e6ee34e0d8c510dea054690",
+      "targets": [
+        {
+          "id": "变体-C.t1~6dffea7a7070",
+          "uid": "theory:9c6d511713a782cb22c5c4e2",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "construct_definition_three_dimensional.t2",
+      "legacy_anchor": "corpus/sentences/construct_definition.md#变体-I",
+      "legacy_citekey": "han_pollock_paruchuri_smj",
+      "source_file": "write-theory/corpus/sentences/construct_definition.md",
+      "text_sha256": "fc6819cbb272deb6e2332adcdc8b3d49d1526c1cd5bf7ddc51315c9b95573bb9",
+      "targets": [
+        {
+          "id": "construct_definition_three_dimensional.t2",
+          "uid": "theory:78b564aaa0a96d0f03044dc5",
+          "citekey": "han_pollock_paruchuri_smj"
+        },
+        {
+          "id": "matrix-1~3e3b79f2c011",
+          "uid": "theory:878a6133fb419f8082749139",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-1",
+      "legacy_anchor": "corpus/sentences/construct_definition.md#变体 I：Framework-Anchored 双构念区分（han_pollock_paruchuri 型）",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/construct_definition.md",
+      "text_sha256": "fc6819cbb272deb6e2332adcdc8b3d49d1526c1cd5bf7ddc51315c9b95573bb9",
+      "targets": [
+        {
+          "id": "construct_definition_three_dimensional.t2",
+          "uid": "theory:78b564aaa0a96d0f03044dc5",
+          "citekey": "han_pollock_paruchuri_smj"
+        },
+        {
+          "id": "matrix-1~3e3b79f2c011",
+          "uid": "theory:878a6133fb419f8082749139",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "1-cc7b55.t1",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#1-cc7b55",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "b900ca6597333345cb773887e94260faea5249981359b02a5c573adac2d43595",
+      "targets": [
+        {
+          "id": "1-cc7b55.t1",
+          "uid": "theory:01201c5859bfc3280ab9393f",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-1~e8fa63c648fd",
+          "uid": "theory:23f521312482554677ebe033",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "1-cc7b55.t2",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#1-cc7b55",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "31b5c18b535a2421f0f550075d0b858f04fecc04ea922e90628c3ab5f625eb39",
+      "targets": [
+        {
+          "id": "1-cc7b55.t2",
+          "uid": "theory:b17ddeed00272bafb078ce34",
+          "citekey": "未标注"
+        },
+        {
+          "id": "cjk-5fe946eb.t2",
+          "uid": "theory:1d7204b0357f206b56ba3f0d",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-2~48019f6ff8d7",
+          "uid": "theory:7d2501f76141315247839c5b",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "1-cc7b55.t3",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#1-cc7b55",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "912ef0948d7cae12baa86d25ec50090348e22af97e673155d87435ab77b9ae58",
+      "targets": [
+        {
+          "id": "1-cc7b55.t3",
+          "uid": "theory:1f761a17836ff5f8beb3a654",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-3~c0c926b77892",
+          "uid": "theory:0d288ef0e57423ad2b418411",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "1-cc7b55.t4",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#1-cc7b55",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "b18d2ba0c82a72b06647045222f4b677fabad5396136a326ed982d6041968fde",
+      "targets": [
+        {
+          "id": "1-cc7b55.t4",
+          "uid": "theory:10e60766bb3d371cfbdb7d3a",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-4~ea9b5a9e8c47",
+          "uid": "theory:c105606d8f3a8928f0f18c94",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "1-cc7b55.t5",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#1-cc7b55",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "efa1d47e9d84670b254e531395fcba703f1514e8d4e0d24076842ac1b96ada0a",
+      "targets": [
+        {
+          "id": "1-cc7b55.t5",
+          "uid": "theory:e6fdc761e97720c8d895abb0",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-5~acb310530881",
+          "uid": "theory:14c04d83e16dde11f477f777",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "1-cc7b55.t6",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#1-cc7b55",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "c2510f9417f009114b93a4f218b7dc54222c7ba9b8b9ce54de25a9dc0acbb8f3",
+      "targets": [
+        {
+          "id": "1-cc7b55.t6",
+          "uid": "theory:8d3d5b46e45b704146a11cba",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-6",
+          "uid": "theory:16907e72fddafbd38523a673",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "变体-B.a",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#变体-B",
+      "legacy_citekey": "westphal_zajac_1998_symbolic_management",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "74c91714ef46aa95f1a72721fe8c695202e961ae5b5575cca3e2f0e43f770ae6",
+      "targets": [
+        {
+          "id": "变体-B.a~6f9a334b6db9",
+          "uid": "theory:86ec979d86d3aeb5af262a24",
+          "citekey": "westphal_zajac_1998_symbolic_management"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "变体-B.b",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#变体-B",
+      "legacy_citekey": "westphal_zajac_1998_symbolic_management",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "b332a482ac1328268f4af3d28578ae8849fe43d3fb9e1bd7ce11c0c35ffaa285",
+      "targets": [
+        {
+          "id": "变体-B.b~428b2cd46c70",
+          "uid": "theory:2c12602e66a25cec4dcb6ffe",
+          "citekey": "westphal_zajac_1998_symbolic_management"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "变体-B.t1",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#变体-B",
+      "legacy_citekey": "westphal_zajac_1998_symbolic_management",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "43ca9bb4256d162d753be7d078ee913b1629801008c86f4967c5afde61269b26",
+      "targets": [
+        {
+          "id": "变体-B.t1~c372e7e96ab3",
+          "uid": "theory:2b9e3bf9dd38b50de4d83e07",
+          "citekey": "westphal_zajac_1998_symbolic_management"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "2-35951b.t1",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#2-35951b",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "17fdd01f647dce6561b3f08ad5322f09f8957336a5c222dcfd269926d18fac84",
+      "targets": [
+        {
+          "id": "2-35951b.t1",
+          "uid": "theory:9f1d292ef8165adcc6bb8a4f",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-7",
+          "uid": "theory:88358ea8c936c05954aaa2cc",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "2-35951b.t2",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#2-35951b",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "478448a1d612f1e7bf75b947bb332a84afc01f150f221601fd69bda34f68dcc0",
+      "targets": [
+        {
+          "id": "2-35951b.t2",
+          "uid": "theory:59a0b366c802fb7a5fad9514",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-8",
+          "uid": "theory:f7ee79f31877bcf9faea1134",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "2-35951b.t3",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#2-35951b",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "370cb4d894856dddcc63c40beb18bbc6e7baf39c2a5fbf2496af7f96f0886562",
+      "targets": [
+        {
+          "id": "2-35951b.t3",
+          "uid": "theory:e6f87d65ce1efb9a2b7607cd",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-9",
+          "uid": "theory:af155510aa40945b1bae6c60",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "2-35951b.t4",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#2-35951b",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "42db7b7d9dd3668ff7e470634921efda901d60293a3877ddb435757d9e218dff",
+      "targets": [
+        {
+          "id": "2-35951b.t4",
+          "uid": "theory:ac180d9489300bd8e489430b",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-10",
+          "uid": "theory:747bcddbd91c77a796141b61",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "2-35951b.t5",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#2-35951b",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "ea24e0c3912cc65a9a05589d813b1402c7c52dec2efdf7941f78be0674510059",
+      "targets": [
+        {
+          "id": "2-35951b.t5",
+          "uid": "theory:e8d8a4b99371c087d217a92a",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-11",
+          "uid": "theory:47b5992c706d46ee91f8e49e",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "2-35951b.t6",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#2-35951b",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "33e655dcd977fd37fb885f322415d138835c1b4ae1056ceac2fb6570122a2df9",
+      "targets": [
+        {
+          "id": "2-35951b.t6",
+          "uid": "theory:e3f38af92c30df97c425345d",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-12",
+          "uid": "theory:8264e141866e0c7a6903cd14",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "3-588118.t1",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#3-588118",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "02fda2116b1baf7a1b34f1f7fdba72c730e55143d00129332b39ba61a0e8a2ac",
+      "targets": [
+        {
+          "id": "3-588118.t1",
+          "uid": "theory:e89080e1590e47713d485bf3",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-13",
+          "uid": "theory:fcf45b72b6ec458886641d66",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "3-588118.t2",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#3-588118",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "dc672d30c59c300716ae059e692b6246626e3a4ffd3bb4bee738b4ad7490e0fe",
+      "targets": [
+        {
+          "id": "3-588118.t2",
+          "uid": "theory:7a6c2ec9e1696e3703b9c20b",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-14",
+          "uid": "theory:f3c1d4d8c5c3dfead3a70dff",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-5fe946eb.t1",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#cjk-5fe946eb",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "e38a283c9ef1042364caf7db85f1040cf744a51152809e58dd9b19006487b58b",
+      "targets": [
+        {
+          "id": "cjk-5fe946eb.t1",
+          "uid": "theory:301b6fd381f3fe886c9e7dda",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-15",
+          "uid": "theory:bd652eaae8b07cb2fac7852c",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-5fe946eb.t2",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#cjk-5fe946eb",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "31b5c18b535a2421f0f550075d0b858f04fecc04ea922e90628c3ab5f625eb39",
+      "targets": [
+        {
+          "id": "1-cc7b55.t2",
+          "uid": "theory:b17ddeed00272bafb078ce34",
+          "citekey": "未标注"
+        },
+        {
+          "id": "cjk-5fe946eb.t2",
+          "uid": "theory:1d7204b0357f206b56ba3f0d",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-2~48019f6ff8d7",
+          "uid": "theory:7d2501f76141315247839c5b",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-9d5232fe.t1",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#cjk-9d5232fe",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "3c948f343d955b731abd12cc6a18686f8352e57d4311579dcfef0827677a2609",
+      "targets": [
+        {
+          "id": "cjk-9d5232fe.t1",
+          "uid": "theory:c559e90ffaf81934041b90f1",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-16",
+          "uid": "theory:5c75d721fb44b4a411c45c8a",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-9d5232fe.t2",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#cjk-9d5232fe",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "3d20a0574b419b2abf2b4814276fcb9a2b923748ef5fb8a73b768fe8029a39b6",
+      "targets": [
+        {
+          "id": "cjk-9d5232fe.t2",
+          "uid": "theory:78b9f070f62201d3b0f8a902",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-17",
+          "uid": "theory:57fb8ac866ad5de6ae7af827",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-9d5232fe.t3",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#cjk-9d5232fe",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "98858309481c6c6b9cfaeeaceb8967b8298dac196e16ca17074911bb85deb919",
+      "targets": [
+        {
+          "id": "cjk-9d5232fe.t3",
+          "uid": "theory:94d4c349e824632bed781dc3",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-18",
+          "uid": "theory:37f50be9a23626b987b5a652",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "comparative_main_effect_hypothesis_form.t3",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#comparative-main-effect-veri-4def1c",
+      "legacy_citekey": "Chen_Ganesan_Liu_2009_JM",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "be53f5b4500e60230d89e3bc90a5a79a745fa8d1fcd32ae4b571ac45e12d9b43",
+      "targets": [
+        {
+          "id": "comparative_main_effect_hypothesis_form.t3",
+          "uid": "theory:a1898cc035031fe8a2fa58f8",
+          "citekey": "Chen_Ganesan_Liu_2009_JM"
+        },
+        {
+          "id": "matrix-19",
+          "uid": "theory:b4e21fa60630b0aee33c4f84",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "变体-A.t1",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#变体-A",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "aa1c75dc85c48bae53f962aa8e1ecf49356a5155b97d3c969c1987b190a46c77",
+      "targets": [
+        {
+          "id": "变体-A.t1~67753263ef6d",
+          "uid": "theory:486a32367182ff745a72ec25",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "变体-C.a",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#变体-C",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "d85562f1fdabcd9c77b5e64785f87ccbf9b0330ea189d04bf21f1dadfa1f4b34",
+      "targets": [
+        {
+          "id": "变体-C.a~c80c9cca8cae",
+          "uid": "theory:859c72f58c290ca125d3477f",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "变体-C.t1",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#变体-C",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "83adfd16630f91d7d12862bee7f80673d27635e1ac65db222c104973c374ab5f",
+      "targets": [
+        {
+          "id": "变体-C.t1~a3004e57035e",
+          "uid": "theory:82802ac6d6a29c17a5284683",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "paired_hypotheses_same_iv_dual_dv.a",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#paired-hypotheses-a-b-format-5e12fb",
+      "legacy_citekey": "malik_wang_martin_gomez_mejia_2025_jm",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "a5adbebb95d841f2d6e65597bc8bfec6711a4e5eae13e54e1f5170496de865af",
+      "targets": [
+        {
+          "id": "paired_hypotheses_same_iv_dual_dv.a",
+          "uid": "theory:5e477d299d45c74a111f908f",
+          "citekey": "malik_wang_martin_gomez_mejia_2025_jm"
+        },
+        {
+          "id": "iv-dv-91e054.a",
+          "uid": "theory:77dc2ec021d82b2c895718e9",
+          "citekey": "malik_wang_martin_gomez_mejia_2025_jm"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "paired_hypotheses_same_iv_dual_dv.c",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#paired-hypotheses-a-b-format-5e12fb",
+      "legacy_citekey": "malik_wang_martin_gomez_mejia_2025_jm",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "0346a044490125fb02c5c7f6f2324b40255b8b8ce2eb7aef097f81e5a4715334",
+      "targets": [
+        {
+          "id": "paired_hypotheses_same_iv_dual_dv.c",
+          "uid": "theory:029625cabe5a5d3f45edb8a0",
+          "citekey": "malik_wang_martin_gomez_mejia_2025_jm"
+        },
+        {
+          "id": "iv-dv-91e054.b",
+          "uid": "theory:7fef05d5618900a06769e957",
+          "citekey": "malik_wang_martin_gomez_mejia_2025_jm"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "paired_hypotheses_same_iv_dual_dv.t1",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#paired-hypotheses-a-b-format-5e12fb",
+      "legacy_citekey": "malik_wang_martin_gomez_mejia_2025_jm",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "be5b94a6be3cb32a3a2b8a0b9c8b6f38a53e784564c6484f4f49624d345053dd",
+      "targets": [
+        {
+          "id": "paired_hypotheses_same_iv_dual_dv.t1",
+          "uid": "theory:58a0e0c7d3606b681d2fcc65",
+          "citekey": "malik_wang_martin_gomez_mejia_2025_jm"
+        },
+        {
+          "id": "matrix-20",
+          "uid": "theory:6983239cc5f81b0a9d371df6",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "paired_hypotheses_same_iv_dual_dv.t2",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#paired-hypotheses-a-b-format-5e12fb",
+      "legacy_citekey": "malik_wang_martin_gomez_mejia_2025_jm",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "7a84cd85e128e659c650be2e8fc42c5870ed8c1f5bf361fb77fc04b1542842b6",
+      "targets": [
+        {
+          "id": "paired_hypotheses_same_iv_dual_dv.t2",
+          "uid": "theory:328d0d2aecfdae1298afe416",
+          "citekey": "malik_wang_martin_gomez_mejia_2025_jm"
+        },
+        {
+          "id": "matrix-21",
+          "uid": "theory:588ec82ea75b2eebfbfeca2e",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "conditional-given-hypothesis-2e9833.t1",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#conditional-given-hypothesis-2e9833",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "d175ebba626f0a9ecc962e75a29f8da2295a7823cb7aa564e1f4be2f95203670",
+      "targets": [
+        {
+          "id": "conditional-given-hypothesis-2e9833.t1",
+          "uid": "theory:1d5aa3b77725fc5023851bcb",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-22",
+          "uid": "theory:1273fb5f54423ea6a18f2fb1",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "conditional-given-hypothesis-2e9833.t2",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#conditional-given-hypothesis-2e9833",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "1e84d7ef88f19848f5ce347e64ba9383f39da90dafaebe86b6716417e700fe1a",
+      "targets": [
+        {
+          "id": "conditional-given-hypothesis-2e9833.t2",
+          "uid": "theory:6655bac1ae6f5938020875eb",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-23",
+          "uid": "theory:f0a7deebfe60329a69958e4a",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "conditional-given-hypothesis-2e9833.t3",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#conditional-given-hypothesis-2e9833",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "f2cc1ad0cfe956b5f3be2e04c9af96d14acd1477db12561ac1480fc6b92ed5c9",
+      "targets": [
+        {
+          "id": "conditional-given-hypothesis-2e9833.t3",
+          "uid": "theory:2a9aa1fafbabcfb84829f2c3",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-24",
+          "uid": "theory:90e7c4a7b826f977d28e5e67",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-df240637.t1",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#cjk-df240637",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "5f598545bfd79877447954a2b4c32e7334993a52ff523c153635fbc007d35307",
+      "targets": [
+        {
+          "id": "cjk-df240637.t1",
+          "uid": "theory:e603f8d89529ffd62abcf150",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-25",
+          "uid": "theory:e02b7e77da516196f1a40586",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-df240637.t2",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#cjk-df240637",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "76ea25ca966d3fc7dd0539be5899d15917a8e381d1719dd669ce654ca9d40cd7",
+      "targets": [
+        {
+          "id": "cjk-df240637.t2",
+          "uid": "theory:16ee67816050028d7413c5ba",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-26",
+          "uid": "theory:31cf31ead1334d50dbc2c55a",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-df240637.t3",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#cjk-df240637",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "be6d16c3f71588073563ee2e3f699c581fd167c4fd69372c0022235108960c58",
+      "targets": [
+        {
+          "id": "cjk-df240637.t3",
+          "uid": "theory:5a3cf27a52c1acc532347c54",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-27",
+          "uid": "theory:814b21d8c7e91b4f54d0fe85",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-df240637.t4",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#cjk-df240637",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "bc918035df14be4cd2180d1ba8e2a885c4483711101aab18c96eef5ae30e2431",
+      "targets": [
+        {
+          "id": "cjk-df240637.t4",
+          "uid": "theory:02c6a83689623bff9aba3c16",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-28",
+          "uid": "theory:904e6b1b11f50b0d42da8b1b",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-df240637.t5",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#cjk-df240637",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "4df9aea535a1cefcfa5570169a9b5ffe2ebafd03db87d65c8607f306ad96e734",
+      "targets": [
+        {
+          "id": "cjk-df240637.t5",
+          "uid": "theory:2f5e4b0d31bc606a1fd6813d",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-29",
+          "uid": "theory:a102bb8779addebee23f0db7",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-42536e43.t1",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#cjk-42536e43",
+      "legacy_citekey": "darby_2023_msom",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "2d0cbdfff953c2341b2c6606b760c2bcb186de145ac6c8946b70dffdf0c21c5f",
+      "targets": [
+        {
+          "id": "cjk-42536e43.t1",
+          "uid": "theory:b72e3f6c75d02685454a962d",
+          "citekey": "darby_2023_msom"
+        },
+        {
+          "id": "matrix-30",
+          "uid": "theory:0ab9166128a42a3d497db44c",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-42536e43.t2",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#cjk-42536e43",
+      "legacy_citekey": "darby_2023_msom",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "10843a21316ec55c8482c1e76f9e99c254fab5a4d3182b44787f0300ba97b648",
+      "targets": [
+        {
+          "id": "cjk-42536e43.t2",
+          "uid": "theory:b7179efe28a4cc556870d9a1",
+          "citekey": "darby_2023_msom"
+        },
+        {
+          "id": "matrix-31",
+          "uid": "theory:540e0239d638215c9f4f91ed",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-42536e43.t3",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#cjk-42536e43",
+      "legacy_citekey": "darby_2023_msom",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "f9708f8438ce4b4529f3dfb05f59b670fff65f823185df899473da3a139222b2",
+      "targets": [
+        {
+          "id": "cjk-42536e43.t3",
+          "uid": "theory:514c08a95ad7e80b4bb5831d",
+          "citekey": "darby_2023_msom"
+        },
+        {
+          "id": "matrix-32",
+          "uid": "theory:8e8c067a21acefdb1035e289",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-42536e43.t4",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#cjk-42536e43",
+      "legacy_citekey": "darby_2023_msom",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "22ef1e873beb260cf9277c05b63829ffd2655f4664265c59b472ffd5fc8552f1",
+      "targets": [
+        {
+          "id": "cjk-42536e43.t4",
+          "uid": "theory:5c274c456cd1a94b3c2249d8",
+          "citekey": "darby_2023_msom"
+        },
+        {
+          "id": "matrix-33",
+          "uid": "theory:02695bb3e4125f0d1c1ecb75",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-42536e43.t5",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#cjk-42536e43",
+      "legacy_citekey": "darby_2023_msom",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "30e8991fd70d66909cfc24febae8e8f788fafcecbb7e3031baf8a18e51a0b6ab",
+      "targets": [
+        {
+          "id": "cjk-42536e43.t5",
+          "uid": "theory:ef9d726974e585314cdd6280",
+          "citekey": "darby_2023_msom"
+        },
+        {
+          "id": "matrix-34",
+          "uid": "theory:5c4b7d2e36d30046cc6a02b8",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-9d0b2b62.t1",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#cjk-9d0b2b62",
+      "legacy_citekey": "darby_2025_jscm",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "b5ef5dd3e22f5c76bb1a091567e07c7063870fddb537806241342d3993f6bbc3",
+      "targets": [
+        {
+          "id": "cjk-9d0b2b62.t1",
+          "uid": "theory:5774f4e286fd5f70e4a455a4",
+          "citekey": "darby_2025_jscm"
+        },
+        {
+          "id": "matrix-35",
+          "uid": "theory:2fa857e94a1be276078f00c9",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-9d0b2b62.t2",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#cjk-9d0b2b62",
+      "legacy_citekey": "darby_2025_jscm",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "f8cd3ee4bd222525ee86f7f76ec76a38dff17c34ba17a3b5badd31f5839c1476",
+      "targets": [
+        {
+          "id": "cjk-9d0b2b62.t2",
+          "uid": "theory:1fcc9f41809b2bbbe28aaccd",
+          "citekey": "darby_2025_jscm"
+        },
+        {
+          "id": "matrix-36",
+          "uid": "theory:1dccf3b180b2618c818b65ad",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-39237b9e.t1",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#cjk-39237b9e",
+      "legacy_citekey": "wowak_2025_ms",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "481f26857628a450640abf81b38d32c6fcc6269b905538c1c918db9a8402f5b5",
+      "targets": [
+        {
+          "id": "cjk-39237b9e.t1",
+          "uid": "theory:f93248e13ea9fd9edbdcbc1c",
+          "citekey": "wowak_2025_ms"
+        },
+        {
+          "id": "matrix-37",
+          "uid": "theory:30fb3cc50c4640b00dcec0b5",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "nondirectional-competing-mod-200f9c.t1",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#nondirectional-competing-mod-200f9c",
+      "legacy_citekey": "kalaignanametal2013",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "5c6fde564706d7c329bcda9efc192270ebd68de8f836a4b3de81b14b9e4f4122",
+      "targets": [
+        {
+          "id": "nondirectional-competing-mod-200f9c.t1",
+          "uid": "theory:90229b827dfb53d0b5a3062a",
+          "citekey": "kalaignanametal2013"
+        },
+        {
+          "id": "matrix-38",
+          "uid": "theory:8814e7e47a37d62a07e40bc1",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "iv-dv-91e054.a",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#iv-dv-91e054",
+      "legacy_citekey": "malik_wang_martin_gomez_mejia_2025_jm",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "a5adbebb95d841f2d6e65597bc8bfec6711a4e5eae13e54e1f5170496de865af",
+      "targets": [
+        {
+          "id": "paired_hypotheses_same_iv_dual_dv.a",
+          "uid": "theory:5e477d299d45c74a111f908f",
+          "citekey": "malik_wang_martin_gomez_mejia_2025_jm"
+        },
+        {
+          "id": "iv-dv-91e054.a",
+          "uid": "theory:77dc2ec021d82b2c895718e9",
+          "citekey": "malik_wang_martin_gomez_mejia_2025_jm"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "iv-dv-91e054.b",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#iv-dv-91e054",
+      "legacy_citekey": "malik_wang_martin_gomez_mejia_2025_jm",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "0346a044490125fb02c5c7f6f2324b40255b8b8ce2eb7aef097f81e5a4715334",
+      "targets": [
+        {
+          "id": "paired_hypotheses_same_iv_dual_dv.c",
+          "uid": "theory:029625cabe5a5d3f45edb8a0",
+          "citekey": "malik_wang_martin_gomez_mejia_2025_jm"
+        },
+        {
+          "id": "iv-dv-91e054.b",
+          "uid": "theory:7fef05d5618900a06769e957",
+          "citekey": "malik_wang_martin_gomez_mejia_2025_jm"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "iv-dv-91e054.t1",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#iv-dv-91e054",
+      "legacy_citekey": "malik_wang_martin_gomez_mejia_2025_jm",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "9c5edb4edb2a81683fbe357759e932cc15681c04228333625a7266e109293401",
+      "targets": [
+        {
+          "id": "iv-dv-91e054.t1",
+          "uid": "theory:4119f40354c3c0dd4cf57aec",
+          "citekey": "malik_wang_martin_gomez_mejia_2025_jm"
+        },
+        {
+          "id": "matrix-39",
+          "uid": "theory:0649efc3827455ef04ccbdfe",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-75e7571b.t1",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#cjk-75e7571b",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "852b7314b21a11cb962850b2166a627d40d3b88f85319b68864637896188a4d7",
+      "targets": [
+        {
+          "id": "cjk-75e7571b.t1",
+          "uid": "theory:dd9a1325d2a1095e74c4ea77",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-40",
+          "uid": "theory:1c18e0030ddcd2eaf51be9a1",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-1",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#1. 测量尺度 → 基础形式速查表",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "b900ca6597333345cb773887e94260faea5249981359b02a5c573adac2d43595",
+      "targets": [
+        {
+          "id": "1-cc7b55.t1",
+          "uid": "theory:01201c5859bfc3280ab9393f",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-1~e8fa63c648fd",
+          "uid": "theory:23f521312482554677ebe033",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-2",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#1. 测量尺度 → 基础形式速查表",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "31b5c18b535a2421f0f550075d0b858f04fecc04ea922e90628c3ab5f625eb39",
+      "targets": [
+        {
+          "id": "1-cc7b55.t2",
+          "uid": "theory:b17ddeed00272bafb078ce34",
+          "citekey": "未标注"
+        },
+        {
+          "id": "cjk-5fe946eb.t2",
+          "uid": "theory:1d7204b0357f206b56ba3f0d",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-2~48019f6ff8d7",
+          "uid": "theory:7d2501f76141315247839c5b",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-3",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#1. 测量尺度 → 基础形式速查表",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "912ef0948d7cae12baa86d25ec50090348e22af97e673155d87435ab77b9ae58",
+      "targets": [
+        {
+          "id": "1-cc7b55.t3",
+          "uid": "theory:1f761a17836ff5f8beb3a654",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-3~c0c926b77892",
+          "uid": "theory:0d288ef0e57423ad2b418411",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-4",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#1. 测量尺度 → 基础形式速查表",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "b18d2ba0c82a72b06647045222f4b677fabad5396136a326ed982d6041968fde",
+      "targets": [
+        {
+          "id": "1-cc7b55.t4",
+          "uid": "theory:10e60766bb3d371cfbdb7d3a",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-4~ea9b5a9e8c47",
+          "uid": "theory:c105606d8f3a8928f0f18c94",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-5",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#1. 测量尺度 → 基础形式速查表",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "efa1d47e9d84670b254e531395fcba703f1514e8d4e0d24076842ac1b96ada0a",
+      "targets": [
+        {
+          "id": "1-cc7b55.t5",
+          "uid": "theory:e6fdc761e97720c8d895abb0",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-5~acb310530881",
+          "uid": "theory:14c04d83e16dde11f477f777",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-6",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#1. 测量尺度 → 基础形式速查表",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "c2510f9417f009114b93a4f218b7dc54222c7ba9b8b9ce54de25a9dc0acbb8f3",
+      "targets": [
+        {
+          "id": "1-cc7b55.t6",
+          "uid": "theory:8d3d5b46e45b704146a11cba",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-6",
+          "uid": "theory:16907e72fddafbd38523a673",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-7",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#2. 调节效应形式决策表",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "17fdd01f647dce6561b3f08ad5322f09f8957336a5c222dcfd269926d18fac84",
+      "targets": [
+        {
+          "id": "2-35951b.t1",
+          "uid": "theory:9f1d292ef8165adcc6bb8a4f",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-7",
+          "uid": "theory:88358ea8c936c05954aaa2cc",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-8",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#2. 调节效应形式决策表",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "478448a1d612f1e7bf75b947bb332a84afc01f150f221601fd69bda34f68dcc0",
+      "targets": [
+        {
+          "id": "2-35951b.t2",
+          "uid": "theory:59a0b366c802fb7a5fad9514",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-8",
+          "uid": "theory:f7ee79f31877bcf9faea1134",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-9",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#2. 调节效应形式决策表",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "370cb4d894856dddcc63c40beb18bbc6e7baf39c2a5fbf2496af7f96f0886562",
+      "targets": [
+        {
+          "id": "2-35951b.t3",
+          "uid": "theory:e6f87d65ce1efb9a2b7607cd",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-9",
+          "uid": "theory:af155510aa40945b1bae6c60",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-10",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#2. 调节效应形式决策表",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "42db7b7d9dd3668ff7e470634921efda901d60293a3877ddb435757d9e218dff",
+      "targets": [
+        {
+          "id": "2-35951b.t4",
+          "uid": "theory:ac180d9489300bd8e489430b",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-10",
+          "uid": "theory:747bcddbd91c77a796141b61",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-11",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#2. 调节效应形式决策表",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "ea24e0c3912cc65a9a05589d813b1402c7c52dec2efdf7941f78be0674510059",
+      "targets": [
+        {
+          "id": "2-35951b.t5",
+          "uid": "theory:e8d8a4b99371c087d217a92a",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-11",
+          "uid": "theory:47b5992c706d46ee91f8e49e",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-12",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#2. 调节效应形式决策表",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "33e655dcd977fd37fb885f322415d138835c1b4ae1056ceac2fb6570122a2df9",
+      "targets": [
+        {
+          "id": "2-35951b.t6",
+          "uid": "theory:e3f38af92c30df97c425345d",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-12",
+          "uid": "theory:8264e141866e0c7a6903cd14",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-13",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#3. 关系形状与措辞匹配",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "02fda2116b1baf7a1b34f1f7fdba72c730e55143d00129332b39ba61a0e8a2ac",
+      "targets": [
+        {
+          "id": "3-588118.t1",
+          "uid": "theory:e89080e1590e47713d485bf3",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-13",
+          "uid": "theory:fcf45b72b6ec458886641d66",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-14",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#3. 关系形状与措辞匹配",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "dc672d30c59c300716ae059e692b6246626e3a4ffd3bb4bee738b4ad7490e0fe",
+      "targets": [
+        {
+          "id": "3-588118.t2",
+          "uid": "theory:7a6c2ec9e1696e3703b9c20b",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-14",
+          "uid": "theory:f3c1d4d8c5c3dfead3a70dff",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-15",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#基础关系",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "e38a283c9ef1042364caf7db85f1040cf744a51152809e58dd9b19006487b58b",
+      "targets": [
+        {
+          "id": "cjk-5fe946eb.t1",
+          "uid": "theory:301b6fd381f3fe886c9e7dda",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-15",
+          "uid": "theory:bd652eaae8b07cb2fac7852c",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-16",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#差异比较",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "3c948f343d955b731abd12cc6a18686f8352e57d4311579dcfef0827677a2609",
+      "targets": [
+        {
+          "id": "cjk-9d5232fe.t1",
+          "uid": "theory:c559e90ffaf81934041b90f1",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-16",
+          "uid": "theory:5c75d721fb44b4a411c45c8a",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-17",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#差异比较",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "3d20a0574b419b2abf2b4814276fcb9a2b923748ef5fb8a73b768fe8029a39b6",
+      "targets": [
+        {
+          "id": "cjk-9d5232fe.t2",
+          "uid": "theory:78b9f070f62201d3b0f8a902",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-17",
+          "uid": "theory:57fb8ac866ad5de6ae7af827",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-18",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#差异比较",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "98858309481c6c6b9cfaeeaceb8967b8298dac196e16ca17074911bb85deb919",
+      "targets": [
+        {
+          "id": "cjk-9d5232fe.t3",
+          "uid": "theory:94d4c349e824632bed781dc3",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-18",
+          "uid": "theory:37f50be9a23626b987b5a652",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-19",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#Comparative Main Effect（比较型主效应；VERIFIED）",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "be53f5b4500e60230d89e3bc90a5a79a745fa8d1fcd32ae4b571ac45e12d9b43",
+      "targets": [
+        {
+          "id": "comparative_main_effect_hypothesis_form.t3",
+          "uid": "theory:a1898cc035031fe8a2fa58f8",
+          "citekey": "Chen_Ganesan_Liu_2009_JM"
+        },
+        {
+          "id": "matrix-19",
+          "uid": "theory:b4e21fa60630b0aee33c4f84",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-20",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#配对假设 (Paired Hypotheses a/b Format)",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "be5b94a6be3cb32a3a2b8a0b9c8b6f38a53e784564c6484f4f49624d345053dd",
+      "targets": [
+        {
+          "id": "paired_hypotheses_same_iv_dual_dv.t1",
+          "uid": "theory:58a0e0c7d3606b681d2fcc65",
+          "citekey": "malik_wang_martin_gomez_mejia_2025_jm"
+        },
+        {
+          "id": "matrix-20",
+          "uid": "theory:6983239cc5f81b0a9d371df6",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-21",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#配对假设 (Paired Hypotheses a/b Format)",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "7a84cd85e128e659c650be2e8fc42c5870ed8c1f5bf361fb77fc04b1542842b6",
+      "targets": [
+        {
+          "id": "paired_hypotheses_same_iv_dual_dv.t2",
+          "uid": "theory:328d0d2aecfdae1298afe416",
+          "citekey": "malik_wang_martin_gomez_mejia_2025_jm"
+        },
+        {
+          "id": "matrix-21",
+          "uid": "theory:588ec82ea75b2eebfbfeca2e",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-22",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#条件假设 (Conditional \"Given...\" Hypothesis Format)",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "d175ebba626f0a9ecc962e75a29f8da2295a7823cb7aa564e1f4be2f95203670",
+      "targets": [
+        {
+          "id": "conditional-given-hypothesis-2e9833.t1",
+          "uid": "theory:1d5aa3b77725fc5023851bcb",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-22",
+          "uid": "theory:1273fb5f54423ea6a18f2fb1",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-23",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#条件假设 (Conditional \"Given...\" Hypothesis Format)",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "1e84d7ef88f19848f5ce347e64ba9383f39da90dafaebe86b6716417e700fe1a",
+      "targets": [
+        {
+          "id": "conditional-given-hypothesis-2e9833.t2",
+          "uid": "theory:6655bac1ae6f5938020875eb",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-23",
+          "uid": "theory:f0a7deebfe60329a69958e4a",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-24",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#条件假设 (Conditional \"Given...\" Hypothesis Format)",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "f2cc1ad0cfe956b5f3be2e04c9af96d14acd1477db12561ac1480fc6b92ed5c9",
+      "targets": [
+        {
+          "id": "conditional-given-hypothesis-2e9833.t3",
+          "uid": "theory:2a9aa1fafbabcfb84829f2c3",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-24",
+          "uid": "theory:90e7c4a7b826f977d28e5e67",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-25",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#中介效应",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "5f598545bfd79877447954a2b4c32e7334993a52ff523c153635fbc007d35307",
+      "targets": [
+        {
+          "id": "cjk-df240637.t1",
+          "uid": "theory:e603f8d89529ffd62abcf150",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-25",
+          "uid": "theory:e02b7e77da516196f1a40586",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-26",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#中介效应",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "76ea25ca966d3fc7dd0539be5899d15917a8e381d1719dd669ce654ca9d40cd7",
+      "targets": [
+        {
+          "id": "cjk-df240637.t2",
+          "uid": "theory:16ee67816050028d7413c5ba",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-26",
+          "uid": "theory:31cf31ead1334d50dbc2c55a",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-27",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#中介效应",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "be6d16c3f71588073563ee2e3f699c581fd167c4fd69372c0022235108960c58",
+      "targets": [
+        {
+          "id": "cjk-df240637.t3",
+          "uid": "theory:5a3cf27a52c1acc532347c54",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-27",
+          "uid": "theory:814b21d8c7e91b4f54d0fe85",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-28",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#中介效应",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "bc918035df14be4cd2180d1ba8e2a885c4483711101aab18c96eef5ae30e2431",
+      "targets": [
+        {
+          "id": "cjk-df240637.t4",
+          "uid": "theory:02c6a83689623bff9aba3c16",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-28",
+          "uid": "theory:904e6b1b11f50b0d42da8b1b",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-29",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#中介效应",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "4df9aea535a1cefcfa5570169a9b5ffe2ebafd03db87d65c8607f306ad96e734",
+      "targets": [
+        {
+          "id": "cjk-df240637.t5",
+          "uid": "theory:2f5e4b0d31bc606a1fd6813d",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-29",
+          "uid": "theory:a102bb8779addebee23f0db7",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-30",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#调节效应",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "2d0cbdfff953c2341b2c6606b760c2bcb186de145ac6c8946b70dffdf0c21c5f",
+      "targets": [
+        {
+          "id": "cjk-42536e43.t1",
+          "uid": "theory:b72e3f6c75d02685454a962d",
+          "citekey": "darby_2023_msom"
+        },
+        {
+          "id": "matrix-30",
+          "uid": "theory:0ab9166128a42a3d497db44c",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-31",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#调节效应",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "10843a21316ec55c8482c1e76f9e99c254fab5a4d3182b44787f0300ba97b648",
+      "targets": [
+        {
+          "id": "cjk-42536e43.t2",
+          "uid": "theory:b7179efe28a4cc556870d9a1",
+          "citekey": "darby_2023_msom"
+        },
+        {
+          "id": "matrix-31",
+          "uid": "theory:540e0239d638215c9f4f91ed",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-32",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#调节效应",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "f9708f8438ce4b4529f3dfb05f59b670fff65f823185df899473da3a139222b2",
+      "targets": [
+        {
+          "id": "cjk-42536e43.t3",
+          "uid": "theory:514c08a95ad7e80b4bb5831d",
+          "citekey": "darby_2023_msom"
+        },
+        {
+          "id": "matrix-32",
+          "uid": "theory:8e8c067a21acefdb1035e289",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-33",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#调节效应",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "22ef1e873beb260cf9277c05b63829ffd2655f4664265c59b472ffd5fc8552f1",
+      "targets": [
+        {
+          "id": "cjk-42536e43.t4",
+          "uid": "theory:5c274c456cd1a94b3c2249d8",
+          "citekey": "darby_2023_msom"
+        },
+        {
+          "id": "matrix-33",
+          "uid": "theory:02695bb3e4125f0d1c1ecb75",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-34",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#调节效应",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "30e8991fd70d66909cfc24febae8e8f788fafcecbb7e3031baf8a18e51a0b6ab",
+      "targets": [
+        {
+          "id": "cjk-42536e43.t5",
+          "uid": "theory:ef9d726974e585314cdd6280",
+          "citekey": "darby_2023_msom"
+        },
+        {
+          "id": "matrix-34",
+          "uid": "theory:5c4b7d2e36d30046cc6a02b8",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-35",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#分组调节",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "b5ef5dd3e22f5c76bb1a091567e07c7063870fddb537806241342d3993f6bbc3",
+      "targets": [
+        {
+          "id": "cjk-9d0b2b62.t1",
+          "uid": "theory:5774f4e286fd5f70e4a455a4",
+          "citekey": "darby_2025_jscm"
+        },
+        {
+          "id": "matrix-35",
+          "uid": "theory:2fa857e94a1be276078f00c9",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-36",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#分组调节",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "f8cd3ee4bd222525ee86f7f76ec76a38dff17c34ba17a3b5badd31f5839c1476",
+      "targets": [
+        {
+          "id": "cjk-9d0b2b62.t2",
+          "uid": "theory:1fcc9f41809b2bbbe28aaccd",
+          "citekey": "darby_2025_jscm"
+        },
+        {
+          "id": "matrix-36",
+          "uid": "theory:1dccf3b180b2618c818b65ad",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-37",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#竞争假设",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "481f26857628a450640abf81b38d32c6fcc6269b905538c1c918db9a8402f5b5",
+      "targets": [
+        {
+          "id": "cjk-39237b9e.t1",
+          "uid": "theory:f93248e13ea9fd9edbdcbc1c",
+          "citekey": "wowak_2025_ms"
+        },
+        {
+          "id": "matrix-37",
+          "uid": "theory:30fb3cc50c4640b00dcec0b5",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-38",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#单一非定向调节（Nondirectional Competing Moderator）",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "5c6fde564706d7c329bcda9efc192270ebd68de8f836a4b3de81b14b9e4f4122",
+      "targets": [
+        {
+          "id": "nondirectional-competing-mod-200f9c.t1",
+          "uid": "theory:90229b827dfb53d0b5a3062a",
+          "citekey": "kalaignanametal2013"
+        },
+        {
+          "id": "matrix-38",
+          "uid": "theory:8814e7e47a37d62a07e40bc1",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-39",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#矩阵假设（多 IV × 多 DV）",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "9c5edb4edb2a81683fbe357759e932cc15681c04228333625a7266e109293401",
+      "targets": [
+        {
+          "id": "iv-dv-91e054.t1",
+          "uid": "theory:4119f40354c3c0dd4cf57aec",
+          "citekey": "malik_wang_martin_gomez_mejia_2025_jm"
+        },
+        {
+          "id": "matrix-39",
+          "uid": "theory:0649efc3827455ef04ccbdfe",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "matrix-40",
+      "legacy_anchor": "corpus/sentences/hypothesis_forms.md#三向交互",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/hypothesis_forms.md",
+      "text_sha256": "852b7314b21a11cb962850b2166a627d40d3b88f85319b68864637896188a4d7",
+      "targets": [
+        {
+          "id": "cjk-75e7571b.t1",
+          "uid": "theory:dd9a1325d2a1095e74c4ea77",
+          "citekey": "未标注"
+        },
+        {
+          "id": "matrix-40",
+          "uid": "theory:1c18e0030ddcd2eaf51be9a1",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "变体-A.t1",
+      "legacy_anchor": "corpus/sentences/mechanism_chain.md#变体-A",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/mechanism_chain.md",
+      "text_sha256": "3114afd0eb3d062be4bb12b0cceeda36ddd07edd49c924d46bd89d35c681731d",
+      "targets": [
+        {
+          "id": "变体-A.t1~1c4bddcb42f9",
+          "uid": "theory:bf150d1e64ed2c9dcfb14053",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "变体-B.a",
+      "legacy_anchor": "corpus/sentences/moderation.md#变体-B",
+      "legacy_citekey": "westphal_zajac_1998_symbolic_management",
+      "source_file": "write-theory/corpus/sentences/moderation.md",
+      "text_sha256": "5c10eb5848e8161a5922164a4896a35eaf4d11ff620ab20ffe618847a8fbe495",
+      "targets": [
+        {
+          "id": "变体-B.a~2bcd478753a8",
+          "uid": "theory:6b713b5bfca00a24b566cc31",
+          "citekey": "westphal_zajac_1998_symbolic_management"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "变体-B.b",
+      "legacy_anchor": "corpus/sentences/moderation.md#变体-B",
+      "legacy_citekey": "westphal_zajac_1998_symbolic_management",
+      "source_file": "write-theory/corpus/sentences/moderation.md",
+      "text_sha256": "5a53280b99f306bcfc78e6cc7cfb82ae3817be8fb9054e9c4941b73de44796b5",
+      "targets": [
+        {
+          "id": "变体-B.b~acc2c3435b39",
+          "uid": "theory:9ef3f3a007026d7c4eabecf6",
+          "citekey": "westphal_zajac_1998_symbolic_management"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "变体-B.t1",
+      "legacy_anchor": "corpus/sentences/moderation.md#变体-B",
+      "legacy_citekey": "westphal_zajac_1998_symbolic_management",
+      "source_file": "write-theory/corpus/sentences/moderation.md",
+      "text_sha256": "d65e17e5e6da428f466adeaacc92d622d5d9e1723da706dff62bb6cd090ef035",
+      "targets": [
+        {
+          "id": "变体-B.t1~2cac5f7945b8",
+          "uid": "theory:33724b82622c7daedd9afc82",
+          "citekey": "westphal_zajac_1998_symbolic_management"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "变体-A.t1",
+      "legacy_anchor": "corpus/sentences/moderation.md#变体-A",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/sentences/moderation.md",
+      "text_sha256": "5ebb7a71fd0f78bfb6a36d56ec0ba7debc4fffd4f454a6e82ce7455363f13395",
+      "targets": [
+        {
+          "id": "变体-A.t1~4a5c993dfd75",
+          "uid": "theory:9e9fffb629441eac0baa3e56",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "enhancing_moderation_more_less_hypothesis_form.t1",
+      "legacy_anchor": "corpus/sentences/moderation.md#变体-F",
+      "legacy_citekey": "raithel_2024_JAMS",
+      "source_file": "write-theory/corpus/sentences/moderation.md",
+      "text_sha256": "91b5480686bd8d6fe89356d42985c1367b55db8ad844993fbb40f9c4a5140728",
+      "targets": [
+        {
+          "id": "enhancing_moderation_more_less_hypothesis_form.t1~87341e7baac2",
+          "uid": "theory:1f4741d3d48c25c34931d544",
+          "citekey": "raithel_2024_JAMS"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "enhancing_moderation_more_less_hypothesis_form.t1",
+      "legacy_anchor": "corpus/sentences/moderation.md#sentence-enhancing-moderatio-18ed46",
+      "legacy_citekey": "raithel_2024_product_recall_effectiveness_and_consumers_part",
+      "source_file": "write-theory/corpus/sentences/moderation.md",
+      "text_sha256": "42031eeeba55ba50035397043e9b4cc60ebb69fa7d1db907dc6caca3b38e658f",
+      "targets": [
+        {
+          "id": "enhancing_moderation_more_less_hypothesis_form.t1~809603c51bce",
+          "uid": "theory:ae622a166db9a89d11c439c2",
+          "citekey": "raithel_2024_product_recall_effectiveness_and_consumers_part"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "model_modification_announcement_setup.t1",
+      "legacy_anchor": "corpus/subprotocols/argumentation_patterns.md#Pattern: Model-Modification Announcement for Context Adaptation（Raithel_2024_JAMS 型）",
+      "legacy_citekey": "raithel_2024_product_recall_effectiveness_and_consumers_part",
+      "source_file": "write-theory/corpus/subprotocols/argumentation_patterns.md",
+      "text_sha256": "62ef8f98e4b39c03cbd9db101a9d29ca52dad810095f5f119e6af59fa4ce175b",
+      "targets": [
+        {
+          "id": "model_modification_announcement_setup.t1",
+          "uid": "theory:56be678b62ce36667f78207b",
+          "citekey": "raithel_2024_JAMS"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "model_modification_announcement_setup.a",
+      "legacy_anchor": "corpus/subprotocols/argumentation_patterns.md#model_modification_announcement_setup",
+      "legacy_citekey": "raithel_2024_JAMS",
+      "source_file": "write-theory/corpus/subprotocols/argumentation_patterns.md",
+      "text_sha256": "3ba9214ee057b26f56ec7d1edbf5bc5adfb33c2a93af7d6941ce69b53514e86b",
+      "targets": [
+        {
+          "id": "e-westphal-bednar2005-ed8dda.a",
+          "uid": "theory:9caafc4164a6e7ca5e029a4b",
+          "citekey": "westphal_bednar2005"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "model_modification_announcement_setup.b",
+      "legacy_anchor": "corpus/subprotocols/argumentation_patterns.md#model_modification_announcement_setup",
+      "legacy_citekey": "raithel_2024_JAMS",
+      "source_file": "write-theory/corpus/subprotocols/argumentation_patterns.md",
+      "text_sha256": "e8245e8c29898e606a5eafada1de33b0538bcec10b35a0a0d5ab097d071c31f8",
+      "targets": [
+        {
+          "id": "e-westphal-bednar2005-ed8dda.b",
+          "uid": "theory:536f36f6288f958a1fd59c62",
+          "citekey": "westphal_bednar2005"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "model_modification_announcement_setup.t1",
+      "legacy_anchor": "corpus/subprotocols/argumentation_patterns.md#model_modification_announcement_setup",
+      "legacy_citekey": "raithel_2024_JAMS",
+      "source_file": "write-theory/corpus/subprotocols/argumentation_patterns.md",
+      "text_sha256": "470c4988bdb6884065c3adb4d1ad42ded908e7f13ca7bbe71c397b52b7df19e9",
+      "targets": [
+        {
+          "id": "e-westphal-bednar2005-ed8dda.t1",
+          "uid": "theory:023d1762bfea78ff2b7862fb",
+          "citekey": "westphal_bednar2005"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "social_identity_boundary_condition.t1",
+      "legacy_anchor": "corpus/subprotocols/bilateral_argumentation_templates.md#social_identity_boundary_condition",
+      "legacy_citekey": "Keeves_2017_ASQ",
+      "source_file": "write-theory/corpus/subprotocols/bilateral_argumentation_templates.md",
+      "text_sha256": "cd9e2ab7a3bfadaadbdedb2a47e1e28a3d82251ef0b5a7a7966656d635064481",
+      "targets": [
+        {
+          "id": "group-identity-as-boundary-condition.t1",
+          "uid": "theory:d6844f69315aa4b086ba48d3",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "asymmetric_bilateral_moderation_baseline_zero.t1",
+      "legacy_anchor": "corpus/subprotocols/bilateral_argumentation_templates.md#Pattern: Asymmetric Bilateral Moderation — Full Derivation Plus Baseline-Zero Counterpart（Raithel_2024_JAMS 型）",
+      "legacy_citekey": "raithel_2024_product_recall_effectiveness_and_consumers_part",
+      "source_file": "write-theory/corpus/subprotocols/bilateral_argumentation_templates.md",
+      "text_sha256": "6ba6076b59f0b65746b51a8c8ffbc992a5267fa0d7257ea6053d7bbc529701c1",
+      "targets": [
+        {
+          "id": "asymmetric_bilateral_moderation_baseline_zero.t1",
+          "uid": "theory:ad2b4f5e1837bbd9c28a41b6",
+          "citekey": "raithel_2024_JAMS"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "hazard_recall_attenuation_moderation_bilateral.a",
+      "legacy_anchor": "corpus/subprotocols/bilateral_argumentation_templates.md#Pattern: Hazard-Recall Attenuation Moderation（Mallapragada et al. 2025 JM 型）",
+      "legacy_citekey": "mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate",
+      "source_file": "write-theory/corpus/subprotocols/bilateral_argumentation_templates.md",
+      "text_sha256": "5737847b11d820d1f504064a01c131963aa605cb2bbce73ca83d71f23da0b28f",
+      "targets": [
+        {
+          "id": "hazard_recall_attenuation_moderation_bilateral.a",
+          "uid": "theory:2ac2ac4e1c4fa39b61af4bc0",
+          "citekey": "Mallapragada_Bommaraju_Kumar_Pedada_2025_JM"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "hazard_recall_attenuation_moderation_bilateral.t1",
+      "legacy_anchor": "corpus/subprotocols/bilateral_argumentation_templates.md#Pattern: Hazard-Recall Attenuation Moderation（Mallapragada et al. 2025 JM 型）",
+      "legacy_citekey": "mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate",
+      "source_file": "write-theory/corpus/subprotocols/bilateral_argumentation_templates.md",
+      "text_sha256": "463a089be12251f2191a4f95cac149a05dffa2fbb788e5eaf352070cbd8b65cc",
+      "targets": [
+        {
+          "id": "hazard_recall_attenuation_moderation_bilateral.t1",
+          "uid": "theory:2ebb7b9685477e14462ab0cc",
+          "citekey": "Mallapragada_Bommaraju_Kumar_Pedada_2025_JM"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "audience_role_dichotomy_mirrored_hypotheses.t1",
+      "legacy_anchor": "corpus/subprotocols/hypothesis_derivation_patterns.md#audience_role_dichotomy_mirrored_hypotheses",
+      "legacy_citekey": "Pontikes_2012_ASQ",
+      "source_file": "write-theory/corpus/subprotocols/hypothesis_derivation_patterns.md",
+      "text_sha256": "23064b529c51eeaf610bbfa2e767253200a85c551a55fbe04b427432623674d2",
+      "targets": [
+        {
+          "id": "audience-role-dichotomy-mirrored-hypothe.t1",
+          "uid": "theory:60efb1044742a214bcec4652",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "continuous_ratio_named_regime_partition.a",
+      "legacy_anchor": "corpus/subprotocols/hypothesis_derivation_patterns.md#Pattern: Continuous Ratio → Named Regime Partition（连续成本收益比的命名区间边界，mao_dong_lee_2022_msom 型）",
+      "legacy_citekey": "mao_dong_lee_2022_msom",
+      "source_file": "write-theory/corpus/subprotocols/hypothesis_derivation_patterns.md",
+      "text_sha256": "81327c07666a310640307efbe3fbfd192513b8ae9a04a6f55c4f9368006d5648",
+      "targets": [
+        {
+          "id": "three_condition_information_herding.a",
+          "uid": "theory:d6c9d28435e2cffcb94407c4",
+          "citekey": "Shi_Grewal_Sridhar_2021_JMR"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "continuous_ratio_named_regime_partition.t1",
+      "legacy_anchor": "corpus/subprotocols/hypothesis_derivation_patterns.md#Pattern: Continuous Ratio → Named Regime Partition（连续成本收益比的命名区间边界，mao_dong_lee_2022_msom 型）",
+      "legacy_citekey": "mao_dong_lee_2022_msom",
+      "source_file": "write-theory/corpus/subprotocols/hypothesis_derivation_patterns.md",
+      "text_sha256": "f44348df4b2134f4552e3635d1356b993005da01a9b784b6639ea7018c0e1ddc",
+      "targets": [
+        {
+          "id": "three_condition_information_herding.t1",
+          "uid": "theory:5deae6bc2850371d04a3a1b5",
+          "citekey": "Shi_Grewal_Sridhar_2021_JMR"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "three_condition_information_herding.t1",
+      "legacy_anchor": "corpus/subprotocols/hypothesis_derivation_patterns.md#three_condition_information_herding",
+      "legacy_citekey": "Shi_Grewal_Sridhar_2021_JMR",
+      "source_file": "write-theory/corpus/subprotocols/hypothesis_derivation_patterns.md",
+      "text_sha256": "e7e1b05ae696230398f4d1579ab01c860c98d7a6fca050a136afe81931d1e39b",
+      "targets": [
+        {
+          "id": "three-condition-framework-for-informatio.t1",
+          "uid": "theory:de1c0f82d421d018047808f0",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "bilateral_moderation_derivation.t1",
+      "legacy_anchor": "corpus/subprotocols/hypothesis_derivation_patterns.md#bilateral_moderation_derivation",
+      "legacy_citekey": "Shen_Zhou_Wang_Zhang_2022_JOM",
+      "source_file": "write-theory/corpus/subprotocols/hypothesis_derivation_patterns.md",
+      "text_sha256": "b9555bbad974a403c6556fa054445e4e58295cb89c62f9d2068786114d76bc50",
+      "targets": [
+        {
+          "id": "bilateral-moderation-derivat-c34baf.t1",
+          "uid": "theory:d75539dfe42497e073d65c00",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "dual-channel-convergence-des-0b8c52.a",
+      "legacy_anchor": "corpus/subprotocols/hypothesis_derivation_patterns.md#Pattern: Dual-Channel Convergence（双通道收敛，DesJardine–Li–Shi 2025 型）",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/subprotocols/hypothesis_derivation_patterns.md",
+      "text_sha256": "685bd7168707c287b521df72c1db837c688fa2bb207e1e5b155c7386b67de0e1",
+      "targets": [
+        {
+          "id": "dual_channel_convergence.a",
+          "uid": "theory:358bf66cee009624b06339c0",
+          "citekey": "desjardine_li_shi_2025_amj"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "dual-channel-convergence-des-0b8c52.b",
+      "legacy_anchor": "corpus/subprotocols/hypothesis_derivation_patterns.md#Pattern: Dual-Channel Convergence（双通道收敛，DesJardine–Li–Shi 2025 型）",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/subprotocols/hypothesis_derivation_patterns.md",
+      "text_sha256": "36339bd7fa4fae4c6fe589029a1f7906190e909930111779fd261681fbc3312f",
+      "targets": [
+        {
+          "id": "dual_channel_convergence.b",
+          "uid": "theory:184aca03b1863d6ed2cd8787",
+          "citekey": "desjardine_li_shi_2025_amj"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "dual-channel-convergence-des-0b8c52.c",
+      "legacy_anchor": "corpus/subprotocols/hypothesis_derivation_patterns.md#Pattern: Dual-Channel Convergence（双通道收敛，DesJardine–Li–Shi 2025 型）",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/subprotocols/hypothesis_derivation_patterns.md",
+      "text_sha256": "b9db9e23c3e06f7bbfa89794d2df88d797b472473507d831d0ffe2d5ef258dfa",
+      "targets": [
+        {
+          "id": "dual_channel_convergence.c",
+          "uid": "theory:fc045a6d982bf4b563c724e3",
+          "citekey": "desjardine_li_shi_2025_amj"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "dual-channel-convergence-des-0b8c52.t1",
+      "legacy_anchor": "corpus/subprotocols/hypothesis_derivation_patterns.md#Pattern: Dual-Channel Convergence（双通道收敛，DesJardine–Li–Shi 2025 型）",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/subprotocols/hypothesis_derivation_patterns.md",
+      "text_sha256": "af290041205f061cbd3be98b202dabdabdf51aeb2611807fee32023a6abad780",
+      "targets": [
+        {
+          "id": "dual_channel_convergence.t1",
+          "uid": "theory:3ca435efe34082b09a521212",
+          "citekey": "desjardine_li_shi_2025_amj"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "why-not-reverse-boundary-dec-42a42f.a",
+      "legacy_anchor": "corpus/subprotocols/hypothesis_derivation_patterns.md#Pattern: Why-Not Reverse Boundary Declaration（\"why not\" 反向边界声明，DesJardine–Li–Shi 2025 型）",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/subprotocols/hypothesis_derivation_patterns.md",
+      "text_sha256": "458b22686079cfc1878b68cda543594ac67700c546002d2a1feaffc16bd70873",
+      "targets": [
+        {
+          "id": "why_not_reverse_boundary_declaration.a",
+          "uid": "theory:4f87a529508ed2de5d05408c",
+          "citekey": "desjardine_li_shi_2025_amj"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "why-not-reverse-boundary-dec-42a42f.t1",
+      "legacy_anchor": "corpus/subprotocols/hypothesis_derivation_patterns.md#Pattern: Why-Not Reverse Boundary Declaration（\"why not\" 反向边界声明，DesJardine–Li–Shi 2025 型）",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/subprotocols/hypothesis_derivation_patterns.md",
+      "text_sha256": "88508efbb9f160fd750b40f3db71627e285dfef9386298505b680cda964d0a69",
+      "targets": [
+        {
+          "id": "why_not_reverse_boundary_declaration.t1",
+          "uid": "theory:9c55d7548d7f1c6e20051ed1",
+          "citekey": "desjardine_li_shi_2025_amj"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "dual_lens_independent_convergence_main_effect.a",
+      "legacy_anchor": "corpus/subprotocols/hypothesis_derivation_patterns.md#Pattern: Dual-Lens Independent Convergence（Mallapragada et al. 2025 JM 型）",
+      "legacy_citekey": "mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate",
+      "source_file": "write-theory/corpus/subprotocols/hypothesis_derivation_patterns.md",
+      "text_sha256": "eabc971e9cecc1acb6caa36e3bd838be1dfb102c1f957dcdd3d0c3147124adab",
+      "targets": [
+        {
+          "id": "dual_lens_independent_convergence_main_effect.a",
+          "uid": "theory:6a831382c648b877e73c7ec7",
+          "citekey": "Mallapragada_Bommaraju_Kumar_Pedada_2025_JM"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "dual_lens_independent_convergence_main_effect.t1",
+      "legacy_anchor": "corpus/subprotocols/hypothesis_derivation_patterns.md#Pattern: Dual-Lens Independent Convergence（Mallapragada et al. 2025 JM 型）",
+      "legacy_citekey": "mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate",
+      "source_file": "write-theory/corpus/subprotocols/hypothesis_derivation_patterns.md",
+      "text_sha256": "ff7981e523a9bee66fdf190adff1bb50af2f1c2018f48d6b18755e7519fa5a46",
+      "targets": [
+        {
+          "id": "dual_lens_independent_convergence_main_effect.t1",
+          "uid": "theory:f6bb8523a589783f57d72f05",
+          "citekey": "Mallapragada_Bommaraju_Kumar_Pedada_2025_JM"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "attribute_asymmetry_hazard_contrasts_mode_choice.a",
+      "legacy_anchor": "corpus/subprotocols/hypothesis_derivation_patterns.md#Pattern: Attribute-Asymmetry Hazard Contrasts → Categorical Mode Choice（Mallapragada et al. 2025 JM 型）",
+      "legacy_citekey": "mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate",
+      "source_file": "write-theory/corpus/subprotocols/hypothesis_derivation_patterns.md",
+      "text_sha256": "187139e3328f419e2a92440a4c459d8440b3ca2a71bc1e09a2a55fe8d5993a56",
+      "targets": [
+        {
+          "id": "attribute_asymmetry_hazard_contrasts_mode_choice.a",
+          "uid": "theory:bc7db28d57a1a770f2abe75c",
+          "citekey": "Mallapragada_Bommaraju_Kumar_Pedada_2025_JM"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "attribute_asymmetry_hazard_contrasts_mode_choice.t1",
+      "legacy_anchor": "corpus/subprotocols/hypothesis_derivation_patterns.md#Pattern: Attribute-Asymmetry Hazard Contrasts → Categorical Mode Choice（Mallapragada et al. 2025 JM 型）",
+      "legacy_citekey": "mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate",
+      "source_file": "write-theory/corpus/subprotocols/hypothesis_derivation_patterns.md",
+      "text_sha256": "0ee61dbc4eb3cd03fff413bca5284d296c5091853ed4f0769c2ffa48512f8ad6",
+      "targets": [
+        {
+          "id": "attribute_asymmetry_hazard_contrasts_mode_choice.t1",
+          "uid": "theory:bbda79b8dffd13de733042fb",
+          "citekey": "Mallapragada_Bommaraju_Kumar_Pedada_2025_JM"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "lens_asymmetric_bounded_moderation.a",
+      "legacy_anchor": "corpus/subprotocols/hypothesis_derivation_patterns.md#Pattern: Lens-Asymmetric Bounded Moderation（Mallapragada et al. 2025 JM 型）",
+      "legacy_citekey": "mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate",
+      "source_file": "write-theory/corpus/subprotocols/hypothesis_derivation_patterns.md",
+      "text_sha256": "96ae1ce78b3940a060035dd6d1e8b7611b5c698f70dbee41715c63ad06758d6c",
+      "targets": [
+        {
+          "id": "lens_asymmetric_bounded_moderation.a",
+          "uid": "theory:ea9183f19493a55e5280a0f8",
+          "citekey": "Mallapragada_Bommaraju_Kumar_Pedada_2025_JM"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "lens_asymmetric_bounded_moderation.t1",
+      "legacy_anchor": "corpus/subprotocols/hypothesis_derivation_patterns.md#Pattern: Lens-Asymmetric Bounded Moderation（Mallapragada et al. 2025 JM 型）",
+      "legacy_citekey": "mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate",
+      "source_file": "write-theory/corpus/subprotocols/hypothesis_derivation_patterns.md",
+      "text_sha256": "523e97b57e462f26400562c69e187a765a7f66b03f8eecdef45f5e4cffe495e8",
+      "targets": [
+        {
+          "id": "lens_asymmetric_bounded_moderation.t1",
+          "uid": "theory:5de8ad9611e23c2e9dad3d69",
+          "citekey": "Mallapragada_Bommaraju_Kumar_Pedada_2025_JM"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "triple_boundary_conditions.t1",
+      "legacy_anchor": "corpus/subprotocols/hypothesis_organization_patterns.md#triple_boundary_conditions",
+      "legacy_citekey": "Malshe_Agarwal_2015_JM",
+      "source_file": "write-theory/corpus/subprotocols/hypothesis_organization_patterns.md",
+      "text_sha256": "036f71f116dc555f619c5d563aadc3783890d1699605aa96293595db0a6432b8",
+      "targets": [
+        {
+          "id": "triple-parallel-boundary-conditions.t1",
+          "uid": "theory:ae5a5846b557c392dc4613dd",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "internal_external_actor_moderator_metaframework.a",
+      "legacy_anchor": "corpus/subprotocols/moderator_selection_frameworks.md#Pattern: Internal Role × External Intermediary Moderator Axis（Mallapragada et al. 2025 JM 型）",
+      "legacy_citekey": "mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate",
+      "source_file": "write-theory/corpus/subprotocols/moderator_selection_frameworks.md",
+      "text_sha256": "698bfe572a9a7705ffbf296660e92d0e3699655a9d1d673e37cacb189b51f261",
+      "targets": [
+        {
+          "id": "internal_external_actor_moderator_metaframework.a",
+          "uid": "theory:b1c7b059547fa41563ed20bc",
+          "citekey": "Mallapragada_Bommaraju_Kumar_Pedada_2025_JM"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "internal_external_actor_moderator_metaframework.t1",
+      "legacy_anchor": "corpus/subprotocols/moderator_selection_frameworks.md#Pattern: Internal Role × External Intermediary Moderator Axis（Mallapragada et al. 2025 JM 型）",
+      "legacy_citekey": "mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate",
+      "source_file": "write-theory/corpus/subprotocols/moderator_selection_frameworks.md",
+      "text_sha256": "df8ea8d615bbd04b819726aa2d2e20dd3e2b9114a74da76ea8e672c5dc64a877",
+      "targets": [
+        {
+          "id": "internal_external_actor_moderator_metaframework.t1",
+          "uid": "theory:34f4f9c167f2662dd6f1b436",
+          "citekey": "Mallapragada_Bommaraju_Kumar_Pedada_2025_JM"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "internal_external_actor_moderator_metaframework.a",
+      "legacy_anchor": "corpus/subprotocols/moderator_selection_frameworks.md#internal_external_actor_moderator_metaframework",
+      "legacy_citekey": "Mallapragada_Bommaraju_Kumar_Pedada_2025_JM",
+      "source_file": "write-theory/corpus/subprotocols/moderator_selection_frameworks.md",
+      "text_sha256": "3420c44681ee8e23d58898fe2029a471dc63e6fbf65297dc5d4dc27d2cf21816",
+      "targets": [
+        {
+          "id": "mechanism_participation_conditions_metaframework.a",
+          "uid": "theory:88f8e87c7f18e605f43119bd",
+          "citekey": "Ridge_Aime_White_2013_SMJ"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "internal_external_actor_moderator_metaframework.t1",
+      "legacy_anchor": "corpus/subprotocols/moderator_selection_frameworks.md#internal_external_actor_moderator_metaframework",
+      "legacy_citekey": "Mallapragada_Bommaraju_Kumar_Pedada_2025_JM",
+      "source_file": "write-theory/corpus/subprotocols/moderator_selection_frameworks.md",
+      "text_sha256": "3f210f117a44d23f9a9b13d2c249be2d18e4140690ed84263bd5d131b56cc314",
+      "targets": [
+        {
+          "id": "mechanism_participation_conditions_metaframework.t1",
+          "uid": "theory:8152b29b001d1be11a800edb",
+          "citekey": "Ridge_Aime_White_2013_SMJ"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "mechanism_participation_conditions_metaframework.a",
+      "legacy_anchor": "corpus/subprotocols/moderator_selection_frameworks.md#mechanism_participation_conditions_metaframework",
+      "legacy_citekey": "Ridge_Aime_White_2013_SMJ",
+      "source_file": "write-theory/corpus/subprotocols/moderator_selection_frameworks.md",
+      "text_sha256": "63da5785be7f29bf09441457674344a235312c8867a395eeeb8c1412f71adba1",
+      "targets": [
+        {
+          "id": "b-westphal-bednar2005-aae44d.a",
+          "uid": "theory:f4b6f5c8f8fa229d705ff4a2",
+          "citekey": "westphal_bednar2005"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "mechanism_participation_conditions_metaframework.t1",
+      "legacy_anchor": "corpus/subprotocols/moderator_selection_frameworks.md#mechanism_participation_conditions_metaframework",
+      "legacy_citekey": "Ridge_Aime_White_2013_SMJ",
+      "source_file": "write-theory/corpus/subprotocols/moderator_selection_frameworks.md",
+      "text_sha256": "b25b4657ec735a7bd60ec6f5f9caf2ce8218abe4b93ea3002223d7644ecc3166",
+      "targets": [
+        {
+          "id": "b-westphal-bednar2005-aae44d.t1",
+          "uid": "theory:95875edd61fadfd9aa25b19d",
+          "citekey": "westphal_bednar2005"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.a",
+      "legacy_anchor": "corpus/variants/A_construct_differentiation.md#cjk-3a351067",
+      "legacy_citekey": "pollock_2015_asq",
+      "source_file": "write-theory/corpus/variants/A_construct_differentiation.md",
+      "text_sha256": "b49e2acd81ea6bb45dfe065d3a80c71b9ccabb8b0615734e038a5925416ec0f5",
+      "targets": [
+        {
+          "id": "cjk-3a351067.a~9c28d2994d4a",
+          "uid": "theory:1ea79cea1e97fdc16d2a1cdc",
+          "citekey": "pollock_2015_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.b",
+      "legacy_anchor": "corpus/variants/A_construct_differentiation.md#cjk-3a351067",
+      "legacy_citekey": "pollock_2015_asq",
+      "source_file": "write-theory/corpus/variants/A_construct_differentiation.md",
+      "text_sha256": "8436643b4bd309acdbcc98505405fc498a1708523113dbe1d9ccd6fe40509bf6",
+      "targets": [
+        {
+          "id": "cjk-3a351067.b~12a48315b79d",
+          "uid": "theory:57a8db6cd7f7d979185beb65",
+          "citekey": "pollock_2015_asq"
+        },
+        {
+          "id": "pollock-2015-6f07e5.c",
+          "uid": "theory:4b9a731ec0d8bd8f5abbe8b8",
+          "citekey": "pollock_2015_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.c",
+      "legacy_anchor": "corpus/variants/A_construct_differentiation.md#cjk-3a351067",
+      "legacy_citekey": "pollock_2015_asq",
+      "source_file": "write-theory/corpus/variants/A_construct_differentiation.md",
+      "text_sha256": "e85ce8d9170cd30791a11852cd8b9339abe923c95c13e8e447f49811c2b17269",
+      "targets": [
+        {
+          "id": "cjk-3a351067.c~ba67a73d1554",
+          "uid": "theory:9eddd3ba7854621536175bb6",
+          "citekey": "pollock_2015_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.d",
+      "legacy_anchor": "corpus/variants/A_construct_differentiation.md#cjk-3a351067",
+      "legacy_citekey": "pollock_2015_asq",
+      "source_file": "write-theory/corpus/variants/A_construct_differentiation.md",
+      "text_sha256": "80bd7ce4764f2d0a764283e3380de1138864b9665c333f9b20c94e9d8e5692d8",
+      "targets": [
+        {
+          "id": "cjk-3a351067.d~99d13b0dce28",
+          "uid": "theory:92d09093fba4a431398e73cd",
+          "citekey": "pollock_2015_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.e",
+      "legacy_anchor": "corpus/variants/A_construct_differentiation.md#cjk-3a351067",
+      "legacy_citekey": "pollock_2015_asq",
+      "source_file": "write-theory/corpus/variants/A_construct_differentiation.md",
+      "text_sha256": "50c58f35ee438ed8314cf0c3746031aba7a1b55129e01b1f390029febb944348",
+      "targets": [
+        {
+          "id": "cjk-3a351067.e~6a3ba98738e2",
+          "uid": "theory:bdf19ac0bae2e4476c34246f",
+          "citekey": "pollock_2015_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.f",
+      "legacy_anchor": "corpus/variants/A_construct_differentiation.md#cjk-3a351067",
+      "legacy_citekey": "pollock_2015_asq",
+      "source_file": "write-theory/corpus/variants/A_construct_differentiation.md",
+      "text_sha256": "547d30f6750bc71f922a49685c9a9fa3e4a3dfffafaca6524c6d35dedde40b79",
+      "targets": [
+        {
+          "id": "cjk-3a351067.f~fc51b207f040",
+          "uid": "theory:d11f4bd9017a9c2c6855814a",
+          "citekey": "pollock_2015_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.t1",
+      "legacy_anchor": "corpus/variants/A_construct_differentiation.md#cjk-3a351067",
+      "legacy_citekey": "pollock_2015_asq",
+      "source_file": "write-theory/corpus/variants/A_construct_differentiation.md",
+      "text_sha256": "201cca53d6a65ada651268ffe8a2f9b7fe52c982ecfb052a753c03edb2f418b8",
+      "targets": [
+        {
+          "id": "cjk-3a351067.t1~892032ee3d8d",
+          "uid": "theory:590aa874a6f4a3954c673681",
+          "citekey": "pollock_2015_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.t2",
+      "legacy_anchor": "corpus/variants/A_construct_differentiation.md#cjk-3a351067",
+      "legacy_citekey": "pollock_2015_asq",
+      "source_file": "write-theory/corpus/variants/A_construct_differentiation.md",
+      "text_sha256": "92dc0a166f1d4fc5023833f68cd0951e866e423f9abbc023ebdd9874911b7730",
+      "targets": [
+        {
+          "id": "cjk-3a351067.t2~6f73aff07e46",
+          "uid": "theory:6101e1a902603217057b471c",
+          "citekey": "pollock_2015_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.t3",
+      "legacy_anchor": "corpus/variants/A_construct_differentiation.md#cjk-3a351067",
+      "legacy_citekey": "pollock_2015_asq",
+      "source_file": "write-theory/corpus/variants/A_construct_differentiation.md",
+      "text_sha256": "d26dd3a99133772c1429c3817fe1e579488f8f20f235d8fc39ce752d3d4fe40c",
+      "targets": [
+        {
+          "id": "cjk-3a351067.t3~999bb5f7aba9",
+          "uid": "theory:e8ab8f36ffdba96afff8ba26",
+          "citekey": "pollock_2015_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.t4",
+      "legacy_anchor": "corpus/variants/A_construct_differentiation.md#cjk-3a351067",
+      "legacy_citekey": "pollock_2015_asq",
+      "source_file": "write-theory/corpus/variants/A_construct_differentiation.md",
+      "text_sha256": "de3ac266c4458531c3ea77ef0fd788302d61ff364df4a034336cd699e932c4a8",
+      "targets": [
+        {
+          "id": "cjk-3a351067.t4~aed2e21b1212",
+          "uid": "theory:fd30279ff6c725ec9056f62c",
+          "citekey": "pollock_2015_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-a5e32c5c.a",
+      "legacy_anchor": "corpus/variants/A_construct_differentiation.md#cjk-a5e32c5c",
+      "legacy_citekey": "pollock_2015_asq",
+      "source_file": "write-theory/corpus/variants/A_construct_differentiation.md",
+      "text_sha256": "8b99dfa7f564187db781175ffa83c6f5815697c1ecc593f96432da98ff582ace",
+      "targets": [
+        {
+          "id": "cjk-a5e32c5c.a~360bcf000ddf",
+          "uid": "theory:c3fbd4a329149532bafad33e",
+          "citekey": "pollock_2015_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-a5e32c5c.b",
+      "legacy_anchor": "corpus/variants/A_construct_differentiation.md#cjk-a5e32c5c",
+      "legacy_citekey": "pollock_2015_asq",
+      "source_file": "write-theory/corpus/variants/A_construct_differentiation.md",
+      "text_sha256": "26b481f9ebae65a4f027269230cbe0c254bfad6fc247e27603b6464cecbda8f9",
+      "targets": [
+        {
+          "id": "cjk-a5e32c5c.b~19f105ccd5af",
+          "uid": "theory:a59cdbbffbc0c32866f1c799",
+          "citekey": "pollock_2015_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-a5e32c5c.t1",
+      "legacy_anchor": "corpus/variants/A_construct_differentiation.md#cjk-a5e32c5c",
+      "legacy_citekey": "pollock_2015_asq",
+      "source_file": "write-theory/corpus/variants/A_construct_differentiation.md",
+      "text_sha256": "1c9afae4191bb0552f99912e7fc7bb9c22ed090f1dc81fc6b1fe1b0968d193c8",
+      "targets": [
+        {
+          "id": "cjk-a5e32c5c.t1~5af52af88f27",
+          "uid": "theory:ce650381a31c7d630c2bbd9a",
+          "citekey": "pollock_2015_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-a5e32c5c.t2",
+      "legacy_anchor": "corpus/variants/A_construct_differentiation.md#cjk-a5e32c5c",
+      "legacy_citekey": "pollock_2015_asq",
+      "source_file": "write-theory/corpus/variants/A_construct_differentiation.md",
+      "text_sha256": "8b0e608ea7b0418a593de9486b39f904639359087e7c18dbbcedcfaf5c71e1dc",
+      "targets": [
+        {
+          "id": "cjk-a5e32c5c.t2~d31130d43747",
+          "uid": "theory:d7fb811b7fddacd9962f0cee",
+          "citekey": "pollock_2015_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "pollock-2015-6f07e5.c",
+      "legacy_anchor": "corpus/variants/A_construct_differentiation.md#pollock-2015-6f07e5",
+      "legacy_citekey": "pollock_2015_asq",
+      "source_file": "write-theory/corpus/variants/A_construct_differentiation.md",
+      "text_sha256": "8436643b4bd309acdbcc98505405fc498a1708523113dbe1d9ccd6fe40509bf6",
+      "targets": [
+        {
+          "id": "cjk-3a351067.b~12a48315b79d",
+          "uid": "theory:57a8db6cd7f7d979185beb65",
+          "citekey": "pollock_2015_asq"
+        },
+        {
+          "id": "pollock-2015-6f07e5.c",
+          "uid": "theory:4b9a731ec0d8bd8f5abbe8b8",
+          "citekey": "pollock_2015_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.t1",
+      "legacy_anchor": "corpus/variants/A_construct_differentiation.md#cjk-3a351067",
+      "legacy_citekey": "pollock_2015_asq",
+      "source_file": "write-theory/corpus/variants/A_construct_differentiation.md",
+      "text_sha256": "90fa6c77e658888da8d00c9ecd07d6d13bb1761fa6ff1674c1b03da3c3f03849",
+      "targets": [
+        {
+          "id": "cjk-3a351067.t1~f73819b8fb6d",
+          "uid": "theory:9df5499914ba081415d7d5fa",
+          "citekey": "pollock_2015_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.t2",
+      "legacy_anchor": "corpus/variants/A_construct_differentiation.md#cjk-3a351067",
+      "legacy_citekey": "pollock_2015_asq",
+      "source_file": "write-theory/corpus/variants/A_construct_differentiation.md",
+      "text_sha256": "1a95f29ad94e22b244dcabc099e854fd1051e1f7b80f4cfcbf023786f433ad12",
+      "targets": [
+        {
+          "id": "cjk-3a351067.t2~664022bdd2d5",
+          "uid": "theory:e1ed12433721534111046ea5",
+          "citekey": "pollock_2015_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.t3",
+      "legacy_anchor": "corpus/variants/A_construct_differentiation.md#cjk-3a351067",
+      "legacy_citekey": "pollock_2015_asq",
+      "source_file": "write-theory/corpus/variants/A_construct_differentiation.md",
+      "text_sha256": "6bd7dd2464f21a7f2aae90a9b36fb90f597078f172395444c33bdfc911e4837c",
+      "targets": [
+        {
+          "id": "cjk-3a351067.t3~a655499b1708",
+          "uid": "theory:b73e25e6c2e7f64befa52e9a",
+          "citekey": "pollock_2015_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.t4",
+      "legacy_anchor": "corpus/variants/A_construct_differentiation.md#cjk-3a351067",
+      "legacy_citekey": "pollock_2015_asq",
+      "source_file": "write-theory/corpus/variants/A_construct_differentiation.md",
+      "text_sha256": "c902ea67b076d919e93af58ea01a520c374406ec48e5e246f807744b1344ac6c",
+      "targets": [
+        {
+          "id": "cjk-3a351067.t4~910b1c458347",
+          "uid": "theory:0b89b2d871a7eae6fe3c5185",
+          "citekey": "pollock_2015_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "two_step_mechanism_chain.a",
+      "legacy_anchor": "corpus/variants/B_mechanism_elaboration.md#cjk-3a351067",
+      "legacy_citekey": "keeves_2017_asq",
+      "source_file": "write-theory/corpus/variants/B_mechanism_elaboration.md",
+      "text_sha256": "6db54209f42c30b5e684842c4fd2edb84349bff73655ef10ac6e2c24cb42ecb4",
+      "targets": [
+        {
+          "id": "two_step_mechanism_chain.a",
+          "uid": "theory:6d3e894c0897b6956ef5811c",
+          "citekey": "wu2025activism"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "two_step_mechanism_chain.b",
+      "legacy_anchor": "corpus/variants/B_mechanism_elaboration.md#cjk-3a351067",
+      "legacy_citekey": "keeves_2017_asq",
+      "source_file": "write-theory/corpus/variants/B_mechanism_elaboration.md",
+      "text_sha256": "ae96d60b422b26451d2037ccf42d718f4ee86cf4360e8ba18b55ca1b586da230",
+      "targets": [
+        {
+          "id": "two_step_mechanism_chain.b",
+          "uid": "theory:a391306bc5e252cb33e21776",
+          "citekey": "wu2025activism"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "two_step_mechanism_chain.c",
+      "legacy_anchor": "corpus/variants/B_mechanism_elaboration.md#cjk-3a351067",
+      "legacy_citekey": "keeves_2017_asq",
+      "source_file": "write-theory/corpus/variants/B_mechanism_elaboration.md",
+      "text_sha256": "b9c6b87071709150b80f0c0e6fe08de9633b57f57f965bad1d5890588a74773f",
+      "targets": [
+        {
+          "id": "two_step_mechanism_chain.c",
+          "uid": "theory:3d2bfb379325ea23b4258c4f",
+          "citekey": "wu2025activism"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "two_step_mechanism_chain.d",
+      "legacy_anchor": "corpus/variants/B_mechanism_elaboration.md#cjk-3a351067",
+      "legacy_citekey": "keeves_2017_asq",
+      "source_file": "write-theory/corpus/variants/B_mechanism_elaboration.md",
+      "text_sha256": "19ff19a56a2c2a4997284e14bd8b802799d27cd927999c087c0dc7087084c675",
+      "targets": [
+        {
+          "id": "two_step_mechanism_chain.d",
+          "uid": "theory:cdbe052598ec966518c652ae",
+          "citekey": "wu2025activism"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "two_step_mechanism_chain.f",
+      "legacy_anchor": "corpus/variants/B_mechanism_elaboration.md#cjk-3a351067",
+      "legacy_citekey": "keeves_2017_asq",
+      "source_file": "write-theory/corpus/variants/B_mechanism_elaboration.md",
+      "text_sha256": "553b40e8873d365bb58e13008704d924415c662244c37455110d3f2d7a1a0278",
+      "targets": [
+        {
+          "id": "two_step_mechanism_chain.f",
+          "uid": "theory:a68aee23012251b845ac525e",
+          "citekey": "keeves_2017_asq"
+        },
+        {
+          "id": "cjk-a5e32c5c.b~dce50be517fe",
+          "uid": "theory:77daec14bcd04bdf623e3648",
+          "citekey": "keeves_2017_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "A.a",
+      "legacy_anchor": "corpus/variants/B_mechanism_elaboration.md#A",
+      "legacy_citekey": "ball_2018",
+      "source_file": "write-theory/corpus/variants/B_mechanism_elaboration.md",
+      "text_sha256": "7c3f6e4d507a982582650439813c7605df9b4d2ca4de9ca4b40ac2fb970c4ebc",
+      "targets": [
+        {
+          "id": "A.a~a4f2ffe5b516",
+          "uid": "theory:042b25ce7b01bc449f7b98bb",
+          "citekey": "ball_2018"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "A.t1",
+      "legacy_anchor": "corpus/variants/B_mechanism_elaboration.md#A",
+      "legacy_citekey": "ball_2018",
+      "source_file": "write-theory/corpus/variants/B_mechanism_elaboration.md",
+      "text_sha256": "f944057c8b25daea2cf53510fba37af2f4ce063a8fc40c807f25c17d983ed1b6",
+      "targets": [
+        {
+          "id": "A.t1~3ea34c496854",
+          "uid": "theory:5f606baab75b2af6bef818a7",
+          "citekey": "ball_2018"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "B.a",
+      "legacy_anchor": "corpus/variants/B_mechanism_elaboration.md#B",
+      "legacy_citekey": "westphal_zajac_1998_symbolic_management",
+      "source_file": "write-theory/corpus/variants/B_mechanism_elaboration.md",
+      "text_sha256": "72790ff9e0f2750ce562c1c1bb420961cec679382212b64b5e589caaeb9b691d",
+      "targets": [
+        {
+          "id": "B.a~a14e6e863689",
+          "uid": "theory:7e23577c4c2a1543d1205c91",
+          "citekey": "westphal_zajac_1998_symbolic_management"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "B.t1",
+      "legacy_anchor": "corpus/variants/B_mechanism_elaboration.md#B",
+      "legacy_citekey": "westphal_zajac_1998_symbolic_management",
+      "source_file": "write-theory/corpus/variants/B_mechanism_elaboration.md",
+      "text_sha256": "ad7f86c58113f68e2201f6836f266ab06bf6cb2a1838317efe823e67cd210f5b",
+      "targets": [
+        {
+          "id": "B.t1~755236f4bf46",
+          "uid": "theory:a4e158ee88b91f23151de576",
+          "citekey": "westphal_zajac_1998_symbolic_management"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-a5e32c5c.a",
+      "legacy_anchor": "corpus/variants/B_mechanism_elaboration.md#cjk-a5e32c5c",
+      "legacy_citekey": "keeves_2017_asq",
+      "source_file": "write-theory/corpus/variants/B_mechanism_elaboration.md",
+      "text_sha256": "7dd1c7d789b4dcf28f0dca7ad6937bbbb8b5c1e0efb1819621cd351c64086a58",
+      "targets": [
+        {
+          "id": "cjk-a5e32c5c.a~b789ea94b6b3",
+          "uid": "theory:968c23142d6b98aad31a36f5",
+          "citekey": "wu2025activism"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-a5e32c5c.b",
+      "legacy_anchor": "corpus/variants/B_mechanism_elaboration.md#cjk-a5e32c5c",
+      "legacy_citekey": "keeves_2017_asq",
+      "source_file": "write-theory/corpus/variants/B_mechanism_elaboration.md",
+      "text_sha256": "553b40e8873d365bb58e13008704d924415c662244c37455110d3f2d7a1a0278",
+      "targets": [
+        {
+          "id": "two_step_mechanism_chain.f",
+          "uid": "theory:a68aee23012251b845ac525e",
+          "citekey": "keeves_2017_asq"
+        },
+        {
+          "id": "cjk-a5e32c5c.b~dce50be517fe",
+          "uid": "theory:77daec14bcd04bdf623e3648",
+          "citekey": "keeves_2017_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-a5e32c5c.t1",
+      "legacy_anchor": "corpus/variants/B_mechanism_elaboration.md#cjk-a5e32c5c",
+      "legacy_citekey": "keeves_2017_asq",
+      "source_file": "write-theory/corpus/variants/B_mechanism_elaboration.md",
+      "text_sha256": "5f598545bfd79877447954a2b4c32e7334993a52ff523c153635fbc007d35307",
+      "targets": [
+        {
+          "id": "cjk-a5e32c5c.t1~dcc60f51def9",
+          "uid": "theory:0e8d2e7bc24c26929fc6b5a8",
+          "citekey": "keeves_2017_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-a5e32c5c.t2",
+      "legacy_anchor": "corpus/variants/B_mechanism_elaboration.md#cjk-a5e32c5c",
+      "legacy_citekey": "keeves_2017_asq",
+      "source_file": "write-theory/corpus/variants/B_mechanism_elaboration.md",
+      "text_sha256": "76ea25ca966d3fc7dd0539be5899d15917a8e381d1719dd669ce654ca9d40cd7",
+      "targets": [
+        {
+          "id": "cjk-a5e32c5c.t2~66753fccd3d0",
+          "uid": "theory:ea378212c108dea27ed9a575",
+          "citekey": "keeves_2017_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-a5e32c5c.t3",
+      "legacy_anchor": "corpus/variants/B_mechanism_elaboration.md#cjk-a5e32c5c",
+      "legacy_citekey": "keeves_2017_asq",
+      "source_file": "write-theory/corpus/variants/B_mechanism_elaboration.md",
+      "text_sha256": "be6d16c3f71588073563ee2e3f699c581fd167c4fd69372c0022235108960c58",
+      "targets": [
+        {
+          "id": "cjk-a5e32c5c.t3~6df1dd538b7d",
+          "uid": "theory:0e3675fc4761260e73f2d24a",
+          "citekey": "keeves_2017_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.a",
+      "legacy_anchor": "corpus/variants/C_hypothesis_tree.md#cjk-3a351067",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/variants/C_hypothesis_tree.md",
+      "text_sha256": "26e1232f299e8a6792b2cef380717eb9e16d1f7662bbd58a8b7fc9c285948780",
+      "targets": [
+        {
+          "id": "cjk-3a351067.a~bde62dbc947a",
+          "uid": "theory:4b01136890e5bfbe5d9f6760",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.b",
+      "legacy_anchor": "corpus/variants/C_hypothesis_tree.md#cjk-3a351067",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/variants/C_hypothesis_tree.md",
+      "text_sha256": "2a26e7989b5e85950955a4cbe5c2714a0735d0d5f55754c43fce01f041b4d013",
+      "targets": [
+        {
+          "id": "cjk-3a351067.b~0713ef845814",
+          "uid": "theory:8f775ccd63d2aec0ebf5408b",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.c",
+      "legacy_anchor": "corpus/variants/C_hypothesis_tree.md#cjk-3a351067",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/variants/C_hypothesis_tree.md",
+      "text_sha256": "6e5ba83a27b67bf69233ec2c3a6da92f3e6b1670637084f1b027ce261d35427d",
+      "targets": [
+        {
+          "id": "cjk-3a351067.c~81ccaf00790b",
+          "uid": "theory:144efcfbeb0c0cc3d4d31d14",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.d",
+      "legacy_anchor": "corpus/variants/C_hypothesis_tree.md#cjk-3a351067",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/variants/C_hypothesis_tree.md",
+      "text_sha256": "9a9dec31e74a5af23a241ebaa5ea865b1578b0f6977680e9457f0811abf8a177",
+      "targets": [
+        {
+          "id": "cjk-3a351067.d~cf501dc517db",
+          "uid": "theory:6d56e9ecbb2383034201c065",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.e",
+      "legacy_anchor": "corpus/variants/C_hypothesis_tree.md#cjk-3a351067",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/variants/C_hypothesis_tree.md",
+      "text_sha256": "4d0d4603e52ab146fe9105c5ccad1e4b7e71d420f1f91e04fe7bbb05bd2e00b7",
+      "targets": [
+        {
+          "id": "cjk-3a351067.e~1e038cc13080",
+          "uid": "theory:fc46868c93a9ac7c3cc3f46b",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.f",
+      "legacy_anchor": "corpus/variants/C_hypothesis_tree.md#cjk-3a351067",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/variants/C_hypothesis_tree.md",
+      "text_sha256": "da786bfde67c500fb8c6f0ad4d1cdd7661acb2e4c40a8083e7364460dc7b535f",
+      "targets": [
+        {
+          "id": "cjk-3a351067.f~4a7ec20f74e3",
+          "uid": "theory:539af248f7e1c773f44c2cb8",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.t1",
+      "legacy_anchor": "corpus/variants/C_hypothesis_tree.md#cjk-3a351067",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/variants/C_hypothesis_tree.md",
+      "text_sha256": "b4560697a3bcb9fc883d8dd1855a806cd8a7131cbe2d143834bef54889643a3e",
+      "targets": [
+        {
+          "id": "cjk-3a351067.t1~ee31a69d13a3",
+          "uid": "theory:05d2ce90e5d83c4513a3ae37",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.t2",
+      "legacy_anchor": "corpus/variants/C_hypothesis_tree.md#cjk-3a351067",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/variants/C_hypothesis_tree.md",
+      "text_sha256": "8c9111348e5b7f656749d69ee8d24ffbe166132b7e337c7322da9817023dc7f3",
+      "targets": [
+        {
+          "id": "cjk-3a351067.t2~0b74ef5459cb",
+          "uid": "theory:ae5f12aeb26ca9fe0759fb65",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.t3",
+      "legacy_anchor": "corpus/variants/C_hypothesis_tree.md#cjk-3a351067",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/variants/C_hypothesis_tree.md",
+      "text_sha256": "2526c6cabf9d0a00aba52ba168c115bde94f9297093e379751be78770b697e5c",
+      "targets": [
+        {
+          "id": "cjk-3a351067.t3~9a6ab86579f8",
+          "uid": "theory:7c03ffd00b90c164994c641d",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-a5e32c5c.a",
+      "legacy_anchor": "corpus/variants/C_hypothesis_tree.md#cjk-a5e32c5c",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/variants/C_hypothesis_tree.md",
+      "text_sha256": "2ce2a8e67b096fc11be789c9716363620e01d32c9192e4a8ebca7a97219879d1",
+      "targets": [
+        {
+          "id": "cjk-a5e32c5c.a~f3dccec26798",
+          "uid": "theory:9831765aabed8ed432c65b49",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-a5e32c5c.b",
+      "legacy_anchor": "corpus/variants/C_hypothesis_tree.md#cjk-a5e32c5c",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/variants/C_hypothesis_tree.md",
+      "text_sha256": "640dbdabeb67e8260fed4f82e8e7f4e8e79c686170a860a65b0680fc1243af68",
+      "targets": [
+        {
+          "id": "cjk-a5e32c5c.b~92c09bda9383",
+          "uid": "theory:99f8ccd13d8968389ee34c44",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-a5e32c5c.t1",
+      "legacy_anchor": "corpus/variants/C_hypothesis_tree.md#cjk-a5e32c5c",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/variants/C_hypothesis_tree.md",
+      "text_sha256": "ac7605b5c74bd50988b64e436caaa1be232d208b0e484036b01da70f6ea98d03",
+      "targets": [
+        {
+          "id": "cjk-a5e32c5c.t1~182167c36d86",
+          "uid": "theory:b8afa447bf18da067a2ed84f",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-a5e32c5c.t2",
+      "legacy_anchor": "corpus/variants/C_hypothesis_tree.md#cjk-a5e32c5c",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/variants/C_hypothesis_tree.md",
+      "text_sha256": "c6253ab450a91dc998b9df06732f0927e6a9398ce65b9af19dd68573ef3da4de",
+      "targets": [
+        {
+          "id": "cjk-a5e32c5c.t2~12a3207e1aea",
+          "uid": "theory:6f7b82129932ac1974fade28",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-a5e32c5c.t3",
+      "legacy_anchor": "corpus/variants/C_hypothesis_tree.md#cjk-a5e32c5c",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/variants/C_hypothesis_tree.md",
+      "text_sha256": "5886e8eddb8472f7a49b78f8e42bf59c08f6d5d6cc82eb39d336f6aa5b48be2d",
+      "targets": [
+        {
+          "id": "cjk-a5e32c5c.t3~ec7d3af6ca7c",
+          "uid": "theory:e24675d794bab52eff7f86e1",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.a",
+      "legacy_anchor": "corpus/variants/D_process_theory.md#cjk-3a351067",
+      "legacy_citekey": "lashley_pollock_2020_asq",
+      "source_file": "write-theory/corpus/variants/D_process_theory.md",
+      "text_sha256": "ef59bdf465cde6ff1c4f339c68402a559eb5daf786d883ce6b8770ba3111a305",
+      "targets": [
+        {
+          "id": "cjk-3a351067.a~57ae0635ee27",
+          "uid": "theory:25abc2dd3f0bcf6774106a96",
+          "citekey": "lashley_pollock_2020_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.b",
+      "legacy_anchor": "corpus/variants/D_process_theory.md#cjk-3a351067",
+      "legacy_citekey": "lashley_pollock_2020_asq",
+      "source_file": "write-theory/corpus/variants/D_process_theory.md",
+      "text_sha256": "8b48643508b663123caa37985a27c3d3f43a3c2662aecdfa09e1666aceb40348",
+      "targets": [
+        {
+          "id": "cjk-3a351067.b~040e7277a35f",
+          "uid": "theory:694f5218ebe1fb31a47a835f",
+          "citekey": "lashley_pollock_2020_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.c",
+      "legacy_anchor": "corpus/variants/D_process_theory.md#cjk-3a351067",
+      "legacy_citekey": "lashley_pollock_2020_asq",
+      "source_file": "write-theory/corpus/variants/D_process_theory.md",
+      "text_sha256": "b9b9eccf91268206a47c50712d8c7eccafc8518fdf3a726b31a9cde283c80b48",
+      "targets": [
+        {
+          "id": "cjk-3a351067.c~0c9970574865",
+          "uid": "theory:6884db8ffe7b3b291ea44aec",
+          "citekey": "lashley_pollock_2020_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.d",
+      "legacy_anchor": "corpus/variants/D_process_theory.md#cjk-3a351067",
+      "legacy_citekey": "lashley_pollock_2020_asq",
+      "source_file": "write-theory/corpus/variants/D_process_theory.md",
+      "text_sha256": "4d7f547ffa96d2a3a96aaf8c57f1f81d6729f8cc0fe378516f8ffe8d18215bd9",
+      "targets": [
+        {
+          "id": "cjk-3a351067.d~e4ccbd2e1a5b",
+          "uid": "theory:b5d37bd417d67b46a29b7c08",
+          "citekey": "lashley_pollock_2020_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.e",
+      "legacy_anchor": "corpus/variants/D_process_theory.md#cjk-3a351067",
+      "legacy_citekey": "lashley_pollock_2020_asq",
+      "source_file": "write-theory/corpus/variants/D_process_theory.md",
+      "text_sha256": "316ffd767794db947845e441a5e70610ee6e903b1942833a5ed460949dd09d3d",
+      "targets": [
+        {
+          "id": "cjk-3a351067.e~5b2d27c721ce",
+          "uid": "theory:0119ad8249235f87b7605aa8",
+          "citekey": "lashley_pollock_2020_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.f",
+      "legacy_anchor": "corpus/variants/D_process_theory.md#cjk-3a351067",
+      "legacy_citekey": "lashley_pollock_2020_asq",
+      "source_file": "write-theory/corpus/variants/D_process_theory.md",
+      "text_sha256": "05cc86eff46c2de6d4a6008132b04fbfd4480475d00c159489d269b2fbf9409a",
+      "targets": [
+        {
+          "id": "cjk-3a351067.f~fcb1bea14953",
+          "uid": "theory:d2d8795af7bcee537c9d508e",
+          "citekey": "lashley_pollock_2020_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.t1",
+      "legacy_anchor": "corpus/variants/D_process_theory.md#cjk-3a351067",
+      "legacy_citekey": "lashley_pollock_2020_asq",
+      "source_file": "write-theory/corpus/variants/D_process_theory.md",
+      "text_sha256": "47fd528aa25e5b102f4a6459009ad49a682ff793809100528f6854be14bfc44a",
+      "targets": [
+        {
+          "id": "cjk-3a351067.t1~c6015bb926cf",
+          "uid": "theory:7f8187909070466141884e23",
+          "citekey": "lashley_pollock_2020_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.t2",
+      "legacy_anchor": "corpus/variants/D_process_theory.md#cjk-3a351067",
+      "legacy_citekey": "lashley_pollock_2020_asq",
+      "source_file": "write-theory/corpus/variants/D_process_theory.md",
+      "text_sha256": "3c4203556ec1c516a71221628c9f6325afd9bfc3abc5ba5ac2f4bd2209332f33",
+      "targets": [
+        {
+          "id": "cjk-3a351067.t2~33e1c3894888",
+          "uid": "theory:36ffec0d9927d7d02312ba16",
+          "citekey": "lashley_pollock_2020_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.t3",
+      "legacy_anchor": "corpus/variants/D_process_theory.md#cjk-3a351067",
+      "legacy_citekey": "lashley_pollock_2020_asq",
+      "source_file": "write-theory/corpus/variants/D_process_theory.md",
+      "text_sha256": "b8fd850e56aad6d3f7778b5a44a91b300775f8cce4d376c8b3ed868f704fa91f",
+      "targets": [
+        {
+          "id": "cjk-3a351067.t3~233492909d18",
+          "uid": "theory:6c1745615ea40522fcbcb6a9",
+          "citekey": "lashley_pollock_2020_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.t4",
+      "legacy_anchor": "corpus/variants/D_process_theory.md#cjk-3a351067",
+      "legacy_citekey": "lashley_pollock_2020_asq",
+      "source_file": "write-theory/corpus/variants/D_process_theory.md",
+      "text_sha256": "9d6c4db4bb71a02026a2d326669c8ad189a23d44f47f189f702a7380dc4b1565",
+      "targets": [
+        {
+          "id": "cjk-3a351067.t4~89fd1a61ad83",
+          "uid": "theory:2e7e20bd5338f446f671732e",
+          "citekey": "lashley_pollock_2020_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.t5",
+      "legacy_anchor": "corpus/variants/D_process_theory.md#cjk-3a351067",
+      "legacy_citekey": "lashley_pollock_2020_asq",
+      "source_file": "write-theory/corpus/variants/D_process_theory.md",
+      "text_sha256": "42c5cd64a408176e1284f2e0ca4fe088627a4389dd6046f86950bce9c87402e4",
+      "targets": [
+        {
+          "id": "cjk-3a351067.t5~59e307e3bad1",
+          "uid": "theory:679405c713f3d42b8906d5b5",
+          "citekey": "lashley_pollock_2020_asq"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.t1",
+      "legacy_anchor": "corpus/variants/E_moderation.md#cjk-3a351067",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/variants/E_moderation.md",
+      "text_sha256": "2d0cbdfff953c2341b2c6606b760c2bcb186de145ac6c8946b70dffdf0c21c5f",
+      "targets": [
+        {
+          "id": "cjk-3a351067.t1~d008d0116948",
+          "uid": "theory:e3507ecc9de939ec38dcbc9b",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.t2",
+      "legacy_anchor": "corpus/variants/E_moderation.md#cjk-3a351067",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/variants/E_moderation.md",
+      "text_sha256": "10843a21316ec55c8482c1e76f9e99c254fab5a4d3182b44787f0300ba97b648",
+      "targets": [
+        {
+          "id": "cjk-3a351067.t2~a1a3318564a1",
+          "uid": "theory:2c1d75ab3f3a84021b2023c8",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.t3",
+      "legacy_anchor": "corpus/variants/E_moderation.md#cjk-3a351067",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/variants/E_moderation.md",
+      "text_sha256": "f9708f8438ce4b4529f3dfb05f59b670fff65f823185df899473da3a139222b2",
+      "targets": [
+        {
+          "id": "cjk-3a351067.t3~03e741ee41c9",
+          "uid": "theory:679a0705331cb66bb243d05c",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.t4",
+      "legacy_anchor": "corpus/variants/E_moderation.md#cjk-3a351067",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/variants/E_moderation.md",
+      "text_sha256": "22ef1e873beb260cf9277c05b63829ffd2655f4664265c59b472ffd5fc8552f1",
+      "targets": [
+        {
+          "id": "cjk-3a351067.t4~1d9c8c950933",
+          "uid": "theory:7caa406205b3f11dfa21d233",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.t5",
+      "legacy_anchor": "corpus/variants/E_moderation.md#cjk-3a351067",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/variants/E_moderation.md",
+      "text_sha256": "30e8991fd70d66909cfc24febae8e8f788fafcecbb7e3031baf8a18e51a0b6ab",
+      "targets": [
+        {
+          "id": "cjk-3a351067.t5~ac50b78932e1",
+          "uid": "theory:be95924096ad835b9f9bd7ed",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "A.a",
+      "legacy_anchor": "corpus/variants/E_moderation.md#A",
+      "legacy_citekey": "ball_2018",
+      "source_file": "write-theory/corpus/variants/E_moderation.md",
+      "text_sha256": "d4550131cec6e4f83937f79eae05f991d44dab8f1ef86c3365b08095b4fc4bcc",
+      "targets": [
+        {
+          "id": "A.a~a82cc6db9a56",
+          "uid": "theory:1022c21b58be0c3b6ff4fd13",
+          "citekey": "ball_2018"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "A.t1",
+      "legacy_anchor": "corpus/variants/E_moderation.md#A",
+      "legacy_citekey": "ball_2018",
+      "source_file": "write-theory/corpus/variants/E_moderation.md",
+      "text_sha256": "25555b73123bab828d556ead10e5d49596becc4f274412fc0fa6b0ac39b6eaa6",
+      "targets": [
+        {
+          "id": "A.t1~6b414dff018b",
+          "uid": "theory:eb814f32370163d904d9e257",
+          "citekey": "ball_2018"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "B.a",
+      "legacy_anchor": "corpus/variants/E_moderation.md#B",
+      "legacy_citekey": "ball_2018",
+      "source_file": "write-theory/corpus/variants/E_moderation.md",
+      "text_sha256": "f54eadce2ae4be961726c0301c4753810c9127be07fc634ebbd1c4a29bbabb46",
+      "targets": [
+        {
+          "id": "B.a~a7fb73dd4405",
+          "uid": "theory:53af376af6604359122f20e3",
+          "citekey": "ball_2018"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "B.t1",
+      "legacy_anchor": "corpus/variants/E_moderation.md#B",
+      "legacy_citekey": "ball_2018",
+      "source_file": "write-theory/corpus/variants/E_moderation.md",
+      "text_sha256": "98957af50a4b39279aa7cbf50efb72ad693df4b6bc733ff4fdc240cffa18a8d0",
+      "targets": [
+        {
+          "id": "B.t1~ae8222f82bb3",
+          "uid": "theory:4d937f114968cd8cc838eba7",
+          "citekey": "ball_2018"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.a",
+      "legacy_anchor": "corpus/variants/F_competing_hypotheses.md#cjk-3a351067",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/variants/F_competing_hypotheses.md",
+      "text_sha256": "1cde3ce9f7d4c68f2eb5485fee6860519da0096105625025fbdf42677e1e4170",
+      "targets": [
+        {
+          "id": "cjk-3a351067.a~dfb766222bec",
+          "uid": "theory:f5a1eca3c2ea10c4764999fc",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.b",
+      "legacy_anchor": "corpus/variants/F_competing_hypotheses.md#cjk-3a351067",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/variants/F_competing_hypotheses.md",
+      "text_sha256": "14c799591af92b45beff95b94c0d428b80c7b5fdefb4db7627025ed1a5e8bc95",
+      "targets": [
+        {
+          "id": "cjk-3a351067.b~6460ebdeafc8",
+          "uid": "theory:454298b6a426d071e61bb483",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.c",
+      "legacy_anchor": "corpus/variants/F_competing_hypotheses.md#cjk-3a351067",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/variants/F_competing_hypotheses.md",
+      "text_sha256": "0c4cdd2918932503a203b32aafa7201431c4baa6cf5df8e1d2e696d268e84c1d",
+      "targets": [
+        {
+          "id": "cjk-3a351067.c~efa0c6090a3f",
+          "uid": "theory:c8fbd6a96dc8f2b9b6ccff3d",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.d",
+      "legacy_anchor": "corpus/variants/F_competing_hypotheses.md#cjk-3a351067",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/variants/F_competing_hypotheses.md",
+      "text_sha256": "47ca51eea5dfd93de447a0db90bf08d46b150cac14539138bee11cf0a8b647f0",
+      "targets": [
+        {
+          "id": "cjk-3a351067.d~82c23d584bae",
+          "uid": "theory:e314392cdf39000c68ae69a7",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.t1",
+      "legacy_anchor": "corpus/variants/F_competing_hypotheses.md#cjk-3a351067",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/variants/F_competing_hypotheses.md",
+      "text_sha256": "003f7be4c5a5c95855be8366bbde5f372490d816db52ac08ebf25baea53fda59",
+      "targets": [
+        {
+          "id": "cjk-3a351067.t1~da36f797ecc5",
+          "uid": "theory:e188c1a540b82e1ec4edc2a9",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.t2",
+      "legacy_anchor": "corpus/variants/F_competing_hypotheses.md#cjk-3a351067",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/variants/F_competing_hypotheses.md",
+      "text_sha256": "e21c1c853c0ebeed222612a53a9952b7ede9bdd3cde4466ebc606a3c5f117fe0",
+      "targets": [
+        {
+          "id": "cjk-3a351067.t2~2a589fc7f11f",
+          "uid": "theory:ac9b8bc99e515b5fb90f233f",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.t3",
+      "legacy_anchor": "corpus/variants/F_competing_hypotheses.md#cjk-3a351067",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/variants/F_competing_hypotheses.md",
+      "text_sha256": "accc60c328c594d08348d5b5115b3e59e9d4db075fa4ee97e6ff2345c539a920",
+      "targets": [
+        {
+          "id": "cjk-3a351067.t3~83eac79a7f11",
+          "uid": "theory:6f411ee5858469f73196085f",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-3a351067.t4",
+      "legacy_anchor": "corpus/variants/F_competing_hypotheses.md#cjk-3a351067",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/variants/F_competing_hypotheses.md",
+      "text_sha256": "0358876e131104d431bb5c4a9ae86dac5a93c8d13d500ea4a63fbb908d6af3f2",
+      "targets": [
+        {
+          "id": "cjk-3a351067.t4~29112fe0ce7a",
+          "uid": "theory:39f8a302eb944cba34a401bf",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-a5e32c5c.a",
+      "legacy_anchor": "corpus/variants/F_competing_hypotheses.md#cjk-a5e32c5c",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/variants/F_competing_hypotheses.md",
+      "text_sha256": "dfafedd965d8caa51362e2378af12c869d236b08c3557bd633988ea97ca2ca0d",
+      "targets": [
+        {
+          "id": "cjk-a5e32c5c.a~4cb0f7ef7b57",
+          "uid": "theory:fdab73068c55f926f9cc03bd",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-a5e32c5c.t1",
+      "legacy_anchor": "corpus/variants/F_competing_hypotheses.md#cjk-a5e32c5c",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/variants/F_competing_hypotheses.md",
+      "text_sha256": "7e0736324f61ac916b1c7953d00e5b14d93f3ec6f851152aecd64792ab35f907",
+      "targets": [
+        {
+          "id": "cjk-a5e32c5c.t1~a5751de5e406",
+          "uid": "theory:30cbe1ad077958cef0d93158",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "t4.a",
+      "legacy_anchor": "corpus/variants/G_dialectical_opposition.md#t4",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/variants/G_dialectical_opposition.md",
+      "text_sha256": "f0c309ff60a720be4b76e1cccf6565cff86f8de699412ab717fb7b9c841e49f2",
+      "targets": [
+        {
+          "id": "t4.a",
+          "uid": "theory:f0e9c6896482c747cfce77eb",
+          "citekey": "未标注"
+        },
+        {
+          "id": "dialectical-turn-cd9086.a",
+          "uid": "theory:7053769b6cfe993c9fd6e9e9",
+          "citekey": "Ridge–Aime–White 2013"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-a5e32c5c.a",
+      "legacy_anchor": "corpus/variants/G_dialectical_opposition.md#cjk-a5e32c5c",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/variants/G_dialectical_opposition.md",
+      "text_sha256": "d844fe2705d2cf1df394f022a206eb4b3332a91cf392e2f6ae255df54734cb86",
+      "targets": [
+        {
+          "id": "cjk-a5e32c5c.a~78f8b3685f4a",
+          "uid": "theory:e7118ea8abf25064342239bc",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "cjk-a5e32c5c.b",
+      "legacy_anchor": "corpus/variants/G_dialectical_opposition.md#cjk-a5e32c5c",
+      "legacy_citekey": "未标注",
+      "source_file": "write-theory/corpus/variants/G_dialectical_opposition.md",
+      "text_sha256": "9aa5c20237ec75f61caabe2eb45206c18ac8f83c32ca9bc31129bc4a5bd88c9f",
+      "targets": [
+        {
+          "id": "cjk-a5e32c5c.b~def11f999a05",
+          "uid": "theory:c817451a0c864004e72ef378",
+          "citekey": "未标注"
+        }
+      ]
+    },
+    {
+      "section": "theory",
+      "legacy_id": "dialectical-turn-cd9086.a",
+      "legacy_anchor": "corpus/variants/G_dialectical_opposition.md#dialectical-turn-cd9086",
+      "legacy_citekey": "Ridge–Aime–White 2013",
+      "source_file": "write-theory/corpus/variants/G_dialectical_opposition.md",
+      "text_sha256": "f0c309ff60a720be4b76e1cccf6565cff86f8de699412ab717fb7b9c841e49f2",
+      "targets": [
+        {
+          "id": "t4.a",
+          "uid": "theory:f0e9c6896482c747cfce77eb",
+          "citekey": "未标注"
+        },
+        {
+          "id": "dialectical-turn-cd9086.a",
+          "uid": "theory:7053769b6cfe993c9fd6e9e9",
+          "citekey": "Ridge–Aime–White 2013"
+        }
+      ]
+    },
+    {
+      "section": "results",
+      "legacy_id": "did#P.a",
+      "legacy_anchor": "corpus/DiD.md#变体-P",
+      "legacy_citekey": "castellaneta_2017_smj_how_does_trade_secret_legal_protection",
+      "source_file": "write-results/corpus/DiD.md",
+      "text_sha256": "57cfc95779e9b9d9dd8c2100f74927962b9d52336af0e42155874b9f13048f71",
+      "targets": [
+        {
+          "id": "did#P.a",
+          "uid": "results:b44e92f0b9531a95889764f6",
+          "citekey": "castellaneta_2017_smj_how_does_trade_secret_legal_protection"
+        },
+        {
+          "id": "did#O.a",
+          "uid": "results:e736668534860a2c6ae2d2ac",
+          "citekey": "castellaneta_2017_smj_how_does_trade_secret_legal_protection"
+        }
+      ]
+    },
+    {
+      "section": "results",
+      "legacy_id": "did#O.a",
+      "legacy_anchor": "corpus/DiD.md#变体-O",
+      "legacy_citekey": "castellaneta_2017_smj_how_does_trade_secret_legal_protection",
+      "source_file": "write-results/corpus/DiD.md",
+      "text_sha256": "57cfc95779e9b9d9dd8c2100f74927962b9d52336af0e42155874b9f13048f71",
+      "targets": [
+        {
+          "id": "did#P.a",
+          "uid": "results:b44e92f0b9531a95889764f6",
+          "citekey": "castellaneta_2017_smj_how_does_trade_secret_legal_protection"
+        },
+        {
+          "id": "did#O.a",
+          "uid": "results:e736668534860a2c6ae2d2ac",
+          "citekey": "castellaneta_2017_smj_how_does_trade_secret_legal_protection"
+        }
+      ]
+    }
+  ],
+  "unresolved": [],
+  "summary": {
+    "baseline_entries": 3516,
+    "mapped": 3516,
+    "unresolved": 0,
+    "changed_records": 237
+  }
+}

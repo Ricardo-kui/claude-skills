@@ -44,6 +44,68 @@ source: Migrated from global corpus + MVP30 validation
 ## 句法模板
 
 ### 变体 A：直接缺口型
+<!-- retrieval-move:
+{
+  "functions": [
+    "intro.gap_unexplained"
+  ],
+  "definitions": [
+    {
+      "id": "intro.gap_unexplained",
+      "label": "指出现象尚未解释",
+      "section": "introduction",
+      "refines": "intro.literature_to_gap",
+      "definition": "在承认已有知识后，精确指出一个尚未得到解释的行为、过程或关系，把文献对话转向待回答的问题。",
+      "use_when": [
+        "已能说明文献解释了什么，以及当前要解释的现象或机制是什么。",
+        "缺口在解释对象或过程；若只是更换地区、样本或测量，先论证其理论必要性。"
+      ],
+      "neighbors": [
+        {
+          "id": "intro.gap_conflicting_accounts",
+          "distinction": "后者需要两套既有解释或预测发生实质分歧；本动作只需指出解释尚缺。"
+        },
+        {
+          "id": "intro.gap_shared_assumption",
+          "distinction": "后者命名并质疑共同前提；本动作不推定既有解释错误。"
+        }
+      ],
+      "positive_example": {
+        "kind": "verbatim",
+        "cue": "how firms respond in anticipation of, rather than in reaction to, stakeholder activism remains poorly understood",
+        "why": "卡片中 Wu 的原句精确定位预先回应行为，而不笼统宣称整个文献空白。"
+      },
+      "mismatch_example": {
+        "kind": "illustrative",
+        "text": "已有研究假定同类企业受到相同声誉波及，但类别内部的差异会改变波及。",
+        "why": "这里质疑的是共享的同质性前提，不能仅作为研究少的缺口来匹配。",
+        "actual_function": "intro.gap_shared_assumption"
+      },
+      "aliases": [
+        "现象尚未解释",
+        "指出解释缺口",
+        "unexplained phenomenon"
+      ],
+      "review_cases": [
+        "I04",
+        "I09"
+      ]
+    }
+  ],
+  "position": "文献对话之后，指出待解释的焦点现象",
+  "prerequisite": "前文已说明文献解释了什么，并明确当前待解释的现象或过程；缺口不是仅更换地区、样本或测量。",
+  "next": "把解释缺口接到研究问题或研究切入。",
+  "applicability": {
+    "required_facts": {
+      "explanation_gap": true
+    }
+  },
+  "advances": "把文献已解释的对象转到尚待解释的焦点现象，为研究问题限定范围。",
+  "next_evidence": [
+    "后文给出与该缺口对应的研究问题与解释路径；缺口边界须由实际文献综述支持，并保留已有例外。"
+  ]
+}
+-->
 
 **模板**:
 > "Despite [this progress / these advances / considerable attention], [specific dimension / mechanism / boundary condition] has remained [largely unaddressed / poorly understood / theoretically underspecified]."

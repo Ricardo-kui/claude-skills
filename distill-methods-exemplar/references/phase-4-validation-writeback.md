@@ -102,20 +102,9 @@ critique_updates:
 - 脚本累加 `revise/reject`、更新 `last_critique`、去重追加 `common_revise_reasons`（最多 8 条），输出信号（quiet/critique_heavy）供下一轮 Phase 0.75 选材。
 - 不登记满意信号、不设淘汰逻辑——语义见 registry `meta.usage_stats_schema`。
 
-## Phase 4 收尾 — 骨架索引回填（2026-09-15 起）
+## Phase 4 收尾 — 写回、登记与检索终验
 
-写回只更新 corpus 与选材索引；写作期借句检索的底本来源是 `corpus/_skeleton/` 骨架子清单
-（借句表底本 id 只取自骨架子清单），必须重建回填，否则新变体对写作期不可见：
-
-```bash
-python ~/.claude/skills/write-methods/scripts/build_indices.py
-```
-
-- plan 含 `new_file`（create_new_file）项：先在 `write-methods/scripts/build_indices.py`
-  的 `FAMILIES` 轴表登记该文件再重建（`_shared/indexing/check_all.py` 的 Check-R 会拦截
-  未登记新文件）。
-- 收尾判据：`python ~/.claude/skills/_shared/indexing/check_all.py` 全绿（重建产物与
-  corpus 同批提交）。
+实际写回后执行 [四节共用收尾协议](../../_shared/distillation-writeback-finalization.md)：新文件登记、写回核验、骨架与检索缓存重建、`check_all.py --worktree`、新增资产试查及清理。单节独立模式也以这套流程作为完成判据；仅生成候选时不执行。
 
 ## Phase 4 收尾 — 回写后语料体检
 

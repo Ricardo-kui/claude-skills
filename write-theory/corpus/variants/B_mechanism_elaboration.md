@@ -63,7 +63,7 @@ defined as [definition]. This theoretical lens allows us to explain not just whe
 [X affects Y], but how and why."
 ```
 
-**原文锚点** (Wu, Bruton & Krause 2025, SMJ "Activism risk and corporate self-regulation"):
+**原文锚点** (Wu, Bruton & Krause 2025, SMJ "Activism risk and corporate self-regulation"; citekey=wu2025activism):
 > "Drawing on the literature on corporate preemptive self-regulation, we argue that firms will respond to an increased risk of stakeholder activism by increasing their institutional corporate social performance (CSP), defined as the tangible outcomes of firms' activities and initiatives in 'promoting social welfare outside firms' formal boundaries.'" ... "Specifically, we propose that when the environmental risk of stakeholder activism increases, institutional CSP will rise as an attempt to satisfy stakeholder activists' interests proactively; we further predict that this effect becomes stronger as the firm-level risk of activism increases."
 
 **多步机制链**：参见 `../sentences/mechanism_chain.md`
@@ -74,7 +74,7 @@ defined as [definition]. This theoretical lens allows us to explain not just whe
 [Y] within [scope]. We therefore predict: [directional/form-specific hypothesis]."
 ```
 
-**原文锚点** (Wu, Bruton & Krause 2025, SMJ "Activism risk and corporate self-regulation"):
+**原文锚点** (Wu, Bruton & Krause 2025, SMJ "Activism risk and corporate self-regulation"; citekey=wu2025activism):
 > "Taken together, these arguments suggest that media coverage of CSI conditions how firms respond to the increased activism risk triggered by the enactment of anti-SLAPP laws." ... "These firms are thus more likely to respond to anti-SLAPP legislation by enhancing institutional CSP, seeking to build moral capital and restore legitimacy."
 
 **B1 收束（仅正式中介分支）**：
@@ -217,8 +217,11 @@ H[k]: [Mk] will partially mediate the effects of [X] on [DV].
 | B1 中介效应 | "H[N]. [Mediator] mediates the [positive/negative] relationship between [IV] and [DV]." |
 | B1 中介等价 | "H[N]. This prediction is formally equivalent to hypothesizing that [mediator] will mediate effects of [IV] on [DV]." |
 
-**原文锚点** (B0 基础假设 → Wu, Bruton & Krause 2025 SMJ; B1 中介等价 → Keeves, Westphal & McDonald 2017 ASQ):
-> "Hypothesis 1. Following the enactment of anti-SLAPP laws, institutional CSP increases." ... "This prediction is formally equivalent to hypothesizing that resentment toward the CEO will mediate effects of the independent variables from the first two sets of hypotheses on negative commentary about the CEO's leadership in communication with journalists."
+**原文锚点** (B0 基础假设 → Wu, Bruton & Krause 2025 SMJ; citekey=wu2025activism):
+> "Hypothesis 1. Following the enactment of anti-SLAPP laws, institutional CSP increases."
+
+**原文锚点** (B1 中介等价 → Keeves, Westphal & McDonald 2017 ASQ; citekey=keeves_2017_asq):
+> "This prediction is formally equivalent to hypothesizing that resentment toward the CEO will mediate effects of the independent variables from the first two sets of hypotheses on negative commentary about the CEO's leadership in communication with journalists."
 
 ---
 
@@ -273,6 +276,44 @@ X → Y  because [reason 1]
 **优势**: 论证稳健性高，每个理由简短易读；适合 SMJ 等偏好简洁理论论证的期刊
 **风险**: 如果理由不独立会显得冗赘；不能替代对"过程机制"的解释
 **调用语料**: `corpus/subprotocols/hypothesis_derivation_patterns.md`（Width-Type Three-Reason Parallel）
+<!-- retrieval-move:
+{
+  "functions": [
+    "theory.actor_motivation",
+    "theory.mechanism_explanation"
+  ],
+  "function_evidence": {
+    "theory.actor_motivation": {
+      "kind": "verbatim",
+      "cue": "satisfy their felt obligation to put the shareholder first",
+      "why": "目标义务与避错倾向解释 CEO 为何偏好某类利益相关者行动。"
+    },
+    "theory.mechanism_explanation": {
+      "kind": "verbatim",
+      "cue": "CEOs high in prevention focus are likely to engage in governance-oriented stakeholder initiatives",
+      "why": "三条有内容的理由分别把焦点特质接到同一战略倾向，而非仅枚举通道名称。"
+    }
+  },
+  "function_support": {
+    "theory.actor_motivation": "complete",
+    "theory.mechanism_explanation": "complete"
+  },
+  "position": "主效应预测之前的平行理由推导",
+  "prerequisite": "焦点特质、行动目标及理由均有依据；借三理由形式时核对理由独立性。",
+  "next": "收敛为实际预测，或继续展开尚缺的传递过程。",
+  "advances": "用目标、避错与规则需求解释行动倾向。",
+  "next_evidence": [
+    "动机与行动的理论联系",
+    "各理由的独立内容"
+  ],
+  "applicability": {
+    "required_facts": {
+      "actor_motivation_supported": true
+    }
+  }
+}
+-->
+
 
 ### 方式三：条件化复杂化（Conditional Complexification）
 <!-- wb:singh_grewal_2023_jmr -->

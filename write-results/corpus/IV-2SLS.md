@@ -151,6 +151,40 @@ updated: 2026-08-05
 **原文锚定**: "The critical value we are required to use is 16.38, which comes from table 5.2 in Stock and Yogo (2005) as we have one IV for one potentially exogenous regressor. ... The Cragg-Donald Wald F-statistic for the IV analysis is 378.163, which indicates that our IV is relevant and unlikely to be weak, at least from a statistical standpoint."
 **来源**: wowak_2020_female_directors_recalls (M&SOM), §5.1.1
 <!-- wb:wowak_2020_female_directors_recalls:legacy_IV-2SLS_12 -->
+<!-- retrieval-move:
+{
+  "functions": [
+    "results.robustness_identification_threat"
+  ],
+  "function_evidence": {
+    "results.robustness_identification_threat": {
+      "kind": "verbatim",
+      "cue": "The Cragg-Donald Wald F-statistic for the IV analysis is 378.163",
+      "why": "实际弱识别统计量与对应临界值相对照，仅支持相关性诊断，不支持排他性。"
+    }
+  },
+  "function_support": {
+    "results.robustness_identification_threat": "complete"
+  },
+  "position": "工具变量分析的弱识别诊断位置",
+  "prerequisite": "统计量、临界值及其识别结构与误差假设适合当前 IV 估计。",
+  "next": "分别交代相关性、排他性及推断设置。",
+  "advances": "将弱工具威胁接到适用的实际诊断。",
+  "next_evidence": [
+    "实际弱识别诊断与临界值依据",
+    "排他性另行论证"
+  ],
+  "applicability": {
+    "design": [
+      "iv_2sls"
+    ],
+    "required_facts": {
+      "weak_iv_diagnostic_applicable": true
+    }
+  }
+}
+-->
+
 
 ### 变体 5: R7 "去 IV" 稳健性 — 用非工具变量估计展示内生性偏误低 (1篇高价值)
 **来源论文**: Wowak2025 MS

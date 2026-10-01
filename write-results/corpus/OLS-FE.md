@@ -258,6 +258,72 @@ updated: 2026-08-13
 
 <!-- wb:darby_msom_2023_msom:legacy_OLS-FE_3 -->
 ### 变体 4: 小样本/非显著结果的诚实声明 (1/5 复现)
+<!-- retrieval-move:
+{
+  "functions": [
+    "results.null_caution"
+  ],
+  "position": "报告非显著之后，限制其理论解释强度",
+  "prerequisite": "当前样本与功效条件确实支持小样本的可能解释；不机械套用",
+  "next": "保留支持判断边界；不由非显著直接推出不存在效应",
+  "definitions": [
+    {
+      "id": "results.null_caution",
+      "label": "限制非显著结果的解释范围",
+      "section": "results",
+      "refines": "results.null",
+      "definition": "在报告非显著之后说明它尚不足以断定效应不存在或某理论机制失效，给出由当前设计支持的限定理由。",
+      "use_when": [
+        "已明确报告非显著事实；限定理由来自当前样本、区间、测量或检验能力。",
+        "使用小样本形式时确有相应事实；不把小样本或低功效作为所有非显著结果的惯常解释。"
+      ],
+      "neighbors": [
+        {
+          "id": "results.hypothesis_not_supported",
+          "distinction": "未获支持裁决须先如实成立，解释限定不改变该裁决。"
+        },
+        {
+          "id": "results.mixed_synthesis",
+          "distinction": "多个检验的分歧需要整合，而非用一个小样本解释覆盖全部结果。"
+        }
+      ],
+      "positive_example": {
+        "kind": "verbatim",
+        "cue": "could also simply be an artifact of the small sample size",
+        "why": "Darby 用 could 限定理论解读，给出替代可能性；没有声称功效已被正式检验或机制已被证伪。"
+      },
+      "mismatch_example": {
+        "kind": "illustrative",
+        "text": "主效应显著而交互不显著，所以这个主效应独立于全部条件。",
+        "why": "利用交互非显著作广泛边界断言，未给相应检验能力或范围限定。",
+        "actual_function": "results.null"
+      },
+      "aliases": [
+        "避免写成没有效应",
+        "非显著不等于无效应",
+        "非显著结果的审慎解释",
+        "非显著的功效限定",
+        "限制非显著结论范围"
+      ],
+      "review_cases": [
+        "R06"
+      ]
+    }
+  ],
+  "applicability": {
+    "evidence": [
+      "null_result",
+      "observational"
+    ],
+    "claim_scope": [
+      "limited_conclusion"
+    ],
+    "required_facts": {
+      "small_sample": true
+    }
+  }
+}
+-->
 **来源论文**: Darby2023 MSOM
 **原始句锚点**: "Although our theorizing supports the notion that CEOs may care less about low-severity recalls given their limited ramifications, we note that the nonsignificant effect for low-severity recalls could also simply be an artifact of the small sample size for low-severity recalls."
 **验证状态**: VERIFIED（所有研究都该用）
@@ -304,6 +370,71 @@ updated: 2026-08-13
 
 <!-- wb:zhao_ding_gaba_orsc:legacy_OLS-FE_7 -->
 ### 变体 8: 主效应不显著但调节显著 — 条件化再定位 (1篇高价值)
+<!-- retrieval-move:
+{
+  "functions": [
+    "results.hypothesis_not_supported"
+  ],
+  "definitions": [
+    {
+      "id": "results.hypothesis_not_supported",
+      "label": "判断特定假设未获支持",
+      "section": "results",
+      "refines": "results.null",
+      "definition": "将实际估计方向与不确定性回指预先提出的具体假设，明确该检验未提供所需支持。",
+      "use_when": [
+        "能指认对应的假设、检验和实际估计；区分主效应与交互假设。",
+        "结论停留在当前假设与检验；后续条件关系有支持时分别报告，不追认未获支持的基线假设。"
+      ],
+      "neighbors": [
+        {
+          "id": "results.null_caution",
+          "distinction": "支持裁决回答假设是否获得证据；解释限定进一步说明该裁决不能推出什么。"
+        },
+        {
+          "id": "results.mixed_synthesis",
+          "distinction": "多个检验的总体裁决需要整合；单项不支持只对对应检验负责。"
+        }
+      ],
+      "positive_example": {
+        "kind": "verbatim",
+        "cue": "Hypothesis 1 was thus not supported",
+        "why": "Hoffmann 的摘录分别作出主效应不支持与交互支持判断；原省略号保持。"
+      },
+      "mismatch_example": {
+        "kind": "illustrative",
+        "text": "该组的非显著效应也可能与样本量较小有关。",
+        "why": "这是解释强度限定，尚未完成对具体假设的支持裁决。",
+        "actual_function": "results.null_caution"
+      },
+      "aliases": [
+        "判断假设未获支持",
+        "报告假设不支持",
+        "hypothesis not supported"
+      ],
+      "review_cases": [
+        "R06"
+      ]
+    }
+  ],
+  "position": "对应假设的实际估计与不确定性之后",
+  "prerequisite": "按本块 definitions 的 use_when 核对当前需求与研究事实。",
+  "next": "保留该项不支持裁决，再分别报告其他支持或限定。",
+  "applicability": {
+    "evidence": [
+      "null_result",
+      "mixed_findings",
+      "observational"
+    ],
+    "claim_scope": [
+      "hypothesis_support"
+    ],
+    "required_facts": {
+      "hypothesis_test_identified": true
+    }
+  }
+}
+-->
 **来源论文**: Mannor, Wowak, Bartkus & Gomez-Mejia 2016 (Strategic Management Journal)
 **原始句锚点**: "Although the coefficient was in the expected positive direction, Model 2 shows that job anxiety was not a significant predictor of social buffering (β = 0.24, n.s.). Hypothesis 1 was thus not supported. … The significant negative coefficient on the interaction term in Model 3 (β = −0.38, p < 0.01) lends support to Hypothesis 3."
 **验证状态**: EMERGING
@@ -382,6 +513,71 @@ updated: 2026-08-13
 
 <!-- wb:li_chiu_kong_cropanzano_ho_2026_jom:legacy_OLS-FE_14 -->
 ### 变体 15: R7 五威胁标签化稳健性序列 — RIR+Oster+CEM组合 (1篇高价值)
+<!-- retrieval-move:
+{
+  "functions": [
+    "results.robustness_identification_threat"
+  ],
+  "definitions": [
+    {
+      "id": "results.robustness_identification_threat",
+      "label": "用检验回应特定识别威胁",
+      "section": "results",
+      "refines": "results.robustness",
+      "definition": "把遗漏变量、反向因果或选择等具体偏误路径接到其威胁的推断，再报告针对该路径的诊断与结果。",
+      "use_when": [
+        "已说明威胁来自何处、影响哪项推断，以及所选检验为什么能提供相关信息。",
+        "按各检验实际能处理的威胁解释证据；一个通过的检验不自动解决所有内生性。"
+      ],
+      "neighbors": [
+        {
+          "id": "results.robustness_alternative_explanation",
+          "distinction": "替代解释可能是被准确估计关系背后的另一机制；识别威胁关乎该关系是否被偏误生成。"
+        },
+        {
+          "id": "results.robustness_measurement_sensitivity",
+          "distinction": "测量口径替换若未针对明确偏误路径，只说明结论对该口径的敏感性。"
+        }
+      ],
+      "positive_example": {
+        "kind": "verbatim",
+        "cue": "the possibility of omitted variable bias",
+        "why": "Li 的摘录先命名遗漏变量偏误再接 RIR 与 Oster；这里只借动作，不把具体检验组合当作通用必做项。"
+      },
+      "mismatch_example": {
+        "kind": "illustrative",
+        "text": "我们又做了若干检验，结果依然显著，因此没有内生性问题。",
+        "why": "没有指认偏误路径，也没有给出检验与威胁的对应关系。",
+        "actual_function": "results.robustness"
+      },
+      "aliases": [
+        "回应特定识别威胁",
+        "逐识别威胁报告",
+        "source-specific identification threat"
+      ],
+      "review_cases": [
+        "R08"
+      ]
+    }
+  ],
+  "position": "补充分析中具体偏误路径与检验相接的位置",
+  "prerequisite": "按本块 definitions 的 use_when 核对当前需求与研究事实。",
+  "next": "报告针对这项威胁的证据与必要边界。",
+  "applicability": {
+    "evidence": [
+      "observational",
+      "identification_diagnostics"
+    ],
+    "claim_scope": [
+      "limited_conclusion",
+      "causal_with_assumptions"
+    ],
+    "required_facts": {
+      "diagnostics_match_threat": true
+    }
+  }
+}
+-->
 **来源论文**: Li, Chiu, Kong, Cropanzano & Ho 2026 (Journal of Management)
 **原始句锚点**: "We conducted a series of supplementary analyses to determine the robustness of our findings. First, to rule out the possibility of omitted variable bias, we performed the robustness of inference to replacement (RIR) test and Oster's delta test."
 **验证状态**: EMERGING
@@ -1107,6 +1303,34 @@ moderate. The mean variance inflation factor for the variables used in the estim
 **验证状态**: EMERGING
 **写入日期**: 2026-07-22
 **槽位**: R3+R9
+<!-- retrieval-move:
+{
+  "functions": ["results.mixed_closure"],
+  "position": "逐项结果报告之后，收束不同阶段的显著与非显著发现",
+  "prerequisite": "前文已分别报告各阶段结果；阶段差异和样本递减须核对",
+  "advances": "保留证据差异，同时限定机制解释的强度",
+  "next": "转入讨论；不把后置非显著写成没有效应或机制确证",
+  "next_evidence": ["机制解释须有当前理论与设计依据，跨阶段比较须交代样本选择"],
+  "skeleton_span": {"start": "[跨阶段对比句]", "functions": ["results.mixed_closure"]},
+  "applicability": {"required_facts": {"mixed_findings": true, "multiple_stages": true}},
+  "definitions": [{
+    "id": "results.mixed_closure",
+    "label": "保留混合发现与主张上限的证据收束",
+    "section": "results",
+    "refines": "results.closure",
+    "definition": "在结果收尾时并置相互不同的发现，说明当前证据允许的有限结论，不把混合结果压成一致支持。",
+    "use_when": ["各项结果已经如实报告，当前任务是收尾而非首次报告。", "借用本卡的跨阶段形式时，当前研究确有多阶段结果，机制衰减解释有独立依据。"],
+    "neighbors": [
+      {"id": "results.mixed_synthesis", "distinction": "混合发现整合可以在检验报告中展开；这里负责结果收尾并保留主张边界。"},
+      {"id": "results.null_caution", "distinction": "单项非显著解释限定不等于不同发现的总体收束。"}
+    ],
+    "positive_example": {"kind": "verbatim", "cue": "This lack of association contrasts with the advantages", "why": "先承认后阶段未找到有力关联，再与前阶段优势并置；机制解释只作为可能性。"},
+    "mismatch_example": {"kind": "illustrative", "text": "总体而言，全部检验提供强证据支持我们的所有预测。", "why": "一致强支持句会抹去当前需要保留的混合发现。", "actual_function": "results.closure"},
+    "aliases": ["收束证据，保留混合发现和主张上限", "保留混合发现的收束", "混合结果收尾", "混合证据收束"],
+    "review_cases": ["R10"]
+  }]
+}
+-->
 **骨架**:
 > [Stage 1 — Front-end] We begin by examining the association between [IV] and [stage-1 outcome]. Model [1] finds a [direction] association (p [relation] [threshold]); this remains stable in Model [2] with [controls]; Model [3] adds [fixed effects], estimating [within-unit] differences, and continues to find a [direction] association (p [relation] [threshold]) corresponding to [economic magnitude].
 >
@@ -1155,6 +1379,38 @@ moderate. The mean variance inflation factor for the variables used in the estim
 **诚实边界**: 使用条件严格——零结果须被理论预测、替代解释须预测非零结果、零结果须嵌入在更大的显著结果模式中（不能孤立地用 null 论证机制）。
 
 <!-- wb:du_tsolmon_2024_os:legacy_OLS-FE_30 -->
+<!-- retrieval-move:
+{
+  "functions": [
+    "results.robustness_alternative_explanation"
+  ],
+  "function_evidence": {
+    "results.robustness_alternative_explanation": {
+      "kind": "verbatim",
+      "cue": "likely reflect integration-related dynamics rather than selection at the time of the deal",
+      "why": "原句以公告时点检验讨论选择与整合解释；该零结果单独不能排除选择，作为有条件的诊断形式保留。"
+    }
+  },
+  "function_support": {
+    "results.robustness_alternative_explanation": "partial"
+  },
+  "position": "不同时间机制的诊断检验之后",
+  "prerequisite": "替代解释确预测所测早期结果；检验有足够信息支持所述有限比较。",
+  "next": "结合其他证据说明机制可信度，避免用零结果作排除证明。",
+  "advances": "提供按事件时点区分实质解释的相邻范式。",
+  "next_evidence": [
+    "替代解释的时点预测",
+    "早期检验与其他机制证据"
+  ],
+  "applicability": {
+    "required_facts": {
+      "alternative_explanation_tested": true,
+      "early_outcome_diagnostic_supported": true
+    }
+  }
+}
+-->
+
 ### 变体 31: R7 — 替代解释三连驳斥 + 异质性模式作为机制裁决收束 (1篇高价值)
 **来源论文**: Du & Tsolmon 2024 (Organization Science)
 **原始句锚点**: "Our CEM analyses partially address this concern by matching deals on industry, firm size, and public status, characteristics often associated with organizational culture. The persistence of our findings in the matched sample suggests that cultural similarity alone may not explain our results."
@@ -1167,6 +1423,38 @@ moderate. The mean variance inflation factor for the variables used in the estim
 **诚实边界**: 异质性裁决必须建立在已报告的调节显著性之上；"partially addresses" 的克制措辞不可省略；比较级收束（more closely than）不可替换为绝对断言（rules out）。
 
 <!-- wb:du_tsolmon_2024_os:legacy_OLS-FE_31 -->
+<!-- retrieval-move:
+{
+  "functions": [
+    "results.robustness_alternative_explanation"
+  ],
+  "function_evidence": {
+    "results.robustness_alternative_explanation": {
+      "kind": "verbatim",
+      "cue": "cultural similarity alone may not explain our results",
+      "why": "文化相似这一实质解释接到实际匹配变量和结果，结论明确保持部分诊断强度。"
+    }
+  },
+  "function_support": {
+    "results.robustness_alternative_explanation": "complete"
+  },
+  "position": "主结果之后的具名替代解释检验",
+  "prerequisite": "替代解释有生成路径；匹配变量确为其有依据的代理，不能宣称已彻底排除。",
+  "next": "报告当前代理及结果，保留未观测部分的边界。",
+  "advances": "让检验针对一条实质解释，并校准其证据强度。",
+  "next_evidence": [
+    "替代解释及代理依据",
+    "匹配后的实际结果"
+  ],
+  "applicability": {
+    "required_facts": {
+      "alternative_explanation_tested": true,
+      "proxy_matching_relevant": true
+    }
+  }
+}
+-->
+
 ### 变体 32: R4 — 外部基准阈值分割 + 边际效应图阈值发现：连续调节的三层验证 (1篇高价值)
 **来源论文**: Du & Tsolmon 2024 (Organization Science)
 **原始句锚点**: "We split the sample by the threshold of 166 miles, which corresponds to the definition of mega-commuting distance by the U.S. Census Bureau. … The marginal effects plot using the full regression model (column 4) shows that the threshold at which distance starts to matter is around 54.6 miles, which corresponds to the "long-distance commuting" distance of 50 or more miles by the U.S. Census Bureau (Online Appendix Figure C)."
@@ -1290,6 +1578,37 @@ moderate. The mean variance inflation factor for the variables used in the estim
 > [Mediator 2]: [Condition 1 met: b = ..., p ≤ ...]. [Condition 2 FAILED: IV has no significant effect on mediator 2, b = ..., p > .10]. As a result, Sobel suggests [mediator 2] does not mediate [...]. In summary, the results support [H_a], but not [H_b]."
 **与原骨架差异**: 把 Baron-Kenny 三条件中介检验适配到**同时方程系统**——条件1的 M→DV 系数与条件2的 IV→M 系数来自系统内**不同方程**，条件3的间接效应 = 跨方程系数乘积，用 Sobel（Zhao, Lynch & Chen 2010 公式）检验乘积显著性。核心叙事价值在**非对称支持**：两个平行中介（advertising、R&D）一个支持（H1a）、一个不支持（H1b），不支持的**根因精确定位**到条件2失败（IV=leverage 对 R&D 无显著效应，b≈0），而非条件1（R&D→CS 边际显著）。这种"逐条件诊断哪个中介失败、且失败在哪一环"的报告，比笼统"H supported / not supported"更具诊断力，且为 Discussion 的机制讨论提供精确入口。适用于多中介并行检验（advertising + R&D、price + quality、recruitment + training）。
 **诚实边界**: 条件2失败时须如实报告 IV→M 不显著（不可因 M→DV 显著就声称中介）；Sobel 检验假设间接效应正态分布，样本小时应补 bootstrap CI；"marginal significant"（p≤.10）的中介须标明。
+<!-- retrieval-move:
+{
+  "functions": [
+    "results.indirect_effect_report"
+  ],
+  "function_evidence": {
+    "results.indirect_effect_report": {
+      "kind": "verbatim",
+      "cue": "Sobel's test on the product of the two coefficients",
+      "why": "直接报告跨方程乘积及其检验统计量，能够模仿间接效应结果句；检验方法须与当前模型相容。"
+    }
+  },
+  "function_support": {
+    "results.indirect_effect_report": "complete"
+  },
+  "position": "中介路径估计之后、间接效应判决位置",
+  "prerequisite": "当前分析实际估计了间接效应；产品计算与检验适合模型，不照搬旧式逐路径判据。",
+  "next": "报告真实间接效应及适当区间或检验，再限定中介主张。",
+  "advances": "把中介判断绑定到实际间接效应估计。",
+  "next_evidence": [
+    "实际间接效应",
+    "模型相容的区间或检验依据"
+  ],
+  "applicability": {
+    "required_facts": {
+      "indirect_effect_estimated": true
+    }
+  }
+}
+-->
+
 
 ### 变体 42: R6 — 反直觉反向结果的诚实报告 + 延迟到 Discussion 的事后解释 (1篇高价值)
 **来源论文**: Malshe & Agarwal (2015, Journal of Marketing)
@@ -1319,6 +1638,45 @@ moderate. The mean variance inflation factor for the variables used in the estim
 **诚实边界**: "consistently show" 须有逐情境结果全部一致支撑；镜像句的两侧陈述必须与表格逐列对应，不得以总结句掩盖单侧个别指标的方向例外（本文 foreign market relatedness 不显著侧例外已在假设段显式交代）。
 
 <!-- wb:carpenter_and_westphal_2001_strategic_context_of_external_ne:r6_cross_context_mirror_pattern_summary -->
+<!-- retrieval-move:
+{
+  "functions": [
+    "results.mixed_synthesis",
+    "results.mixed_closure"
+  ],
+  "function_evidence": {
+    "results.mixed_synthesis": {
+      "kind": "verbatim",
+      "cue": "increases director involvement in stable environments but does not do so in unstable environments",
+      "why": "同一承诺下分别回指不同情境的支持与未支持部分。"
+    },
+    "results.mixed_closure": {
+      "kind": "verbatim",
+      "cue": "The opposite pattern emerges in unstable environments",
+      "why": "以不同构念变体在不同环境下的镜像结果限制总体结论。"
+    }
+  },
+  "function_support": {
+    "results.mixed_synthesis": "complete",
+    "results.mixed_closure": "complete"
+  },
+  "position": "不同情境与构念变体的结果报告之后",
+  "prerequisite": "各情境已实际检验且可比较；相反模式不能仅从显著性差异推定。",
+  "next": "给出条件范围内的总体判断，并按需要报告直接差异检验。",
+  "advances": "保留跨情境差异，避免合并成普遍一致支持。",
+  "next_evidence": [
+    "各情境的估计与不确定性",
+    "相反模式及其比较依据"
+  ],
+  "applicability": {
+    "required_facts": {
+      "mixed_findings_reported": true,
+      "multiple_contexts_tested": true
+    }
+  }
+}
+-->
+
 
 ### 变体 43: R4/R6 — 组内方向切换但不显著 → 直接组间系数差异裁决 (1篇高价值)
 **来源论文**: Schumacher, Keck & Tang (2020, Strategic Management Journal)
@@ -1712,6 +2070,26 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 ### 变体 62: R8 — 二元策略完全中介 firm characteristics + 市场信号收束（legacy Kenny）(1篇高价值)
 
 **来源论文**: Chen, Ganesan & Liu 2009 (Journal of Marketing)
+<!-- retrieval-move:
+{
+  "functions": [],
+  "position": "历史 Kenny 条件计数式完全中介报告；不是现代间接效应结果句",
+  "prerequisite": "只在明确讨论历史报告范式或明标 legacy claim 时使用；若写现代证据，须另有间接效应估计。",
+  "next": "维持原卡 LEGACY 边界，不能升级为现代间接效应区间或因果中介识别。",
+  "applicability": {
+    "evidence": [
+      "observational",
+      "legacy_mediation"
+    ],
+    "claim_scope": [
+      "association"
+    ],
+    "required_facts": {
+      "legacy_mediation_intended": true
+    }
+  }
+}
+-->
 **source**: chenganesanliu2009
 **skeleton_id**: `r8_ols_strategy_complete_mediation_kenny_signal`
 **原始句锚点**: Based on the steps that Kenny, Kashy, and Bolger (1998) outline, these effects indicate that product-recall strategies completely mediate the influences of firm characteristics on abnormal returns.

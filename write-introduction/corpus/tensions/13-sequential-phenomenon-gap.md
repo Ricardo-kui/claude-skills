@@ -62,6 +62,38 @@ Incompleteness 问题化的高阶 Tension：不是简单地指出"没人研究�
 - "we have good theory about... and good theory about..., but know little about..." → **对称结构**强调两个领域的成熟度，反衬缺口的意外性
 - 零次使用 "few studies have examined"
 
+<!-- retrieval-move:
+{
+  "functions": [
+    "intro.gap_unexplained"
+  ],
+  "function_evidence": {
+    "intro.gap_unexplained": {
+      "kind": "verbatim",
+      "cue": "we know little about why they might exhibit both tendencies in succession",
+      "why": "既有理论分别解释学习与遗忘，但尚未解释其连续出现及循环。"
+    }
+  },
+  "function_support": {
+    "intro.gap_unexplained": "complete"
+  },
+  "position": "现象实例之后、序列过程研究问题之前",
+  "prerequisite": "当前材料支持过程顺序，且缺口确在环节衔接而非单独环节。",
+  "next": "提出跨阶段连接与循环的解释任务。",
+  "advances": "把两个已知过程之间的连接显化为缺口。",
+  "next_evidence": [
+    "过程顺序的材料",
+    "分别解释各环节的文献"
+  ],
+  "applicability": {
+    "required_facts": {
+      "unexplained_process_documented": true,
+      "sequential_process_observed": true
+    }
+  }
+}
+-->
+
 ---
 
 ## 关键功能短语

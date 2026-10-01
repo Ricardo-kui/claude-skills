@@ -179,6 +179,37 @@ updated: 2026-08-13
 <!-- wb:darbyAgencyTheoryPerspective2025:legacy_面板数据-OLS_1_2 -->
 <!-- wb:eilert_2017_jm:legacy_面板数据-OLS_1_3 -->
 <!-- wb:darby_2023_msom:legacy_面板数据-OLS_1_4 -->
+<!-- retrieval-move:
+{
+  "functions": [
+    "methods.control_rationale"
+  ],
+  "function_evidence": {
+    "methods.control_rationale": {
+      "kind": "verbatim",
+      "cue": "variables correlated with ownership by large institutional investors that may also influence the time-to-recall",
+      "why": "原句同时给出与解释变量共变及影响结果的控制路径。"
+    }
+  },
+  "function_support": {
+    "methods.control_rationale": "complete"
+  },
+  "position": "控制变量总起、逐层测量之前",
+  "prerequisite": "控制角色有理论依据，并与当前设计相容；不按范文数量补控制。",
+  "next": "按实际层级说明变量及测量。",
+  "advances": "把控制名单连接到要处理的路径。",
+  "next_evidence": [
+    "控制与解释变量共变的依据",
+    "控制影响结果的依据"
+  ],
+  "applicability": {
+    "required_facts": {
+      "control_rationale_supported": true
+    }
+  }
+}
+-->
+
 #### 变体：M6 动态模型的「全一阶差分」控制声明 + 分层 because 链（post_2022_women_tmt_strategic_renewal 型，EXTEND）
 - **功能标签**：在变体 1 的分层 because 结构之上，增加动态模型特有的控制变量处理声明（全差分）+ 供给侧（候选池）控制逻辑
 - **骨架**：Our analyses controlled for time-variant characteristics of [CEO], [TMT], [firms], and [countries], some of which were variables in studies published with subsets of our data (see [Table reference]). To estimate dynamic models, all control variables, unless noted otherwise, are in first differences (from year [t-1] to [t]), accounting for the change in these characteristics in all models. [Level] controls. We included [control], because [rival explanation]. Because [contextual/societal factor] may influence the strength of [relationship], we controlled for such disparities, with [measure]. We also controlled for [supply-side factor]—the availability of [candidates] in the [labor market]—by including [measure].
@@ -187,6 +218,63 @@ updated: 2026-08-13
 - **反模式对照**：行业控制用 12 个 industry dummy 但未解释与固定 industry effects 的分工（M7 用 fixed industry effects + M6 再放 industry dummies 存在重复吸收嫌疑）——写入时带一行警告
 
 ### 变体 2: 样本交集漏斗 (3/4 复现)
+<!-- retrieval-move:
+{
+  "functions": [
+    "methods.sample_linkage"
+  ],
+  "definitions": [
+    {
+      "id": "methods.sample_linkage",
+      "label": "交代数据连接如何形成样本",
+      "section": "methods",
+      "refines": "methods.sample",
+      "definition": "把数据源之间的匹配或交集接到最终分析单位、样本量和观察窗，说明分析样本如何形成。",
+      "use_when": [
+        "样本确由多个来源连接或筛选得到，连接单位与保留规则明确。",
+        "所有数量、观察窗与处理步骤由当前数据决定；不凭范文要求补造不存在的起始数量。"
+      ],
+      "neighbors": [
+        {
+          "id": "methods.setting",
+          "distinction": "情境适切性说明为什么研究这里，样本连接说明实际上纳入哪些观察。"
+        },
+        {
+          "id": "methods.iv",
+          "distinction": "变量构造可使用同一数据源，但承担构念操作化而非样本形成。"
+        }
+      ],
+      "positive_example": {
+        "kind": "verbatim",
+        "cue": "The intersection of these datasets resulted in a sample",
+        "why": "Darby 的摘录把数据交集接到召回、企业数和时间窗；现有多来源键仍须消歧。"
+      },
+      "mismatch_example": {
+        "kind": "illustrative",
+        "text": "这个行业提供丰富的管理裁量与结果变异。",
+        "why": "这是情境适切性或数据可用性理由，没有说明样本形成过程。",
+        "actual_function": "methods.setting"
+      },
+      "aliases": [
+        "数据连接形成样本",
+        "多库匹配样本",
+        "sample linkage funnel"
+      ],
+      "review_cases": [
+        "M02"
+      ]
+    }
+  ],
+  "position": "数据源说明之后，分析样本交代位置",
+  "prerequisite": "按本块 definitions 的 use_when 核对当前需求与研究事实。",
+  "next": "报告实际最终样本与观察窗。",
+  "applicability": {
+    "required_facts": {
+      "linked_sources": true
+    }
+  }
+}
+-->
 **来源论文**: Darby2026 JOM / Darby2025 JSCM / Darby2023 MSOM
 **原始句锚点**: The intersection of these datasets resulted in a sample of 2982 high severity recalls across 69 publicly traded firms from 2002 to 2020.
 **验证状态**: VERIFIED
@@ -416,6 +504,38 @@ updated: 2026-08-13
 **禁忌**: 保守方向声明必须基于实际计算的相关（方向要对假设不利才可写），不得反向包装；时间括弧窗需与"实施可能延迟"的实质窗口匹配，窗太短则检验无效
 
 **验证状态**: VERIFIED — expert_audit_override (user 2026-08-28: 单源足矣; paper_count=1)
+<!-- retrieval-move:
+{
+  "functions": [
+    "methods.control_rationale"
+  ],
+  "function_evidence": {
+    "methods.control_rationale": {
+      "kind": "verbatim",
+      "cue": "Moreover, these control variables were negatively correlated with symbolic LTIP adoption",
+      "why": "检查同期及后续改革是否生成结果，并报告这些控制与焦点行动的共变。"
+    }
+  },
+  "function_support": {
+    "methods.control_rationale": "complete"
+  },
+  "position": "控制说明或补充规格的时间窗口辩护处",
+  "prerequisite": "确有可能同时发生的改革；相关方向和窗口由实际数据决定。",
+  "next": "报告具体窗口、规格和实际变化。",
+  "advances": "让控制时间范围与待处理路径对应。",
+  "next_evidence": [
+    "同期变化的理论理由",
+    "时间窗口及实际相关性"
+  ],
+  "applicability": {
+    "required_facts": {
+      "control_rationale_supported": true,
+      "concurrent_changes_relevant": true
+    }
+  }
+}
+-->
+
 
 ### 变体 64：风险集排他型控制变量剔除（westphal_zajac_1998_symbolic_management 型）
 
@@ -584,6 +704,38 @@ updated: 2026-08-13
 **适用**: 第三方中介/评估者设计（评级、认证、媒体、审计、分析师）中"行为者对整个机构类别有普遍偏好"类替代解释的封堵；亦可推广为 sibling-target placebo 控制。
 
 <!-- wb:desjardine_2025_information_based_competition_the_case_of_ri:isomorphic_alternative_target_control -->
+<!-- retrieval-move:
+{
+  "functions": [
+    "methods.control_rationale"
+  ],
+  "function_evidence": {
+    "methods.control_rationale": {
+      "kind": "verbatim",
+      "cue": "might be driven by investors' beliefs in the value of ESG",
+      "why": "点名同时驱动焦点关系的普遍信念，并以同类目标上的构念控制该路径。"
+    }
+  },
+  "function_support": {
+    "methods.control_rationale": "complete"
+  },
+  "position": "控制变量说明中的替代解释处理处",
+  "prerequisite": "同类目标代理确能反映所述普遍偏好，且当前构念与目标可比较。",
+  "next": "说明替代目标、重算方式及其局限。",
+  "advances": "用同构控制说明规格针对何种共同驱动。",
+  "next_evidence": [
+    "普遍偏好的生成路径",
+    "同类目标代理的测量依据"
+  ],
+  "applicability": {
+    "required_facts": {
+      "control_rationale_supported": true,
+      "analogous_target_proxy_available": true
+    }
+  }
+}
+-->
+
 
 ### 变体 23: M1 行业统计 + 先例对齐的设置辩护 (1篇高价值)
 **来源论文**: Pupovac, Astvansh, Carrillat & Legoux 2026 (POM)
@@ -636,6 +788,38 @@ updated: 2026-08-13
 > "We assembled a data set using multiple sources, including [source 1], [source 2], [source 3], [source 4], and [source 5]. [Table] provides a description of these variables and the source of the specific data items. We obtained [financial data] from [database A]. Because there is no common [firm-level] identifier between [database A] and [database B], we **manually matched** [database B units] belonging to corresponding [database A entities]. Because one of our research questions pertains to [shareholder value], we retained only those [firms] that are [publicly listed] at any time during our sample period. We obtained [market data] from [database C]. Finally, we obtained [ownership data] from [database D] and derived [other ownership] from [database E]. After we merged the [N] data sets and removed [M] [firm-year] observations pertaining to [excluded segment, e.g., financial firms], our final sample consisted of [N_final] [firm-year] observations spanning a [Y]-year period ([year_start]–[year_end]) for which all the relevant variables have nonmissing values."
 **与原骨架差异**: 区别于变体16（多源 alliance **自动**交叉验证）与变体2（逐步样本交集漏斗）——本变体处理两个核心数据库**无共同标识符**的硬情况（如 ACSI 品牌与 Compustat 企业无公用 firm ID），须**手工匹配**（manually matched）下游单位到上游实体。三要素：(1) 五库多源 + 每变量的数据源声明表；(2) **手工匹配的明示**（不可假装自动 merge）；(3) 合并后漏斗（合并 N 库 → 排除 M 个 [金融行业] 观测 → 最终 N_final，且限定"上市"以配合股东价值 RQ）。配套反模式（见"多数据库无漏斗"）：即便无法逐步漏斗，也须报告关键交集 N。适用于营销-金融、营销-会计等跨职能多源面板（ACSI/Compustat/CRSP/ExecuComp/Thomson Reuters 组合）。
 **诚实边界**: 手工匹配的匹配率与匹配规则须报告（多少 brand 成功匹配到 firm？规则是否可复现？）；限定"上市"会引入生存偏误（上市公司更大更老），须在 limitation 讨论。
+<!-- retrieval-move:
+{
+  "functions": [
+    "methods.sample_linkage"
+  ],
+  "function_evidence": {
+    "methods.sample_linkage": {
+      "kind": "verbatim",
+      "cue": "we manually matched ACSI brands belonging to corresponding Compustat firms",
+      "why": "原句支持无共同标识符的手工匹配；最终数量与观察窗只在现有模板中，不能当成完整原文。"
+    }
+  },
+  "function_support": {
+    "methods.sample_linkage": "partial"
+  },
+  "position": "数据源说明之后、合并样本交代之前",
+  "prerequisite": "多源确需连接且匹配可复核；最终数量与窗口须由当前数据补足。",
+  "next": "报告合并、剔除和最终样本及观察窗。",
+  "advances": "把匹配操作接入已有样本形成骨架。",
+  "next_evidence": [
+    "手工匹配规则与核验",
+    "合并后的实际数量与观察窗"
+  ],
+  "applicability": {
+    "required_facts": {
+      "linked_sources": true,
+      "manual_matching_required": true
+    }
+  }
+}
+-->
+
 
 ### 变体 27: M4 构念形成窗—结果观察窗分离 + 双代理收敛 (1篇高价值)
 **来源论文**: Schumacher, Keck & Tang (2020, Strategic Management Journal)
@@ -678,6 +862,45 @@ updated: 2026-08-13
 
 **跨 skill 对齐**: `../write-results/corpus/Logit-Probit-Ordered-Probit.md` 变体9–11（正式 U-test、条件曲线概率图与经济成本换算）；`../write-theory/corpus/subprotocols/hypothesis_derivation_patterns.md`（two-phase curvilinear argumentation）。
 <!-- wb:bendig_hensellek_schulte_2024_etp:legacy_面板数据-OLS_28 -->
+<!-- retrieval-move:
+{
+  "functions": [
+    "methods.estimator_fe_support"
+  ],
+  "function_evidence": {
+    "methods.estimator_fe_support": {
+      "kind": "verbatim",
+      "cue": "many of our observations are zero for all years for one firm",
+      "why": "原句给出全零单元及保留需求；固定效应二元模型的删除规则与 GEE 辩护见现有模板，属部分原文支持。"
+    }
+  },
+  "function_support": {
+    "methods.estimator_fe_support": "partial"
+  },
+  "position": "估计器选择理由中的样本保留位置",
+  "prerequisite": "已核查具体估计器删除全零单元的规则；GEE 与单位固定效应处理的问题须分别说明。",
+  "next": "报告 GEE 链接、相关结构与推断设置；曲线识别另行说明。",
+  "advances": "将结果变异不足接到估计样本保留问题。",
+  "next_evidence": [
+    "全零单元的实际分布",
+    "估计器样本规则与相关结构依据"
+  ],
+  "applicability": {
+    "required_facts": {
+      "all_zero_units_present": true,
+      "retain_all_zero_units": true
+    }
+  },
+  "skeleton_span": {
+    "functions": [
+      "methods.estimator_fe_support"
+    ],
+    "start": "We estimate a generalized estimating equation",
+    "end_before": "A significant quadratic coefficient"
+  }
+}
+-->
+
 
 
 
@@ -929,6 +1152,63 @@ updated: 2026-08-13
 <!-- wb:ridge_hill_ingram_kolomeitsev_worrell_2024_amj:legacy_面板数据-OLS_39 -->
 
 ### 变体 40: M6 控制变量"双面 because" — 对 DV 一条理由 + 对 IV 共变一条理由（2026-08-12）
+<!-- retrieval-move:
+{
+  "functions": [
+    "methods.control_rationale"
+  ],
+  "definitions": [
+    {
+      "id": "methods.control_rationale",
+      "label": "说明控制变量为何进入规格",
+      "section": "methods",
+      "refines": "methods.controls",
+      "definition": "把控制变量连接到焦点结果及其与核心解释变量共变的理由，交代它在当前规格中要处理的路径。",
+      "use_when": [
+        "有理论或文献依据支持控制的角色，并与当前研究设计一致。",
+        "控制数量由路径需要决定；明确角色后再说明测量，避免由惯例名单推定混淆控制有效。"
+      ],
+      "neighbors": [
+        {
+          "id": "methods.controls",
+          "distinction": "泛控制变量报告可只列变量与测量；本动作进一步解释纳入理由。"
+        },
+        {
+          "id": "methods.iv",
+          "distinction": "核心解释变量的代理辩护与控制变量的纳入理由不同，即使都使用 because。"
+        }
+      ],
+      "positive_example": {
+        "kind": "verbatim",
+        "cue": "Likewise, there is reason to expect that each may covary with paranoia",
+        "why": "Ridge 的同块原句先给影响结果的理由，再给与核心特质共变的理由。"
+      },
+      "mismatch_example": {
+        "kind": "illustrative",
+        "text": "我们纳入企业规模、绩效与年份变量，它们都被先行研究使用。",
+        "why": "仅列惯例名单，没有说明这些变量在当前关系中的路径角色。",
+        "actual_function": "methods.controls"
+      },
+      "aliases": [
+        "控制变量纳入理由",
+        "双面because控制",
+        "control inclusion rationale"
+      ],
+      "review_cases": [
+        "M07"
+      ]
+    }
+  ],
+  "position": "控制变量与测量说明位置",
+  "prerequisite": "按本块 definitions 的 use_when 核对当前需求与研究事实。",
+  "next": "将控制角色接到当前规格。",
+  "applicability": {
+    "required_facts": {
+      "control_rationale_supported": true
+    }
+  }
+}
+-->
 
 **来源论文**: Ridge, Hill, Ingram, Kolomeitsev & Worrell 2024 (*Academy of Management Journal*)
 **原始句锚点**: "We control for firm size (logarithm of total assets), market performance (measured as Tobin's Q), and tax aggressiveness... because lobbying and competitive actions may be affected by all three. Likewise, there is reason to expect that each may covary with paranoia, given tendencies of those higher in the trait to avoid attention."（英文原句——源论文为英文，非中文锚点）

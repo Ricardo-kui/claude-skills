@@ -670,6 +670,36 @@ H[h]. The impact of [X] on [Y] will be more negative when [W_hinder] is higher.
 >
 > "Although rivals may become subject to negative spillover effects of the target firm's ESG media controversy (DesJardine, Grewal & Viswanathan, 2023; Shi, Connelly, Hoskisson & Ketchen, 2020), they should still fare better than the target firm that directly incurs the controversy. This follows from the idea that spillover effects dissipate, such that firms involved in controversies are almost always more heavily penalized than any 'bystander' peers subject to negative spillovers (Shi, Wajda & Aguilera, 2022)."
 
+<!-- retrieval-move:
+{
+  "functions": ["theory.concession_direction"],
+  "function_evidence": {
+    "theory.concession_direction": {
+      "kind": "verbatim",
+      "cue": "they should still fare better than the target firm",
+      "why": "同一原段先承认竞争对手也可能承受负面溢出，再保留其相对占优方向，并用溢出随距离消散、直接涉事者受罚更重的机制回应。"
+    }
+  },
+  "function_support": {"theory.concession_direction": "complete"},
+  "position": "受害方侧的调节推导中，相对优势判断之后、预测收束之前的让步回应。",
+  "prerequisite": "当前预测依赖相对比较；直接涉事者与旁观同业的暴露差异及溢出递减机制已有依据。保留的是相对优势，不能据此推断竞争对手的绝对结果改善。",
+  "advances": "承认双方都可能受损，同时解释为何这种反向风险没有推翻相对方向。",
+  "next": "把相对优势对行为动机的影响接回当前调节机制，再导出方向判断。",
+  "next_evidence": ["直接暴露与间接溢出的相对强度依据", "相对优势如何改变焦点主体的行为动机"],
+  "skeleton_span": {
+    "functions": ["theory.concession_direction"],
+    "start": "Although rivals may become subject to negative spillover effects",
+    "end_before": "Therefore, we expect:"
+  },
+  "applicability": {
+    "required_facts": {
+      "response_grounded": true,
+      "relative_exposure_supported": true
+    }
+  }
+}
+-->
+
 **骨架**（威胁对 H2a/H2b；机会对同构替换）:
 ```
 [增强侧——攻击方侧] When a [portfolio firm] incurs [reputational damage] from [source], subsequent [positive signal] becomes more useful in mitigating [stakeholder harm] ([citation]). Because [stakeholders] trust [signal type], those [signals] may make the firm appear [better than its peers]. Because [signals] effectively counteract [damage type], and because stakeholders' assessments are based on relative comparisons between similar firms, [attackers] may be especially motivated to [attack] by [mechanism]. Following our prior logic, we expect [attackers] to achieve this goal by [tarnishing the reputations of] (target) firms that compete with their portfolio firms. That is, a target firm is likely to receive worse [coverage] from [intermediary] in which rivals' investors have greater ownership when those rivals face more [threat]. Thus:
@@ -1233,6 +1263,60 @@ H3: The [effect/reduction] ... is smaller when [units] have a higher [cost of M]
 **反模式**: 把成本与收益写成两套不可通约理论（退化为两个独立调节的拼盘）；或没有基线主效应就直接进入异号调节（那是 E8 的领地）。
 
 <!-- wb:lu_et_al_2022_frenemies_corporate_advertising:e15_one_calculus_cost_benefit_opposite_signed_moderation_pair -->
+<!-- retrieval-move:
+{
+  "functions": [
+    "theory.cost_benefit_balance",
+    "theory.actor_motivation",
+    "theory.condition_amplification"
+  ],
+  "function_evidence": {
+    "theory.cost_benefit_balance": {
+      "kind": "verbatim",
+      "cue": "the cost and benefit of coordination would affect firms' incentive to collaborate",
+      "why": "同一协调行动的收益与成本共同进入选择逻辑。"
+    },
+    "theory.actor_motivation": {
+      "kind": "verbatim",
+      "cue": "When the gain from coordination is larger, firms have more incentives to coordinate",
+      "why": "收益改变协调动机，成本解释何时不愿改变策略。"
+    },
+    "theory.condition_amplification": {
+      "kind": "verbatim",
+      "cue": "if the cost of coordination is high, firms are less likely to shift their strategy",
+      "why": "高收益放大已有作用，高成本削弱作用，均通过协调意愿解释。"
+    }
+  },
+  "function_support": {
+    "theory.cost_benefit_balance": "complete",
+    "theory.actor_motivation": "complete",
+    "theory.condition_amplification": "complete"
+  },
+  "position": "基线机制建立之后的权衡与边界条件推导",
+  "prerequisite": "同一行动的两侧来源及基线作用已建立；两类条件各有依据。",
+  "next": "按实际条件推出强度预测，避免将强度变化写成方向反转。",
+  "advances": "用同一成本收益计算解释动机与强度条件。",
+  "next_evidence": [
+    "同一行动的成本与收益",
+    "基线机制及边界条件依据"
+  ],
+  "applicability": {
+    "required_facts": {
+      "cost_and_benefit_supported": true
+    }
+  },
+  "skeleton_span": {
+    "functions": [
+      "theory.cost_benefit_balance",
+      "theory.actor_motivation",
+      "theory.condition_amplification"
+    ],
+    "start": "We argue that the [benefit] and [cost]",
+    "end_before": "Based on these arguments"
+  }
+}
+-->
+
 
 
 ## E16. 双列因子账本 → 单开关不对称翻转（Two-Column Factor Ledger → Single-Switch Asymmetric Reversal，Dewan & Jensen 2020 AMJ 型）

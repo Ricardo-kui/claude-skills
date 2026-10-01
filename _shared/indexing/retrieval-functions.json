@@ -1,0 +1,580 @@
+{
+  "schema_version": 3,
+  "note": "宽功能的查询词桥接与既有词法选择器；细功能定义、适用条件、相邻动作和例子唯一维护在源卡 retrieval-move.definitions，由 catalog 派生读取。",
+  "functions": [
+    {
+      "id": "results.model_sequence",
+      "refines": "results.navigation",
+      "section": "results",
+      "aliases": [
+        "逐列推进",
+        "基准到完整模型",
+        "模型序列导航"
+      ],
+      "description": "用原文导航基准到扩展模型的列序；支持裁决句不代替导航。",
+      "selector": "(?:^|[ /])R2(?:/|$)",
+      "focus": "序列|层次|逐列|导航|hierarch",
+      "require_focus": true,
+      "title_only": true,
+      "require_original": true,
+      "required_text": [
+        "(?:model|column|table)\\s*(?:\\[|[0-9]|I|one|two|three)",
+        "control|baseline|full|hierarch"
+      ]
+    },
+    {
+      "id": "intro.attention_lens",
+      "section": "introduction",
+      "selector": "/theory-lens/",
+      "focus": "注意力|attention|关注切换",
+      "require_focus": true,
+      "title_only": true
+    },
+    {
+      "id": "intro.hook",
+      "section": "introduction",
+      "aliases": [
+        "hook",
+        "开篇",
+        "引起兴趣"
+      ],
+      "selector": "/hooks/"
+    },
+    {
+      "id": "intro.tension",
+      "section": "introduction",
+      "aliases": [
+        "tension",
+        "张力",
+        "矛盾",
+        "problematization"
+      ],
+      "selector": "/tensions/"
+    },
+    {
+      "id": "intro.stakes",
+      "section": "introduction",
+      "aliases": [
+        "stakes",
+        "重要性",
+        "现实后果"
+      ],
+      "selector": "/stakes/"
+    },
+    {
+      "id": "intro.literature",
+      "section": "introduction",
+      "aliases": [
+        "literature turn",
+        "文献转向",
+        "文献对话"
+      ],
+      "selector": "/literature-turns/"
+    },
+    {
+      "id": "intro.lens",
+      "section": "introduction",
+      "aliases": [
+        "theory lens",
+        "理论透镜"
+      ],
+      "selector": "/theory-lens/"
+    },
+    {
+      "id": "intro.preview",
+      "section": "introduction",
+      "aliases": [
+        "preview",
+        "研究预告",
+        "设计预告"
+      ],
+      "selector": "/previews/"
+    },
+    {
+      "id": "intro.rq",
+      "section": "introduction",
+      "aliases": [
+        "research question",
+        "研究问题"
+      ],
+      "selector": "/research-questions/"
+    },
+    {
+      "id": "intro.contribution",
+      "section": "introduction",
+      "aliases": [
+        "contribution",
+        "贡献预告",
+        "理论贡献"
+      ],
+      "selector": "/contributions/"
+    },
+    {
+      "id": "intro.transition",
+      "section": "introduction",
+      "aliases": [
+        "transition",
+        "过渡",
+        "衔接"
+      ],
+      "selector": "/transitions/|transition-signals"
+    },
+    {
+      "id": "intro.literature_to_gap",
+      "section": "introduction",
+      "aliases": [
+        "literature to gap",
+        "文献到问题",
+        "文献转问题",
+        "文献到缺口"
+      ],
+      "selector": "/transitions/10-literature-to-gap"
+    },
+    {
+      "id": "intro.differentiation",
+      "section": "introduction",
+      "aliases": [
+        "differentiation",
+        "区别于前作",
+        "研究差异"
+      ],
+      "selector": "/differentiation/"
+    },
+    {
+      "id": "theory.definition",
+      "section": "theory",
+      "aliases": [
+        "construct definition",
+        "构念定义",
+        "定义构念"
+      ],
+      "selector": "construct_definition|A_construct_differentiation|construct_differentiation_patterns",
+      "focus": "定义|definition|scope|lineage"
+    },
+    {
+      "id": "theory.mechanism",
+      "section": "theory",
+      "aliases": [
+        "mechanism chain",
+        "机制推演",
+        "机制链"
+      ],
+      "selector": "mechanism_chain|B_mechanism_elaboration|hypothesis_derivation_patterns",
+      "focus": "通道|channel|机制|mechanism|warrant"
+    },
+    {
+      "id": "theory.hypothesis",
+      "section": "theory",
+      "aliases": [
+        "hypothesis form",
+        "假设陈述",
+        "假设句"
+      ],
+      "selector": "hypothesis_forms",
+      "focus": "基础关系|主效应|Hypothesis|Prediction|假设陈述"
+    },
+    {
+      "id": "theory.hypothesis_main",
+      "section": "theory",
+      "aliases": [
+        "main-effect hypothesis",
+        "主效应假设句",
+        "正向主效应假设"
+      ],
+      "selector": "hypothesis_forms",
+      "focus": "基础关系|主效应|Comparative Main Effect",
+      "require_focus": true,
+      "title_only": true
+    },
+    {
+      "id": "theory.moderation",
+      "section": "theory",
+      "aliases": [
+        "moderation",
+        "调节论证",
+        "高低两端",
+        "双边调节"
+      ],
+      "selector": "/moderation.md|E_moderation|bilateral_argumentation_templates",
+      "focus": "双边|高低|high.*low|High-W|Null-Side|双侧"
+    },
+    {
+      "id": "theory.moderator_selection",
+      "section": "theory",
+      "aliases": [
+        "moderator selection",
+        "选择调节变量",
+        "调节变量选择"
+      ],
+      "selector": "moderator_selection_frameworks",
+      "focus": "Framework|元框架|Meta-Framework|条件"
+    },
+    {
+      "id": "theory.competing",
+      "section": "theory",
+      "aliases": [
+        "competing hypotheses",
+        "竞争假设",
+        "竞争预测"
+      ],
+      "selector": "F_competing_hypotheses|G_dialectical_opposition",
+      "focus": "竞争|competing|oppos|conversely",
+      "require_focus": true,
+      "title_only": true
+    },
+    {
+      "id": "theory.concession",
+      "section": "theory",
+      "aliases": [
+        "acknowledgment response",
+        "承认与回应",
+        "让步回应",
+        "回应异议",
+        "承认替代解释",
+        "先承认再回应",
+        "承认反向解释"
+      ],
+      "selector": "acknowledgment_response|argumentation_patterns",
+      "focus": "反向|承认|回应|Rogerian|Counter|counter|concession"
+    },
+    {
+      "id": "theory.closure",
+      "section": "theory",
+      "aliases": [
+        "closure",
+        "段落收束",
+        "推导收束"
+      ],
+      "selector": "/closure.md",
+      "focus": "收束|Transition|过渡|Therefore|Convergence"
+    },
+    {
+      "id": "theory.cost_benefit",
+      "section": "theory",
+      "aliases": [
+        "cost benefit",
+        "成本收益",
+        "收益成本"
+      ],
+      "selector": "cost_benefit_calculus",
+      "focus": "成本|收益|cost|benefit"
+    },
+    {
+      "id": "theory.process",
+      "section": "theory",
+      "aliases": [
+        "process theory",
+        "过程理论",
+        "阶段转换"
+      ],
+      "selector": "D_process_theory",
+      "focus": "阶段|Stage|transition|process|生命周期"
+    },
+    {
+      "id": "methods.setting",
+      "section": "methods",
+      "aliases": [
+        "research setting",
+        "研究情境",
+        "情境适切性"
+      ],
+      "selector": "(?:^|[ /])M1(?:/|$)",
+      "focus": "情境|场景|Setting|setting|适切"
+    },
+    {
+      "id": "methods.sample",
+      "section": "methods",
+      "aliases": [
+        "sample funnel",
+        "样本漏斗",
+        "样本筛选"
+      ],
+      "selector": "(?:^|[ /])M2(?:/|$)",
+      "focus": "漏斗|筛选|sample|Sample|匹配|合并"
+    },
+    {
+      "id": "methods.model_free",
+      "section": "methods",
+      "aliases": [
+        "model-free",
+        "无模型证据",
+        "描述性识别预告"
+      ],
+      "selector": "M2\\.5",
+      "focus": "Model-Free|model-free|无模型"
+    },
+    {
+      "id": "methods.dv",
+      "section": "methods",
+      "aliases": [
+        "dependent variable",
+        "因变量操作化",
+        "结果变量测量"
+      ],
+      "selector": "(?:^|[ /])M3(?:/|$)",
+      "focus": "DV|因变量|结果变量|rare|稀有"
+    },
+    {
+      "id": "methods.iv",
+      "section": "methods",
+      "aliases": [
+        "independent variable",
+        "自变量操作化",
+        "解释变量测量"
+      ],
+      "selector": "(?:^|[ /])M4(?:/|$)",
+      "focus": "IV|自变量|解释变量|构建"
+    },
+    {
+      "id": "methods.mediator",
+      "section": "methods",
+      "aliases": [
+        "moderator measurement",
+        "调节变量测量",
+        "中介变量测量"
+      ],
+      "selector": "(?:^|[ /])M5(?:/|$)",
+      "focus": "调节|中介|moderator|Mediator"
+    },
+    {
+      "id": "methods.controls",
+      "section": "methods",
+      "aliases": [
+        "controls",
+        "控制变量",
+        "控制理由"
+      ],
+      "selector": "(?:^|[ /])M6(?:/|$)",
+      "focus": "控制变量|控制链|because|Control",
+      "require_focus": true
+    },
+    {
+      "id": "methods.estimator",
+      "section": "methods",
+      "aliases": [
+        "estimator",
+        "估计器选择",
+        "模型选择理由"
+      ],
+      "selector": "(?:^|[ /])M7(?:/|$)",
+      "focus": "估计|选择|模型|estimat|Model|模型选择|Logit|Probit|2SLS|固定效应|\\bFE\\b"
+    },
+    {
+      "id": "methods.identification",
+      "section": "methods",
+      "aliases": [
+        "identification",
+        "识别策略",
+        "内生性辩护"
+      ],
+      "selector": "(?:^|[ /])M8(?:/|$)",
+      "focus": "识别|内生|外生|因果|identif|endogen|Instrument"
+    },
+    {
+      "id": "methods.multi_study",
+      "section": "methods",
+      "aliases": [
+        "multi-study",
+        "多研究组织",
+        "多研究设计"
+      ],
+      "selector": "(?:^|[ /])M9(?:/|$)|多研究",
+      "focus": "Study|study|多研究|递进|复现"
+    },
+    {
+      "id": "results.descriptive",
+      "section": "results",
+      "aliases": [
+        "descriptive statistics",
+        "描述统计",
+        "相关矩阵"
+      ],
+      "selector": "(?:^|[ /])R1(?:/|$)",
+      "focus": "描述|相关|correlation|Descriptive"
+    },
+    {
+      "id": "results.navigation",
+      "section": "results",
+      "aliases": [
+        "table navigation",
+        "表格导航",
+        "逐列推进"
+      ],
+      "selector": "(?:^|[ /])R2(?:/|$)",
+      "focus": "导航|表格|Table|逐列|顺序|Model"
+    },
+    {
+      "id": "results.hypothesis",
+      "section": "results",
+      "aliases": [
+        "hypothesis support",
+        "假设支持判断",
+        "主效应报告"
+      ],
+      "selector": "(?:^|[ /])R3(?:/|$)",
+      "focus": "主效应|假设|Hypothesis|support|四拍"
+    },
+    {
+      "id": "results.interaction",
+      "section": "results",
+      "aliases": [
+        "interaction interpretation",
+        "交互解释",
+        "调节结果"
+      ],
+      "selector": "(?:^|[ /])R4(?:/|$)",
+      "focus": "交互|调节|interaction|斜率|边际|分样本|分组|subsample|split.sample|Chow|Wald|条件效应"
+    },
+    {
+      "id": "results.magnitude",
+      "section": "results",
+      "aliases": [
+        "economic significance",
+        "经济显著性",
+        "效应幅度"
+      ],
+      "selector": "(?:^|[ /])R5(?:/|$)",
+      "focus": "幅度|经济|Economic|百分|标准差|实际"
+    },
+    {
+      "id": "results.null",
+      "section": "results",
+      "aliases": [
+        "null result",
+        "非显著结果",
+        "诚实报告非显著"
+      ],
+      "selector": "(?:^|[ /])R6(?:/|$)",
+      "focus": "非显著|不支持|Null|non-significant|nonsignificant|not support"
+    },
+    {
+      "id": "results.mixed",
+      "section": "results",
+      "aliases": [
+        "mixed findings",
+        "混合发现",
+        "部分支持"
+      ],
+      "selector": "(?:^|[ /])R6(?:/|$)",
+      "focus": "混合|部分支持|Mixed|不一致",
+      "require_focus": true,
+      "title_only": true
+    },
+    {
+      "id": "results.robustness",
+      "section": "results",
+      "aliases": [
+        "robustness",
+        "稳健性汇总",
+        "稳健性报告"
+      ],
+      "selector": "(?:^|[ /])R7(?:/|$)",
+      "focus": "稳健|robust|Robust|Threat|placebo|安慰剂"
+    },
+    {
+      "id": "results.mechanism",
+      "section": "results",
+      "aliases": [
+        "mechanism evidence",
+        "机制证据",
+        "机制检验"
+      ],
+      "selector": "(?:^|[ /])R8(?:/|$)",
+      "focus": "机制|中介|渠道|通道|mechanism|mediat|channel"
+    },
+    {
+      "id": "results.mediation",
+      "section": "results",
+      "aliases": [
+        "mediation reporting",
+        "中介结果报告",
+        "间接效应报告",
+        "中介证据"
+      ],
+      "selector": "(?:^|[ /])R8(?:/|$)",
+      "focus": "中介|mediat|间接",
+      "require_focus": true,
+      "title_only": true
+    },
+    {
+      "id": "results.closure",
+      "section": "results",
+      "aliases": [
+        "results closure",
+        "结果收束",
+        "证据收束"
+      ],
+      "selector": "(?:^|[ /])R9(?:/|$)",
+      "focus": "收束|Summary|综上|Taken together|汇总"
+    },
+    {
+      "id": "theory.construct_contrast",
+      "section": "theory",
+      "selector": "construct_definition|A_construct_differentiation|construct_differentiation_patterns",
+      "focus": "构念.*(?:区分|辨析)|两构念|多构念|Construct.*(?:Contrast|Comparison|Distinction)|Framework-Anchored",
+      "exclude_title": "Umbrella|上位类|假设陈述|Typology|层次辩护",
+      "require_focus": true,
+      "title_only": true
+    },
+    {
+      "id": "theory.mechanism_explanation",
+      "section": "theory",
+      "selector": "mechanism_chain|B_mechanism_elaboration|hypothesis_derivation_patterns",
+      "focus": "机制|Mechanism|Channel|通道|推导",
+      "exclude_title": "Why-Not|反向边界|Instantiation Enumeration|通道枚举|Fallback|双刃限定|框架定义|透镜解码",
+      "require_focus": true,
+      "title_only": true
+    },
+    {
+      "id": "theory.competing_predictions",
+      "section": "theory",
+      "selector": "F_competing_hypotheses|G_dialectical_opposition",
+      "focus": "竞争假设|竞争对|对立理论|Competing.*(?:Hypothes|Prediction)|自反性反机制",
+      "exclude_title": "代理桥接|Observable Direction Proxy|假设树交接",
+      "require_focus": true,
+      "title_only": true,
+      "required_text": [
+        "hypothes|prediction|预测"
+      ]
+    },
+    {
+      "id": "theory.concession_direction",
+      "section": "theory",
+      "selector": "acknowledgment_response|argumentation_patterns|mechanism_chain",
+      "focus": "Concession.Rebuttal|双刃限定|竞争推测预承认|反向.*回应",
+      "require_focus": true,
+      "title_only": true,
+      "require_original": true,
+      "required_text": [
+        "both|either|although|while|may also|could|plausible",
+        "we (?:base|predict|expect|argue)|thus|therefore|however.*(?:because|earlier)|enabling conditions"
+      ]
+    },
+    {
+      "id": "theory.cost_benefit_balance",
+      "section": "theory",
+      "selector": "cost_benefit_calculus|mechanism_chain",
+      "focus": "基础权衡|成本.收益.*机制链|综合收敛|Trade.off",
+      "exclude_title": "同级 IV|感知高收益|感知低成本",
+      "require_focus": true,
+      "title_only": true,
+      "required_text": [
+        "benefit|收益",
+        "cost|成本"
+      ]
+    },
+    {
+      "id": "results.null_caution",
+      "section": "results",
+      "selector": "(?:^|[ /])R6(?:/|$)",
+      "focus": "诚实声明|小样本|功效|谨慎|审慎|不等于|power|caution",
+      "exclude_title": "Monte Carlo 功效分析",
+      "require_focus": true,
+      "title_only": true,
+      "required_text": [
+        "nonsignificant|non-significant|not significant|null",
+        "could|may|power|small sample|limited"
+      ]
+    }
+  ]
+}

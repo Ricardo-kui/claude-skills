@@ -50,6 +50,8 @@ Distill how a published Introduction works—not what it says—into reusable, e
 
 Return the requested depth level, the functional module map, transferable expression skeletons, rhetorical logic, boundary conditions, evidence anchors, QC findings, and `skill_design_feedback`. For Incommensurability, include the L0–L3 profile, route confidence, closest alternative, and any unclassified residual. Separate direct evidence from inference, corpus updates, and core-skill defect hypotheses. Never copy source sentences as reusable templates.
 
+实际写回后的完成判据见 [四节共用收尾协议](../_shared/distillation-writeback-finalization.md)；单节独立模式同样执行登记、检索刷新与工作树终验。
+
 ## Context discipline
 
 Do not preload every phase or the full writing corpus. Index/registry 查询一律经 `py ../distill-paper-exemplar/scripts/corpus_query.py index|registry --section introduction --query "<关键词>"`（确定性，命中行默认 ≤50），然后只打开被命中的文件用于对比或写回——先查后开、命中即开，索引正文不进上下文（单份 54–257KB，曾是蒸馏 token 的头号成本）。

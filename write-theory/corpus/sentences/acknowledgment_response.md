@@ -364,7 +364,89 @@ hypothesize that [prediction]。
 
 <!-- wb:lu_et_al_2022_frenemies_corporate_advertising:majority_evidence_construct_level_scoping_sentence -->
 
+<!-- retrieval-move:
+{
+  "functions": ["theory.concession_direction"],
+  "function_evidence": {
+    "theory.concession_direction": {
+      "kind": "verbatim",
+      "cue": "whereas the existence of positive spillovers depends on the specific definition of product substitutes",
+      "why": "同一原段承认正向溢出依赖产品替代定义，再说明本文研究企业层级广告支出，据此保留负外部性的理论前提方向。"
+    }
+  },
+  "function_support": {"theory.concession_direction": "complete"},
+  "position": "假设推导之前，对反方向证据作构念层级划界并选择推演前提。",
+  "prerequisite": "主流方向及反向证据的成立条件均有文献支持；当前构念层级与反证的适用域确实不同。原文承诺的是理论前提方向，具体假设仍需后续机制推导。",
+  "advances": "把相反作用的成立条件与当前构念域区分，说明为何保留后续推演采用的外部性方向。",
+  "next": "据此展开当前机制并导出具体预测，保留反向证据的条件限定。",
+  "next_evidence": ["两类证据的构念层级和适用域", "从所选理论前提到具体假设的机制链"],
+  "applicability": {
+    "required_facts": {
+      "response_grounded": true,
+      "scope_distinction_supported": true,
+      "dominant_direction_supported": true
+    }
+  }
+}
+-->
+
 ### 句式 D：竞争推测预承认与核心论点回收（Competing-Speculation Acknowledgment + Numbered Core-Argument Recap）
+<!-- retrieval-move:
+{
+  "functions": [],
+  "definitions": [
+    {
+      "id": "theory.concession_direction",
+      "label": "承认反向可能后回应预测方向",
+      "section": "theory",
+      "refines": "theory.concession",
+      "definition": "先公平承认相反方向为何可能成立，再用已建立的核心论点说明为何仍保留当前预测。",
+      "use_when": [
+        "反向可能确有内容，回应理由能够指向此前已建立的机制或当前作用域。",
+        "选文章原文范本时，同一源块的摘录须同时含承认与回应；回应须说明为何在当前机制或作用域下保留方向。"
+      ],
+      "neighbors": [
+        {
+          "id": "theory.competing_predictions",
+          "distinction": "竞争预测保留双方供检验；本动作在承认后给出保留单一方向的理由。"
+        },
+        {
+          "id": "results.null_caution",
+          "distinction": "结果阶段的解释限定依据实际证据，不承担 Theory 中的前置预测裁决。"
+        }
+      ],
+      "positive_example": {
+        "kind": "template",
+        "cue": "We base our predictions on our core theoretical arguments",
+        "why": "本卡已有模板同时含 either 方向承认和核心论点回收；这是模板正例，不能宣称原文摘录已补齐回应。"
+      },
+      "mismatch_example": {
+        "kind": "illustrative",
+        "text": "其他原因也可能造成这种结果。",
+        "why": "只有一般多因性承认，没有相反方向的实质解释，也没有回应。",
+        "actual_function": "theory.concession"
+      },
+      "aliases": [
+        "反向风险",
+        "仍预期正向",
+        "承认反向机制",
+        "让步后维持预测"
+      ],
+      "review_cases": [
+        "T07"
+      ]
+    }
+  ],
+  "position": "预测方向存在反向可能时，机制推演或收敛位置",
+  "prerequisite": "按本块 definitions 的 use_when 核对当前需求与研究事实。",
+  "next": "用此前核心论点回应；原文只含承认时保留完整范本缺口。",
+  "applicability": {
+    "required_facts": {
+      "response_grounded": true
+    }
+  }
+}
+-->
 
 <!-- pattern_id: competing_speculation_resolution; build_type: 跨类型（句式级）; source_papers: ["Pfarrer_Pollock_Rindova_2010_AMJ"]; confidence: medium; sentence_position: 让步-回应 -->
 

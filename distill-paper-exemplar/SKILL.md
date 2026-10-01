@@ -135,14 +135,10 @@ when_to_use: "用户给一篇完整论文要求整篇蒸馏/整篇学习时；�
    残项写成 `writeback_residuals.yaml` 工作单交由单个同步 pass 消费（该 pass 不得运行
    corpus_writeback.py）。写回器本身已幂等（块尾 `<!-- wb:<paper>:<item> -->` 溯源标记 +
    同体检测），同一 plan 误跑两次 --apply 不再产生重复。
-   **骨架索引回填（强制，2026-09-15 起）**：终验通过后、audit 之前，涉事 write-* 各跑
-   `python ~/.claude/skills/<skill>/scripts/build_indices.py` 重建 `corpus/_skeleton/`。
-   骨架子清单是 write 侧写作期借句检索的底本来源（选材索引同步 ≠ 骨架索引同步），不回填
-   则新变体对写作期不可见。plan 含 `new_file` 项时，先在对应 skill `scripts/build_indices.py`
-   的骨架轴表登记该文件（methods/results `FAMILIES`；theory
-   `VARIANT_FILES`/`SUBPROTOCOL_FILES`/`SENTENCE_FILES`；introduction CardParser 自动
-   glob，免登记），再重建。收尾判据：`python ~/.claude/skills/_shared/indexing/check_all.py`
-   全绿（漂移门要求重建产物与 corpus 同批提交）。
+   **登记与检索收尾（强制）**：终验通过后、audit 之前执行
+   [四节共用收尾协议](../_shared/distillation-writeback-finalization.md)；已完成的写回核验
+   复用本次结果，按协议登记新文件、重建涉事骨架与检索缓存、运行 `check_all.py --worktree`，
+   并试查新增资产。audit 完成后按下述 clean/sweep 规则清理现场。
    **S6 起的 registry 语义**：执行器只保留块插入 + wb-meta + tfr 分配 + batch_history
    append + INDEX 行；registry 的 papers/paper_count/gap_distribution/patterns/
    summary/skeleton_variants 计数等 DERIVED 字段由 apply 末尾的

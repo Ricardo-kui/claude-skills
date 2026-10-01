@@ -30,8 +30,8 @@
 | [`blp-state-space`](blp-state-space.md) | `corpus/BLP-状态空间.md` | 5 | 结构需求或状态空间模型，需拟合/反事实报告 |
 | [`hawkes-process`](hawkes-process.md) | `corpus/Hawkes过程.md` | 1 | 结果来自 Hawkes/自激点过程估计，需写参数语义解读或模型机制自证 |
 
-合计：22 模型族 / verbatim 310 条 / 模板 336 条。
+合计：22 模型族 / verbatim 320 条 / 模板 343 条。
 
 ## 待补录
 
-- [`_unparsed.md`](_unparsed.md)：8 条未自动命中或结构不规整，**待人工判定**。
+- [`_unparsed.md`](_unparsed.md)：4 条未自动命中或结构不规整，**待人工判定**。

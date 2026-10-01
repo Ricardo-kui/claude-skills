@@ -106,6 +106,8 @@ Distill how a published Results section stages evidence—not what it found—in
 - **`write-results`** — Phase 4 writeback plan（执行器 v2）指定锚点文件与插入位置
 - **`results-review`** — Phase 1.5 槽位覆盖 + Rhythm Map 可复用
 
+实际写回后的完成判据见 [四节共用收尾协议](../_shared/distillation-writeback-finalization.md)；单节独立模式同样执行登记、检索刷新与工作树终验。
+
 ## Context discipline
 
 按需加载单个 phase reference，不预读全部；先经 `py ../distill-paper-exemplar/scripts/corpus_query.py index --section results --query "<槽位/估计器关键词>"` 与 `... registry --section results --query "<关键词>"` 查命中行（确定性，默认 ≤50 行），再打开具体语料文件对比或写回——先查后开、命中即开，索引正文不进上下文。

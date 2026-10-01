@@ -1,7 +1,7 @@
 # 功能→语料载体地图（write-* 家族）
 
 > **用途**：写作中"要写/借一个 X 功能的句子或词"时的单问单答路由——按节直达该节功能表、骨架索引与词汇载体；跨节借句（写 theory 时借 hook 句、写 results 时查因果动词档位）从本图进入。
-> **纪律**：各节功能系统**异构即正典**（体裁决定功能，不归一）；本图只列轴名、代表功能与唯一源指针，**不复述**各节索引内容（SSOT：功能描述归各节自有一级索引）。关键词查询工具（`distill-paper-exemplar/scripts/corpus_query.py`）属蒸馏维护期，写作期不走。
+> **纪律**：各节功能系统**异构即正典**（体裁决定功能，不归一）；本图只列轴名、代表功能与唯一源指针，**不复述**各节索引内容（SSOT：功能描述归各节自有一级索引）。写作期按 `_shared/exemplar-retrieval.md` 使用 `_shared/indexing/retrieve.py`，同时输入内容、句子功能与设计条件，取原句/模板及上下文。旧 `distill-paper-exemplar/scripts/corpus_query.py` 保持蒸馏维护用途。
 > **机器看守**：`_shared/indexing/check_all.py` 的 function-map 节逐指针断言（目标可解析；索引/骨架目标条目非空）。本图由此自成 fixtures——图上每条指针即一条"功能→非空范本"断言。
 
 ## write-introduction — 功能模块轴（叙事功能）

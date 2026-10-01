@@ -6,7 +6,7 @@
 > **锚点** = `corpus/<文件名>#变体-<变体号>`（脚本自定义片段，指向 `### 变体 <N>` 标题；`--verify` 断言该标题存在）。
 > 状态列：`verbatim` = 逐字底本（与源卡片逐字一致，不得改写/拼接/补全）；`模板` = 填槽骨架（不可当逐字底本引用）。
 
-条目：verbatim 63 条 / 模板 65 条。
+条目：verbatim 66 条 / 模板 65 条。
 
 ## Verbatim 底本
 
@@ -75,6 +75,9 @@
 | `logit-probit-ordered-probit#AJ` | R4 | gulati_1999_where_do_interorganizational_networks | "We tested these models separately because of concerns of multicollinearity across the interaction terms. ... However, interdependence on its own has a positive impact on alliance formation across all models."（跨段拼接，省略号标注） | `corpus/Logit-Probit-Ordered-Probit.md#变体-AJ` | verbatim |
 | `logit-probit-ordered-probit#AK` | R6 | gulati_1999_where_do_interorganizational_networks | "Although similarity in centrality was not a significant predictor of alliance formation, the interaction between this variable and structural differentiation is statistically significant. ... although this tendency is not strong enough to make the difference in centrality statistically significant during the period of observation."（同段拼接，省略号标注） | `corpus/Logit-Probit-Ordered-Probit.md#变体-AK` | verbatim |
 | `logit-probit-ordered-probit#AL` | R7 | gulati_1999_where_do_interorganizational_networks | "The results suggest that the relationship between previous alliances and future alliances within the dyads is best described as an inverted U-shape relationship, captured by a second-order polynomial function. ... We report the results of the linear model for the sake of parsimony."（同脚注内拼接，省略号标注） | `corpus/Logit-Probit-Ordered-Probit.md#变体-AL` | verbatim |
+| `logit-probit-ordered-probit#AU.a` | 通用 | raithel_2024_product_recall_effectiveness_and_consumers_part | Figure 2 (Panel A) visualizes the marginal effects of Remedy on recall effectiveness with a floodlight analysis (Spiller et al., 2013): ... We identify two Johnson-Neyman (JN) points. | `corpus/Logit-Probit-Ordered-Probit.md#变体-AU` | verbatim（原文锚定节） |
+| `logit-probit-ordered-probit#AV.a` | 通用 | raithel_2024_product_recall_effectiveness_and_consumers_part | The model is significant (χ²(5) = 81.00, p < 0.001) and has a good fit (Pseudo-R² = 0.135, squared correlation of observed and predicted Recall Effectiveness is 0.454). | `corpus/Logit-Probit-Ordered-Probit.md#变体-AV` | verbatim（原文锚定节） |
+| `logit-probit-ordered-probit#AW.a` | 通用 | raithel_2024_product_recall_effectiveness_and_consumers_part | Although the control functions (Inverse Mills Ratio), which correct for the potential sample self-selection and endogenous remedy choice, do not have significant coefficients in the fully specified model (p > 0.10), their pairwise correlation with the focal outcome is significant. | `corpus/Logit-Probit-Ordered-Probit.md#变体-AW` | verbatim（原文锚定节） |
 
 ## 填槽模板
 

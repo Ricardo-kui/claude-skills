@@ -461,6 +461,8 @@ confidence: high
 
 ## Pattern: Mechanism-Channel Instantiation Enumeration → Cost-Benefit Moderation（Lu et al. 2022 MS 型）
 
+<!-- pattern_id: b_variant_e_mechanism_channel_instantiation_enumeration; source_papers: ["lu_et_al_2022_frenemies_corporate_advertising"] -->
+
 > 论证角色：Reason——把抽象机制具体化为 2-4 条实现通道的枚举骨架，为可行性证明与后续成本收益调节推导提供载体；通道不另立假设
 
 **band**: gap（主题变体语料零命中，新增；单源 EMERGING，gate ① 裁决）
@@ -908,6 +910,66 @@ H[X]: The impact of [M] on [DV] is [weaker/more negative] for firms with [high/l
 
 ## Pattern: Dual-Channel Convergence（双通道收敛，DesJardine–Li–Shi 2025 型）
 
+<!-- pattern_id: dual_channel_convergence; source_papers: ["desjardine_li_shi_2025_amj"] -->
+<!-- retrieval-move:
+{
+  "functions": [
+    "theory.mechanism_explanation"
+  ],
+  "position": "主效应假设之前：施动方推动、接收方迎合与可行性条件",
+  "prerequisite": "两条概念独立通道指向同一预测；当前研究须支持影响手段与迎合动机",
+  "next": "收敛到主效应假设；不是假设后排除反向对象的边界声明",
+  "definitions": [
+    {
+      "id": "theory.mechanism_explanation",
+      "label": "展开产生焦点结果的完整机制",
+      "section": "theory",
+      "refines": "theory.mechanism",
+      "definition": "在预测之前交代行动者、传递过程与必要条件，使焦点因素为何产生结果能够逐步追问。",
+      "use_when": [
+        "当前任务要求建立主效应或完整关系的 why-chain，关键环节都有实质内容。",
+        "使用双通道收敛卡时，两通道须概念独立且指向同一预测；局部句、通道枚举或假设后划界不足以完成本动作。"
+      ],
+      "neighbors": [
+        {
+          "id": "theory.mechanism_link",
+          "distinction": "一个局部连接只承担完整链条的一步。"
+        },
+        {
+          "id": "theory.hypothesis",
+          "distinction": "假设句陈述预测；机制推演承担预测之前的理由。"
+        }
+      ],
+      "positive_example": {
+        "kind": "template",
+        "cue": "losing or upsetting investors can cause financial and reputational harm",
+        "why": "该卡模板把施动方影响、接收方迎合原因和可行性条件串联；三条原句摘录须连同模板与源块阅读。"
+      },
+      "mismatch_example": {
+        "kind": "illustrative",
+        "text": "我们不预测竞争企业受到相同影响，因为其条件不同。",
+        "why": "这是既有预测之后的对象范围划界，不能承担焦点主效应的前置机制。",
+        "actual_function": "theory.mechanism"
+      },
+      "aliases": [
+        "具体机制",
+        "主效应机制",
+        "why-chain",
+        "机制如何运作"
+      ],
+      "review_cases": [
+        "T02"
+      ]
+    }
+  ],
+  "applicability": {
+    "required_facts": {
+      "independent_converging_channels": true
+    }
+  }
+}
+-->
+
 **适用场景**: 主效应机制由**两条独立通道**构成——①施动方主动施加影响（push 通道）；②中介方/接收方主动迎合（pull 通道）——两条通道**收敛于同一预测**，用于加固主效应机制而非裁决。
 
 **微观动作序列**: 通道 1（主动施加：讨论/反馈/游说）→ "On the other side of the equation" 通道 2（被动迎合：讨好/忌惮）→ "Importantly" 可行性条件（不透明性/低检测风险）→ 假设
@@ -946,6 +1008,74 @@ H1. The level of [IV] is negatively associated with [DV].
 
 
 ## Pattern: Dual-Channel Time-Varying Hazard Mechanism（外部/内部影响双渠道 + 事件时变冲击，mao_dong_lee_2022_msom 型）
+<!-- retrieval-move:
+{
+  "functions": [
+    "theory.mechanism_link"
+  ],
+  "definitions": [
+    {
+      "id": "theory.mechanism_link",
+      "label": "连接两个机制环节",
+      "section": "theory",
+      "refines": "theory.mechanism",
+      "definition": "说明前一状态或行动通过什么过程改变后一环节，把相邻节点之间的推理补齐。",
+      "use_when": [
+        "前后环节都已明确，且提供有内容的传递过程，而非只插入因此或随后。",
+        "局部连接须符合当前分析单位与时间顺序；模型中的过程设定不自行升级为经验证实的中介。"
+      ],
+      "neighbors": [
+        {
+          "id": "theory.actor_motivation",
+          "distinction": "动机解释专门回答行动者为什么愿意做；本动作可连接非意愿环节。"
+        },
+        {
+          "id": "theory.mechanism_explanation",
+          "distinction": "完整推演覆盖产生焦点结果的关键链条；一个局部连接不能替代整条 why-chain。"
+        }
+      ],
+      "positive_example": {
+        "kind": "verbatim",
+        "cue": "thus affecting the coefficient of internal influences",
+        "why": "Mao 的原句把缺陷被注意到、已购买者口碑变化和内部影响渠道相接，说明冲击如何传播。"
+      },
+      "mismatch_example": {
+        "kind": "illustrative",
+        "text": "企业可以通过信息交换、协调和监督三个通道产生影响。",
+        "why": "这是通道清单，没有说明其中一个环节如何引发下一环节。",
+        "actual_function": "theory.mechanism"
+      },
+      "aliases": [
+        "连接两个机制环节",
+        "连接机制环节",
+        "mechanism step link"
+      ],
+      "review_cases": [
+        "T02"
+      ]
+    }
+  ],
+  "position": "已命名前一机制环节之后，后一环节之前",
+  "prerequisite": "前一状态或行动与后一机制节点均已明确，并有传递过程、分析单位和时间顺序的依据。",
+  "next": "连接到下一环节；需要整条推演时继续补其余步骤。",
+  "applicability": {
+    "required_facts": {
+      "mechanism_links_supported": true
+    }
+  },
+  "advances": "补齐事件被注意到、已购买者口碑变化与内部影响渠道变化之间的传递环节。",
+  "next_evidence": [
+    "继续交代后一环节及其传递依据；模型参数约束须明确为假设并说明直觉，不能当作已检验的中介。"
+  ],
+  "skeleton_span": {
+    "start": "[事件分段1]",
+    "end_before": "[事件分段2]",
+    "functions": [
+      "theory.mechanism_link"
+    ]
+  }
+}
+-->
 
 > 论证角色：Reason——把结果过程的演化分解为外部与内部两条影响渠道，让冲击事件通过渠道系数的时变函数（而非直接进入结果水平）传播其负面效应
 
@@ -978,6 +1108,8 @@ H1. The level of [IV] is negatively associated with [DV].
 <!-- wb-meta: gap=Incompleteness status=EMERGING dim=Mechanism tbt="机制推演型（formal-model 解析建模）" -->
 
 ## Pattern: Why-Not Reverse Boundary Declaration（"why not" 反向边界声明，DesJardine–Li–Shi 2025 型）
+
+<!-- pattern_id: why_not_reverse_boundary_declaration; source_papers: ["desjardine_li_shi_2025_amj"] -->
 
 **适用场景**: 主效应假设后，立即解释**为何不预测相邻方向/相邻对象的效应**——把效应的"选择性"理论化（攻击方为何选择受害方而非自己人），防止读者追问，同时深化机制。
 
@@ -1875,6 +2007,37 @@ related: dual_mechanism_same_direction (argumentation_patterns.md) — 后者收
 **禁忌**: 替代逻辑需要文献中已确立的 A-B 替代关系（本篇: 激励 vs 监督），不能凭空宣称替代；entrenchment 结论若无可信的反向排除（真心改革的公司），需在 Results/Discussion 预留处置
 
 **验证状态**: VERIFIED — expert_audit_override (user 2026-08-28: 单源足矣; paper_count=1)
+<!-- retrieval-move:
+{
+  "functions": [
+    "theory.mechanism_link"
+  ],
+  "function_evidence": {
+    "theory.mechanism_link": {
+      "kind": "verbatim",
+      "cue": "preempt or forestall alternative changes in board structure",
+      "why": "形式合规降低实质监督变更需求，再接到权力维持；原文分段与省略状态照旧保留。"
+    }
+  },
+  "function_support": {
+    "theory.mechanism_link": "complete"
+  },
+  "position": "替代控制机制说明之后、固权推论之前",
+  "prerequisite": "符号措施与实质控制的替代关系有理论依据；原句切分处须读上下文。",
+  "next": "说明被延缓的实质安排如何改变监督关系。",
+  "advances": "连接符号替代、监督变更及权力后果。",
+  "next_evidence": [
+    "控制措施替代关系",
+    "原文上下文与过程顺序"
+  ],
+  "applicability": {
+    "required_facts": {
+      "mechanism_steps_supported": true
+    }
+  }
+}
+-->
+
 
 
 ## Pattern: Corollary-Form Moderator Derivation（机制推论式调节假设，Castellaneta 2017 型）

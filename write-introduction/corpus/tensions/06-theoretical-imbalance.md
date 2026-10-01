@@ -42,6 +42,37 @@ source: Extracted from desai2012 + hahl2017 distill-introduction-exemplar
 
 **适用**: 制度理论、创新研究、组织变革等存在"变革偏向"的领域
 
+<!-- retrieval-move:
+{
+  "functions": [
+    "intro.gap_unexplained"
+  ],
+  "function_evidence": {
+    "intro.gap_unexplained": {
+      "kind": "verbatim",
+      "cue": "lack of a formal theoretical framework for understanding what actions organizations may pursue to preserve the status quo",
+      "why": "承认制度变迁理论后，指出危机后维持现状这一相邻现象仍缺正式解释。"
+    }
+  },
+  "function_support": {
+    "intro.gap_unexplained": "complete"
+  },
+  "position": "文献主流与反常实例对照之后",
+  "prerequisite": "反常实例及文献关注偏向有依据；维持现状是理论问题而非仅换样本。",
+  "next": "说明哪些行动与机制可能维持现状。",
+  "advances": "由既有解释的边界引出遗漏的解释对象。",
+  "next_evidence": [
+    "反常实例",
+    "既有理论的覆盖范围"
+  ],
+  "applicability": {
+    "required_facts": {
+      "unexplained_process_documented": true
+    }
+  }
+}
+-->
+
 ---
 
 ## 变体 B：经典理论颠覆型（hahl2017 型）

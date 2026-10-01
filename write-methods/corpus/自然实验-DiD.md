@@ -215,6 +215,38 @@ updated: 2026-08-23
 - industry FE 不能替代 firm FE；不得写 "fully addresses unobserved heterogeneity"。
 
 <!-- wb:hoffmann_cheong_phan_zurbruegg2024_jm:legacy_自然实验-DiD_5 -->
+<!-- retrieval-move:
+{
+  "functions": [
+    "methods.estimator_fe_support"
+  ],
+  "function_evidence": {
+    "methods.estimator_fe_support": {
+      "kind": "verbatim",
+      "cue": "our sample includes a set of firms that never issue a recall",
+      "why": "原句解释不变结果单元对所用规格的约束；不能推广成任何估计器都无法纳入单位固定效应。"
+    }
+  },
+  "function_support": {
+    "methods.estimator_fe_support": "partial"
+  },
+  "position": "固定效应结构选择的解释处",
+  "prerequisite": "按实际二元估计器核对不变单元的处理及样本变化；不照搬笼统的完全共线表述。",
+  "next": "说明实际保留规则、替代规格和估计对象。",
+  "advances": "提供稀有结果样本约束的相邻原句。",
+  "next_evidence": [
+    "组内结果变异",
+    "具体估计器规则与最终估计样本"
+  ],
+  "applicability": {
+    "required_facts": {
+      "all_zero_units_present": true,
+      "estimator_retention_rule_checked": true
+    }
+  }
+}
+-->
+
 ### 变体 6：staggered adoption 下 POST 与 Treat×Post 共线性说明（2026-08-05）
 
 **来源论文**: Hoffmann, Cheong, Phan & Zurbruegg 2024 (*Journal of Marketing*)
@@ -570,9 +602,165 @@ verify.
 - 地理/制度范围收缩（如仅一国内）必须有理由句（纵向追踪该国制度变化），否则像便利抽样。
 
 <!-- wb:castellaneta_2017_smj_how_does_trade_secret_legal_protection:m2_proprietary_core_per_construct_complement_funnel -->
+<!-- retrieval-move:
+{
+  "functions": [
+    "methods.sample_linkage"
+  ],
+  "function_evidence": {
+    "methods.sample_linkage": {
+      "kind": "verbatim",
+      "cue": "After we merged all the data, our final sample was comprised of 1,890 companies",
+      "why": "原句把外部补充源与合并后的单位、数量、年份和行业范围相接。"
+    }
+  },
+  "function_support": {
+    "methods.sample_linkage": "complete"
+  },
+  "position": "数据来源及保留规则之后、变量测量之前",
+  "prerequisite": "当前数据确由核心库与外部源连接；所有数量和窗口按当前数据填写。",
+  "next": "说明分析单位及各变量来源。",
+  "advances": "完成多源数据到分析样本的连接。",
+  "next_evidence": [
+    "连接与保留规则",
+    "最终单位、数量和观察窗"
+  ],
+  "applicability": {
+    "required_facts": {
+      "linked_sources": true
+    }
+  }
+}
+-->
+
 
 
 ### 变体 R：内生性点名→冲击移交开篇（Endogeneity-Named Challenge → Shock Handoff，Lu et al. 2022 MS 型）
+<!-- retrieval-move:
+{
+  "functions": [
+    "methods.endogeneity_risk",
+    "methods.design_mitigation"
+  ],
+  "position": "Methods 识别论证开篇；风险定位后移交冲击，卡片摘录含省略号",
+  "prerequisite": "处理选择风险真实存在；外生冲击与该风险的对应关系有当前研究依据。",
+  "next": "交代冲击、分组和识别假设；此句不代替外生性论证。",
+  "applicability": {
+    "design": [
+      "did"
+    ],
+    "evidence": [
+      "observational",
+      "quasi_experimental"
+    ],
+    "claim_scope": [
+      "association",
+      "causal_with_assumptions"
+    ],
+    "required_facts": {
+      "plausibly_exogenous_shock": true
+    }
+  },
+  "sequence": [
+    {
+      "function": "methods.endogeneity_risk",
+      "kind": "verbatim",
+      "cue": "the potential endogeneity concern"
+    },
+    {
+      "function": "methods.design_mitigation",
+      "kind": "verbatim",
+      "cue": "To address this issue, we exploit financial institution mergers"
+    }
+  ],
+  "definitions": [
+    {
+      "id": "methods.endogeneity_risk",
+      "label": "承认并定位内生性风险",
+      "section": "methods",
+      "refines": "methods.identification",
+      "definition": "点名可能影响当前估计的内生性或选择风险，说明风险来自哪种分配或行为过程，为后续设计辩护建立对象。",
+      "use_when": [
+        "当前研究确有可以说明的非随机分配、共同原因或反向因果风险。",
+        "风险承认不等于风险已得到缓解；后文须交代设计与该风险的对应关系。"
+      ],
+      "neighbors": [
+        {
+          "id": "methods.design_mitigation",
+          "distinction": "风险定位解释为什么需要设计；设计缓解说明用什么安排回应风险。"
+        },
+        {
+          "id": "results.robustness_identification_threat",
+          "distinction": "Results 的威胁回应报告已执行检验；本动作在 Methods 中引出设计。"
+        }
+      ],
+      "positive_example": {
+        "kind": "verbatim",
+        "cue": "Institutional blockholders do not invest randomly.",
+        "why": "同块原文点名 endogeneity concern，并把威胁落到投资者非随机选择。"
+      },
+      "mismatch_example": {
+        "kind": "illustrative",
+        "text": "为缓解这一风险，我们利用外生政策变化。",
+        "why": "这是设计移交，未说明风险如何生成。",
+        "actual_function": "methods.design_mitigation"
+      },
+      "aliases": [
+        "承认内生性风险",
+        "点名内生性风险",
+        "内生性威胁来源",
+        "承认选择偏差",
+        "acknowledge endogeneity risk"
+      ]
+    },
+    {
+      "id": "methods.design_mitigation",
+      "label": "将识别风险移交具体缓解设计",
+      "section": "methods",
+      "refines": "methods.identification",
+      "definition": "把已点名风险与实际使用的冲击、工具或选择修正安排对应起来，说明缓解路径及其依赖前提，不宣称方法名本身消除了风险。",
+      "use_when": [
+        "实际设计针对前文指出的风险，且能够提供相应识别前提或诊断依据。",
+        "移交句只开启设计论证；原句仅引入方法时，须用当前设计事实补足为何有效，后续仍需假设与诊断。"
+      ],
+      "neighbors": [
+        {
+          "id": "methods.endogeneity_risk",
+          "distinction": "风险承认解释需要回应什么；本动作把该风险移交实际设计。"
+        },
+        {
+          "id": "methods.estimator",
+          "distinction": "估计器选择可针对分布或数据结构；本动作必须回应具体识别风险。"
+        }
+      ],
+      "positive_example": {
+        "kind": "verbatim",
+        "cue": "To address this issue, we exploit financial institution mergers",
+        "why": "同块原文用 plausibly exogenous variation 将非随机选择风险移交合并冲击。"
+      },
+      "mismatch_example": {
+        "kind": "illustrative",
+        "text": "处理组并非随机选择，未观测特征可能同时影响处理与结果。",
+        "why": "只有风险定位，还未交代具体缓解设计。",
+        "actual_function": "methods.endogeneity_risk"
+      },
+      "aliases": [
+        "解释设计如何缓解风险",
+        "说明设计如何缓解风险",
+        "设计缓解内生性",
+        "解释如何缓解内生性",
+        "缓解选择偏差",
+        "explain design mitigation"
+      ]
+    }
+  ],
+  "advances": "把非随机选择这一估计难点移交给可评估的冲击设计，尚不宣称内生性已被排除。",
+  "next_evidence": [
+    "交代冲击、处理时点以及处理组和对照组的形成。",
+    "提供外生性与当前设计识别假设的依据及相应检验；不能仅凭设计名称宣称风险已排除。"
+  ]
+}
+-->
 
 > 论证角色：Credibility——Methods 首段先点名识别威胁的具体来源，再一句移交自然实验冲击；把"为什么需要外生冲击"写成开篇结论而非制度背景的附录
 

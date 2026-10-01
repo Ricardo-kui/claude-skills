@@ -1,0 +1,740 @@
+{
+  "schema_version": 1,
+  "aliases": [
+    {
+      "legacy_id": "cjk-3a351067.a",
+      "id": "cjk-3a351067.a~9c28d2994d4a",
+      "source_file": "corpus/variants/A_construct_differentiation.md",
+      "anchor": "corpus/variants/A_construct_differentiation.md#cjk-3a351067",
+      "text_sha256": "b49e2acd81ea6bb45dfe065d3a80c71b9ccabb8b0615734e038a5925416ec0f5"
+    },
+    {
+      "legacy_id": "cjk-3a351067.b",
+      "id": "cjk-3a351067.b~12a48315b79d",
+      "source_file": "corpus/variants/A_construct_differentiation.md",
+      "anchor": "corpus/variants/A_construct_differentiation.md#cjk-3a351067",
+      "text_sha256": "8436643b4bd309acdbcc98505405fc498a1708523113dbe1d9ccd6fe40509bf6"
+    },
+    {
+      "legacy_id": "cjk-3a351067.c",
+      "id": "cjk-3a351067.c~ba67a73d1554",
+      "source_file": "corpus/variants/A_construct_differentiation.md",
+      "anchor": "corpus/variants/A_construct_differentiation.md#cjk-3a351067",
+      "text_sha256": "e85ce8d9170cd30791a11852cd8b9339abe923c95c13e8e447f49811c2b17269"
+    },
+    {
+      "legacy_id": "cjk-3a351067.d",
+      "id": "cjk-3a351067.d~99d13b0dce28",
+      "source_file": "corpus/variants/A_construct_differentiation.md",
+      "anchor": "corpus/variants/A_construct_differentiation.md#cjk-3a351067",
+      "text_sha256": "80bd7ce4764f2d0a764283e3380de1138864b9665c333f9b20c94e9d8e5692d8"
+    },
+    {
+      "legacy_id": "cjk-3a351067.e",
+      "id": "cjk-3a351067.e~6a3ba98738e2",
+      "source_file": "corpus/variants/A_construct_differentiation.md",
+      "anchor": "corpus/variants/A_construct_differentiation.md#cjk-3a351067",
+      "text_sha256": "50c58f35ee438ed8314cf0c3746031aba7a1b55129e01b1f390029febb944348"
+    },
+    {
+      "legacy_id": "cjk-3a351067.f",
+      "id": "cjk-3a351067.f~fc51b207f040",
+      "source_file": "corpus/variants/A_construct_differentiation.md",
+      "anchor": "corpus/variants/A_construct_differentiation.md#cjk-3a351067",
+      "text_sha256": "547d30f6750bc71f922a49685c9a9fa3e4a3dfffafaca6524c6d35dedde40b79"
+    },
+    {
+      "legacy_id": "cjk-3a351067.t1",
+      "id": "cjk-3a351067.t1~892032ee3d8d",
+      "source_file": "corpus/variants/A_construct_differentiation.md",
+      "anchor": "corpus/variants/A_construct_differentiation.md#cjk-3a351067",
+      "text_sha256": "201cca53d6a65ada651268ffe8a2f9b7fe52c982ecfb052a753c03edb2f418b8"
+    },
+    {
+      "legacy_id": "cjk-3a351067.t2",
+      "id": "cjk-3a351067.t2~6f73aff07e46",
+      "source_file": "corpus/variants/A_construct_differentiation.md",
+      "anchor": "corpus/variants/A_construct_differentiation.md#cjk-3a351067",
+      "text_sha256": "92dc0a166f1d4fc5023833f68cd0951e866e423f9abbc023ebdd9874911b7730"
+    },
+    {
+      "legacy_id": "cjk-3a351067.t3",
+      "id": "cjk-3a351067.t3~999bb5f7aba9",
+      "source_file": "corpus/variants/A_construct_differentiation.md",
+      "anchor": "corpus/variants/A_construct_differentiation.md#cjk-3a351067",
+      "text_sha256": "d26dd3a99133772c1429c3817fe1e579488f8f20f235d8fc39ce752d3d4fe40c"
+    },
+    {
+      "legacy_id": "cjk-3a351067.t4",
+      "id": "cjk-3a351067.t4~aed2e21b1212",
+      "source_file": "corpus/variants/A_construct_differentiation.md",
+      "anchor": "corpus/variants/A_construct_differentiation.md#cjk-3a351067",
+      "text_sha256": "de3ac266c4458531c3ea77ef0fd788302d61ff364df4a034336cd699e932c4a8"
+    },
+    {
+      "legacy_id": "cjk-a5e32c5c.a",
+      "id": "cjk-a5e32c5c.a~360bcf000ddf",
+      "source_file": "corpus/variants/A_construct_differentiation.md",
+      "anchor": "corpus/variants/A_construct_differentiation.md#cjk-a5e32c5c",
+      "text_sha256": "8b99dfa7f564187db781175ffa83c6f5815697c1ecc593f96432da98ff582ace"
+    },
+    {
+      "legacy_id": "cjk-a5e32c5c.b",
+      "id": "cjk-a5e32c5c.b~19f105ccd5af",
+      "source_file": "corpus/variants/A_construct_differentiation.md",
+      "anchor": "corpus/variants/A_construct_differentiation.md#cjk-a5e32c5c",
+      "text_sha256": "26b481f9ebae65a4f027269230cbe0c254bfad6fc247e27603b6464cecbda8f9"
+    },
+    {
+      "legacy_id": "cjk-a5e32c5c.t1",
+      "id": "cjk-a5e32c5c.t1~5af52af88f27",
+      "source_file": "corpus/variants/A_construct_differentiation.md",
+      "anchor": "corpus/variants/A_construct_differentiation.md#cjk-a5e32c5c",
+      "text_sha256": "1c9afae4191bb0552f99912e7fc7bb9c22ed090f1dc81fc6b1fe1b0968d193c8"
+    },
+    {
+      "legacy_id": "cjk-a5e32c5c.t2",
+      "id": "cjk-a5e32c5c.t2~d31130d43747",
+      "source_file": "corpus/variants/A_construct_differentiation.md",
+      "anchor": "corpus/variants/A_construct_differentiation.md#cjk-a5e32c5c",
+      "text_sha256": "8b0e608ea7b0418a593de9486b39f904639359087e7c18dbbcedcfaf5c71e1dc"
+    },
+    {
+      "legacy_id": "cjk-3a351067.t1",
+      "id": "cjk-3a351067.t1~f73819b8fb6d",
+      "source_file": "corpus/variants/A_construct_differentiation.md",
+      "anchor": "corpus/variants/A_construct_differentiation.md#cjk-3a351067",
+      "text_sha256": "90fa6c77e658888da8d00c9ecd07d6d13bb1761fa6ff1674c1b03da3c3f03849"
+    },
+    {
+      "legacy_id": "cjk-3a351067.t2",
+      "id": "cjk-3a351067.t2~664022bdd2d5",
+      "source_file": "corpus/variants/A_construct_differentiation.md",
+      "anchor": "corpus/variants/A_construct_differentiation.md#cjk-3a351067",
+      "text_sha256": "1a95f29ad94e22b244dcabc099e854fd1051e1f7b80f4cfcbf023786f433ad12"
+    },
+    {
+      "legacy_id": "cjk-3a351067.t3",
+      "id": "cjk-3a351067.t3~a655499b1708",
+      "source_file": "corpus/variants/A_construct_differentiation.md",
+      "anchor": "corpus/variants/A_construct_differentiation.md#cjk-3a351067",
+      "text_sha256": "6bd7dd2464f21a7f2aae90a9b36fb90f597078f172395444c33bdfc911e4837c"
+    },
+    {
+      "legacy_id": "cjk-3a351067.t4",
+      "id": "cjk-3a351067.t4~910b1c458347",
+      "source_file": "corpus/variants/A_construct_differentiation.md",
+      "anchor": "corpus/variants/A_construct_differentiation.md#cjk-3a351067",
+      "text_sha256": "c902ea67b076d919e93af58ea01a520c374406ec48e5e246f807744b1344ac6c"
+    },
+    {
+      "legacy_id": "A.a",
+      "id": "A.a~a4f2ffe5b516",
+      "source_file": "corpus/variants/B_mechanism_elaboration.md",
+      "anchor": "corpus/variants/B_mechanism_elaboration.md#A",
+      "text_sha256": "7c3f6e4d507a982582650439813c7605df9b4d2ca4de9ca4b40ac2fb970c4ebc"
+    },
+    {
+      "legacy_id": "A.t1",
+      "id": "A.t1~3ea34c496854",
+      "source_file": "corpus/variants/B_mechanism_elaboration.md",
+      "anchor": "corpus/variants/B_mechanism_elaboration.md#A",
+      "text_sha256": "f944057c8b25daea2cf53510fba37af2f4ce063a8fc40c807f25c17d983ed1b6"
+    },
+    {
+      "legacy_id": "B.a",
+      "id": "B.a~a14e6e863689",
+      "source_file": "corpus/variants/B_mechanism_elaboration.md",
+      "anchor": "corpus/variants/B_mechanism_elaboration.md#B",
+      "text_sha256": "72790ff9e0f2750ce562c1c1bb420961cec679382212b64b5e589caaeb9b691d"
+    },
+    {
+      "legacy_id": "B.t1",
+      "id": "B.t1~755236f4bf46",
+      "source_file": "corpus/variants/B_mechanism_elaboration.md",
+      "anchor": "corpus/variants/B_mechanism_elaboration.md#B",
+      "text_sha256": "ad7f86c58113f68e2201f6836f266ab06bf6cb2a1838317efe823e67cd210f5b"
+    },
+    {
+      "legacy_id": "cjk-a5e32c5c.a",
+      "id": "cjk-a5e32c5c.a~b789ea94b6b3",
+      "source_file": "corpus/variants/B_mechanism_elaboration.md",
+      "anchor": "corpus/variants/B_mechanism_elaboration.md#cjk-a5e32c5c",
+      "text_sha256": "7dd1c7d789b4dcf28f0dca7ad6937bbbb8b5c1e0efb1819621cd351c64086a58"
+    },
+    {
+      "legacy_id": "cjk-a5e32c5c.b",
+      "id": "cjk-a5e32c5c.b~dce50be517fe",
+      "source_file": "corpus/variants/B_mechanism_elaboration.md",
+      "anchor": "corpus/variants/B_mechanism_elaboration.md#cjk-a5e32c5c",
+      "text_sha256": "553b40e8873d365bb58e13008704d924415c662244c37455110d3f2d7a1a0278"
+    },
+    {
+      "legacy_id": "cjk-a5e32c5c.t1",
+      "id": "cjk-a5e32c5c.t1~dcc60f51def9",
+      "source_file": "corpus/variants/B_mechanism_elaboration.md",
+      "anchor": "corpus/variants/B_mechanism_elaboration.md#cjk-a5e32c5c",
+      "text_sha256": "5f598545bfd79877447954a2b4c32e7334993a52ff523c153635fbc007d35307"
+    },
+    {
+      "legacy_id": "cjk-a5e32c5c.t2",
+      "id": "cjk-a5e32c5c.t2~66753fccd3d0",
+      "source_file": "corpus/variants/B_mechanism_elaboration.md",
+      "anchor": "corpus/variants/B_mechanism_elaboration.md#cjk-a5e32c5c",
+      "text_sha256": "76ea25ca966d3fc7dd0539be5899d15917a8e381d1719dd669ce654ca9d40cd7"
+    },
+    {
+      "legacy_id": "cjk-a5e32c5c.t3",
+      "id": "cjk-a5e32c5c.t3~6df1dd538b7d",
+      "source_file": "corpus/variants/B_mechanism_elaboration.md",
+      "anchor": "corpus/variants/B_mechanism_elaboration.md#cjk-a5e32c5c",
+      "text_sha256": "be6d16c3f71588073563ee2e3f699c581fd167c4fd69372c0022235108960c58"
+    },
+    {
+      "legacy_id": "cjk-3a351067.a",
+      "id": "cjk-3a351067.a~bde62dbc947a",
+      "source_file": "corpus/variants/C_hypothesis_tree.md",
+      "anchor": "corpus/variants/C_hypothesis_tree.md#cjk-3a351067",
+      "text_sha256": "26e1232f299e8a6792b2cef380717eb9e16d1f7662bbd58a8b7fc9c285948780"
+    },
+    {
+      "legacy_id": "cjk-3a351067.b",
+      "id": "cjk-3a351067.b~0713ef845814",
+      "source_file": "corpus/variants/C_hypothesis_tree.md",
+      "anchor": "corpus/variants/C_hypothesis_tree.md#cjk-3a351067",
+      "text_sha256": "2a26e7989b5e85950955a4cbe5c2714a0735d0d5f55754c43fce01f041b4d013"
+    },
+    {
+      "legacy_id": "cjk-3a351067.c",
+      "id": "cjk-3a351067.c~81ccaf00790b",
+      "source_file": "corpus/variants/C_hypothesis_tree.md",
+      "anchor": "corpus/variants/C_hypothesis_tree.md#cjk-3a351067",
+      "text_sha256": "6e5ba83a27b67bf69233ec2c3a6da92f3e6b1670637084f1b027ce261d35427d"
+    },
+    {
+      "legacy_id": "cjk-3a351067.d",
+      "id": "cjk-3a351067.d~cf501dc517db",
+      "source_file": "corpus/variants/C_hypothesis_tree.md",
+      "anchor": "corpus/variants/C_hypothesis_tree.md#cjk-3a351067",
+      "text_sha256": "9a9dec31e74a5af23a241ebaa5ea865b1578b0f6977680e9457f0811abf8a177"
+    },
+    {
+      "legacy_id": "cjk-3a351067.e",
+      "id": "cjk-3a351067.e~1e038cc13080",
+      "source_file": "corpus/variants/C_hypothesis_tree.md",
+      "anchor": "corpus/variants/C_hypothesis_tree.md#cjk-3a351067",
+      "text_sha256": "4d0d4603e52ab146fe9105c5ccad1e4b7e71d420f1f91e04fe7bbb05bd2e00b7"
+    },
+    {
+      "legacy_id": "cjk-3a351067.f",
+      "id": "cjk-3a351067.f~4a7ec20f74e3",
+      "source_file": "corpus/variants/C_hypothesis_tree.md",
+      "anchor": "corpus/variants/C_hypothesis_tree.md#cjk-3a351067",
+      "text_sha256": "da786bfde67c500fb8c6f0ad4d1cdd7661acb2e4c40a8083e7364460dc7b535f"
+    },
+    {
+      "legacy_id": "cjk-3a351067.t1",
+      "id": "cjk-3a351067.t1~ee31a69d13a3",
+      "source_file": "corpus/variants/C_hypothesis_tree.md",
+      "anchor": "corpus/variants/C_hypothesis_tree.md#cjk-3a351067",
+      "text_sha256": "b4560697a3bcb9fc883d8dd1855a806cd8a7131cbe2d143834bef54889643a3e"
+    },
+    {
+      "legacy_id": "cjk-3a351067.t2",
+      "id": "cjk-3a351067.t2~0b74ef5459cb",
+      "source_file": "corpus/variants/C_hypothesis_tree.md",
+      "anchor": "corpus/variants/C_hypothesis_tree.md#cjk-3a351067",
+      "text_sha256": "8c9111348e5b7f656749d69ee8d24ffbe166132b7e337c7322da9817023dc7f3"
+    },
+    {
+      "legacy_id": "cjk-3a351067.t3",
+      "id": "cjk-3a351067.t3~9a6ab86579f8",
+      "source_file": "corpus/variants/C_hypothesis_tree.md",
+      "anchor": "corpus/variants/C_hypothesis_tree.md#cjk-3a351067",
+      "text_sha256": "2526c6cabf9d0a00aba52ba168c115bde94f9297093e379751be78770b697e5c"
+    },
+    {
+      "legacy_id": "cjk-a5e32c5c.a",
+      "id": "cjk-a5e32c5c.a~f3dccec26798",
+      "source_file": "corpus/variants/C_hypothesis_tree.md",
+      "anchor": "corpus/variants/C_hypothesis_tree.md#cjk-a5e32c5c",
+      "text_sha256": "2ce2a8e67b096fc11be789c9716363620e01d32c9192e4a8ebca7a97219879d1"
+    },
+    {
+      "legacy_id": "cjk-a5e32c5c.b",
+      "id": "cjk-a5e32c5c.b~92c09bda9383",
+      "source_file": "corpus/variants/C_hypothesis_tree.md",
+      "anchor": "corpus/variants/C_hypothesis_tree.md#cjk-a5e32c5c",
+      "text_sha256": "640dbdabeb67e8260fed4f82e8e7f4e8e79c686170a860a65b0680fc1243af68"
+    },
+    {
+      "legacy_id": "cjk-a5e32c5c.t1",
+      "id": "cjk-a5e32c5c.t1~182167c36d86",
+      "source_file": "corpus/variants/C_hypothesis_tree.md",
+      "anchor": "corpus/variants/C_hypothesis_tree.md#cjk-a5e32c5c",
+      "text_sha256": "ac7605b5c74bd50988b64e436caaa1be232d208b0e484036b01da70f6ea98d03"
+    },
+    {
+      "legacy_id": "cjk-a5e32c5c.t2",
+      "id": "cjk-a5e32c5c.t2~12a3207e1aea",
+      "source_file": "corpus/variants/C_hypothesis_tree.md",
+      "anchor": "corpus/variants/C_hypothesis_tree.md#cjk-a5e32c5c",
+      "text_sha256": "c6253ab450a91dc998b9df06732f0927e6a9398ce65b9af19dd68573ef3da4de"
+    },
+    {
+      "legacy_id": "cjk-a5e32c5c.t3",
+      "id": "cjk-a5e32c5c.t3~ec7d3af6ca7c",
+      "source_file": "corpus/variants/C_hypothesis_tree.md",
+      "anchor": "corpus/variants/C_hypothesis_tree.md#cjk-a5e32c5c",
+      "text_sha256": "5886e8eddb8472f7a49b78f8e42bf59c08f6d5d6cc82eb39d336f6aa5b48be2d"
+    },
+    {
+      "legacy_id": "cjk-3a351067.a",
+      "id": "cjk-3a351067.a~57ae0635ee27",
+      "source_file": "corpus/variants/D_process_theory.md",
+      "anchor": "corpus/variants/D_process_theory.md#cjk-3a351067",
+      "text_sha256": "ef59bdf465cde6ff1c4f339c68402a559eb5daf786d883ce6b8770ba3111a305"
+    },
+    {
+      "legacy_id": "cjk-3a351067.b",
+      "id": "cjk-3a351067.b~040e7277a35f",
+      "source_file": "corpus/variants/D_process_theory.md",
+      "anchor": "corpus/variants/D_process_theory.md#cjk-3a351067",
+      "text_sha256": "8b48643508b663123caa37985a27c3d3f43a3c2662aecdfa09e1666aceb40348"
+    },
+    {
+      "legacy_id": "cjk-3a351067.c",
+      "id": "cjk-3a351067.c~0c9970574865",
+      "source_file": "corpus/variants/D_process_theory.md",
+      "anchor": "corpus/variants/D_process_theory.md#cjk-3a351067",
+      "text_sha256": "b9b9eccf91268206a47c50712d8c7eccafc8518fdf3a726b31a9cde283c80b48"
+    },
+    {
+      "legacy_id": "cjk-3a351067.d",
+      "id": "cjk-3a351067.d~e4ccbd2e1a5b",
+      "source_file": "corpus/variants/D_process_theory.md",
+      "anchor": "corpus/variants/D_process_theory.md#cjk-3a351067",
+      "text_sha256": "4d7f547ffa96d2a3a96aaf8c57f1f81d6729f8cc0fe378516f8ffe8d18215bd9"
+    },
+    {
+      "legacy_id": "cjk-3a351067.e",
+      "id": "cjk-3a351067.e~5b2d27c721ce",
+      "source_file": "corpus/variants/D_process_theory.md",
+      "anchor": "corpus/variants/D_process_theory.md#cjk-3a351067",
+      "text_sha256": "316ffd767794db947845e441a5e70610ee6e903b1942833a5ed460949dd09d3d"
+    },
+    {
+      "legacy_id": "cjk-3a351067.f",
+      "id": "cjk-3a351067.f~fcb1bea14953",
+      "source_file": "corpus/variants/D_process_theory.md",
+      "anchor": "corpus/variants/D_process_theory.md#cjk-3a351067",
+      "text_sha256": "05cc86eff46c2de6d4a6008132b04fbfd4480475d00c159489d269b2fbf9409a"
+    },
+    {
+      "legacy_id": "cjk-3a351067.t1",
+      "id": "cjk-3a351067.t1~c6015bb926cf",
+      "source_file": "corpus/variants/D_process_theory.md",
+      "anchor": "corpus/variants/D_process_theory.md#cjk-3a351067",
+      "text_sha256": "47fd528aa25e5b102f4a6459009ad49a682ff793809100528f6854be14bfc44a"
+    },
+    {
+      "legacy_id": "cjk-3a351067.t2",
+      "id": "cjk-3a351067.t2~33e1c3894888",
+      "source_file": "corpus/variants/D_process_theory.md",
+      "anchor": "corpus/variants/D_process_theory.md#cjk-3a351067",
+      "text_sha256": "3c4203556ec1c516a71221628c9f6325afd9bfc3abc5ba5ac2f4bd2209332f33"
+    },
+    {
+      "legacy_id": "cjk-3a351067.t3",
+      "id": "cjk-3a351067.t3~233492909d18",
+      "source_file": "corpus/variants/D_process_theory.md",
+      "anchor": "corpus/variants/D_process_theory.md#cjk-3a351067",
+      "text_sha256": "b8fd850e56aad6d3f7778b5a44a91b300775f8cce4d376c8b3ed868f704fa91f"
+    },
+    {
+      "legacy_id": "cjk-3a351067.t4",
+      "id": "cjk-3a351067.t4~89fd1a61ad83",
+      "source_file": "corpus/variants/D_process_theory.md",
+      "anchor": "corpus/variants/D_process_theory.md#cjk-3a351067",
+      "text_sha256": "9d6c4db4bb71a02026a2d326669c8ad189a23d44f47f189f702a7380dc4b1565"
+    },
+    {
+      "legacy_id": "cjk-3a351067.t5",
+      "id": "cjk-3a351067.t5~59e307e3bad1",
+      "source_file": "corpus/variants/D_process_theory.md",
+      "anchor": "corpus/variants/D_process_theory.md#cjk-3a351067",
+      "text_sha256": "42c5cd64a408176e1284f2e0ca4fe088627a4389dd6046f86950bce9c87402e4"
+    },
+    {
+      "legacy_id": "cjk-3a351067.t1",
+      "id": "cjk-3a351067.t1~d008d0116948",
+      "source_file": "corpus/variants/E_moderation.md",
+      "anchor": "corpus/variants/E_moderation.md#cjk-3a351067",
+      "text_sha256": "2d0cbdfff953c2341b2c6606b760c2bcb186de145ac6c8946b70dffdf0c21c5f"
+    },
+    {
+      "legacy_id": "cjk-3a351067.t2",
+      "id": "cjk-3a351067.t2~a1a3318564a1",
+      "source_file": "corpus/variants/E_moderation.md",
+      "anchor": "corpus/variants/E_moderation.md#cjk-3a351067",
+      "text_sha256": "10843a21316ec55c8482c1e76f9e99c254fab5a4d3182b44787f0300ba97b648"
+    },
+    {
+      "legacy_id": "cjk-3a351067.t3",
+      "id": "cjk-3a351067.t3~03e741ee41c9",
+      "source_file": "corpus/variants/E_moderation.md",
+      "anchor": "corpus/variants/E_moderation.md#cjk-3a351067",
+      "text_sha256": "f9708f8438ce4b4529f3dfb05f59b670fff65f823185df899473da3a139222b2"
+    },
+    {
+      "legacy_id": "cjk-3a351067.t4",
+      "id": "cjk-3a351067.t4~1d9c8c950933",
+      "source_file": "corpus/variants/E_moderation.md",
+      "anchor": "corpus/variants/E_moderation.md#cjk-3a351067",
+      "text_sha256": "22ef1e873beb260cf9277c05b63829ffd2655f4664265c59b472ffd5fc8552f1"
+    },
+    {
+      "legacy_id": "cjk-3a351067.t5",
+      "id": "cjk-3a351067.t5~ac50b78932e1",
+      "source_file": "corpus/variants/E_moderation.md",
+      "anchor": "corpus/variants/E_moderation.md#cjk-3a351067",
+      "text_sha256": "30e8991fd70d66909cfc24febae8e8f788fafcecbb7e3031baf8a18e51a0b6ab"
+    },
+    {
+      "legacy_id": "A.a",
+      "id": "A.a~a82cc6db9a56",
+      "source_file": "corpus/variants/E_moderation.md",
+      "anchor": "corpus/variants/E_moderation.md#A",
+      "text_sha256": "d4550131cec6e4f83937f79eae05f991d44dab8f1ef86c3365b08095b4fc4bcc"
+    },
+    {
+      "legacy_id": "A.t1",
+      "id": "A.t1~6b414dff018b",
+      "source_file": "corpus/variants/E_moderation.md",
+      "anchor": "corpus/variants/E_moderation.md#A",
+      "text_sha256": "25555b73123bab828d556ead10e5d49596becc4f274412fc0fa6b0ac39b6eaa6"
+    },
+    {
+      "legacy_id": "B.a",
+      "id": "B.a~a7fb73dd4405",
+      "source_file": "corpus/variants/E_moderation.md",
+      "anchor": "corpus/variants/E_moderation.md#B",
+      "text_sha256": "f54eadce2ae4be961726c0301c4753810c9127be07fc634ebbd1c4a29bbabb46"
+    },
+    {
+      "legacy_id": "B.t1",
+      "id": "B.t1~ae8222f82bb3",
+      "source_file": "corpus/variants/E_moderation.md",
+      "anchor": "corpus/variants/E_moderation.md#B",
+      "text_sha256": "98957af50a4b39279aa7cbf50efb72ad693df4b6bc733ff4fdc240cffa18a8d0"
+    },
+    {
+      "legacy_id": "cjk-3a351067.a",
+      "id": "cjk-3a351067.a~dfb766222bec",
+      "source_file": "corpus/variants/F_competing_hypotheses.md",
+      "anchor": "corpus/variants/F_competing_hypotheses.md#cjk-3a351067",
+      "text_sha256": "1cde3ce9f7d4c68f2eb5485fee6860519da0096105625025fbdf42677e1e4170"
+    },
+    {
+      "legacy_id": "cjk-3a351067.b",
+      "id": "cjk-3a351067.b~6460ebdeafc8",
+      "source_file": "corpus/variants/F_competing_hypotheses.md",
+      "anchor": "corpus/variants/F_competing_hypotheses.md#cjk-3a351067",
+      "text_sha256": "14c799591af92b45beff95b94c0d428b80c7b5fdefb4db7627025ed1a5e8bc95"
+    },
+    {
+      "legacy_id": "cjk-3a351067.c",
+      "id": "cjk-3a351067.c~efa0c6090a3f",
+      "source_file": "corpus/variants/F_competing_hypotheses.md",
+      "anchor": "corpus/variants/F_competing_hypotheses.md#cjk-3a351067",
+      "text_sha256": "0c4cdd2918932503a203b32aafa7201431c4baa6cf5df8e1d2e696d268e84c1d"
+    },
+    {
+      "legacy_id": "cjk-3a351067.d",
+      "id": "cjk-3a351067.d~82c23d584bae",
+      "source_file": "corpus/variants/F_competing_hypotheses.md",
+      "anchor": "corpus/variants/F_competing_hypotheses.md#cjk-3a351067",
+      "text_sha256": "47ca51eea5dfd93de447a0db90bf08d46b150cac14539138bee11cf0a8b647f0"
+    },
+    {
+      "legacy_id": "cjk-3a351067.t1",
+      "id": "cjk-3a351067.t1~da36f797ecc5",
+      "source_file": "corpus/variants/F_competing_hypotheses.md",
+      "anchor": "corpus/variants/F_competing_hypotheses.md#cjk-3a351067",
+      "text_sha256": "003f7be4c5a5c95855be8366bbde5f372490d816db52ac08ebf25baea53fda59"
+    },
+    {
+      "legacy_id": "cjk-3a351067.t2",
+      "id": "cjk-3a351067.t2~2a589fc7f11f",
+      "source_file": "corpus/variants/F_competing_hypotheses.md",
+      "anchor": "corpus/variants/F_competing_hypotheses.md#cjk-3a351067",
+      "text_sha256": "e21c1c853c0ebeed222612a53a9952b7ede9bdd3cde4466ebc606a3c5f117fe0"
+    },
+    {
+      "legacy_id": "cjk-3a351067.t3",
+      "id": "cjk-3a351067.t3~83eac79a7f11",
+      "source_file": "corpus/variants/F_competing_hypotheses.md",
+      "anchor": "corpus/variants/F_competing_hypotheses.md#cjk-3a351067",
+      "text_sha256": "accc60c328c594d08348d5b5115b3e59e9d4db075fa4ee97e6ff2345c539a920"
+    },
+    {
+      "legacy_id": "cjk-3a351067.t4",
+      "id": "cjk-3a351067.t4~29112fe0ce7a",
+      "source_file": "corpus/variants/F_competing_hypotheses.md",
+      "anchor": "corpus/variants/F_competing_hypotheses.md#cjk-3a351067",
+      "text_sha256": "0358876e131104d431bb5c4a9ae86dac5a93c8d13d500ea4a63fbb908d6af3f2"
+    },
+    {
+      "legacy_id": "cjk-a5e32c5c.a",
+      "id": "cjk-a5e32c5c.a~4cb0f7ef7b57",
+      "source_file": "corpus/variants/F_competing_hypotheses.md",
+      "anchor": "corpus/variants/F_competing_hypotheses.md#cjk-a5e32c5c",
+      "text_sha256": "dfafedd965d8caa51362e2378af12c869d236b08c3557bd633988ea97ca2ca0d"
+    },
+    {
+      "legacy_id": "cjk-a5e32c5c.t1",
+      "id": "cjk-a5e32c5c.t1~a5751de5e406",
+      "source_file": "corpus/variants/F_competing_hypotheses.md",
+      "anchor": "corpus/variants/F_competing_hypotheses.md#cjk-a5e32c5c",
+      "text_sha256": "7e0736324f61ac916b1c7953d00e5b14d93f3ec6f851152aecd64792ab35f907"
+    },
+    {
+      "legacy_id": "cjk-a5e32c5c.a",
+      "id": "cjk-a5e32c5c.a~78f8b3685f4a",
+      "source_file": "corpus/variants/G_dialectical_opposition.md",
+      "anchor": "corpus/variants/G_dialectical_opposition.md#cjk-a5e32c5c",
+      "text_sha256": "d844fe2705d2cf1df394f022a206eb4b3332a91cf392e2f6ae255df54734cb86"
+    },
+    {
+      "legacy_id": "cjk-a5e32c5c.b",
+      "id": "cjk-a5e32c5c.b~def11f999a05",
+      "source_file": "corpus/variants/G_dialectical_opposition.md",
+      "anchor": "corpus/variants/G_dialectical_opposition.md#cjk-a5e32c5c",
+      "text_sha256": "9aa5c20237ec75f61caabe2eb45206c18ac8f83c32ca9bc31129bc4a5bd88c9f"
+    },
+    {
+      "legacy_id": "matrix-1",
+      "id": "matrix-1~44bc8b8122e0",
+      "source_file": "corpus/sentences/acknowledgment_response.md",
+      "anchor": "corpus/sentences/acknowledgment_response.md#5. Rogerian 四步对话结构（高威胁异议的降防御序列，G&L 2017 Ch04）",
+      "text_sha256": "285f1755bb5c46c0c034019182c4cc59e2edd583dd3d16d5f0b8892bf6e56236"
+    },
+    {
+      "legacy_id": "matrix-2",
+      "id": "matrix-2~4e2fab3625cf",
+      "source_file": "corpus/sentences/acknowledgment_response.md",
+      "anchor": "corpus/sentences/acknowledgment_response.md#5. Rogerian 四步对话结构（高威胁异议的降防御序列，G&L 2017 Ch04）",
+      "text_sha256": "4906eb90b11f7b370fc5f9a6fefb6df593046944ad8ee62e2405fe96392b7914"
+    },
+    {
+      "legacy_id": "matrix-3",
+      "id": "matrix-3~2add6a53fd53",
+      "source_file": "corpus/sentences/acknowledgment_response.md",
+      "anchor": "corpus/sentences/acknowledgment_response.md#5. Rogerian 四步对话结构（高威胁异议的降防御序列，G&L 2017 Ch04）",
+      "text_sha256": "ac886bcdb651a0ad4c44c1487fbb8262e315522f5b8c1a35d257a9f317e75cd4"
+    },
+    {
+      "legacy_id": "matrix-4",
+      "id": "matrix-4~4e8d8408c21d",
+      "source_file": "corpus/sentences/acknowledgment_response.md",
+      "anchor": "corpus/sentences/acknowledgment_response.md#5. Rogerian 四步对话结构（高威胁异议的降防御序列，G&L 2017 Ch04）",
+      "text_sha256": "27eb23ff403e8594bbb9dc5b3e38f603d5ae09d3800c47be54d3b1f4dcd01074"
+    },
+    {
+      "legacy_id": "matrix-1",
+      "id": "matrix-1~78263e3b6b0f",
+      "source_file": "corpus/sentences/closure.md",
+      "anchor": "corpus/sentences/closure.md#段落收束→假设过渡（按论证类型）",
+      "text_sha256": "6f32abcbf899ea0a75385edb2aaaa54aca9882390e47a4bd18a861026cfb822b"
+    },
+    {
+      "legacy_id": "matrix-2",
+      "id": "matrix-2~d737617b121b",
+      "source_file": "corpus/sentences/closure.md",
+      "anchor": "corpus/sentences/closure.md#段落收束→假设过渡（按论证类型）",
+      "text_sha256": "9f6f942565c1ba4b866ebb61820aef0efd6a08601f6126b62a2fb5ac9cd14a4e"
+    },
+    {
+      "legacy_id": "matrix-3",
+      "id": "matrix-3~7bc8f697f62c",
+      "source_file": "corpus/sentences/closure.md",
+      "anchor": "corpus/sentences/closure.md#段落收束→假设过渡（按论证类型）",
+      "text_sha256": "39cfd1ce24296178abe23a490950ef1a9f3c1ebd51ad67b7b1bb7bccf2fc722c"
+    },
+    {
+      "legacy_id": "matrix-4",
+      "id": "matrix-4~e71155edd607",
+      "source_file": "corpus/sentences/closure.md",
+      "anchor": "corpus/sentences/closure.md#段落收束→假设过渡（按论证类型）",
+      "text_sha256": "abeec715536f6ab211a481f4d429c564fb6a1ec59a4b2250de26c49c892b5983"
+    },
+    {
+      "legacy_id": "matrix-5",
+      "id": "matrix-5~3a3fe7664c43",
+      "source_file": "corpus/sentences/closure.md",
+      "anchor": "corpus/sentences/closure.md#段落收束→假设过渡（按论证类型）",
+      "text_sha256": "5893914e5d573e2569e1482f3c36cc9aa219c56672e3d77733c13f46ac2913c6"
+    },
+    {
+      "legacy_id": "变体-B.a",
+      "id": "变体-B.a~bbdf9f8b2f20",
+      "source_file": "corpus/sentences/construct_definition.md",
+      "anchor": "corpus/sentences/construct_definition.md#变体-B",
+      "text_sha256": "8d5efad4fe18bc5195ac4c90dc64b8eb25c85df9936dc4e84283cda5742e56bb"
+    },
+    {
+      "legacy_id": "变体-B.t1",
+      "id": "变体-B.t1~856cf8a0019e",
+      "source_file": "corpus/sentences/construct_definition.md",
+      "anchor": "corpus/sentences/construct_definition.md#变体-B",
+      "text_sha256": "1ada3d76693fee50b372c547adfac7beb4591ff1b9ff99483c1900ba094429dd"
+    },
+    {
+      "legacy_id": "变体-C.a",
+      "id": "变体-C.a~25e1edd05d4d",
+      "source_file": "corpus/sentences/construct_definition.md",
+      "anchor": "corpus/sentences/construct_definition.md#变体-C",
+      "text_sha256": "1e10055b007f5c2e85dec066565ae343d29ee5e165be7a74e3c16bf8965720c4"
+    },
+    {
+      "legacy_id": "变体-C.t1",
+      "id": "变体-C.t1~6dffea7a7070",
+      "source_file": "corpus/sentences/construct_definition.md",
+      "anchor": "corpus/sentences/construct_definition.md#变体-C",
+      "text_sha256": "5599e99e058df24322ba120148a2eea207d7dc788e6ee34e0d8c510dea054690"
+    },
+    {
+      "legacy_id": "matrix-1",
+      "id": "matrix-1~3e3b79f2c011",
+      "source_file": "corpus/sentences/construct_definition.md",
+      "anchor": "corpus/sentences/construct_definition.md#变体 I：Framework-Anchored 双构念区分（han_pollock_paruchuri 型）",
+      "text_sha256": "fc6819cbb272deb6e2332adcdc8b3d49d1526c1cd5bf7ddc51315c9b95573bb9"
+    },
+    {
+      "legacy_id": "变体-B.a",
+      "id": "变体-B.a~6f9a334b6db9",
+      "source_file": "corpus/sentences/hypothesis_forms.md",
+      "anchor": "corpus/sentences/hypothesis_forms.md#变体-B",
+      "text_sha256": "74c91714ef46aa95f1a72721fe8c695202e961ae5b5575cca3e2f0e43f770ae6"
+    },
+    {
+      "legacy_id": "变体-B.b",
+      "id": "变体-B.b~428b2cd46c70",
+      "source_file": "corpus/sentences/hypothesis_forms.md",
+      "anchor": "corpus/sentences/hypothesis_forms.md#变体-B",
+      "text_sha256": "b332a482ac1328268f4af3d28578ae8849fe43d3fb9e1bd7ce11c0c35ffaa285"
+    },
+    {
+      "legacy_id": "变体-B.t1",
+      "id": "变体-B.t1~c372e7e96ab3",
+      "source_file": "corpus/sentences/hypothesis_forms.md",
+      "anchor": "corpus/sentences/hypothesis_forms.md#变体-B",
+      "text_sha256": "43ca9bb4256d162d753be7d078ee913b1629801008c86f4967c5afde61269b26"
+    },
+    {
+      "legacy_id": "变体-A.t1",
+      "id": "变体-A.t1~67753263ef6d",
+      "source_file": "corpus/sentences/hypothesis_forms.md",
+      "anchor": "corpus/sentences/hypothesis_forms.md#变体-A",
+      "text_sha256": "aa1c75dc85c48bae53f962aa8e1ecf49356a5155b97d3c969c1987b190a46c77"
+    },
+    {
+      "legacy_id": "变体-C.a",
+      "id": "变体-C.a~c80c9cca8cae",
+      "source_file": "corpus/sentences/hypothesis_forms.md",
+      "anchor": "corpus/sentences/hypothesis_forms.md#变体-C",
+      "text_sha256": "d85562f1fdabcd9c77b5e64785f87ccbf9b0330ea189d04bf21f1dadfa1f4b34"
+    },
+    {
+      "legacy_id": "变体-C.t1",
+      "id": "变体-C.t1~a3004e57035e",
+      "source_file": "corpus/sentences/hypothesis_forms.md",
+      "anchor": "corpus/sentences/hypothesis_forms.md#变体-C",
+      "text_sha256": "83adfd16630f91d7d12862bee7f80673d27635e1ac65db222c104973c374ab5f"
+    },
+    {
+      "legacy_id": "matrix-1",
+      "id": "matrix-1~e8fa63c648fd",
+      "source_file": "corpus/sentences/hypothesis_forms.md",
+      "anchor": "corpus/sentences/hypothesis_forms.md#1. 测量尺度 → 基础形式速查表",
+      "text_sha256": "b900ca6597333345cb773887e94260faea5249981359b02a5c573adac2d43595"
+    },
+    {
+      "legacy_id": "matrix-2",
+      "id": "matrix-2~48019f6ff8d7",
+      "source_file": "corpus/sentences/hypothesis_forms.md",
+      "anchor": "corpus/sentences/hypothesis_forms.md#1. 测量尺度 → 基础形式速查表",
+      "text_sha256": "31b5c18b535a2421f0f550075d0b858f04fecc04ea922e90628c3ab5f625eb39"
+    },
+    {
+      "legacy_id": "matrix-3",
+      "id": "matrix-3~c0c926b77892",
+      "source_file": "corpus/sentences/hypothesis_forms.md",
+      "anchor": "corpus/sentences/hypothesis_forms.md#1. 测量尺度 → 基础形式速查表",
+      "text_sha256": "912ef0948d7cae12baa86d25ec50090348e22af97e673155d87435ab77b9ae58"
+    },
+    {
+      "legacy_id": "matrix-4",
+      "id": "matrix-4~ea9b5a9e8c47",
+      "source_file": "corpus/sentences/hypothesis_forms.md",
+      "anchor": "corpus/sentences/hypothesis_forms.md#1. 测量尺度 → 基础形式速查表",
+      "text_sha256": "b18d2ba0c82a72b06647045222f4b677fabad5396136a326ed982d6041968fde"
+    },
+    {
+      "legacy_id": "matrix-5",
+      "id": "matrix-5~acb310530881",
+      "source_file": "corpus/sentences/hypothesis_forms.md",
+      "anchor": "corpus/sentences/hypothesis_forms.md#1. 测量尺度 → 基础形式速查表",
+      "text_sha256": "efa1d47e9d84670b254e531395fcba703f1514e8d4e0d24076842ac1b96ada0a"
+    },
+    {
+      "legacy_id": "变体-A.t1",
+      "id": "变体-A.t1~1c4bddcb42f9",
+      "source_file": "corpus/sentences/mechanism_chain.md",
+      "anchor": "corpus/sentences/mechanism_chain.md#变体-A",
+      "text_sha256": "3114afd0eb3d062be4bb12b0cceeda36ddd07edd49c924d46bd89d35c681731d"
+    },
+    {
+      "legacy_id": "变体-B.a",
+      "id": "变体-B.a~2bcd478753a8",
+      "source_file": "corpus/sentences/moderation.md",
+      "anchor": "corpus/sentences/moderation.md#变体-B",
+      "text_sha256": "5c10eb5848e8161a5922164a4896a35eaf4d11ff620ab20ffe618847a8fbe495"
+    },
+    {
+      "legacy_id": "变体-B.b",
+      "id": "变体-B.b~acc2c3435b39",
+      "source_file": "corpus/sentences/moderation.md",
+      "anchor": "corpus/sentences/moderation.md#变体-B",
+      "text_sha256": "5a53280b99f306bcfc78e6cc7cfb82ae3817be8fb9054e9c4941b73de44796b5"
+    },
+    {
+      "legacy_id": "变体-B.t1",
+      "id": "变体-B.t1~2cac5f7945b8",
+      "source_file": "corpus/sentences/moderation.md",
+      "anchor": "corpus/sentences/moderation.md#变体-B",
+      "text_sha256": "d65e17e5e6da428f466adeaacc92d622d5d9e1723da706dff62bb6cd090ef035"
+    },
+    {
+      "legacy_id": "变体-A.t1",
+      "id": "变体-A.t1~4a5c993dfd75",
+      "source_file": "corpus/sentences/moderation.md",
+      "anchor": "corpus/sentences/moderation.md#变体-A",
+      "text_sha256": "5ebb7a71fd0f78bfb6a36d56ec0ba7debc4fffd4f454a6e82ce7455363f13395"
+    },
+    {
+      "legacy_id": "enhancing_moderation_more_less_hypothesis_form.t1",
+      "id": "enhancing_moderation_more_less_hypothesis_form.t1~87341e7baac2",
+      "source_file": "corpus/sentences/moderation.md",
+      "anchor": "corpus/sentences/moderation.md#变体-F",
+      "text_sha256": "91b5480686bd8d6fe89356d42985c1367b55db8ad844993fbb40f9c4a5140728"
+    },
+    {
+      "legacy_id": "enhancing_moderation_more_less_hypothesis_form.t1",
+      "id": "enhancing_moderation_more_less_hypothesis_form.t1~809603c51bce",
+      "source_file": "corpus/sentences/moderation.md",
+      "anchor": "corpus/sentences/moderation.md#sentence-enhancing-moderatio-18ed46",
+      "text_sha256": "42031eeeba55ba50035397043e9b4cc60ebb69fa7d1db907dc6caca3b38e658f"
+    }
+  ]
+}

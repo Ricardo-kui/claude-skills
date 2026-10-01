@@ -651,6 +651,38 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 
 **禁忌**: 缺口数量必须与后文假设/贡献一一对应——"two gaps" 承诺了两个理论贡献方向，Discussion 必须逐项兑现。不要只列举缺口而不解释缺口间的关系——"Importantly, A and B might compete" 是必要的连接句。Gap1 和 Gap2 的 Gap 类型不要相同——如果两个都是 Incompleteness，合并为一个缺口。Gap2 若使用 Inadequacy 语言（"has assumed... In contrast"），必须有具体文献引用支撑假设的存在
 
+<!-- retrieval-move:
+{
+  "functions": [
+    "intro.gap_shared_assumption"
+  ],
+  "function_evidence": {
+    "intro.gap_shared_assumption": {
+      "kind": "verbatim",
+      "cue": "previous research has typically assumed imprinting effects reflect characteristics, preferences, and actions of imprinters",
+      "why": "第二缺口挑战把作用锁定在历史敏感期的静态前提，并指出后续转变可能持续影响结果。"
+    }
+  },
+  "function_support": {
+    "intro.gap_shared_assumption": "complete"
+  },
+  "position": "双缺口枚举的第二项",
+  "prerequisite": "静态前提及后续变化的理论依据明确；仅使用第二项时无需补造第一项缺口。",
+  "next": "解释后续转变如何改变持续影响。",
+  "advances": "把静态前提改写为动态机制问题。",
+  "next_evidence": [
+    "静态前提的文献依据",
+    "后续转变与持续作用的理论联系"
+  ],
+  "applicability": {
+    "required_facts": {
+      "common_assumption_documented": true,
+      "post_initial_change_relevant": true
+    }
+  }
+}
+-->
+
 ---
 
 ### 变体 U：Paradox 阐述 + Rhetorical Question pivot 型（cancellieri2023 型）

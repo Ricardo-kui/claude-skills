@@ -50,6 +50,8 @@ Distill the architecture and reasoning of a published Theory section into reusab
 
 Return the theory-building classification, functional module map, why-chain, construct relationships, hypothesis organization, transferable skeletons, non-transferable boundaries, evidence anchors, QC findings, and `skill_design_feedback`. For Incommensurability, include L0–L3, route confidence, closest alternative, unclassified residual, architecture necessity, and the distinguishing prediction. Separate corpus enrichment from core-design defects, label inference explicitly, and never copy source sentences as templates.
 
+实际写回后的完成判据见 [四节共用收尾协议](../_shared/distillation-writeback-finalization.md)；单节独立模式同样执行登记、检索刷新与工作树终验。
+
 ## Context discipline
 
 Do not preload the full write-theory corpus. Finish paper-first extraction, then inspect only the exact rule targets and corpus files needed for comparison, persistence, or writeback. Routing 查询经 `py ../distill-paper-exemplar/scripts/corpus_query.py routing --section theory --query "<关键词>"`（确定性，命中行默认 ≤50）——先查后开、命中即开，routing 表正文不进上下文。

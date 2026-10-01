@@ -1,0 +1,516 @@
+{
+  "reviewer": "Codex 实施者合并后开发期复核（2026-10-01）；本组40场景参与规则修正，非独立盲评，作者接受未测",
+  "rubric": {
+    "usable": "在当前需求下有可学习的卡片原文与模板动作，研究事实仍须替换；不表示书目或PDF身份已确认",
+    "conditional": "可借部分动作或模板，但主题、形式、证据/设计条件或原文来源仍需补充",
+    "gap": "top-3 没有满足该需求的顶刊原文范本",
+    "expected_no_fit": "负例正确不返回"
+  },
+  "decisions": [
+    {
+      "id": "I01",
+      "verdict": "usable",
+      "rank": 1,
+      "reason": "Imagine 代入非法/污名情境，建立现象及解释压力；不移植法律与金融事实。",
+      "resolved_function": "intro.hook",
+      "selected_source_uids": [
+        "introduction:24c7698863d9d3168cd4a945"
+      ],
+      "selected_title": "变体 A：直接式 \"Imagine...\"（lashley_pollock2020 型）"
+    },
+    {
+      "id": "I02",
+      "verdict": "usable",
+      "rank": 1,
+      "reason": "学习后遗忘的序贯张力与需求相符；NASA 及错误史必须换成当前材料。",
+      "resolved_function": "intro.tension",
+      "selected_source_uids": [
+        "introduction:3243534340f31804613aae60"
+      ],
+      "selected_title": "变体 A：两段式递进型（haunschild2015 型）"
+    },
+    {
+      "id": "I03",
+      "verdict": "usable",
+      "rank": 1,
+      "reason": "以具体伤害连接召回延迟与公共安全，已有卡片原句和模板；伤亡数据与制度事实须来自当前研究，一条摘录仅核到卡片，另一条已定位本地档案，均非PDF核验。",
+      "resolved_function": "intro.stakes",
+      "selected_source_uids": [
+        "introduction:d27b989fa3a0af724fd28d5c",
+        "introduction:ebbe34c3bfb92bfb821d9854",
+        "introduction:23da78d7ff988a82fbbf1085"
+      ],
+      "selected_title": "变体 A：具体伤害型（darby2023 型）"
+    },
+    {
+      "id": "I04",
+      "verdict": "conditional",
+      "rank": 1,
+      "reason": "可借前作局限到新视角的转向；静态到动态不是竞争到治理，需重写对话关系。",
+      "resolved_function": "intro.literature",
+      "selected_source_uids": [
+        "introduction:809b41a5653bb513025b96cf",
+        "introduction:789b1781be5c0ea538ddb3cf"
+      ],
+      "selected_title": "变体 O：近邻研究静态观批评 → 动态化 bridge（desjardine2025 型）"
+    },
+    {
+      "id": "I05",
+      "verdict": "usable",
+      "rank": 1,
+      "first_misleading": false,
+      "reason": "首项现为 Moon 注意力重定向：稀缺注意力→配置，与 ABV 需求匹配；仍须支持注意力释放来源及外部期望，不移植制度事实。",
+      "first_misleading_before_repair": true,
+      "resolved_function": "intro.attention_lens",
+      "selected_source_uids": [
+        "introduction:ea1002e3a7403d4103a08a87",
+        "introduction:a7babc624a5ccafb53e023ee"
+      ],
+      "selected_title": "变体 C：注意力重定向型（moon2026 型）"
+    },
+    {
+      "id": "I06",
+      "verdict": "usable",
+      "rank": 1,
+      "reason": "构念与数据源逐项映射可复用；只预告真实数据与设计，不复制原文额外变量。",
+      "resolved_function": "intro.preview",
+      "selected_source_uids": [
+        "introduction:f06458b6eab51079b52eaaa0",
+        "introduction:013ef8b9f60fd27b54158bd7",
+        "introduction:98cb01f8441d2e6645ff15bf"
+      ],
+      "selected_title": "变体 A：构念映射数据源枚举型（giannetti2022 型）"
+    },
+    {
+      "id": "I07",
+      "verdict": "conditional",
+      "rank": 1,
+      "reason": "单问及范围收窄形式可借，地位/声誉没有内容命中；不是同主题范文。",
+      "resolved_function": "intro.rq",
+      "selected_source_uids": [
+        "introduction:74c1bf92830dc2c567df3b5b",
+        "introduction:73fd6d1fabd18edcfe7eeec0"
+      ],
+      "selected_title": "变体 D：单研究问题 + 范围收窄前置型（single-RQ scope-narrowing，fini2017 型）"
+    },
+    {
+      "id": "I08",
+      "verdict": "usable",
+      "rank": 2,
+      "reason": "内部到外部治理贡献的理解变化可学；不能将范文的发现与新颖性认定带入。",
+      "resolved_function": "intro.contribution",
+      "selected_source_uids": [
+        "introduction:a8a7e2a1fcc2b561cf5b9766",
+        "introduction:213c5170f2649f5d182244dd"
+      ],
+      "selected_title": "变体 E：三段闭环型（darby2026 型；变体字母按文件局部编号——本文件的 E≠three-layer-contribution.md 变体 E「经典正效应抵消型」）"
+    },
+    {
+      "id": "I09",
+      "verdict": "conditional",
+      "rank": 3,
+      "reason": "prior accounts hint→系统考察的过渡可借；用于 Theory 时须调整章节角色，且不自动推导研究缺口。",
+      "resolved_function": "intro.literature_to_gap",
+      "selected_source_uids": [
+        "introduction:4c642231764e91488ccc6f1f",
+        "introduction:bf59268574da211fdb198a8b"
+      ],
+      "selected_title": "变体 F：暗示性证据系统化过渡型（gulati_sytch2007 型）"
+    },
+    {
+      "id": "I10",
+      "verdict": "usable",
+      "rank": 1,
+      "reason": "按维度区分并说明互补关系，满足区别于前作的功能；篇名、维度须由当前研究决定。",
+      "resolved_function": "intro.differentiation",
+      "selected_source_uids": [
+        "introduction:b05269783cc0575275b645c6",
+        "introduction:78a62365e1fd70567c585791"
+      ],
+      "selected_title": "变体 A：双维区分+互补框定型（weng_yang2024 型）"
+    },
+    {
+      "id": "T01",
+      "verdict": "usable",
+      "rank": 1,
+      "first_misleading": false,
+      "reason": "首项现为 Pollock 地位/声誉四维区分；两构念定义与共同维度辨析均有原句，区别于上位类收编。",
+      "first_misleading_before_repair": true,
+      "resolved_function": "theory.construct_contrast",
+      "selected_source_uids": [
+        "theory:0bc8d5b4ab962b5e448ab6fa",
+        "theory:50232cc258ce0331c709d5c7",
+        "theory:4b9a731ec0d8bd8f5abbe8b8",
+        "theory:d16855c69a5a8f6e1ceee7d9"
+      ],
+      "selected_title": "Pollock 2015 型：两构念四维系统区分"
+    },
+    {
+      "id": "T02",
+      "verdict": "conditional",
+      "rank": 1,
+      "first_misleading": false,
+      "reason": "首项现为 DesJardine 双通道主效应机制：施动方推动、接收方迎合与可行性；不是反向对象边界。原文是评级影响，不是召回机制，当前研究仍须建立具体影响手段及迎合动机。",
+      "first_misleading_before_repair": true,
+      "resolved_function": "theory.mechanism_explanation",
+      "selected_source_uids": [
+        "theory:358bf66cee009624b06339c0",
+        "theory:184aca03b1863d6ed2cd8787",
+        "theory:fc045a6d982bf4b563c724e3",
+        "theory:3ca435efe34082b09a521212"
+      ],
+      "selected_title": "Pattern: Dual-Channel Convergence（双通道收敛，DesJardine–Li–Shi 2025 型）"
+    },
+    {
+      "id": "T03",
+      "verdict": "conditional",
+      "rank": 3,
+      "reason": "基础正向关系模板可用，但该块无原文且未命中风险主题；可学形式，不能宣称找到同主题原句。",
+      "resolved_function": "theory.hypothesis_main",
+      "selected_source_uids": [
+        "theory:301b6fd381f3fe886c9e7dda",
+        "theory:1d7204b0357f206b56ba3f0d",
+        "theory:bd652eaae8b07cb2fac7852c"
+      ],
+      "selected_title": "基础关系"
+    },
+    {
+      "id": "T04",
+      "verdict": "usable",
+      "rank": 1,
+      "reason": "权力增强能力与低权力约束的双侧推导可借；高低端论证必须由当前机制承担。",
+      "resolved_function": "theory.moderation",
+      "selected_source_uids": [
+        "theory:622fa8479ed6c1aefb020409",
+        "theory:ee2407d35cb1a9f444982b61",
+        "theory:3e6696aa259ea5e708328ff8"
+      ],
+      "selected_title": "能力放大+双边约束型（weng_yang2024 型）"
+    },
+    {
+      "id": "T05",
+      "verdict": "usable",
+      "rank": 1,
+      "reason": "Ridge 的机制参与条件直接匹配，来源已核至本地卡；不能把机制参与等同于任意相关变量。",
+      "resolved_function": "theory.moderator_selection",
+      "selected_source_uids": [
+        "theory:88f8e87c7f18e605f43119bd",
+        "theory:8152b29b001d1be11a800edb"
+      ],
+      "selected_title": "Framework: Mechanism-Participation Conditions（机制参与条件三槽位，Ridge, Aime & White 2013 型）"
+    },
+    {
+      "id": "T06",
+      "verdict": "conditional",
+      "rank": 1,
+      "first_misleading": false,
+      "reason": "首项现为 Zajac 竞争预测与回指收敛；没有董事会合作/控制主题命中，须先建立两套实质论据，不以代理桥接替代预测。",
+      "first_misleading_before_repair": true,
+      "resolved_function": "theory.competing_predictions",
+      "selected_source_uids": [
+        "theory:df95deffaaa8155059a13143",
+        "theory:28cfba4858128384a4931ce6",
+        "theory:f624a76c3a04b1a0aa37abd7"
+      ],
+      "selected_title": "技巧 4：分离编号回指竞争对 + 期界基线 + 跨政策推广（Zajac & Westphal 2004, ASR）"
+    },
+    {
+      "id": "T07",
+      "verdict": "gap",
+      "rank": null,
+      "first_misleading": false,
+      "reason": "细动作检索明确 no_fit；当前库未抽出同块完成反向可能性承认与方向回应的文章原文。Gulati/Pfarrer 相关块只有承认侧摘录，教材或模板不补造另一侧；该缺口仍待定向蒸馏。",
+      "first_misleading_before_repair": true,
+      "resolved_function": "theory.concession_direction",
+      "selected_source_uids": [],
+      "selected_title": null
+    },
+    {
+      "id": "T08",
+      "verdict": "conditional",
+      "rank": 3,
+      "reason": "原文 In sum 可学配对假设收束；向下一机制的交棒仍需另配句，不整搬局部轨道模板。",
+      "resolved_function": "theory.closure",
+      "selected_source_uids": [
+        "theory:105a0364996671b1049da9ec",
+        "theory:3c2953dc8cef6d9c5b3c9ea6"
+      ],
+      "selected_title": "句式 B：比较型配对假设局部收束（Gulati_Lavie_Singh_2009 型）"
+    },
+    {
+      "id": "T09",
+      "verdict": "conditional",
+      "rank": 1,
+      "first_misleading": false,
+      "reason": "首项是同一行动的收益成本权衡模板，明确没有原文；第二项为 Hoffmann 治理冲击下两种激励的权衡原句，需当前设计支持。Chung 综合收敛句仅部分支持完整推导；两侧机制须用当前事实补齐。",
+      "first_misleading_before_repair": true,
+      "resolved_function": "theory.cost_benefit_balance",
+      "selected_source_uids": [
+        "theory:6832bc629ce66d34a1a87070",
+        "theory:099d5b9d5ae71721de1d898f"
+      ],
+      "selected_title": "基础权衡框架"
+    },
+    {
+      "id": "T10",
+      "verdict": "usable",
+      "rank": 1,
+      "reason": "三阶段与前台/后台转换机制可学；过程类型和时间序列须确为当前研究证据支持。",
+      "resolved_function": "theory.process",
+      "selected_source_uids": [
+        "theory:ef7e880ec1112f5aa43baeed",
+        "theory:88d79146dfa91a2e11572f72",
+        "theory:e35f8320175e75295cd45cdb",
+        "theory:64f74bd5bc7535e171e6edbe"
+      ],
+      "selected_title": "Lashley & Pollock 2020 型：核心污名降低三阶段过程模型"
+    },
+    {
+      "id": "M01",
+      "verdict": "conditional",
+      "rank": 3,
+      "reason": "行业多理由情境辩护可学；这些理由偏数据/变异可用性，不能直接证明管理裁量理论适切性。",
+      "resolved_function": "methods.setting",
+      "selected_source_uids": [
+        "methods:df3cd6532688d360463de065",
+        "methods:e4b7bdfe1a199eba1309a9bb"
+      ],
+      "selected_title": "变体 1: 行业情境 4-reason 辩护 (1/1 复现)"
+    },
+    {
+      "id": "M02",
+      "verdict": "usable",
+      "rank": 1,
+      "reason": "按构念补源→合并→最终样本的漏斗适用；并非共同所有权主题精确命中，数据单位与筛选须真实。",
+      "resolved_function": "methods.sample",
+      "selected_source_uids": [
+        "methods:54472cb74d45410532ede934",
+        "methods:91ef960943f443b3678d5de3"
+      ],
+      "selected_title": "变体 Q：专有核心库 + 按构念补外部源 + 合并后最终样本（2026-09-05）"
+    },
+    {
+      "id": "M03",
+      "verdict": "usable",
+      "rank": 1,
+      "reason": "四分位描述→单调变化的 model-free 节拍可借；不是工具变量有效性的验证。",
+      "resolved_function": "methods.model_free",
+      "selected_source_uids": [
+        "methods:3031d872056c0efe76c0f8d0",
+        "methods:959feb53f3986d2878f6d823"
+      ],
+      "selected_title": "变体 20: M2.5 Model-Free Evidence 预览 (1篇高价值)"
+    },
+    {
+      "id": "M04",
+      "verdict": "usable",
+      "rank": 1,
+      "reason": "分布审计→extensive/intensive margin→二元测量直接匹配；97.5% 不能移植。",
+      "resolved_function": "methods.dv",
+      "selected_source_uids": [
+        "methods:2011e120c987e33f613a2f40",
+        "methods:3f1793e3810c310ad5727cea"
+      ],
+      "selected_title": "变体 3: M3 分布审计→extensive/intensive margin→二元 DV 对齐 likelihood (2026-08-13)"
+    },
+    {
+      "id": "M05",
+      "verdict": "usable",
+      "rank": 1,
+      "reason": "13F→两端同时持股→共同所有权构建匹配；门槛及聚合单位不能照抄。",
+      "resolved_function": "methods.iv",
+      "selected_source_uids": [
+        "methods:fc7959cd852b8d58e9aa4be9",
+        "methods:55a9e4ede02da234fccc988a"
+      ],
+      "selected_title": "变体 36: M4 复合测量构念分步构建 + 阈值辩护 + 可行性论证 (1篇高价值)"
+    },
+    {
+      "id": "M06",
+      "verdict": "conditional",
+      "rank": 1,
+      "reason": "测量过程并与 rival constructs 比较的逻辑可借；这是实验测量/操纵设计，不提供档案式注意力中介量表。",
+      "resolved_function": "methods.mediator",
+      "selected_source_uids": [
+        "methods:49881368d92e3e78609d2fa7",
+        "methods:1806d9ac863647d2f53049f9"
+      ],
+      "selected_title": "变体 6: M5/M8 测量过程+操纵过程双设计 + rival accounts battery (1篇高价值)"
+    },
+    {
+      "id": "M07",
+      "verdict": "usable",
+      "rank": 1,
+      "reason": "每个控制组对 DV 的理由及与 IV 共变的理由明确；不能无依据添加控制。",
+      "resolved_function": "methods.controls",
+      "selected_source_uids": [
+        "methods:d5fd71a78a101c56c5b88fbf",
+        "methods:4c60fd913f37ee1b10e6e85f"
+      ],
+      "selected_title": "变体 40: M6 控制变量\"双面 because\" — 对 DV 一条理由 + 对 IV 共变一条理由（2026-08-12）"
+    },
+    {
+      "id": "M08",
+      "verdict": "conditional",
+      "rank": 1,
+      "reason": "估计器限制说明可学；无组内变异与样本构造才是关键，不能从结果稀有直接推断不能用 firm FE。",
+      "resolved_function": "methods.estimator",
+      "selected_source_uids": [
+        "methods:a5ebb831b04aa5c7b8366aff",
+        "methods:8b5e554c4c3bb56234db764c"
+      ],
+      "selected_title": "变体 5：二元 rare outcome 下 year + industry FE，无法 firm FE（perfect collinearity）（2026-08-05）"
+    },
+    {
+      "id": "M09",
+      "verdict": "expected_no_fit",
+      "rank": null,
+      "reason": "不存在的设计保持 no_fit，未强配 OLS/DiD。",
+      "resolved_function": "methods.identification",
+      "selected_source_uids": [],
+      "selected_title": null
+    },
+    {
+      "id": "M10",
+      "verdict": "usable",
+      "rank": 1,
+      "reason": "Study 2 承接并扩展 Study 1 的多研究理由适用；推广、复制与效度各自须有真实设计支撑。",
+      "resolved_function": "methods.multi_study",
+      "selected_source_uids": [
+        "methods:10e71c351294f6df384d9140",
+        "methods:6a9c699795989afbd6d3fe06"
+      ],
+      "selected_title": "变体 3: M2 混合方法多研究设计的情境+数据源衔接 (1篇高价值)"
+    },
+    {
+      "id": "R01",
+      "verdict": "usable",
+      "rank": 1,
+      "reason": "相关结构与构念映射符合描述统计功能；相关性不升级为因果发现。",
+      "resolved_function": "results.descriptive",
+      "selected_source_uids": [
+        "results:653a2ab4004f668997fb3ef3",
+        "results:96a80361d6dee0ba761dbf71"
+      ],
+      "selected_title": "变体 28：R1 假设键控描述统计叙述（计数模型）（anand2024 型，gap HIGH）"
+    },
+    {
+      "id": "R02",
+      "verdict": "usable",
+      "rank": 1,
+      "reason": "首项现为 Model 1 controls→Models 2–5 added variables 的真实模型序列原句；不再用支持裁决句充当导航，列号、模型及顺序须替换为真实分析。",
+      "resolved_function": "results.model_sequence",
+      "selected_source_uids": [
+        "results:3ca596242b6a1b89ffa0526c",
+        "results:76dd2fa50ea6297da6f245c0"
+      ],
+      "selected_title": "变体 19: R2 模型序列 — 多项式主效应 + 多个曲线调节 (1篇高价值)"
+    },
+    {
+      "id": "R03",
+      "verdict": "conditional",
+      "rank": 1,
+      "reason": "幅度→低基准下绝对/相对概率限定可借；该项是 DiD+Logit，不应套用给模型未确定的共同所有权分析。",
+      "resolved_function": "results.hypothesis",
+      "selected_source_uids": [
+        "results:c3f0ad8e364ae0c1c342c773",
+        "results:3c3f0ffc3849a9d9b18b8c0a"
+      ],
+      "selected_title": "变体 14: R3 DiD+Logit 主效应 — OR→相对概率 + 低基准诚实 + stakes（2026-08-05）"
+    },
+    {
+      "id": "R04",
+      "verdict": "usable",
+      "rank": 1,
+      "reason": "同主题分样本与 Chow/Wald 的诚实降级匹配；分组差异不能仅凭一组显著另一组不显著来判断。原句已命中档案，但卡片2022与档案2020的键年份需核对，动作可借不表示书目已确认。",
+      "resolved_function": "results.interaction",
+      "selected_source_uids": [
+        "results:defffdd4b18863ddf703c9d1",
+        "results:055192436ecea2f11ef38605"
+      ],
+      "selected_title": "变体 65: R4 — 分样本 null→significant 对 + 组内 Wald + 跨子样本 Chow 诚实降级（post_2022_women_tmt_strategic_renewal 型）"
+    },
+    {
+      "id": "R05",
+      "verdict": "usable",
+      "rank": 1,
+      "reason": "1-SD→概率百分点变化符合幅度解释功能；基准、尺度、数值与设计必须换成真实结果。",
+      "resolved_function": "results.magnitude",
+      "selected_source_uids": [
+        "results:b79adda5d6a18e6cde997c06",
+        "results:36efcf9289cf6249382333b5"
+      ],
+      "selected_title": "变体 7: R5 Probit 经济显著性 — 1-SD → 概率百分点变化 (1篇高价值)"
+    },
+    {
+      "id": "R06",
+      "verdict": "conditional",
+      "rank": 1,
+      "first_misleading": false,
+      "reason": "首项现为 Darby 非显著结果的小样本/功效可能解释；不把非显著直接当成无效应。原文是低严重度子样本，不是交互检验，不能无依据宣称当前交互功效不足。",
+      "first_misleading_before_repair": true,
+      "resolved_function": "results.null_caution",
+      "selected_source_uids": [
+        "results:0add2eda76de5533b9795ba5",
+        "results:36da125dfd48fc7b8dfa8e31"
+      ],
+      "selected_title": "变体 4: 小样本/非显著结果的诚实声明 (1/5 复现)"
+    },
+    {
+      "id": "R07",
+      "verdict": "conditional",
+      "rank": 1,
+      "reason": "首项现为 mixed 标题→核心显著→辅助 null 的混合发现原句；没有召回主题命中，省略号仍表明拼接摘录，不能当作连续原段。",
+      "resolved_function": "results.mixed",
+      "selected_source_uids": [
+        "results:d0eec6a857b2b692024272b7",
+        "results:57512c095d4e7a50245581e5"
+      ],
+      "selected_title": "变体 Z: R6 构念家族混合证据 — mixed 标题拍+核心显著+辅助 null 全披露 (gulati1999 型)"
+    },
+    {
+      "id": "R08",
+      "verdict": "usable",
+      "rank": 2,
+      "reason": "general tests→specific threats→逐威胁检验的组织适用；rule out 等强度须按当前证据重新校准。",
+      "resolved_function": "results.robustness",
+      "selected_source_uids": [
+        "results:64cb9cc39ef5d7437673992d",
+        "results:f3e18382cca0e3bf63f16120"
+      ],
+      "selected_title": "变体 26: R7 内生性稳健性表叙事 — threat-by-threat Table 7 汇总 (1篇高价值)"
+    },
+    {
+      "id": "R09",
+      "verdict": "conditional",
+      "rank": 1,
+      "reason": "中介段落与间接效应报告形式可借；这是计数 DV 的 post hoc 机制，不是注意力测量范本，也不自动证明因果中介。",
+      "resolved_function": "results.indirect_effect_report",
+      "selected_source_uids": [
+        "results:2262eb8fe41b26bb7def1e45",
+        "results:54a5949c8e090164ea999ca6"
+      ],
+      "selected_title": "变体 3: Post Hoc — 计数模型的 mediation 扩展 (1/5 复现)"
+    },
+    {
+      "id": "R10",
+      "verdict": "conditional",
+      "rank": 1,
+      "reason": "首项保留前阶段优势与后阶段非显著的对比；当前须确有多阶段结果，机制衰减与样本选择不能从范文移植，仍需当前理论和设计支持。",
+      "resolved_function": "results.mixed_closure",
+      "selected_source_uids": [
+        "results:3ff6b0160f4059ef791d338a",
+        "results:bba8bb955f1b9dd670bd232b"
+      ],
+      "selected_title": "变体 27: 多阶段同 IV 管道衰减 profile — 同一 IV 跨序贯决策阶段的方向/显著性对比 (1篇高价值)"
+    }
+  ],
+  "cases_sha256": "8c46008af8062748b919fbc82b4828cd37303e5cdcdf1656c0e694fea0a0fb1a",
+  "dependency_hashes": {
+    "_shared/indexing/retrieve.py": "7f6da38aa609210e1e814f24c300c80c7505c48240b984c4e361d3ca871cf67a",
+    "_shared/indexing/request_matching.py": "8abf2f72af9ec5449bf5095f397b253594fdf3817e8d7d1b7793c59cd2126009",
+    "_shared/indexing/adaptation_cards.py": "4a780958d1be3047860ae0b356da5f7909b2cb1ea79c0364d6576266b23aa4cb",
+    "_shared/indexing/retrieval-functions.json": "58d8e2d6fa4ca79b40b6be1a35da007994ebafe9d93b8f328f26989ba8040039",
+    "catalog_content": "5bde3191b92158a7cea53f2ef2036ec76e79291e3cfa519a9ec2ca383e24ce53"
+  }
+}

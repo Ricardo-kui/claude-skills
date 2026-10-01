@@ -16,6 +16,8 @@ when_to_use: "用户提供现稿与修订记录/审稿意见、要求深度修�
 
 ## Phase -1: 模式识别与当前文本锁定
 
+**句段范本检索**：逐句/逐段选范本前读取 `../_shared/exemplar-retrieval.md`，用 `../_shared/indexing/use_exemplar.py query` 同时查询研究内容、当前句子功能与已知设计条件，自动保留本次检索编号。比较 top 3 的六栏改编卡，核对句段的承接、推进、后续证据以及分别呈现的适用性和来源状态后再改编；无可用候选时说明缺口并回查原生索引。改编前用共享协议的 `open` 实际读源卡与原文上下文；保存改编稿用 `write/adopt` 统一登记采用和消耗，关联编号、真实 UID 与草稿指纹。已登记的版本不另记一次；收到对范本匹配或本次改编的明确评价时，按共享协议的 `feedback` 关联实际采用与草稿版本，未评价的版本保持未知。
+
 先判定 `new_draft | revision | local_rewrite`。用户提供草稿路径、现有段落、修订记录，或要求“继续/修改/重写”时，进入 revision 模式并完整读取 `references/draft-revision-protocol.md`：
 
 - 在制定计划或生成文字前，读取当前 Results 正文、相关修订记录/Decision Register、当前 Methods 与实际结果表；不得凭旧版本或对话摘要替代现稿。

@@ -238,6 +238,63 @@ confidence: medium（F 变体第 3 源，常规规则即升 VERIFIED）
 status: VERIFIED
 verification_basis: "expert_audit_override (Westphal 系裁决: 用户点名最爱学者,引言/理论单源足矣)"
 -->
+<!-- retrieval-move:
+{
+  "functions": [
+    "theory.competing_predictions"
+  ],
+  "position": "对立论证的预测收敛与竞争假设回指",
+  "prerequisite": "两套竞争解释已有实质论据；期界变化须由研究事实支持",
+  "next": "用可检验预测交接实证；代理桥接须在预测建立之后处理",
+  "definitions": [
+    {
+      "id": "theory.competing_predictions",
+      "label": "形成并配对对立预测",
+      "section": "theory",
+      "refines": "theory.competing",
+      "definition": "把两套可信的竞争解释分别收敛为针对同一可观测关系的不同预测，并明确它们构成竞争对。",
+      "use_when": [
+        "两方机制各有实质推导；比较对象、结果、条件及尺度可对应。",
+        "保留各自预测与竞争关系；不以某项后续代理的可测量性替代预测本身。"
+      ],
+      "neighbors": [
+        {
+          "id": "intro.gap_conflicting_accounts",
+          "distinction": "文献对话中的分歧先提出问题；本动作把分歧转化为可检验预测。"
+        },
+        {
+          "id": "methods.iv",
+          "distinction": "代理构建说明如何观测构念，需在预测确立后按真实测量处理。"
+        }
+      ],
+      "positive_example": {
+        "kind": "template",
+        "cue": "in opposition to Hypothesis",
+        "why": "Zajac–Westphal 卡的模板将同一可观测量的正负预测用回指配对；原文摘录另保留竞争声明。"
+      },
+      "mismatch_example": {
+        "kind": "illustrative",
+        "text": "为检验上述两项假设，我们用该变量作为可观察代理。",
+        "why": "这是预测之后的测量交接，不是竞争假设陈述。",
+        "actual_function": "methods.iv"
+      },
+      "aliases": [
+        "竞争预测",
+        "对立预测",
+        "竞争假设陈述"
+      ],
+      "review_cases": [
+        "T06"
+      ]
+    }
+  ],
+  "applicability": {
+    "required_facts": {
+      "comparable_predictions": true
+    }
+  }
+}
+-->
 
 > 源自 Zajac & Westphal (2004, ASR)——变体 F 第 3 源。把 Wowak 的相邻编号对（H1a/H1b）扩展为"分离编号 + 回指收敛"形态，并给竞争对补上期界舞台与跨预测元推广。与 Wowak 的多 DV 递进（每 DV 机制空间加深）互补：本篇是**多 X 推广**（机制 trunk 不变，预测元家族扩容）。
 

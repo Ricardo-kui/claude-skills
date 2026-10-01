@@ -46,6 +46,61 @@ source: Distilled from Kundro & Rothbard (AMJ), Eilert et al. (JM), Wowak et al.
 ## 句法模板
 
 ### 变体 A：对立发现对称呈现型（kundro_rothbard 型）
+<!-- retrieval-move:
+{
+  "functions": [
+    "intro.gap_conflicting_accounts"
+  ],
+  "definitions": [
+    {
+      "id": "intro.gap_conflicting_accounts",
+      "label": "揭示既有解释相互矛盾",
+      "section": "introduction",
+      "refines": "intro.literature_to_gap",
+      "definition": "把针对同一焦点关系的两套既有解释及其不同预测并置，说明分歧为何尚不能由现有对话解决。",
+      "use_when": [
+        "双方都存在可追溯的论据，且讨论对象、结果和比较条件足以构成同一个问题。",
+        "指出分歧落在何处；不同指标或不相容样本产生不同结果时，先核对是否真有解释冲突。"
+      ],
+      "neighbors": [
+        {
+          "id": "intro.gap_unexplained",
+          "distinction": "缺少解释不等于解释冲突；本动作需要双方实质内容。"
+        },
+        {
+          "id": "theory.competing_predictions",
+          "distinction": "Theory 中将对立机制收敛为正式竞争预测；此处先建立文献对话的问题。"
+        }
+      ],
+      "positive_example": {
+        "kind": "verbatim",
+        "cue": "On the one hand, emerging research has corroborated",
+        "why": "同一块先呈现权力解除角色约束的解释，再呈现性别角色理论的反向解释；来源年份仍沿用卡片的待补状态。"
+      },
+      "mismatch_example": {
+        "kind": "illustrative",
+        "text": "既有理论预测惩罚会抑制行为，但现实中该行为仍然持续。",
+        "why": "只有理论与现象不一致，尚未呈现两套既有解释；应先定位为现象张力。",
+        "actual_function": "intro.tension"
+      },
+      "aliases": [
+        "揭示既有解释相互矛盾",
+        "既有解释冲突",
+        "conflicting prior accounts"
+      ],
+      "review_cases": []
+    }
+  ],
+  "position": "文献对话的问题化位置，先对称呈现双方解释",
+  "prerequisite": "按本块 definitions 的 use_when 核对当前需求与研究事实。",
+  "next": "把未解决的分歧接到本文拟回答的问题。",
+  "applicability": {
+    "required_facts": {
+      "comparable_accounts": true
+    }
+  }
+}
+-->
 
 **模板**:
 > "Yet, it remains to be seen whether [IV] protects [group A] in the same way as it protects [group B] in the context of [behavior]. Indeed, within the [field] literature, there is a debate on whether or not [IV] will mitigate [negative outcome] against [group A]. On the one hand, emerging research has corroborated the suggestion that [IV] will protect [group A] from [outcome] in certain contexts ([citations]) because [mechanism A]. On the other hand, extant research on [theory B] has questioned whether [group A] benefit from [IV] in the same way [group B] do and suggests they may be viewed as [negative attribute] ([citations]) and still face [negative outcome] ([citations]). This debate has large societal implications too, particularly as [trend]. Indeed, [group A] may find themselves in a double bind ([citation]) where they are simultaneously expected to engage in [behavior] and also penalized for doing so."
@@ -114,6 +169,38 @@ source: Distilled from Kundro & Rothbard (AMJ), Eilert et al. (JM), Wowak et al.
 - 两个阵营必须真实存在且可引用——不能把一个观点的推论 strawman 成对立阵营
 - 'so we may expect' 的预期必须是读者会自然认同的常识逻辑，否则悖论感失效
 
+<!-- retrieval-move:
+{
+  "functions": [
+    "intro.gap_conflicting_accounts"
+  ],
+  "function_evidence": {
+    "intro.gap_conflicting_accounts": {
+      "kind": "verbatim",
+      "cue": "This contradiction reflects competing assumptions about the value of target managers",
+      "why": "同一人员保留问题上并置知识冗余与关键能力两种解释，说明其预测分歧。"
+    }
+  },
+  "function_support": {
+    "intro.gap_conflicting_accounts": "complete"
+  },
+  "position": "反常现象呈现之后、竞争解释定位处",
+  "prerequisite": "两套解释针对可比较的收购情境、行动者及结果。",
+  "next": "明确在哪些条件下两种解释可被区分。",
+  "advances": "把经验矛盾定位为理论解释的分歧。",
+  "next_evidence": [
+    "双方解释的原始文献",
+    "可比较的情境与结果"
+  ],
+  "applicability": {
+    "required_facts": {
+      "competing_accounts_documented": true,
+      "comparison_scope_aligned": true
+    }
+  }
+}
+-->
+
 ---
 
 ### 变体 E：单一制度双重功能同时衰退 → 对立激励 → 替代者条件化（Lee–Wu–Bednar 型）
@@ -155,6 +242,38 @@ source: Distilled from Kundro & Rothbard (AMJ), Eilert et al. (JM), Wowak et al.
 **适用**: Incommensurability R3（对立机制）×Mechanism 组合的标志型 Tension；两条机制均有文献支撑且论文将同时建模两者时；适合紧随 Incompleteness 型 gap 段作为第二重张力。
 
 **禁忌**: 两条机制必须真的同指一个自变量且方向相反，不可为制造张力硬凑；问句钉死后正文必须真的同时处理两者，否则沦为空头悖论。
+<!-- retrieval-move:
+{
+  "functions": [
+    "intro.gap_conflicting_accounts"
+  ],
+  "function_evidence": {
+    "intro.gap_conflicting_accounts": {
+      "kind": "verbatim",
+      "cue": "how can women simultaneously be more open to change and also risk averse?",
+      "why": "直接并置开放变革与风险厌恶前提，并说明选择性援引会遮蔽整体解释。"
+    }
+  },
+  "function_support": {
+    "intro.gap_conflicting_accounts": "complete"
+  },
+  "position": "已有解释列举之后、研究问题转折处",
+  "prerequisite": "两个前提的对象与条件可比较；本卡标题与来源键的既有差异仍需核验。",
+  "next": "说明研究怎样处理这一张力。",
+  "advances": "将表面兼容的论据转成尚未解决的解释冲突。",
+  "next_evidence": [
+    "两个前提的文献与适用条件",
+    "来源身份核验"
+  ],
+  "applicability": {
+    "required_facts": {
+      "competing_accounts_documented": true,
+      "comparison_scope_aligned": true
+    }
+  }
+}
+-->
+
 
 ## 组装规则
 

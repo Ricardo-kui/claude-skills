@@ -168,6 +168,7 @@ __pycache__/
 !_shared/**
 # re-ignore caches inside _shared (last-match-wins; the !_shared/** above would otherwise re-include __pycache__)
 __pycache__/
+_shared/indexing/catalog.json
 
 # Plan & acceptance records（方案定稿与验收记录；落地后仅追加，不删改历史裁定）
 !_plans/
